@@ -1,0 +1,7 @@
+License: Personal Use Only
+Link: https://befonts.com/kohinoor-font-family.html
+
+Note: the licensed .otf files are not redistributed in this repo (it's public, and
+the license is personal-use-only). They live in the private vazio-ops repo and on
+the machine that builds this client's Figma work. Re-source them from the link
+above, or from the private repo, before building locally.
