@@ -1,24 +1,24 @@
 # PowerDigital Lab — agent team
 
-The reusable, brand-agnostic team behind this operation. Auto-loaded by Claude Code from this folder. Brand-specific knowledge for each client lives under `clients/{client}/01-brand/` and `clients/{client}/02-agents/` (per-agent briefs), never inside these definitions.
+A small, fixed team of 4 agents, auto-loaded by Claude Code from this folder. Every agent is brand-agnostic in *structure* but brand-aware in *content*: Copywriter and Designer each carry a section per onboarded client brand right inside their own file. Adding a brand means teaching these agents its rules — never spinning up a new set of per-brand files.
 
-## Front
+## The team
 
-- **Brand Guardian** (`design-brand-guardian.md`) — holds the active client's brand and enforces consistency across everything the other agents produce. Reactivate with the relevant `clients/{client}/02-agents/brand-guardian.md` brief at the start of a project.
-- **Studio Producer** (`project-management-studio-producer.md`) — receives the creative demand and distributes focused briefs to the execution agents below.
+- **Briefing Analyst** (`briefing-analyst.md`) — receives the creative demand, identifies the brand and the ask, and hands off to Copywriter and/or Designer.
+- **Brand Guardian** (`design-brand-guardian.md`) — holds the full brand (from `clients/<brand>/01-brand/identity/`) and checks everything against it before it ships.
+- **Copywriter** (`copywriter.md`) — copy for Meta creatives and programmatic banner ads, plus creative-testing angles. Carries every onboarded brand's voice.
+- **Designer** (`designer.md`) — visual direction for Meta creatives and AI image-prompt generation for banners. Carries every onboarded brand's palette, photography rules, and graphic language.
 
-## Meta creatives
+## Why this shape
 
-- **Content Creator** (`marketing-content-creator.md`) — copy and editorial calendar.
-- **Instagram Curator** (`marketing-instagram-curator.md`) — aesthetic, grid, and formats.
+This used to be split into per-role, per-brand files (a generic agent plus a separate brand "brief" for each client) — it worked for one brand, but every new brand meant a new file per role, and updating how the team handles a discipline meant touching several files at once. Fusing related disciplines into fewer agents, and baking each onboarded brand's rules directly into that agent's own file, keeps the team size fixed regardless of how many brands join.
 
-## Banners (Google Ads programmatic)
+## Onboarding a new brand
 
-- **Ad Creative Strategist** (`paid-media-creative-strategist.md`) — creative copy, variations, testing.
-- **Image Prompt Engineer** (`design-image-prompt-engineer.md`) — banner visuals.
-- **Programmatic & Display Buyer** (`paid-media-programmatic-buyer.md`) — delivery on Google Display Network / DV360.
-- **Tracking & Measurement Specialist** (`paid-media-tracking-specialist.md`) — conversion tracking.
+1. Capture the brand in `clients/<brand>/01-brand/` (the standard structure — see the root README).
+2. Add a section for it inside `copywriter.md` and `designer.md`, following the pattern of the existing brand sections.
+3. Brand Guardian and Briefing Analyst need no changes — they already read whichever brand is active from `clients/<brand>/`.
 
-## How branding flows into these agents
+## Scope note
 
-See the root [README.md](../../README.md#how-branding-is-set-up-inside-the-agents) for the full pipeline: one client brand goes into the Brand Guardian, gets distilled into `clients/{client}/01-brand/identity/brand-guidelines.md`, then cut into a focused per-agent brief under `clients/{client}/02-agents/`. These 8 agent definitions stay generic on purpose — never paste one client's brand into them directly.
+This team makes the creative asset. It does not buy media or build conversion tracking — that's out of scope for this design-ops repo by design; it's a different team's job once a brand is live.

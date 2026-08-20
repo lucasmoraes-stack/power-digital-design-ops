@@ -12,46 +12,34 @@ The rest of this document is for whoever maintains the setup.
 
 ### The agent team
 
-Defined in [.claude/agents/](.claude/agents/) — reusable and brand-agnostic, so the same 8 agents serve every client. Brand knowledge lives separately, under `clients/`, and never inside these definitions.
+Defined in [.claude/agents/](.claude/agents/) — a small, fixed team of 4, scoped to *making the creative*. Media buying and conversion tracking are out of scope on purpose — a different team's job once a brand is live.
 
-**Front**
-- **Brand Guardian** (`design-brand-guardian.md`) — brand custody; enforces consistency across everything produced.
-- **Studio Producer** (`project-management-studio-producer.md`) — receives the demand and distributes briefs to the execution agents.
+- **Briefing Analyst** (`briefing-analyst.md`) — receives the demand, identifies the brand and the ask, hands off to the right specialist.
+- **Brand Guardian** (`design-brand-guardian.md`) — holds the full brand, checks everything before it ships.
+- **Copywriter** (`copywriter.md`) — copy for Meta creatives and banner ads, plus testing angles.
+- **Designer** (`designer.md`) — visual direction for Meta creatives and AI image-prompt generation for banners.
 
-**Meta creatives**
-- **Content Creator** (`marketing-content-creator.md`) — copy and editorial calendar.
-- **Instagram Curator** (`marketing-instagram-curator.md`) — aesthetic, grid, and formats.
-
-**Banners (Google Ads programmatic)**
-- **Ad Creative Strategist** (`paid-media-creative-strategist.md`) — creative copy, variations, testing.
-- **Image Prompt Engineer** (`design-image-prompt-engineer.md`) — banner visuals.
-- **Programmatic & Display Buyer** (`paid-media-programmatic-buyer.md`) — delivery on Google Display Network / DV360.
-- **Tracking & Measurement Specialist** (`paid-media-tracking-specialist.md`) — conversion tracking.
+Copywriter and Designer are brand-agnostic in structure but brand-aware in content: each carries a `## <Brand>` section, right inside its own file, for every onboarded client. Briefing Analyst hands off by naming the brand — it doesn't re-explain it.
 
 ### How branding flows into the agents
 
-The brand is never pasted into every agent directly. It flows through a pipeline, so each agent only carries the slice it needs:
+- **Brand Guardian owns the full guidelines** — distilled into one digest at `clients/<brand>/01-brand/identity/brand-guidelines.md`. Figma outranks the PDF where they disagree.
+- **Copywriter and Designer get only their slice**, written directly into their own `## <Brand>` section — voice and approved phrasing for Copywriter, palette and photography rules for Designer.
+- **References** (templates, layout specs) live alongside the digest, under `01-brand/references/`.
+- **Every human correction becomes a standing rule**, written back into the relevant brand section.
 
-1. **One custodian owns the brand.** The brand guidelines (for Katapult, the official PDF brand book) are given to the Brand Guardian alone — the single source of truth.
-2. **Distilled into one digest** — `clients/<brand>/01-brand/identity/brand-guidelines.md`: idea, positioning, voice, palette, typography, photography rules, disclaimer.
-3. **Cut into per-agent briefs** under `clients/<brand>/02-agents/`, each containing only the slice that agent uses (copy agents get voice and approved phrasing; visual agents get palette, type, and photography; media/tracking agents get audience and brand-safety notes).
-4. **Figma outranks the PDF** where the two disagree, since the live design system changes faster than the printed guidelines.
-5. **References live next to the briefs** — layout examples, templates, production specs — under `clients/<brand>/01-brand/references/`.
-6. **Every human correction becomes a standing rule**, written back into the briefs and references.
-
-Katapult is currently the only brand with step 3 fully cut for all 8 agents; Roku has step 2 done and is next in line.
+Katapult's sections are fully written from its brand guidelines. Roku's are partial — visual facts observed while reframing existing creative, with voice and audience flagged as not yet captured rather than guessed at.
 
 ### Repository structure
 
 ```
-.claude/agents/               the reusable, brand-agnostic agent team (auto-loaded by Claude Code)
+.claude/agents/               the fixed 4-agent team (auto-loaded by Claude Code)
 clients/
   <brand>/
     01-brand/
       identity/
         brand-guidelines.md  master digest (Brand Guardian's source of truth)
       references/            templates, layout specs, test imagery
-    02-agents/               one focused brief per agent (once cut)
     00-inbox/                incoming demands
     04-deliverables/
       social/                Meta creatives produced
