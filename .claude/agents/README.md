@@ -19,6 +19,10 @@ This used to be split into per-role, per-brand files (a generic agent plus a sep
 2. Add a section for it inside `copywriter.md` and `designer.md`, following the pattern of the existing brand sections.
 3. Brand Guardian and Briefing Analyst need no changes — they already read whichever brand is active from `clients/<brand>/`.
 
+## Source of truth for tokens
+
+For color, type, and other basic brand elements, the shared [Figma Library](https://www.figma.com/design/pcf9QNPjvBBzqDPnBLefVS/Claude-Design-Ops---Lab?node-id=74-7766) file — one style-guide section per brand — outranks the PDF/brand-notes digest wherever they disagree. Designer's brand sections cite the exact node checked and the date.
+
 ## Scope note
 
 This team makes the creative asset. It does not buy media or build conversion tracking — that's out of scope for this design-ops repo by design; it's a different team's job once a brand is live.

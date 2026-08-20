@@ -2,6 +2,8 @@
 
 Client onboarded under PowerDigital Lab. Roku's advertiser-facing product ("Roku Ads Manager") is promoted to B2B media buyers through holiday-season CTV ad campaigns — the work here is production support on that ad creative, not brand strategy or copywriting.
 
+Tokens and basic elements are tracked against the [Figma Library style guide](https://www.figma.com/design/pcf9QNPjvBBzqDPnBLefVS/Claude-Design-Ops---Lab?node-id=74-8964) — still lighter than Katapult's (no verified color/logo export yet), but it's where the real asset libraries (ilovemyroku.com, Brandfolder) are linked from. See `01-brand/identity/brand-notes.md`.
+
 ## Current scope
 
 First deliverable: reframe already-approved 16:9 ad creative into 9:16 and 1:1, across every section of one Figma file. Copy and layout are fixed (client-approved); the job was recomposing backgrounds, text, and decorative elements to the new aspect ratios, not rewriting anything.

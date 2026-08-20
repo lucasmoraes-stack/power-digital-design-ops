@@ -1,6 +1,15 @@
 # Roku — visual identity notes
 
-Not a full brand-guidelines ingestion — just what was observed working across 61 ad scenes (MOF and BOF holiday campaigns) in Figma during the aspect-ratio reframe session. Treat as a starting point; confirm against Roku's actual brand guidelines if/when those are supplied.
+Not a full brand-guidelines ingestion — just what was observed working across 61 ad scenes (MOF and BOF holiday campaigns) in Figma during the aspect-ratio reframe session, plus what's confirmed in the Figma Library style guide ([node 74:8964](https://www.figma.com/design/pcf9QNPjvBBzqDPnBLefVS/Claude-Design-Ops---Lab?node-id=74-8964), checked 2026-08-20). Treat the palette below as a starting point; a verified export hasn't happened yet.
+
+## Where the real assets live (not yet pulled into this repo)
+
+- **ilovemyroku.com** → Visual Identity section, guest login, password `goodguide`. Photos and icons.
+- **brandfolder.com/roku-brand** → `/roku-brand-illustration`, `/roku-brand-icons`, `/roku-lifestyle-photography`.
+
+## Confirmed correction
+
+Roku's written brand guidelines say the headline font is **Gotham — do not use it.** The font actually in use is **"Roku Display"** (confirmed both in production files and the Library style guide).
 
 ## Palette
 

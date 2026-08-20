@@ -86,24 +86,26 @@ A "K" combined with the Bounce. Available square and round for app, social, and 
 
 ## Color palette
 
-Hex values are the digital source of truth. Pink and Dark Blue are the foundation. Tints are allowed only in data visualization, never elsewhere.
+**Source of truth as of 2026-08-20: the Figma Library style guide** ([node 74:7772](https://www.figma.com/design/pcf9QNPjvBBzqDPnBLefVS/Claude-Design-Ops---Lab?node-id=74-7772)), which outranks both the PDF values below it replaced and this digest where they ever disagree again in the future. Pink and Dark Blue are the foundation. Tints are allowed only in data visualization, never elsewhere.
 
 Primary:
-- Katapult Pink: #ed5370 (RGB 237/83/112, PMS 709 C, CMYK 0/72/30/0)
-- Katapult Dark Blue: #131340 (RGB 19/19/64, PMS 2766 C, CMYK 100/87/0/58)
+- Katapult Pink: `#ED5370` (RGB 237/83/112)
+- Katapult Dark Blue: `#131540` (RGB 19/21/64)
 
 Secondary:
-- Katapult Blue: #364488 (PMS 7685 C)
-- Katapult Light Blue: #afb3cc (PMS 2106 C)
-- Katapult Orange: #dd8021 (PMS 7564 C)
-- Katapult Cream: #ead0b6 (PMS 4685 C)
+- Katapult Blue: `#365488` (RGB 54/84/136)
+- Katapult Light Blue: `#9EB5C0` (RGB 158/181/192)
+- Katapult Orange: `#E48027` (RGB 228/128/39)
+- Katapult Cream: `#D4A574` (RGB 212/165/116)
 
-Grays:
-- Dark Gray: #4d4d4d
-- Medium Gray: #808080
-- Gray: #a8a8a8
-- Light Gray: #dcdcdc
-- Lightest Gray: #f4f4f4 (digital use only)
+Greys:
+- Dark Grey: `#4D4D4D` (RGB 77/77/77)
+- Medium Grey: `#808285` (RGB 128/130/133)
+- Grey: `#A4A4A4` (RGB 164/164/164)
+- Light Grey: `#D8D8D8` (RGB 216/216/216)
+- Lightest Grey: `#F0F0F0` (RGB 240/240/240, digital use only)
+
+(PMS/CMYK print values from the original PDF weren't in the Figma export — keep them as a fallback for print only if the exact hex above isn't achievable in that medium.)
 
 ---
 

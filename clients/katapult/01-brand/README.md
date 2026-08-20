@@ -1,6 +1,6 @@
 # Katapult branding
 
-Brand source of truth, fed from the Katapult Brand Guidelines (v1.3, June 2022).
+Brand source of truth, fed from the Katapult Brand Guidelines (v1.3, June 2022) and, for tokens and basic elements, the [Figma Library style guide](https://www.figma.com/design/pcf9QNPjvBBzqDPnBLefVS/Claude-Design-Ops---Lab?node-id=74-7772) — which wins where the two disagree.
 
 ## Files
 

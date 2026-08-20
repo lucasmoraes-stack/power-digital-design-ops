@@ -23,7 +23,7 @@ Copywriter and Designer are brand-agnostic in structure but brand-aware in conte
 
 ### How branding flows into the agents
 
-- **Brand Guardian owns the full guidelines** — distilled into one digest at `clients/<brand>/01-brand/identity/brand-guidelines.md`. Figma outranks the PDF where they disagree.
+- **Brand Guardian owns the full guidelines** — distilled into one digest at `clients/<brand>/01-brand/identity/brand-guidelines.md`. For tokens and basic elements (color, type, logo), the shared [Figma Library](https://www.figma.com/design/pcf9QNPjvBBzqDPnBLefVS/Claude-Design-Ops---Lab?node-id=74-7766) — one style-guide section per brand — outranks the PDF and this digest wherever they disagree.
 - **Copywriter and Designer get only their slice**, written directly into their own `## <Brand>` section — voice and approved phrasing for Copywriter, palette and photography rules for Designer.
 - **References** (templates, layout specs) live alongside the digest, under `01-brand/references/`.
 - **Every human correction becomes a standing rule**, written back into the relevant brand section.
