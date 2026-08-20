@@ -5,3 +5,9 @@ desktop.ini
 *.tmp
 *~
 node_modules/
+
+# licensed font binaries — keep locally, never redistribute
+*.otf
+*.ttf
+*.woff
+*.woff2
