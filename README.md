@@ -39,7 +39,7 @@ The brand is never pasted into every agent directly. It flows through a pipeline
 5. **References live next to the briefs** — layout examples, templates, production specs — under `clients/<brand>/01-brand/references/`.
 6. **Every human correction becomes a standing rule**, written back into the briefs and references.
 
-Katapult is currently the only brand with step 3 fully cut for all 8 agents; Akkermansia and Roku have step 2 done and are next in line.
+Katapult is currently the only brand with step 3 fully cut for all 8 agents; Roku has step 2 done and is next in line.
 
 ### Repository structure
 
