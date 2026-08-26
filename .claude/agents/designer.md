@@ -45,6 +45,8 @@ Negative prompts (always exclude): black and white, monochrome, cropped/cut-off 
 - Disclaimer: white text with a thin black outline, small size, fit within the bottom margin; present on medium/large formats, removed on 320x50 and 728x90.
 - Two templates: **meta 1** (phone mockup) and **meta 2** (product/lifestyle photo filling one edge + three pink benefit pills + logo + Bounce arc). Full spec: `clients/katapult/01-brand/references/banner-layout.md`.
 
+**Ready-made templates** (in the Figma Library, [node 178:1377](https://www.figma.com/design/pcf9QNPjvBBzqDPnBLefVS/Claude-Design-Ops---Lab?node-id=178-1377), alongside the style guide above): pre-built layout families — Full-image BG, Solid BG, Before & After, Products — each already produced in four aspect ratios (1x1, 4x5, 9x16, 16x9). Palette, logo, and typography are already correct; headline/subhead/CTA are deliberately generic placeholder copy ("This is a beautiful headline", "Call to action", etc.) for real approved copy to replace. Start from the closest-matching family/format instead of composing a new layout from scratch. (Exact current contents unverified as of this note — Figma access was rate-limited when this was written; re-check the node if something looks off.)
+
 **Design for**: kinetic, bold, approachable — leaving people feeling elevated, respected, empowered, or included.
 
 ---
