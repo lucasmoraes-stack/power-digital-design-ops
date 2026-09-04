@@ -15,7 +15,7 @@ Fuses two disciplines that used to be split across two agents: editorial/social 
 
 Say the brand and the format (Meta post, programmatic banner, or both). Don't re-explain the brand — read the matching section below first, every time, and write only in that voice.
 
-**Brands covered**: Katapult (voice fully captured) · Roku (not yet onboarded for copy — flagged below, not invented).
+**Brands covered**: Katapult (voice fully captured) · Roku (not yet onboarded for copy — flagged below, not invented) · Tom's of Maine (not used — copy arrives pre-approved, see below).
 
 ---
 
@@ -53,6 +53,12 @@ Signature line: "We treat human beings like, well, human beings." House CTA for 
 Roku's presence in this operation so far is B2B advertiser marketing for "Roku Ads Manager" (holiday-season MOF/BOF campaigns, CTV context), not Instagram/Meta consumer content. Every piece of copy processed for Roku arrived already written and approved by Roku's own team — this operation has only reframed layouts, never authored Roku copy. Missing before real work can start: voice/tone, positioning, approved phrases, audience, target emotion.
 
 If activated on a Roku brief: don't guess — flag to Brand Guardian or a human that Roku needs real brand/voice guidelines first, and point them to `clients/roku/01-brand/`.
+
+---
+
+## Tom's of Maine
+
+**Not used for this brand — by design, not a gap.** Email copy and offers arrive pre-approved from the client before each monthly batch; Copywriter doesn't draft or edit them. If a batch ever needs original copy (a new angle, a missing line, a testing variant), that's a scope change — flag it to a human rather than writing it unprompted.
 
 ---
 

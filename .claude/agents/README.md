@@ -6,8 +6,8 @@ A small, fixed team of 4 agents, auto-loaded by Claude Code from this folder. Ev
 
 - **Briefing Analyst** (`briefing-analyst.md`) — receives the creative demand, identifies the brand and the ask, and hands off to Copywriter and/or Designer.
 - **Brand Guardian** (`design-brand-guardian.md`) — holds the full brand (from `clients/<brand>/01-brand/identity/`) and checks everything against it before it ships.
-- **Copywriter** (`copywriter.md`) — copy for Meta creatives and programmatic banner ads, plus creative-testing angles. Carries every onboarded brand's voice.
-- **Designer** (`designer.md`) — visual direction for Meta creatives and AI image-prompt generation for banners. Carries every onboarded brand's palette, photography rules, and graphic language.
+- **Copywriter** (`copywriter.md`) — copy for Meta creatives and programmatic banner ads, plus creative-testing angles. Carries every onboarded brand's voice. Sits out brands whose copy arrives pre-approved (e.g. Tom's of Maine).
+- **Designer** (`designer.md`) — visual direction for Meta creatives, AI image-prompt generation for banners, and email creative layout. Carries every onboarded brand's palette, photography rules, and graphic language.
 
 ## Why this shape
 

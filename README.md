@@ -1,6 +1,6 @@
 # PowerDigital Lab
 
-PowerDigital Lab is a small team of AI agents that produces on-brand ad creatives for Power Digital's client brands — Meta/Instagram posts and Google Ads programmatic banners.
+PowerDigital Lab is a small team of AI agents that produces on-brand creative for Power Digital's client brands — Meta/Instagram posts, Google Ads programmatic banners, and email marketing creative.
 
 It exists to take the repetitive, manual side of design production off the team's plate: resizing the same creative across a dozen ad sizes, adapting copy across message variants, recoloring templates across a brand's palette. None of that needs creative judgment, it just takes time. Automating it frees up time for the work that actually needs a person — strategy, art direction, reviewing the output — while a dedicated brand agent and a human review step keep everything on-brand before it ships.
 
@@ -16,8 +16,8 @@ Defined in [.claude/agents/](.claude/agents/) — a small, fixed team of 4, scop
 
 - **Briefing Analyst** (`briefing-analyst.md`) — receives the demand, identifies the brand and the ask, hands off to the right specialist.
 - **Brand Guardian** (`design-brand-guardian.md`) — holds the full brand, checks everything before it ships.
-- **Copywriter** (`copywriter.md`) — copy for Meta creatives and banner ads, plus testing angles.
-- **Designer** (`designer.md`) — visual direction for Meta creatives and AI image-prompt generation for banners.
+- **Copywriter** (`copywriter.md`) — copy for Meta creatives and banner ads, plus testing angles. Sits out brands whose copy arrives pre-approved (e.g. Tom's of Maine).
+- **Designer** (`designer.md`) — visual direction for Meta creatives, AI image-prompt generation for banners, and email creative layout.
 
 Copywriter and Designer are brand-agnostic in structure but brand-aware in content: each carries a `## <Brand>` section, right inside its own file, for every onboarded client. Briefing Analyst hands off by naming the brand — it doesn't re-explain it.
 
@@ -45,6 +45,7 @@ clients/
     04-deliverables/
       social/                Meta creatives produced
       banners/               banner creatives produced
+      email/                 email creatives produced (batch-based brands, e.g. Tom's of Maine)
 ```
 
 ### Learning loop — examples already captured for Katapult
