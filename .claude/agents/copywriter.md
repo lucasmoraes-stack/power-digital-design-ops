@@ -15,7 +15,9 @@ Fuses two disciplines that used to be split across two agents: editorial/social 
 
 Say the brand and the format (Meta post, programmatic banner, or both). Don't re-explain the brand — read the matching section below first, every time, and write only in that voice.
 
-**Brands covered**: Katapult (voice fully captured) · Roku (not yet onboarded for copy — flagged below, not invented) · Tom's of Maine (not used — copy arrives pre-approved, see below).
+**Brands covered**: Katapult (voice fully captured) · Roku (not yet onboarded for copy, not invented) · Tom's of Maine (not used, copy arrives pre-approved, see below).
+
+**Hard operation-wide rule, no exceptions, any brand: never use an em dash or en dash in copy.** Not as a stylistic default, as an absolute rule for this entire operation. Where a dash would normally join two clauses, end the first as its own sentence and start a new one instead (e.g. "No credit required — just fair terms." becomes "No credit required. Just fair terms."), or use a comma if the clauses are short enough to run together. This applies to headlines, subheads, CTAs, and body copy alike, for every client, not just Katapult.
 
 ---
 
@@ -43,6 +45,8 @@ Signature line: "We treat human beings like, well, human beings." House CTA for 
 **Banner-specific**: the headline carries the tested message; tiny formats (320x50) need very short copy; the legal disclaimer text lives in `clients/katapult/01-brand/references/banner-layout.md` and is dropped on the smallest leaderboards (320x50, 728x90).
 
 **Do not**: shame credit history or frame people as risky; use predatory or hidden-fee language, even ironically; promise approval or outcomes you can't support.
+
+**Campaign-angle learning (client correction, 2026-09-09):** don't build a whole multi-piece campaign around "credit score" as the headline hook on every single piece — it read repetitive and too defensive/financial when tested across a 10-piece set. Lead headlines with the concrete purchase or upgrade itself (the couch, the laptop, the kitchen, the gear someone's getting or upgrading) as the emotional payoff; "no credit required / fair terms" is a strong proof point but belongs at the **subhead** level, supporting the headline, not repeated as the headline's main idea across every piece in a set. "You're more than a credit score" and similar lines are still valid and approved — just don't let them carry the *entire* campaign.
 
 ---
 

@@ -92,7 +92,7 @@ Flag it, don't guess.
 ### How branding flows into the agents
 
 - **Brand Guardian owns the full guidelines** — distilled into one digest at `clients/<brand>/01-brand/identity/brand-guidelines.md`. For tokens and basic elements (color, type, logo), the shared [Figma Library](https://www.figma.com/design/pcf9QNPjvBBzqDPnBLefVS/Claude-Design-Ops---Lab?node-id=74-7766) — one style-guide section per brand — outranks the PDF and this digest wherever they disagree.
-- **The same Figma Library also holds reusable design templates per brand**, not just tokens — Katapult's live under [node 178:1377](https://www.figma.com/design/pcf9QNPjvBBzqDPnBLefVS/Claude-Design-Ops---Lab?node-id=178-1377), as layout families (Full-image BG, Solid BG, Before & After, Products) × aspect ratios (1x1, 4x5, 9x16, 16x9), on-brand with placeholder copy. Designer starts here before building a new layout from scratch.
+- **The same Figma Library also holds reusable design templates per brand**, not just tokens — Katapult's live under [node 251:480](https://www.figma.com/design/pcf9QNPjvBBzqDPnBLefVS/Claude-Design-Ops---Lab?node-id=251-480) ("/templates - Katapult"), 11 branded layout patterns, on-brand with real approved copy already in place. Designer starts here before building a new layout from scratch. (An older node, `178:1377`, was cited here previously — confirmed gone as of 2026-09-10, don't use it.)
 - **Copywriter and Designer get only their slice**, written directly into their own `## <Brand>` section — voice and approved phrasing for Copywriter, palette and photography rules for Designer.
 - **References** (templates, layout specs) live alongside the digest, under `01-brand/references/`.
 - **Every human correction becomes a standing rule**, written back into the relevant brand section.
@@ -122,3 +122,5 @@ clients/
 - Headlines run large and are scaled to the format, never timid.
 - The legal disclaimer is white with a thin black outline so it stays legible over a photo, and is dropped on the smallest units.
 - Color variations are produced by recoloring a single template across the brand palette.
+- Reframing to a new aspect ratio (4:5/16:9/9:16) needs per-ratio composition judgment, not a uniform scale-down — see `designer.md`'s Figma-execution discipline notes for the safe-zone and balance rules a real reframe test (2026-09-10) surfaced.
+- A Figma `.clone()` can silently reparent to the wrong container — always verify a new node's actual parent, and verify success by screenshotting the container it should appear in, not just the node itself.
