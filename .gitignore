@@ -11,3 +11,20 @@ node_modules/
 *.ttf
 *.woff
 *.woff2
+
+# python
+__pycache__/
+*.pyc
+
+# brand image bank originals (heavy; kept on disk/OneDrive, crops used by the kit live in email-kit/assets/)
+clients/*/01-brand/photos/**/*.png
+clients/*/01-brand/photos/**/*.jpg
+clients/*/01-brand/photos/**/*.jpeg
+clients/*/03-work/**/_src/
+
+# client-confidential source material (kept on disk/OneDrive, never in the public repo)
+clients/habit-outdoors/01-brand/identity/*.pdf
+clients/*/01-brand/email-kit/references/*.png
+clients/*/01-brand/email-kit/references/*.html
+clients/*/01-brand/email-kit/references/*_files/
+__pycache__/

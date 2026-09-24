@@ -1,0 +1,7 @@
+- Rodada 2 (2026-09-24): refeitos pela direção de arte art-direction-r2.md (referências Duck Camp): hero em tela cheia, textura em toda banda, rasgo em toda fronteira, produto em leque, sangrando ou grande.
+- Clima por e-mail: 01 fim de tarde de verão · 02 cru e de trabalho · 03 mata fechada e camo · 04 barro × água aberta.
+- Copy do cliente igual à rodada 1 (mesmos desvios). Assunto e preheader iguais.
+- Provisório: fotos são recortes dos e-mails enviados; céu do 01 e neblina do 03/04 gerados por script. Trocar quando chegarem os originais.
+- Ajustes pós-QA: hero do 01 rasga direto na foto; produtos do 03 de volta à ordem do cliente.
+- Decidir: aprovar kit v0.4 (texturas, hero tela cheia, foto rasgada, bordas com fibra) · exceção de 2 bandas no 04 · frase do 03 · datas de envio.
+- Cliente confirmar: claims C1 (01), C2 Scent-Factor® (02), C5/C6 (04).

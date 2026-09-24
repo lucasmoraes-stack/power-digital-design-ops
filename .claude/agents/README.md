@@ -1,13 +1,23 @@
 # PowerDigital Lab — agent team
 
-A small, fixed team of 4 agents, auto-loaded by Claude Code from this folder. Every agent is brand-agnostic in *structure* but brand-aware in *content*: Copywriter and Designer each carry a section per onboarded client brand right inside their own file. Adding a brand means teaching these agents its rules — never spinning up a new set of per-brand files.
+A small, fixed team of 4 creative agents, plus the 3 agents of the email operation, auto-loaded by Claude Code from this folder. Every agent is brand-agnostic in *structure* but brand-aware in *content*: Copywriter and Designer each carry a section per onboarded client brand right inside their own file. Adding a brand means teaching these agents its rules — never spinning up a new set of per-brand files.
 
 ## The team
 
 - **Briefing Analyst** (`briefing-analyst.md`) — receives the creative demand, identifies the brand and the ask, and hands off to Copywriter and/or Designer.
 - **Brand Guardian** (`design-brand-guardian.md`) — holds the full brand (from `clients/<brand>/01-brand/identity/`) and checks everything against it before it ships.
 - **Copywriter** (`copywriter.md`) — copy for Meta creatives and programmatic banner ads, plus creative-testing angles. Carries every onboarded brand's voice. Sits out brands whose copy arrives pre-approved (e.g. Tom's of Maine).
-- **Designer** (`designer.md`) — visual direction for Meta creatives, AI image-prompt generation for banners, and email creative layout. Carries every onboarded brand's palette, photography rules, and graphic language.
+- **Designer** (`designer.md`) — visual direction for Meta creatives and AI image-prompt generation for banners.
+
+## The email operation
+
+Every email request goes here, not to Designer. Method, rules and tools live in [`email-ops/`](../../email-ops/README.md).
+
+- **Email Designer** (`design-email-designer.md`) — builds each brand's email kit, then the HTML emails from it.
+- **Email QA Reviewer** (`design-email-qa-reviewer.md`) — PASS/BLOCK gate before any email ships.
+- **Email Marketing Strategist** (`marketing-email-strategist.md`) — flow strategy only.
+
+These three carry no brand sections: each brand's email knowledge lives in its kit, `clients/<brand>/01-brand/email-kit/`. Onboarding a brand for email = building its kit, not editing these files. Carries every onboarded brand's palette, photography rules, and graphic language.
 
 ## Why this shape
 

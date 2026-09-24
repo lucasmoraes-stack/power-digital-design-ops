@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--
+  Habit Outdoors · 2026 Broadcasts · 02 Stain & Odor Reset · ROUND 2 (art-direction-r2.md)
+  Subject: Fish slime, sweat, bait, smoke
+  Preheader: Your favorite shirts have seen it all. Maybe it's time for a fresh rotation.
+  Modules: E24B Full-Bleed Photo Hero (text bottom, logo on photo, heavy Major Brown grain, tears into Tap Shoe paper) / E22-E26 torn photo collage + E25 Textured Band on tex-paper-tapshoe / E21 Band-Crossing Product (3 products thrown across the tear, Tap Shoe paper to Major Brown grain) / E25 Textured Band on tex-grain-brown with live names / E18 textured edge brown-footer / E13 Closing Band / E14 Legal Footer
+  Button: #FF6400 / #2A2B2D
+  Kit: v0.2 approved + v0.3/v0.4 DRAFT (E21, E22, E24B, E25, E26, textured E18) pending approval: review draft, not for send. Brief: brief.md, section E2 + "Decisões registradas" (round 2). Copy: copy-source.md Email 2, same deviations as round 1 (A1 dash to period, A2 Scent-Factor&reg;, A3 cut).
+  Bands: preheader, hero (logo on photo), angle-shift, product structure, footer = 5. The E21 crossing row is a divider, not a band.
+  Links: {{CTA_URL}} (one destination) and the footer placeholders are wired in the ESP; product names and prices use the exact variant URLs from products.json.
+  Prices from products.json (store, 2026-09-24): re-check on the send date.
+  Assets: r2-02-* in ./assets (compose_01-02.py job r2_02); textures, edges and logos from the kit.
+-->
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>Fish slime, sweat, bait, smoke</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <style>body, table, td, p, a, h1, h2, h3, span { font-family: Arial, sans-serif !important; }</style>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;800&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    body { margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #EFECE9; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+    a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+    u + #body a { color: inherit; text-decoration: none; }
+    .logo-dark, .img-dark { display: none; max-height: 0; overflow: hidden; }
+
+    @media screen and (max-width: 620px) {
+      .container { width: 100% !important; }
+      .px { padding-left: 24px !important; padding-right: 24px !important; }
+      .py { padding-top: 40px !important; padding-bottom: 40px !important; }
+      .stack { display: block !important; width: 100% !important; max-width: 100% !important; }
+      .stack-pad { padding: 0 0 16px 0 !important; }
+      .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
+      .h1 { font-size: 34px !important; line-height: 38px !important; }
+      .h2 { font-size: 28px !important; line-height: 32px !important; }
+      .h1-lead { font-size: 26px !important; line-height: 30px !important; }
+      .h1-key { font-size: 60px !important; line-height: 62px !important; }
+      .btn-full { width: 100% !important; }
+      .btn-full a { display: block !important; padding-left: 16px !important; padding-right: 16px !important; }
+      .card-gutter { padding-left: 12px !important; padding-right: 12px !important; }
+      .hero-card { height: 484px !important; padding: 36px 24px 0 24px !important; }
+      .h1-card { font-size: 32px !important; line-height: 36px !important; }
+      .card-cell { display: block !important; width: 100% !important; max-width: 100% !important; padding: 0 0 16px 0 !important; }
+      .nav-td { padding: 0 7px !important; }
+      .nav-a { font-size: 12px !important; letter-spacing: 1.5px !important; }
+      /* v0.3 draft modules */
+      .e20-pad { padding: 40px 0 40px 0 !important; }
+      .e20-img { padding: 0 !important; box-sizing: border-box !important; }
+      .e20-pic { width: 220px !important; height: auto !important; }
+      .e20-text { padding: 28px 24px 0 24px !important; box-sizing: border-box !important; }
+      .e22-panel { padding-left: 24px !important; padding-right: 24px !important; text-align: left !important; }
+      /* v0.4 draft modules (E24, E24B) */
+      .e24-logo { padding: 24px 24px 0 24px !important; }
+      .e24-text { padding: 24px 24px 0 24px !important; }
+      .e24-lead { font-size: 26px !important; line-height: 30px !important; }
+      .e24-key { font-size: 58px !important; line-height: 60px !important; }
+      .e24-sub { font-size: 13px !important; line-height: 20px !important; letter-spacing: 1.5px !important; }
+      .e24-space { height: 310px !important; }
+      .e24b-space { height: 280px !important; }
+      .e24b-bottom { height: 56px !important; }
+      /* round 2: product names under a fan / pile */
+      .r2-tex { background-size: 100% auto !important; }   /* the opening image scales with the screen: the tile must too */
+      .r2-name { display: block !important; width: 100% !important; max-width: 100% !important; padding: 0 0 20px 0 !important; box-sizing: border-box !important; }
+    }
+
+    /* Dark mode. Apple Mail / iOS via prefers-color-scheme; Outlook app via [data-ogsc]/[data-ogsb].
+       Gmail ignores these and inverts on its own. Fixed dark bands (Tap Shoe, Patriot Blue, brown, taupe, olive) carry no dm class.
+       Links go light + underlined in dark mode: orange on the dark band #34353A is 4.1:1 and fails for small text. */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .dm-page { background-color: #1E1F21 !important; }
+      :root:not([data-theme="light"]) .dm-surface { background-color: #2A2B2D !important; }
+      :root:not([data-theme="light"]) .dm-band { background-color: #34353A !important; }
+      :root:not([data-theme="light"]) .dm-h { color: #F1EEEB !important; }
+      :root:not([data-theme="light"]) .dm-p { color: #D6D0CA !important; }
+      :root:not([data-theme="light"]) .dm-muted { color: #B0A89C !important; }
+      :root:not([data-theme="light"]) .dm-link { color: #F1EEEB !important; }
+      :root:not([data-theme="light"]) .dm-accent { color: #FF6400 !important; }
+      :root:not([data-theme="light"]) .dm-line { border-color: #45464A !important; }
+      :root:not([data-theme="light"]) .kit-label { background-color: #25262A !important; color: #B0A89C !important; }
+      :root:not([data-theme="light"]) .logo-light, :root:not([data-theme="light"]) .img-light { display: none !important; max-height: 0 !important; overflow: hidden !important; }
+      :root:not([data-theme="light"]) .logo-dark, :root:not([data-theme="light"]) .img-dark { display: block !important; max-height: none !important; overflow: visible !important; }
+      :root:not([data-theme="light"]) .dm-tex { background-color: #34353A !important; background-image: url('../../../01-brand/email-kit/assets/tex-paper-light-dm.jpg') !important; }
+    }
+    :root[data-theme="dark"] .dm-page { background-color: #1E1F21 !important; }
+    :root[data-theme="dark"] .dm-surface { background-color: #2A2B2D !important; }
+    :root[data-theme="dark"] .dm-band { background-color: #34353A !important; }
+    :root[data-theme="dark"] .dm-h { color: #F1EEEB !important; }
+    :root[data-theme="dark"] .dm-p { color: #D6D0CA !important; }
+    :root[data-theme="dark"] .dm-muted { color: #B0A89C !important; }
+    :root[data-theme="dark"] .dm-link { color: #F1EEEB !important; }
+    :root[data-theme="dark"] .dm-accent { color: #FF6400 !important; }
+    :root[data-theme="dark"] .dm-line { border-color: #45464A !important; }
+    :root[data-theme="dark"] .kit-label { background-color: #25262A !important; color: #B0A89C !important; }
+    :root[data-theme="dark"] .logo-light, :root[data-theme="dark"] .img-light { display: none !important; max-height: 0 !important; overflow: hidden !important; }
+    :root[data-theme="dark"] .logo-dark, :root[data-theme="dark"] .img-dark { display: block !important; max-height: none !important; overflow: visible !important; }
+    [data-ogsb] .dm-surface { background-color: #2A2B2D !important; }
+    :root[data-theme="dark"] .dm-tex { background-color: #34353A !important; background-image: url('../../../01-brand/email-kit/assets/tex-paper-light-dm.jpg') !important; }
+    [data-ogsb] .dm-band { background-color: #34353A !important; }
+    [data-ogsb] .dm-tex { background-color: #34353A !important; background-image: url('../../../01-brand/email-kit/assets/tex-paper-light-dm.jpg') !important; }
+    [data-ogsc] .dm-h { color: #F1EEEB !important; }
+    [data-ogsc] .dm-p { color: #D6D0CA !important; }
+    [data-ogsc] .dm-link { color: #F1EEEB !important; }
+    [data-ogsc] .dm-accent { color: #FF6400 !important; }
+  </style>
+</head>
+<body id="body" class="dm-page" style="margin:0; padding:0; background-color:#EFECE9;">
+
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#EFECE9;">
+    Your favorite shirts have seen it all. Maybe it&rsquo;s time for a fresh rotation.
+    &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="dm-page" style="background-color:#EFECE9;">
+    <tr>
+      <td align="center" style="padding:32px 0 64px 0;">
+        <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+        <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px;">
+          <!-- MODULE:E24B Full-Bleed Photo Hero (text bottom) -->
+          <tr>
+            <td align="center" valign="top" class="e24-hero" background="assets/r2-02-hero-barn.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:0; background-color:#2A2B2D; background-image:url('assets/r2-02-hero-barn.jpg'); background-size:cover; background-position:center top; background-repeat:no-repeat; vertical-align:top;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:780px;"><v:fill type="frame" src="assets/r2-02-hero-barn.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" class="e24-logo" style="padding:32px 40px 0 40px;">
+                    <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="../../../01-brand/email-kit/assets/logo-dark.png" width="160" height="26" alt="Habit" style="display:block; width:160px; height:26px; border:0; margin:0 auto;"></a>
+                  </td>
+                </tr>
+                <tr><td class="e24b-space" height="350" style="height:350px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                <tr>
+                  <td align="center" class="e24-text" style="padding:0 40px 0 40px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
+                    <h1 style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                      <span class="e24-lead" style="display:block; font-size:40px; line-height:44px; letter-spacing:1px;">THE &ldquo;STAIN &amp; ODOR&rdquo;</span>
+                      <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; font-size:90px; line-height:88px; color:#FF6400;">RESET</span>
+                    </h1>
+                    <p class="e24-sub" style="margin:0 auto 28px auto; max-width:440px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">FISH SLIME, SWEAT, BAIT, SMOKE. SPRING FISHING LEAVES A&nbsp;MARK.</p>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
+                <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">REFRESH YOUR FAVORITES</a>
+                </td></tr>
+              </table>
+                  </td>
+                </tr>
+                <tr><td class="e24b-bottom" height="68" style="height:68px; font-size:0; line-height:0;">&nbsp;</td></tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E24B -->
+          <!-- MODULE:E26 Torn Photo collage + E25 Textured Band -->
+          <tr>
+            <td align="center" class="r2-tex" background="../../../01-brand/email-kit/assets/tex-paper-tapshoe.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:0; background-color:#2A2B2D; background-image:url('../../../01-brand/email-kit/assets/tex-paper-tapshoe.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="../../../01-brand/email-kit/assets/tex-paper-tapshoe.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" style="padding:0; font-size:0; line-height:0;">
+                    <img class="fluid" src="assets/r2-02-collage-stable.jpg" width="600" height="390" alt="A man in a brown Habit plaid flannel in a horse barn, and the same man resting on a hay bale with work gloves" style="display:block; width:600px; max-width:100%; height:auto; border:0; margin:0 auto; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="px" style="padding:16px 40px 40px 40px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
+                    <h2 class="h2" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:44px; line-height:48px; font-weight:800; color:#FFFFFF;">TOUGH ON ODOR.<br>EASY ON&nbsp;<span style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; font-size:56px; line-height:48px; color:#FF6400;">CARE.</span></h2>
+                    <p style="margin:0 auto 24px auto; max-width:460px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">PERFORMANCE APPAREL DESIGNED TO FIGHT ODOR AND CLEAN UP EASILY AFTER EVERY&nbsp;TRIP.</p>
+                    <p style="margin:0 auto 24px auto; max-width:460px; font-size:16px; line-height:26px; color:#E2DDD9;">By mid-season, your favorite shirts have seen it all. That&rsquo;s why <span style="white-space:nowrap;">Scent-Factor&reg;</span> technology helps keep odors under control while lightweight performance fabrics make cleanup simple after long days on the water. Stay fresher between washes and ready for whatever tomorrow&rsquo;s forecast looks like.</p>
+                    <p style="margin:0; font-size:16px; line-height:26px;"><a href="{{CTA_URL}}" target="_blank" style="color:#FFFFFF; text-decoration:underline; font-weight:700;">Shop Fresh Performance Gear</a></p>
+                  </td>
+                </tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E26 -->
+          <!-- MODULE:E21 Band-Crossing Product (3 products, textured) -->
+          <tr>
+            <td bgcolor="#2A2B2D" style="padding:0; background-color:#2A2B2D; font-size:0; line-height:0;">
+              <a href="{{CTA_URL}}" target="_blank" style="text-decoration:none;"><img class="fluid" src="assets/r2-02-pile-reset.jpg" width="600" height="440" alt="Habit Men&rsquo;s Cedar Branch Insulated Waterproof Bomber in Realtree APX camo, Fourche Mountain fishing shirt in black and Performance Fleece Hoodie in Flint Stone, thrown in a pile" style="display:block; width:600px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;"></a>
+            </td>
+          </tr>
+          <!-- /MODULE:E21 -->
+          <!-- MODULE:E25 Textured Band -->
+          <tr>
+            <td align="center" class="r2-tex" background="../../../01-brand/email-kit/assets/tex-grain-brown.jpg" bgcolor="#483F39" style="mso-padding-alt:0px; padding:0; background-color:#483F39; background-image:url('../../../01-brand/email-kit/assets/tex-grain-brown.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="../../../01-brand/email-kit/assets/tex-grain-brown.jpg" color="#483F39" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" class="px" style="padding:20px 40px 24px 40px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
+                    <h2 class="h2" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:44px; line-height:48px; font-weight:800; color:#FFFFFF;">YOUR GEAR HAS BEEN <span style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; font-size:56px; line-height:48px; color:#FF6400;">THROUGH</span>&nbsp;IT</h2>
+                    <p style="margin:0 auto 8px auto; max-width:460px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">SIGNS IT MIGHT BE TIME TO REFRESH YOUR ROTATION WITH PERFORMANCE GEAR BUILT FOR&nbsp;MORE.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px" style="padding:8px 40px 36px 40px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                      <td width="33%" class="r2-name" valign="top" align="center" style="width:33%; padding:0 12px 0 0; vertical-align:top; text-align:center; font-family:Helvetica,Arial,sans-serif;">
+                        <p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;"><a href="https://www.habitoutdoors.com/products/habit-mens-wj657-cedar-branch-insulated-waterproof-bomber?variant=51265344733466" target="_blank" style="color:#FFFFFF; text-decoration:none;">MEN&rsquo;S CEDAR BRANCH</a></p>
+                        <p style="margin:0 0 6px 0; font-size:15px; line-height:21px; color:#E2DDD9;">Insulated Waterproof Bomber</p>
+                        <p style="margin:0; font-size:15px; line-height:21px;"><a href="https://www.habitoutdoors.com/products/habit-mens-wj657-cedar-branch-insulated-waterproof-bomber?variant=51265344733466" target="_blank" style="color:#FFFFFF; text-decoration:underline; font-weight:700; letter-spacing:1px;">$74.99 USD</a></p>
+                      </td>
+                      <td width="33%" class="r2-name" valign="top" align="center" style="width:33%; padding:0 6px; vertical-align:top; text-align:center; font-family:Helvetica,Arial,sans-serif;">
+                        <p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;"><a href="https://www.habitoutdoors.com/products/men-s-fourche-mountain-long-sleeve-river-guide-fishing-shirt?variant=32728036802611" target="_blank" style="color:#FFFFFF; text-decoration:none;">MEN&rsquo;S FOURCHE MOUNTAIN</a></p>
+                        <p style="margin:0 0 6px 0; font-size:15px; line-height:21px; color:#E2DDD9;">Long Sleeve River Guide Fishing Shirt</p>
+                        <p style="margin:0; font-size:15px; line-height:21px;"><a href="https://www.habitoutdoors.com/products/men-s-fourche-mountain-long-sleeve-river-guide-fishing-shirt?variant=32728036802611" target="_blank" style="color:#FFFFFF; text-decoration:underline; font-weight:700; letter-spacing:1px;">$34.99 USD</a></p>
+                      </td>
+                      <td width="33%" class="r2-name" valign="top" align="center" style="width:33%; padding:0 0 0 12px; vertical-align:top; text-align:center; font-family:Helvetica,Arial,sans-serif;">
+                        <p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;"><a href="https://www.habitoutdoors.com/products/mens-performance-fleece-hoodie?variant=45600303677722" target="_blank" style="color:#FFFFFF; text-decoration:none;">MEN&rsquo;S PERFORMANCE</a></p>
+                        <p style="margin:0 0 6px 0; font-size:15px; line-height:21px; color:#E2DDD9;">Fleece Hoodie</p>
+                        <p style="margin:0; font-size:15px; line-height:21px;"><a href="https://www.habitoutdoors.com/products/mens-performance-fleece-hoodie?variant=45600303677722" target="_blank" style="color:#FFFFFF; text-decoration:underline; font-weight:700; letter-spacing:1px;">$49.99 USD</a></p>
+                      </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="px" style="padding:0 40px 72px 40px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
+                <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP PERFORMANCE ESSENTIALS</a>
+                </td></tr>
+              </table>
+                  </td>
+                </tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E25 -->
+          <!-- MODULE:E18 Torn Edge (textured) -->
+          <tr>
+            <td bgcolor="#483F39" style="padding:0; background-color:#483F39; font-size:0; line-height:0;">
+              <img class="fluid" src="../../../01-brand/email-kit/assets/edge-tex-brown-footer.jpg" width="600" height="40" alt="" style="display:block; width:600px; max-width:100%; height:auto; border:0;">
+            </td>
+          </tr>
+          <!-- /MODULE:E18 -->
+          <!-- MODULE:E13 Closing Band -->
+          <tr>
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:56px 40px 32px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
+              <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="../../../01-brand/email-kit/assets/logo-footer.png" width="160" height="71" alt="Habit" style="display:block; width:160px; height:71px; border:0; margin:0 auto;"></a>
+            </td>
+          </tr>
+          <!-- /MODULE:E13 -->
+          <!-- MODULE:E14 Legal Footer -->
+          <tr>
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:0 40px 48px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 32px auto;">
+                <tr>
+                  <td class="nav-td" style="padding:0 14px;"><a href="{{MENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">MEN&rsquo;S</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{WOMENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">WOMEN&rsquo;S</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{YOUTH_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">YOUTH</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{SALE_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">SALE</a></td>
+                </tr>
+              </table>
+              <p style="margin:0 0 32px 0; font-size:14px; line-height:22px; color:#E2DDD9;">Follow us on Instagram<br><a href="{{INSTAGRAM_URL}}" target="_blank" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:24px; font-weight:800; letter-spacing:1.5px; color:#FFFFFF; text-decoration:none;">@HABITOUTDOORS</a></p>
+              <p style="margin:0; font-size:12px; line-height:18px; color:#E2DDD9;">&copy; 2026, Habit Outdoors. Built By Wilde Creative.</p>
+            </td>
+          </tr>
+          <!-- /MODULE:E14 -->
+
+        </table>
+        <!--[if mso]></td></tr></table><![endif]-->
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

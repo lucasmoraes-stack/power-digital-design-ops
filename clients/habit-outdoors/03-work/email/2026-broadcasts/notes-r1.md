@@ -1,0 +1,6 @@
+- Rodada 1 (2026-09-24): 4 e-mails montados a partir do kit v0.2 + módulos v0.3 (E19 no 02, E21 no 03 e 04) pendentes de aprovação.
+- Copy do cliente exata, exceto: travessão do E2 virou ponto; Scent-Factor® com espaço; nota "Highlighted Categories & Products" cortada.
+- Assunto e preheader: copy nova do Copywriter, revisar.
+- Decidir: exceção de 2 bandas de produto no 04; frase "Camo isn't just for the hunt" do 03; datas de envio (Memorial Day, "spring").
+- Cliente confirmar: Scent-Factor® só no Cedar Branch Bomber (E2); "UPF hoodies / utility shorts" sem produto no E1; "utility pants / fishing shirts" sem produto no E4.
+- Tipografia provisória: acerto final no Figma.

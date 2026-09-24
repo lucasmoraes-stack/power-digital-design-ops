@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--
+  Habit Outdoors · 2026 Broadcasts · 04 Shoreline vs. Deep Water · Designer B · round 2, built 2026-09-24
+  Subject: Shoreline or deep water? Pick your kit
+  Preheader: Your setup should match where you cast from. Mud and brush, or a slick deck.
+  Modules: E24 Full-Bleed Photo Hero (text top, logo on photo, tears into earth), E25 Textured Band "Shoreline" (earth texture) with E26/E22 torn-window collage + live product labels, E21 Band-Crossing Product on textures (boot on the shoreline tear, earth to water, live label over it), E25 Textured Band "Open Water" (water texture) with torn-window collage + live product labels, E18 textured torn edge, E13 Closing Band, E14 Legal Footer
+  Button: #FF6400 / #2A2B2D
+  Kit: habit-outdoors email-kit v0.2.1 approved (E13, E14, E18) + v0.4 DRAFT (E24, E25, E26) + v0.3 DRAFT (E21, E22 idea), all pending approval; two NEW textures proposed for the kit (r2-04-tex-earth.jpg, r2-04-tex-water.jpg). Not for sending before the owner approves them.
+  Art direction: art-direction-r2.md (round 2). Mood: two worlds. Mud and brush on Major Brown earth, open water on Patriot Blue water, the torn shoreline between them with the boot that belongs to both kits standing on it.
+  Exception E-X1 (brief): two structure bands (Shoreline, Open Water), because the client copy has two product lists. PENDING owner approval; alternative = split into two emails.
+  Textured bands: background-size:100% auto (the tile scales with the fluid images on mobile), VML frame for Outlook, bgcolor fallback keeps the white text legible alone.
+  Status: DRAFT for owner review (stage 5). Not final: {{CTA_URL}}, {{SHORELINE_URL}}, {{OPEN_WATER_URL}}, {{HOME_URL}}, {{MENS_URL}}, {{WOMENS_URL}}, {{YOUTH_URL}}, {{SALE_URL}}, {{INSTAGRAM_URL}} to wire in Omnisend.
+  Pending: C5 / C6 (brief); prices re-check on send date (MLF Hooded compare_at 29.99 < price 34.99, shown plain, C7); the boot is one product of both lists and is shown once, on the shoreline tear.
+  Source: brief.md (E4) + copy-source.md (Email 4). Assets: assets/r2-04-* (compose_03-04.py, round 2 jobs) and ../../../01-brand/email-kit/assets/ (logos).
+-->
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>Shoreline or deep water? Pick your kit</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <style>body, table, td, p, a, h1, h2, h3, span { font-family: Arial, sans-serif !important; }</style>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;800&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    body { margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #EFECE9; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+    a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+    u + #body a { color: inherit; text-decoration: none; }
+
+    @media screen and (max-width: 620px) {
+      .container { width: 100% !important; }
+      .px { padding-left: 24px !important; padding-right: 24px !important; }
+      .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
+      .btn-full { width: 100% !important; }
+      .btn-full a { display: block !important; padding-left: 16px !important; padding-right: 16px !important; }
+      .nav-td { padding: 0 7px !important; }
+      .nav-a { font-size: 12px !important; letter-spacing: 1.5px !important; }
+      /* v0.4 draft modules */
+      .e24-logo { padding: 24px 24px 0 24px !important; }
+      .e24-text { padding: 24px 24px 0 24px !important; }
+      .e24-lead { font-size: 30px !important; line-height: 34px !important; }
+      .e24-key { font-size: 58px !important; line-height: 60px !important; }
+      .e24-sub { font-size: 13px !important; line-height: 20px !important; letter-spacing: 1.5px !important; }
+      .e24-space { height: 300px !important; }
+      /* round 2, this email */
+      .r2-small { font-size: 17px !important; line-height: 24px !important; letter-spacing: 2px !important; }
+      .r2-top { padding: 56px 24px 24px 24px !important; }
+      .r2-lab { padding: 8px 8px 0 24px !important; }
+      .r2-lab2 { padding: 8px 24px 0 8px !important; }
+      .r2-name { font-size: 15px !important; line-height: 19px !important; }
+      .r2-type { font-size: 14px !important; line-height: 19px !important; }
+      .r2-btn { padding: 32px 24px 24px 24px !important; }
+      .r2-btn-last { padding: 32px 24px 64px 24px !important; }
+      .r2-cross { height: 262px !important; background-size: cover !important; background-position: left top !important; }
+      .r2-cross-lab { padding: 14px 20px 0 0 !important; }
+    }
+
+    /* Dark mode: every band of this email is a fixed dark texture (earth, water, Tap Shoe), no swap.
+       Only the page around the 600px column follows the kit dark page color. */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .dm-page { background-color: #1E1F21 !important; }
+    }
+    :root[data-theme="dark"] .dm-page { background-color: #1E1F21 !important; }
+  </style>
+</head>
+<body id="body" class="dm-page" style="margin:0; padding:0; background-color:#EFECE9;">
+
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#EFECE9;">
+    Your setup should match where you cast from. Mud and brush, or a slick deck.
+    &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="dm-page" style="background-color:#EFECE9;">
+    <tr>
+      <td align="center" style="padding:32px 0 64px 0;">
+        <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+        <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px;">
+
+          <!-- MODULE:E24 Full-Bleed Photo Hero (text top) · r2-04-hero.jpg: angler over his tackle box, dark river grown into fog, tears into the earth -->
+          <tr>
+            <td align="center" valign="top" class="e24-hero" background="assets/r2-04-hero.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:0; background-color:#2A2B2D; background-image:url('assets/r2-04-hero.jpg'); background-size:cover; background-position:center bottom; background-repeat:no-repeat; vertical-align:top;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:820px;"><v:fill type="frame" src="assets/r2-04-hero.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" class="e24-logo" style="padding:32px 40px 0 40px;">
+                    <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="../../../01-brand/email-kit/assets/logo-dark.png" width="160" height="26" alt="Habit" style="display:block; width:160px; height:26px; border:0; margin:0 auto;"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="e24-text" style="padding:44px 40px 0 40px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
+                    <h1 style="margin:0 0 20px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                      <span class="e24-lead" style="display:block; font-size:50px; line-height:54px; letter-spacing:1px;">SHORELINE</span>
+                      <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:84px; line-height:84px; font-weight:900; color:#FF6400;">VS.</span>
+                      <span class="e24-lead" style="display:block; font-size:50px; line-height:54px; letter-spacing:1px;">DEEP&nbsp;WATER:</span>
+                      <span class="r2-small" style="display:block; margin-top:6px; font-size:22px; line-height:30px; letter-spacing:3px;">CHOOSING YOUR&nbsp;KIT</span>
+                    </h1>
+                    <p class="e24-sub" style="margin:0 auto 28px auto; max-width:440px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">YOUR SETUP SHOULD MATCH WHERE YOU CAST&nbsp;FROM.</p>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
+                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
+                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">FIND YOUR FISHING KIT</a>
+                      </td></tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td class="e24-space" height="340" style="height:340px; font-size:0; line-height:0;">&nbsp;</td></tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E24 -->
+
+          <!-- MODULE:E25 Textured Band "Shoreline" · r2-04-tex-earth.jpg (fallback #483F39) + torn-window collage (E26/E22) + live labels -->
+          <tr>
+            <td align="center" background="assets/r2-04-tex-earth.jpg" bgcolor="#483F39" style="mso-padding-alt:0px; padding:0; background-color:#483F39; background-image:url('assets/r2-04-tex-earth.jpg'); background-size:100% auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/r2-04-tex-earth.jpg" color="#483F39" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" class="r2-top" style="padding:72px 40px 28px 40px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
+                    <h2 style="margin:0 0 20px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                      <span class="e24-lead" style="display:block; font-size:44px; line-height:48px; letter-spacing:1px;">SHORELINE</span>
+                      <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:90px; line-height:88px; font-weight:900; color:#FF6400;">READY</span>
+                    </h2>
+                    <p class="e24-sub" style="margin:0 auto 24px auto; max-width:440px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">DURABLE LAYERS AND RUGGED FOOTWEAR BUILT FOR MUDDY BANKS, BRUSH, AND UNEVEN&nbsp;TRAILS.</p>
+                    <p style="margin:0 auto; max-width:440px; font-size:16px; line-height:26px; color:#E2DDD9;">Fishing from shore means movement, rough terrain, and changing conditions. Utility pants, waterproof boots, and durable outer layers help you navigate brush, mud, and rocky edges without slowing down. Built for anglers who have ground to cover before they ever make a&nbsp;cast.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:0; font-size:0; line-height:0;">
+                    <img class="fluid" src="assets/r2-04-shore-pants.jpg" width="600" height="360" alt="Habit Men&rsquo;s Roaring Springs Packable Rain Pants in Gray Waves and in Realtree Edge camo, over a torn photo of an angler walking a river bank" style="display:block; width:600px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#FFFFFF;">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="50%" valign="top" class="r2-lab" style="width:50%; padding:8px 12px 0 72px; vertical-align:top; text-align:left; font-family:Helvetica,Arial,sans-serif;">
+                          <p class="r2-name" style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:18px; line-height:22px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;">MEN&rsquo;S ROARING SPRINGS</p>
+                          <p class="r2-type" style="margin:0 0 8px 0; font-size:15px; line-height:21px; color:#E2DDD9;">Packable Rain Pant, Gray&nbsp;Waves</p>
+                          <p style="margin:0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/habit-mens-roaring-springs-packable-rain-pant-1?variant=31820086575155" target="_blank" style="color:#FFFFFF; text-decoration:underline; letter-spacing:1px;">$34.99 USD</a></p>
+                        </td>
+                        <td width="50%" valign="top" class="r2-lab2" style="width:50%; padding:8px 40px 0 44px; vertical-align:top; text-align:left; font-family:Helvetica,Arial,sans-serif;">
+                          <p class="r2-name" style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:18px; line-height:22px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;">MEN&rsquo;S ROARING SPRINGS</p>
+                          <p class="r2-type" style="margin:0 0 8px 0; font-size:15px; line-height:21px; color:#E2DDD9;">Packable Rain Pant, Realtree&nbsp;Edge</p>
+                          <p style="margin:0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/habit-mens-roaring-springs-packable-rain-pant?variant=31746549415987" target="_blank" style="color:#FFFFFF; text-decoration:underline; letter-spacing:1px;">$59.99 USD</a></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="r2-btn" style="padding:40px 40px 32px 40px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
+                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
+                        <a href="{{SHORELINE_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP SHORELINE GEAR</a>
+                      </td></tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E25 -->
+
+          <!-- MODULE:E21 Band-Crossing Product (on textures) · r2-04-cross-boot.jpg as the cell background: the boot stands on the torn shoreline, earth above, water below; live label on the calm right half -->
+          <tr>
+            <td valign="top" class="r2-cross" height="360" background="assets/r2-04-cross-boot.jpg" bgcolor="#483F39" style="mso-padding-alt:0px; padding:0; height:360px; background-color:#483F39; background-image:url('assets/r2-04-cross-boot.jpg'); background-size:100% auto; background-position:center top; background-repeat:no-repeat; vertical-align:top;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:360px;"><v:fill type="frame" src="assets/r2-04-cross-boot.jpg" color="#483F39" /><v:textbox inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td width="54%" style="width:54%; padding:0; font-size:0; line-height:0;">&nbsp;</td>
+                  <td valign="top" class="r2-cross-lab" style="padding:48px 40px 0 0; vertical-align:top; text-align:left; font-family:Helvetica,Arial,sans-serif;">
+                    <p class="r2-name" style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:18px; line-height:22px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;">MEN&rsquo;S 15&quot; WATERPROOF</p>
+                    <p class="r2-type" style="margin:0 0 8px 0; font-size:15px; line-height:21px; color:#E2DDD9;">All-Weather Rubber&nbsp;Boots</p>
+                    <p style="margin:0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/copy-of-mens-all-weather-boot?variant=39916249776179" target="_blank" style="color:#FFFFFF; text-decoration:underline; letter-spacing:1px;">$69.99 USD</a></p>
+                  </td>
+                </tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E21 -->
+
+          <!-- MODULE:E25 Textured Band "Open Water" · r2-04-tex-water.jpg (fallback #202944) + torn-window collage + live labels -->
+          <tr>
+            <td align="center" background="assets/r2-04-tex-water.jpg" bgcolor="#202944" style="mso-padding-alt:0px; padding:0; background-color:#202944; background-image:url('assets/r2-04-tex-water.jpg'); background-size:100% auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/r2-04-tex-water.jpg" color="#202944" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" class="r2-top" style="padding:64px 40px 28px 40px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
+                    <h2 style="margin:0 0 20px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                      <span class="e24-lead" style="display:block; font-size:44px; line-height:48px; letter-spacing:1px;">BUILT FOR OPEN</span>
+                      <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:90px; line-height:88px; font-weight:900; color:#FF6400;">WATER</span>
+                    </h2>
+                    <p class="e24-sub" style="margin:0 auto 24px auto; max-width:440px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">LIGHTWEIGHT COMFORT AND GRIP-FOCUSED ESSENTIALS MADE FOR LONG DAYS ON&nbsp;DECK.</p>
+                    <p style="margin:0 auto; max-width:440px; font-size:16px; line-height:26px; color:#E2DDD9;">Boat days call for breathable performance. Stay cool with moisture-wicking hoodies, lightweight fishing shirts, and high-traction footwear designed to keep you steady on slick surfaces. When the sun stays high and the water stays rough, comfort&nbsp;matters.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:0; font-size:0; line-height:0;">
+                    <img class="fluid" src="assets/r2-04-water-hood-pant.jpg" width="600" height="360" alt="Habit MLF Men&rsquo;s Hooded Performance Layer with Gaiter in Sharkskin and Men&rsquo;s Roaring Springs Packable Rain Pant in Marlin Blue, over a torn photo of three anglers fly fishing from a boat" style="display:block; width:600px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#FFFFFF;">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="50%" valign="top" class="r2-lab" style="width:50%; padding:8px 12px 0 72px; vertical-align:top; text-align:left; font-family:Helvetica,Arial,sans-serif;">
+                          <p class="r2-name" style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:18px; line-height:22px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;">MLF MEN&rsquo;S HOODED</p>
+                          <p class="r2-type" style="margin:0 0 8px 0; font-size:15px; line-height:21px; color:#E2DDD9;">Performance Layer with&nbsp;Gaiter</p>
+                          <p style="margin:0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/mlf-hooded-performance-layer-with-gaiter?variant=40557557448755" target="_blank" style="color:#FFFFFF; text-decoration:underline; letter-spacing:1px;">$34.99 USD</a></p>
+                        </td>
+                        <td width="50%" valign="top" class="r2-lab2" style="width:50%; padding:8px 40px 0 44px; vertical-align:top; text-align:left; font-family:Helvetica,Arial,sans-serif;">
+                          <p class="r2-name" style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:18px; line-height:22px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;">MEN&rsquo;S ROARING SPRINGS</p>
+                          <p class="r2-type" style="margin:0 0 8px 0; font-size:15px; line-height:21px; color:#E2DDD9;">Packable Rain Pant, Marlin&nbsp;Blue</p>
+                          <p style="margin:0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/men-s-roaring-springs-packable-rain-pant?variant=39299401875507" target="_blank" style="color:#FFFFFF; text-decoration:underline; letter-spacing:1px;">$44.99 USD</a></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="r2-btn-last" style="padding:40px 40px 88px 40px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
+                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
+                        <a href="{{OPEN_WATER_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP BOAT-READY GEAR</a>
+                      </td></tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E25 -->
+
+          <!-- MODULE:E18 Torn Edge (textured, paper rim) · water -> flat Tap Shoe footer -->
+          <tr>
+            <td bgcolor="#202944" style="padding:0; background-color:#202944; font-size:0; line-height:0;">
+              <img class="fluid" src="assets/r2-04-edge-water-footer.jpg" width="600" height="40" alt="" style="display:block; width:600px; max-width:100%; height:auto; border:0;">
+            </td>
+          </tr>
+          <!-- /MODULE:E18 -->
+
+          <!-- MODULE:E13 Closing Band -->
+          <tr>
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:56px 40px 32px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
+              <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="../../../01-brand/email-kit/assets/logo-footer.png" width="160" height="71" alt="Habit" style="display:block; width:160px; height:71px; border:0; margin:0 auto;"></a>
+            </td>
+          </tr>
+          <!-- /MODULE:E13 -->
+          <!-- MODULE:E14 Legal Footer -->
+          <tr>
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:0 40px 48px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 32px auto;">
+                <tr>
+                  <td class="nav-td" style="padding:0 14px;"><a href="{{MENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">MEN&rsquo;S</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{WOMENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">WOMEN&rsquo;S</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{YOUTH_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">YOUTH</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{SALE_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">SALE</a></td>
+                </tr>
+              </table>
+              <p style="margin:0 0 32px 0; font-size:14px; line-height:22px; color:#E2DDD9;">Follow us on Instagram<br><a href="{{INSTAGRAM_URL}}" target="_blank" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:24px; font-weight:800; letter-spacing:1.5px; color:#FFFFFF; text-decoration:none;">@HABITOUTDOORS</a></p>
+              <p style="margin:0; font-size:12px; line-height:18px; color:#E2DDD9;">&copy; 2026, Habit Outdoors. Built By Wilde Creative.</p>
+            </td>
+          </tr>
+          <!-- /MODULE:E14 -->
+
+        </table>
+        <!--[if mso]></td></tr></table><![endif]-->
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
