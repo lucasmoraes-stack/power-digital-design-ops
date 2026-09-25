@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!--
+  Habit Outdoors · October 2026 Broadcasts · 04 Crater Valley (send 2026-10-22) · Designer B · built 2026-09-25
+  Subject: One Line That Does It All
+  Preheader: Three layers that work together
+  Modules: Hero on tex-paper-tapshoe (E24 family, NEW left-aligned ref D layout: logo, headline, subheadline and button left, Full Zip Fleece on model bleeding off the right and top edges, tearing into Major Brown; mobile twin under a torn paper strip) / E25 Textured Band on tex-grain-brown carrying the NEW Open Frame Rows (ref D: 1px #FEF4C6 frame, model or garment breaking the frame, two orange strokes at the corner, link per product, client order and sides) / E18 textured edge brown-ivy / E25 Textured Band on tex-grain-ivy with the NEW Lifestyle GIF (D4, torn window) / E18 textured edge ivy-footer / E13 Closing Band / E14 Legal Footer + D3 address and unsubscribe
+  Button: #FF6400 / #2A2B2D
+  Kit: habit-outdoors email-kit v0.2.1 approved (E13, E14, E18) + v0.4 DRAFT (E24 family, E25, textures) + Open Frame Rows and Lifestyle GIF NEW (October batch, not in the kit yet). Not for sending before the owner approves.
+  Structure: client reference D (struct-r3-d-framed-rows.png), structure only. Look: round 2 (art-direction-r2.md).
+  Weight: o4-lifestyle.gif is the D4 exception (3 scenes, about 245 KB, QA r1); with it the email is about 885 KB on desktop (cap about 900 KB).
+  Status: DRAFT for owner review. Not final: {{CTA_URL}}, {{HOME_URL}}, {{MENS_URL}}, {{WOMENS_URL}}, {{YOUTH_URL}}, {{SALE_URL}}, {{INSTAGRAM_URL}}, {{UNSUBSCRIBE_URL}}, [[CONFIRMAR]] address.
+  Source: brief.md (E4) + copy-source.md (Email 4) + products.json (email 04). Assets: assets/o4-* (compose_B.py) and ../../../01-brand/email-kit/assets/.
+-->
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>One Line That Does It All</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <style>body, table, td, p, a, h1, h2, h3, span { font-family: Arial, sans-serif !important; }</style>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;800&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    body { margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #EFECE9; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+    a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+    u + #body a { color: inherit; text-decoration: none; }
+    .m-only { display: none; max-height: 0; overflow: hidden; }
+
+    @media screen and (max-width: 620px) {
+      .container { width: 100% !important; }
+      .px { padding-left: 24px !important; padding-right: 24px !important; }
+      .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
+      .btn-full { width: 100% !important; }
+      .btn-full a { display: block !important; padding-left: 16px !important; padding-right: 16px !important; }
+      .nav-td { padding: 0 7px !important; }
+      .nav-a { font-size: 12px !important; letter-spacing: 1.5px !important; }
+      .r2-tex { background-size: 100% auto !important; }
+      .e24-lead { font-size: 26px !important; line-height: 30px !important; }
+      .e24-key { font-size: 50px !important; line-height: 52px !important; }
+      .e24-sub { font-size: 13px !important; line-height: 20px !important; letter-spacing: 1.5px !important; }
+      /* desktop pieces off, mobile pieces on */
+      .d-only { display: none !important; max-height: 0 !important; overflow: hidden !important; }
+      .m-only { display: block !important; max-height: none !important; overflow: visible !important; }
+      /* hero: text full width, then the mobile hero image */
+      .h-text { display: block !important; width: 100% !important; box-sizing: border-box !important; padding: 24px 24px 8px 24px !important; }
+      /* frames: image first, text below without the frame (the mobile image carries a closed frame) */
+      .o4-band { padding-top: 40px !important; }
+      .o4-head { padding: 0 24px 16px 24px !important; }
+      .f-row { padding: 0 0 32px 0 !important; }
+      .f-cell { display: block !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
+      .f-text { padding: 16px 32px 0 32px !important; }
+      .f-gap, .f-mg { display: none !important; }
+      .f-box { display: block !important; height: auto !important; border: 0 !important; border-radius: 0 !important; padding: 0 !important; }
+      .o4-life { padding: 40px 24px 24px 24px !important; }
+      .o4-cta { padding: 8px 24px 56px 24px !important; }
+    }
+
+    /* Dark mode: every band is a fixed dark texture (Tap Shoe, Major Brown, Ivy), no swap. Only the page
+       around the 600px column follows the kit dark page colour. */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .dm-page { background-color: #1E1F21 !important; }
+    }
+    :root[data-theme="dark"] .dm-page { background-color: #1E1F21 !important; }
+  </style>
+</head>
+<body id="body" class="dm-page" style="margin:0; padding:0; background-color:#EFECE9;">
+
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#EFECE9;">
+    Three layers that work together
+    &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="dm-page" style="background-color:#EFECE9;">
+    <tr>
+      <td align="center" style="padding:32px 0 64px 0;">
+        <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+        <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px;">
+
+          <!-- MODULE:Hero (ref D, E24 family) · tex-paper-tapshoe; right column o4-hero-a.jpg + full-width strip o4-hero-b.jpg are ONE canvas
+               (the fleece on model is cut under the chin by the email top edge; its thigh cut is hidden under the tear into Major Brown); mobile: o4-hero-m.jpg -->
+          <tr>
+            <td align="left" valign="top" class="r2-tex" background="../../../01-brand/email-kit/assets/tex-paper-tapshoe.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:0; background-color:#2A2B2D; background-image:url('../../../01-brand/email-kit/assets/tex-paper-tapshoe.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:left top; vertical-align:top;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:770px;"><v:fill type="frame" src="../../../01-brand/email-kit/assets/tex-paper-tapshoe.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="h-text" width="330" valign="top" style="width:330px; padding:32px 12px 0 32px; vertical-align:top; text-align:left; font-family:Helvetica,Arial,sans-serif;">
+                    <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="../../../01-brand/email-kit/assets/logo-dark.png" width="160" height="26" alt="Habit" style="display:block; width:160px; height:26px; border:0;"></a>
+                    <h1 style="margin:48px 0 20px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:left;">
+                      <span class="e24-lead" style="display:block; font-size:38px; line-height:42px; letter-spacing:1px;">MEET THE</span>
+                      <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:60px; line-height:62px; font-weight:900; color:#FF6400;">CRATER VALLEY</span>
+                      <span class="e24-lead" style="display:block; font-size:38px; line-height:42px; letter-spacing:1px;">LINE</span>
+                    </h1>
+                    <p class="e24-sub" style="margin:0 0 28px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-align:left;">A HOODIE, A FLEECE, AND A QUARTER ZIP THAT PAIR TOGETHER AND HANDLE ANYTHING THE DAY&nbsp;THROWS.</p>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="btn-full" align="left">
+                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
+                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 18px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px; white-space:nowrap;">SHOP CRATER VALLEY</a>
+                      </td></tr>
+                    </table>
+                  </td>
+                  <td class="d-only" width="270" valign="top" style="width:270px; padding:0; font-size:0; line-height:0; vertical-align:top;">
+                    <img src="assets/o4-hero-a.jpg" width="270" height="620" alt="A man wearing the Habit Crater Valley Full Zip Fleece Jacket in Woodland Deadwood Khaki" style="display:block; width:270px; height:620px; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#FFFFFF;">
+                  </td>
+                </tr>
+                <tr>
+                  <td class="d-only" colspan="2" style="padding:0; font-size:0; line-height:0;">
+                    <img src="assets/o4-hero-b.jpg" width="600" height="150" alt="" style="display:block; width:600px; height:150px; border:0;">
+                  </td>
+                </tr>
+                <!--[if !mso]><!-->
+                <tr>
+                  <td class="m-only" colspan="2" style="display:none; max-height:0; overflow:hidden; mso-hide:all; padding:0; font-size:0; line-height:0;">
+                    <img class="fluid" src="assets/o4-hero-m.jpg" width="375" height="450" alt="A man wearing the Habit Crater Valley Full Zip Fleece Jacket in Woodland Deadwood Khaki" style="display:block; width:100%; height:auto; border:0;">
+                  </td>
+                </tr>
+                <!--<![endif]-->
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:Hero -->
+
+          <!-- MODULE:E25 Textured Band (tex-grain-brown) + Open Frame Rows (NEW, ref D). Each row = image piece (frame lines, model or garment
+               breaking the frame, orange strokes, baked on the brown tile) + text td whose CSS border closes the frame. Mobile: closed-frame twin, text below. -->
+          <tr>
+            <td align="center" class="r2-tex o4-band" background="../../../01-brand/email-kit/assets/tex-grain-brown.jpg" bgcolor="#483F39" style="mso-padding-alt:0px; padding:48px 0 24px 0; background-color:#483F39; background-image:url('../../../01-brand/email-kit/assets/tex-grain-brown.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="../../../01-brand/email-kit/assets/tex-grain-brown.jpg" color="#483F39" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" class="o4-head" style="padding:0 48px 24px 48px; text-align:center;">
+                    <h2 style="margin:0 0 20px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                      <span class="e24-lead" style="display:block; font-size:36px; line-height:40px; letter-spacing:1px;">YOUR BEST</span>
+                      <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:84px; line-height:86px; font-weight:900; color:#FF6400;">LAYERING</span>
+                      <span class="e24-lead" style="display:block; font-size:36px; line-height:40px; letter-spacing:1px;">MOVE THIS&nbsp;FALL</span>
+                    </h2>
+                    <p class="e24-sub" style="margin:0 auto; max-width:440px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-align:center;">SOLO ON MILD DAYS OR STACKED TOGETHER WHEN THE COLD HITS&nbsp;HARDER.</p>
+                  </td>
+                </tr>
+
+                <!-- Frame 1 · image left -->
+                <tr>
+                  <td class="f-row" style="padding:0 0 24px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="ltr">
+                      <tr>
+                        <td class="f-cell" width="300" valign="top" style="width:300px; padding:0; font-size:0; line-height:0; vertical-align:top;">
+                          <a href="https://www.habitoutdoors.com/products/mens-crater-valley-performance-hoodie?variant=52423312867610" target="_blank" style="text-decoration:none;">
+                            <img class="d-only" src="assets/o4-frame-hoodie.jpg" width="300" height="330" alt="Habit Crater Valley Performance Hoodie in Woodland Ghost Khaki, worn on a model with the hood up" style="display:block; width:300px; height:330px; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#FFFFFF;">
+                            <!--[if !mso]><!--><img class="m-only fluid" src="assets/o4-frame-hoodie-m.jpg" width="375" height="320" alt="Habit Crater Valley Performance Hoodie in Woodland Ghost Khaki, worn on a model with the hood up" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; height:auto; border:0;"><!--<![endif]-->
+                          </a>
+                        </td>
+                        <td class="f-cell f-text" width="276" valign="top" style="width:276px; padding:0; vertical-align:top;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;">
+                            <tr><td class="f-gap" height="44" style="height:44px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                            <tr>
+                              <td class="f-box" height="272" valign="middle" style="height:272px; padding:0 28px 0 12px; border:1px solid #FEF4C6; border-left:0; border-radius:0 12px 12px 0; vertical-align:middle; text-align:left; font-family:Helvetica,Arial,sans-serif;">
+                                <p style="margin:0 0 8px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:18px; line-height:22px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;">CRATER VALLEY PERFORMANCE&nbsp;HOODIE</p>
+                                <p style="margin:0 0 12px 0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/mens-crater-valley-performance-hoodie?variant=52423312867610" target="_blank" style="color:#FFFFFF; text-decoration:underline; font-weight:700; letter-spacing:1px;">$29.99 USD</a></p>
+                                <p style="margin:0 0 16px 0; font-size:16px; line-height:25px; color:#E2DDD9;">Bamboo-blend fabric with moisture-wicking and anti-odor tech. Your base layer for&nbsp;everything.</p>
+                                <p style="margin:0; font-size:13px; line-height:20px;"><a href="https://www.habitoutdoors.com/products/mens-crater-valley-performance-hoodie?variant=52423312867610" target="_blank" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:underline;">SHOP HOODIE</a></p>
+                              </td>
+                            </tr>
+                            <tr><td class="f-gap" height="12" style="height:12px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                          </table>
+                        </td>
+                        <td class="f-mg" width="24" style="width:24px; font-size:0; line-height:0;">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Frame 2 · image right (dir=rtl: the image cell comes first in the HTML, so it stacks first on mobile) -->
+                <tr>
+                  <td class="f-row" style="padding:0 0 24px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="rtl">
+                      <tr>
+                        <td class="f-cell" dir="ltr" width="300" valign="top" style="width:300px; padding:0; font-size:0; line-height:0; vertical-align:top;">
+                          <a href="https://www.habitoutdoors.com/products/mens-crater-valley-full-zip-fleece-jacket?variant=52630367076634" target="_blank" style="text-decoration:none;">
+                            <img class="d-only" src="assets/o4-frame-fleece.jpg" width="300" height="330" alt="Habit Crater Valley Full Zip Fleece Jacket in Woodland Deadwood Khaki, worn on a model" style="display:block; width:300px; height:330px; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#FFFFFF;">
+                            <!--[if !mso]><!--><img class="m-only fluid" src="assets/o4-frame-fleece-m.jpg" width="375" height="320" alt="Habit Crater Valley Full Zip Fleece Jacket in Woodland Deadwood Khaki, worn on a model" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; height:auto; border:0;"><!--<![endif]-->
+                          </a>
+                        </td>
+                        <td class="f-cell f-text" dir="ltr" width="276" valign="top" style="width:276px; padding:0; vertical-align:top;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;">
+                            <tr><td class="f-gap" height="44" style="height:44px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                            <tr>
+                              <td class="f-box" height="272" valign="middle" style="height:272px; padding:0 12px 0 28px; border:1px solid #FEF4C6; border-right:0; border-radius:12px 0 0 12px; vertical-align:middle; text-align:left; font-family:Helvetica,Arial,sans-serif;">
+                                <p style="margin:0 0 8px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:18px; line-height:22px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;">CRATER VALLEY FULL ZIP FLEECE&nbsp;JACKET</p>
+                                <p style="margin:0 0 12px 0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/mens-crater-valley-full-zip-fleece-jacket?variant=52630367076634" target="_blank" style="color:#FFFFFF; text-decoration:underline; font-weight:700; letter-spacing:1px;">$49.99 USD</a></p>
+                                <p style="margin:0 0 16px 0; font-size:16px; line-height:25px; color:#E2DDD9;">Sherpa fleece with a high standing collar and snap chest pocket. Warmth you can throw on&nbsp;fast.</p>
+                                <p style="margin:0; font-size:13px; line-height:20px;"><a href="https://www.habitoutdoors.com/products/mens-crater-valley-full-zip-fleece-jacket?variant=52630367076634" target="_blank" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:underline;">SHOP FLEECE</a></p>
+                              </td>
+                            </tr>
+                            <tr><td class="f-gap" height="12" style="height:12px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                          </table>
+                        </td>
+                        <td class="f-mg" width="24" style="width:24px; font-size:0; line-height:0;">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Frame 3 · image left -->
+                <tr>
+                  <td class="f-row" style="padding:0 0 24px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="ltr">
+                      <tr>
+                        <td class="f-cell" width="300" valign="top" style="width:300px; padding:0; font-size:0; line-height:0; vertical-align:top;">
+                          <a href="https://www.habitoutdoors.com/products/mens-crater-valley-sweater-fleece-zip-jacket?variant=52630359834906" target="_blank" style="text-decoration:none;">
+                            <img class="d-only" src="assets/o4-frame-qzip.jpg" width="300" height="330" alt="Habit Crater Valley Sweater Fleece Quarter Zip Jacket in Realtree APX" style="display:block; width:300px; height:330px; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#FFFFFF;">
+                            <!--[if !mso]><!--><img class="m-only fluid" src="assets/o4-frame-qzip-m.jpg" width="375" height="320" alt="Habit Crater Valley Sweater Fleece Quarter Zip Jacket in Realtree APX" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; height:auto; border:0;"><!--<![endif]-->
+                          </a>
+                        </td>
+                        <td class="f-cell f-text" width="276" valign="top" style="width:276px; padding:0; vertical-align:top;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;">
+                            <tr><td class="f-gap" height="44" style="height:44px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                            <tr>
+                              <td class="f-box" height="272" valign="middle" style="height:272px; padding:0 28px 0 12px; border:1px solid #FEF4C6; border-left:0; border-radius:0 12px 12px 0; vertical-align:middle; text-align:left; font-family:Helvetica,Arial,sans-serif;">
+                                <p style="margin:0 0 8px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:18px; line-height:22px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;">CRATER VALLEY SWEATER FLEECE &frac14;&nbsp;ZIP&nbsp;JACKET</p>
+                                <p style="margin:0 0 12px 0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/mens-crater-valley-sweater-fleece-zip-jacket?variant=52630359834906" target="_blank" style="color:#FFFFFF; text-decoration:underline; font-weight:700; letter-spacing:1px;">$54.99 USD</a></p>
+                                <p style="margin:0 0 16px 0; font-size:16px; line-height:25px; color:#E2DDD9;">Clean enough for town, warm enough for the trail. A quarter zip that goes&nbsp;anywhere.</p>
+                                <p style="margin:0; font-size:13px; line-height:20px;"><a href="https://www.habitoutdoors.com/products/mens-crater-valley-sweater-fleece-zip-jacket?variant=52630359834906" target="_blank" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:underline;">SHOP QUARTER ZIP</a></p>
+                              </td>
+                            </tr>
+                            <tr><td class="f-gap" height="12" style="height:12px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                          </table>
+                        </td>
+                        <td class="f-mg" width="24" style="width:24px; font-size:0; line-height:0;">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E25 -->
+
+          <!-- MODULE:E18 Torn Edge (textured, paper rim) · Major Brown grain -> Ivy grain (o4-edge-brown-ivy.jpg) -->
+          <tr>
+            <td bgcolor="#483F39" style="padding:0; background-color:#483F39; font-size:0; line-height:0;">
+              <img class="fluid" src="assets/o4-edge-brown-ivy.jpg" width="600" height="40" alt="" style="display:block; width:600px; max-width:100%; height:auto; border:0;">
+            </td>
+          </tr>
+          <!-- /MODULE:E18 -->
+
+          <!-- MODULE:E25 Textured Band (tex-grain-ivy, white text only, no orange text) + Lifestyle GIF (NEW, D4): loop,
+               3 scenes, first frame = the three layers together (all Outlook desktop shows); store shots cut under the chin, cut hidden under the torn paper strips -->
+          <tr>
+            <td align="center" class="r2-tex" background="../../../01-brand/email-kit/assets/tex-grain-ivy.jpg" bgcolor="#595442" style="mso-padding-alt:0px; padding:0; background-color:#595442; background-image:url('../../../01-brand/email-kit/assets/tex-grain-ivy.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="../../../01-brand/email-kit/assets/tex-grain-ivy.jpg" color="#595442" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" class="o4-life" style="padding:48px 48px 24px 48px; text-align:center;">
+                    <h2 style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                      <span class="e24-lead" style="display:block; font-size:36px; line-height:40px; letter-spacing:1px;">FROM</span>
+                      <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:70px; line-height:74px; font-weight:900;">FIRST LIGHT</span>
+                      <span class="e24-lead" style="display:block; font-size:36px; line-height:40px; letter-spacing:1px;">TO LAST&nbsp;CALL</span>
+                    </h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:0; font-size:0; line-height:0;">
+                    <a href="{{CTA_URL}}" target="_blank" style="text-decoration:none;"><img class="fluid" src="assets/o4-lifestyle.gif" width="600" height="380" alt="The Crater Valley Performance Hoodie, Full Zip Fleece Jacket and Sweater Fleece Quarter Zip Jacket worn by three men, then the hoodie with the hood up and the quarter zip on their own" style="display:block; width:600px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#FFFFFF;"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="o4-cta" style="padding:16px 48px 64px 48px; text-align:center;">
+                    <p style="margin:0 auto 28px auto; max-width:440px; font-size:16px; line-height:26px; color:#FFFFFF; text-align:center;">Trail in the morning, lunch in town, campfire after dark. Crater Valley layers handle the whole day without a&nbsp;change.</p>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="btn-full" align="center">
+                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
+                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px; white-space:nowrap;">SHOP NOW</a>
+                      </td></tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E25 -->
+
+          <!-- MODULE:E18 Torn Edge (textured) · Ivy grain -> flat Tap Shoe footer (kit) -->
+          <tr>
+            <td bgcolor="#595442" style="padding:0; background-color:#595442; font-size:0; line-height:0;">
+              <img class="fluid" src="../../../01-brand/email-kit/assets/edge-tex-ivy-footer.jpg" width="600" height="40" alt="" style="display:block; width:600px; max-width:100%; height:auto; border:0;">
+            </td>
+          </tr>
+          <!-- /MODULE:E18 -->
+
+          <!-- MODULE:E13 Closing Band -->
+          <tr>
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:56px 40px 32px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
+              <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="../../../01-brand/email-kit/assets/logo-footer.png" width="160" height="71" alt="Habit" style="display:block; width:160px; height:71px; border:0; margin:0 auto;"></a>
+            </td>
+          </tr>
+          <!-- /MODULE:E13 -->
+          <!-- MODULE:E14 Legal Footer + D3 (address and unsubscribe, client copy [Address] [Unsubscribe]) -->
+          <tr>
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:0 40px 48px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 32px auto;">
+                <tr>
+                  <td class="nav-td" style="padding:0 14px;"><a href="{{MENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">MEN&rsquo;S</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{WOMENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">WOMEN&rsquo;S</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{YOUTH_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">YOUTH</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{SALE_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">SALE</a></td>
+                </tr>
+              </table>
+              <p style="margin:0 0 32px 0; font-size:14px; line-height:22px; color:#E2DDD9;">Follow us on Instagram<br><a href="{{INSTAGRAM_URL}}" target="_blank" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:24px; font-weight:800; letter-spacing:1.5px; color:#FFFFFF; text-decoration:none;">@HABITOUTDOORS</a></p>
+              <p style="margin:0 0 8px 0; font-size:12px; line-height:18px; color:#E2DDD9;">&copy; 2026, Habit Outdoors. Built By Wilde Creative.</p>
+              <p style="margin:0 0 8px 0; font-size:12px; line-height:18px; color:#E2DDD9;">[[CONFIRMAR: endere&ccedil;o f&iacute;sico da Habit]]</p>
+              <p style="margin:0; font-size:12px; line-height:18px;"><a href="{{UNSUBSCRIBE_URL}}" target="_blank" style="color:#FFFFFF; text-decoration:underline;">Unsubscribe</a></p>
+            </td>
+          </tr>
+          <!-- /MODULE:E14 -->
+
+        </table>
+        <!--[if mso]></td></tr></table><![endif]-->
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

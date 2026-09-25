@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<!--
+  Habit Outdoors · October 2026 Broadcasts · 01 Cedar Branch Bibs (send Oct 6) · Designer A · built 2026-09-25
+  Subject: Gear Up with Cedar Branch
+  Preheader: Waterproof, insulated, and built for what the season brings.
+  Modules: E24 Full-Bleed Photo Hero (logo on photo) with ref C label-box headline (live text on light paper td over the photo, assets/o1-tex-label.jpg) / E25 Textured Band on tex-grain-brown with ref C bleeding product rows + framed box (#FEF4C6) / E18 textured edge brown-papertapshoe / E25 on tex-paper-tapshoe with D2 detail crops (parka chest pocket, bib front zipper, leg zipper cut-out) + ref C framed review boxes (live quotes, orange stars) / E18 textured edge papertapshoe-ivy / E25 on tex-grain-ivy as ref C split band between two #FEF4C6 rules / E18 textured edge ivy-footer / E13 Closing Band / E14 Legal Footer + D3 address and unsubscribe
+  Button: #FF6400 / #2A2B2D
+  Kit: v0.2.1 approved (E13, E14, E18) + v0.4 DRAFT (E24, E25, textures, textured E18) + new structures from this batch (label box, bleeding product row + framed box, review box, split band), all pending approval. Review draft, not for send.
+  Bands: preheader, hero, products (structure), reviews (angle shift), split band (last call), footer = 6.
+  Source: brief.md section E1 (deviations X1, X2, X3, X6; decisions D1, D2, D3) + copy-source.md Email 1. Build notes: notes-A.md.
+  Links: {{CTA_URL}} (one destination: Cedar Branch / hunting collection, [[CONFIRMAR]] in the brief), product URLs and prices from products.json (store, 2026-09-25): re-check on the send date. Footer placeholders wired in Omnisend.
+  Assets: assets/o1-* (compose_A.py); textures, edges and logos from the kit.
+-->
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>Gear Up with Cedar Branch</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <style>body, table, td, p, a, h1, h2, h3, span { font-family: Arial, sans-serif !important; }</style>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;800&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    body { margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #EFECE9; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+    a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+    u + #body a { color: inherit; text-decoration: none; }
+
+    @media screen and (max-width: 620px) {
+      .container { width: 100% !important; }
+      .px { padding-left: 24px !important; padding-right: 24px !important; }
+      .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
+      .btn-full { width: 100% !important; }
+      .btn-full a { display: block !important; padding-left: 16px !important; padding-right: 16px !important; }
+      .nav-td { padding: 0 7px !important; }
+      .nav-a { font-size: 12px !important; letter-spacing: 1.5px !important; }
+      .r2-tex { background-size: 100% auto !important; }
+      /* E24 hero */
+      .e24-logo { padding: 24px 24px 0 24px !important; }
+      .e24-text { padding: 0 24px 0 24px !important; }
+      .e24-sub { font-size: 13px !important; line-height: 20px !important; letter-spacing: 1.5px !important; }
+      .e24-lead { font-size: 26px !important; line-height: 30px !important; }
+      .e24-key { font-size: 44px !important; line-height: 48px !important; }
+      /* ref C label boxes */
+      .lb-top { padding-top: 36px !important; }
+      .lb { padding: 6px 16px 4px 18px !important; font-size: 24px !important; line-height: 30px !important; }
+      .lb-key { padding: 4px 16px 0 18px !important; font-size: 44px !important; line-height: 52px !important; }
+      .o1-space { height: 250px !important; }
+      /* rows: stack, image first */
+      .stack { display: block !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
+      .row-txt { padding: 0 24px 0 24px !important; }
+      .bleed-l { width: 80% !important; max-width: 80% !important; height: auto !important; margin: 0 auto 0 0 !important; }
+      .bleed-r { width: 80% !important; max-width: 80% !important; height: auto !important; margin: 0 0 0 auto !important; }
+      .detail { width: 82% !important; max-width: 82% !important; height: auto !important; margin: 0 auto !important; }
+      .row-gap { padding-bottom: 40px !important; }
+      .band-pad { padding-top: 56px !important; padding-bottom: 56px !important; }
+      .split { padding: 32px 0 0 0 !important; }
+      .split-btn { padding: 28px 0 32px 0 !important; }
+      .split-btn table { float: none !important; }
+    }
+
+    /* Dark mode: every band of this email is a fixed dark texture (brown, Tap Shoe, Ivy) and the label boxes
+       are a fixed light paper over the photo, so nothing swaps. Only the page around the column follows the kit. */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .dm-page { background-color: #1E1F21 !important; }
+    }
+    :root[data-theme="dark"] .dm-page { background-color: #1E1F21 !important; }
+    [data-ogsb] .dm-page { background-color: #1E1F21 !important; }
+  </style>
+</head>
+<body id="body" class="dm-page" style="margin:0; padding:0; background-color:#EFECE9;">
+
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#EFECE9;">
+    Waterproof, insulated, and built for what the season brings.
+    &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="dm-page" style="background-color:#EFECE9;">
+    <tr>
+      <td align="center" style="padding:32px 0 64px 0;">
+        <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+        <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px;">
+
+          <!-- MODULE:E24 Full-Bleed Photo Hero + ref C label boxes · o1-hero.jpg: three hunters walking up the field at sunrise (orig-hunt22), sky pulled toward Tap Shoe for the logo, grass melts into Tap Shoe paper, tears into Major Brown grain -->
+          <tr>
+            <td align="center" valign="top" background="assets/o1-hero.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:0; background-color:#2A2B2D; background-image:url('assets/o1-hero.jpg'); background-size:cover; background-position:center bottom; background-repeat:no-repeat; vertical-align:top;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:700px;"><v:fill type="frame" src="assets/o1-hero.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" class="e24-logo" style="padding:32px 40px 0 40px;">
+                    <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="../../../01-brand/email-kit/assets/logo-dark.png" width="160" height="26" alt="Habit" style="display:block; width:160px; height:26px; border:0; margin:0 auto;"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right" class="lb-top" style="padding:44px 0 0 0;">
+                    <div role="heading" aria-level="1">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="right">
+                        <tr>
+                          <td align="right" style="padding:0 0 6px 0;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="right"><tr>
+                              <td class="lb" background="assets/o1-tex-label.jpg" bgcolor="#E2DDD9" style="padding:8px 24px 6px 26px; background-color:#E2DDD9; background-image:url('assets/o1-tex-label.jpg'); background-size:360px auto; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:34px; line-height:42px; font-weight:800; letter-spacing:1px; color:#2A2B2D; white-space:nowrap;">READY WHEN THE</td>
+                            </tr></table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="right" style="padding:0 0 6px 0;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="right"><tr>
+                              <td class="lb-key" background="assets/o1-tex-label.jpg" bgcolor="#E2DDD9" style="padding:6px 24px 0 26px; background-color:#E2DDD9; background-image:url('assets/o1-tex-label.jpg'); background-size:360px auto; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:68px; line-height:80px; font-weight:900; color:#2A2B2D; white-space:nowrap;">WEATHER</td>
+                            </tr></table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="right" style="padding:0;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="right"><tr>
+                              <td class="lb" background="assets/o1-tex-label.jpg" bgcolor="#E2DDD9" style="padding:8px 24px 6px 26px; background-color:#E2DDD9; background-image:url('assets/o1-tex-label.jpg'); background-size:360px auto; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:34px; line-height:42px; font-weight:800; letter-spacing:1px; color:#2A2B2D; white-space:nowrap;">TURNS</td>
+                            </tr></table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+                <tr><td class="o1-space" height="244" style="height:244px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                <tr>
+                  <td align="center" class="e24-text" style="padding:0 40px 0 40px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
+                    <p class="e24-sub" style="margin:0 auto 22px auto; max-width:470px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">WATERPROOF, WINDPROOF, AND BREATHABLE INSULATION BUILT TO HANDLE WHATEVER THE SEASON THROWS AT&nbsp;YOU.</p>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
+                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
+                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP CEDAR BRANCH</a>
+                      </td></tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td height="64" style="height:64px; font-size:0; line-height:0;">&nbsp;</td></tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E24 -->
+
+          <!-- MODULE:E25 Textured Band · Major Brown grain (kit tex-grain-brown.jpg, fallback #483F39: white, #E2DDD9 body, orange only on the large serif) · ref C bleeding product rows + framed box -->
+          <tr>
+            <td align="center" class="r2-tex" background="../../../01-brand/email-kit/assets/tex-grain-brown.jpg" bgcolor="#483F39" style="mso-padding-alt:0px; padding:0; background-color:#483F39; background-image:url('../../../01-brand/email-kit/assets/tex-grain-brown.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="../../../01-brand/email-kit/assets/tex-grain-brown.jpg" color="#483F39" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" class="px" style="padding:40px 40px 16px 40px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
+                    <h2 style="margin:0 0 20px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                      <span class="e24-lead" style="display:block; font-size:34px; line-height:40px; letter-spacing:1px;">THE</span>
+                      <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:62px; line-height:68px; font-weight:900; color:#FF6400;">CEDAR BRANCH</span>
+                      <span class="e24-lead" style="display:block; font-size:34px; line-height:40px; letter-spacing:1px;">COLLECTION</span>
+                    </h2>
+                    <p class="e24-sub" style="margin:0 auto 20px auto; max-width:440px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">QUIET FABRIC WITH WEATHER&nbsp;PROTECTION.</p>
+                    <p style="margin:0 auto; max-width:460px; font-size:16px; line-height:26px; color:#E2DDD9;">Soft tricot fabric, Rain-Factor&reg; waterproofing, and full insulation make the Cedar Branch your go-to when temperatures drop and conditions get rough.</p>
+                  </td>
+                </tr>
+                <!-- row 1: bibs cut by the left email edge, box right -->
+                <tr>
+                  <td style="padding:0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="300" class="stack" valign="middle" style="width:300px; padding:0; font-size:0; line-height:0; vertical-align:middle;">
+                          <a href="https://www.habitoutdoors.com/products/ahabit-sup-sup-mens-insulated-bib?variant=49451798790426" target="_blank" style="text-decoration:none;"><img class="bleed-l" src="assets/o1-prod-bibs.jpg" width="300" height="360" alt="Habit Men&rsquo;s Cedar Branch Insulated Waterproof Bibs in Realtree APX" style="display:block; width:300px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;"></a>
+                        </td>
+                        <td width="300" class="stack row-txt" valign="middle" style="width:300px; padding:0 40px 0 8px; vertical-align:middle;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #FEF4C6; border-radius:12px; border-collapse:separate;">
+                            <tr>
+                              <td style="padding:28px 24px 28px 24px; font-family:Helvetica,Arial,sans-serif; text-align:left;">
+                                <p style="margin:0 0 6px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;"><a href="https://www.habitoutdoors.com/products/ahabit-sup-sup-mens-insulated-bib?variant=49451798790426" target="_blank" style="color:#FFFFFF; text-decoration:none;">MEN&rsquo;S CEDAR BRANCH</a></p>
+                                <p style="margin:0 0 14px 0; font-size:16px; line-height:22px; color:#E2DDD9;">Insulated Waterproof Bibs</p>
+                                <p style="margin:0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/ahabit-sup-sup-mens-insulated-bib?variant=49451798790426" target="_blank" style="color:#FFFFFF; text-decoration:underline; font-weight:700; letter-spacing:1px;">$89.99 USD</a></p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- row 2: box left, parka cut by the right email edge (dir=rtl: the image comes first when stacked) -->
+                <tr>
+                  <td style="padding:8px 0 40px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="rtl">
+                      <tr>
+                        <td width="300" class="stack" dir="ltr" valign="middle" style="width:300px; padding:0; font-size:0; line-height:0; vertical-align:middle;">
+                          <a href="https://www.habitoutdoors.com/products/habit-mens-cedar-branch-insulated-waterproof-parka?variant=49451818385690" target="_blank" style="text-decoration:none;"><img class="bleed-r" src="assets/o1-prod-parka.jpg" width="300" height="360" alt="Habit Men&rsquo;s Cedar Branch Insulated Waterproof Parka in Realtree APX" style="display:block; width:300px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;"></a>
+                        </td>
+                        <td width="300" class="stack row-txt" dir="ltr" valign="middle" style="width:300px; padding:0 8px 0 40px; vertical-align:middle;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #FEF4C6; border-radius:12px; border-collapse:separate;">
+                            <tr>
+                              <td style="padding:28px 24px 28px 24px; font-family:Helvetica,Arial,sans-serif; text-align:left;">
+                                <p style="margin:0 0 6px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;"><a href="https://www.habitoutdoors.com/products/habit-mens-cedar-branch-insulated-waterproof-parka?variant=49451818385690" target="_blank" style="color:#FFFFFF; text-decoration:none;">MEN&rsquo;S CEDAR BRANCH</a></p>
+                                <p style="margin:0 0 14px 0; font-size:16px; line-height:22px; color:#E2DDD9;">Insulated Waterproof Parka</p>
+                                <p style="margin:0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/habit-mens-cedar-branch-insulated-waterproof-parka?variant=49451818385690" target="_blank" style="color:#FFFFFF; text-decoration:underline; font-weight:700; letter-spacing:1px;">$99.99 USD</a></p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E25 -->
+
+          <!-- MODULE:E18 Torn Edge (textured) · Major Brown grain -> Tap Shoe paper (kit) -->
+          <tr>
+            <td bgcolor="#483F39" style="padding:0; background-color:#483F39; font-size:0; line-height:0;">
+              <img class="fluid" src="../../../01-brand/email-kit/assets/edge-tex-brown-papertapshoe.jpg" width="600" height="40" alt="" style="display:block; width:600px; max-width:100%; height:auto; border:0;">
+            </td>
+          </tr>
+          <!-- /MODULE:E18 -->
+
+          <!-- MODULE:E25 Textured Band · Tap Shoe paper (kit tex-paper-tapshoe.jpg, fallback #2A2B2D: white, #E2DDD9 body, orange 24px+) · D2 detail crops (parka chest pocket, bib front zipper, leg zipper cut-out) + ref C framed review boxes (D1: live text) -->
+          <tr>
+            <td align="center" class="r2-tex" background="../../../01-brand/email-kit/assets/tex-paper-tapshoe.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:0; background-color:#2A2B2D; background-image:url('../../../01-brand/email-kit/assets/tex-paper-tapshoe.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="../../../01-brand/email-kit/assets/tex-paper-tapshoe.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <!-- review 1: detail left -->
+                <tr>
+                  <td class="row-gap" style="padding:56px 0 24px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="290" class="stack" valign="middle" style="width:290px; padding:0 0 0 10px; font-size:0; line-height:0; vertical-align:middle;">
+                          <img class="detail" src="assets/o1-detail-pocket.jpg" width="280" height="261" alt="Close-up of a hand in the zippered chest pocket of the Cedar Branch Parka in Realtree APX, orange Habit logo embroidered above" style="display:block; width:280px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;">
+                        </td>
+                        <td width="310" class="stack row-txt" valign="middle" style="width:310px; padding:0 40px 0 8px; vertical-align:middle;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #FEF4C6; border-radius:12px; border-collapse:separate;">
+                            <tr>
+                              <td style="padding:20px 24px 26px 24px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
+                                <p aria-hidden="true" style="margin:0; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:72px; line-height:56px; font-weight:900; color:#FF6400;">&ldquo;</p>
+                                <p role="img" aria-label="5 out of 5 stars" style="margin:0 0 12px 0; font-size:24px; line-height:28px; letter-spacing:3px; color:#FF6400;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                                <blockquote style="margin:0; padding:0; border:0;"><p style="margin:0 0 14px 0; font-size:16px; line-height:25px; color:#E2DDD9;">Jacket and bibs were superb. Weather was 19 degrees with real feel of 11 due to wind and storm front coming in. I was super warm and comfy. I like how quiet everything is when walking&nbsp;in.</p></blockquote>
+                                <p style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:20px; font-weight:800; letter-spacing:1px; color:#FFFFFF;">Matthew B.</p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- review 2: detail right (dir=rtl) -->
+                <tr>
+                  <td class="row-gap" style="padding:0 0 24px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="rtl">
+                      <tr>
+                        <td width="290" class="stack" dir="ltr" valign="middle" style="width:290px; padding:0 10px 0 0; font-size:0; line-height:0; vertical-align:middle;">
+                          <img class="detail" src="assets/o1-detail-zipper.jpg" width="280" height="261" alt="Close-up of a hand pulling the 2-way front zipper on the brown chest of the Cedar Branch Bibs, orange Habit logo on the chest" style="display:block; width:280px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;">
+                        </td>
+                        <td width="310" class="stack row-txt" dir="ltr" valign="middle" style="width:310px; padding:0 8px 0 40px; vertical-align:middle;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #FEF4C6; border-radius:12px; border-collapse:separate;">
+                            <tr>
+                              <td style="padding:20px 24px 26px 24px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
+                                <p aria-hidden="true" style="margin:0; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:72px; line-height:56px; font-weight:900; color:#FF6400;">&ldquo;</p>
+                                <p role="img" aria-label="5 out of 5 stars" style="margin:0 0 12px 0; font-size:24px; line-height:28px; letter-spacing:3px; color:#FF6400;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                                <blockquote style="margin:0; padding:0; border:0;"><p style="margin:0 0 14px 0; font-size:16px; line-height:25px; color:#E2DDD9;">These Habits are obviously insulated but also waterproof. They also have the silent tech. I have washed them about 5 times and they are still just as waterproof as day&nbsp;1.</p></blockquote>
+                                <p style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:20px; font-weight:800; letter-spacing:1px; color:#FFFFFF;">Ryan And L.</p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- review 3: detail left -->
+                <tr>
+                  <td class="row-gap" style="padding:0 0 40px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="290" class="stack" valign="middle" style="width:290px; padding:0 0 0 10px; font-size:0; line-height:0; vertical-align:middle;">
+                          <img class="detail" src="assets/o1-detail-legzip.jpg" width="280" height="261" alt="Close-up of a hand opening the zippered leg of the Cedar Branch Bibs in Realtree Edge over a rubber boot" style="display:block; width:280px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;">
+                        </td>
+                        <td width="310" class="stack row-txt" valign="middle" style="width:310px; padding:0 40px 0 8px; vertical-align:middle;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #FEF4C6; border-radius:12px; border-collapse:separate;">
+                            <tr>
+                              <td style="padding:20px 24px 26px 24px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
+                                <p aria-hidden="true" style="margin:0; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:72px; line-height:56px; font-weight:900; color:#FF6400;">&ldquo;</p>
+                                <p role="img" aria-label="5 out of 5 stars" style="margin:0 0 12px 0; font-size:24px; line-height:28px; letter-spacing:3px; color:#FF6400;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                                <blockquote style="margin:0; padding:0; border:0;"><p style="margin:0 0 14px 0; font-size:16px; line-height:25px; color:#E2DDD9;">Awesome bibs! Keeps me warm in the stand and the occasional wear to work on them cold days! 10/10 would and will purchase&nbsp;again!</p></blockquote>
+                                <p style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:20px; font-weight:800; letter-spacing:1px; color:#FFFFFF;">Andrew C.</p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="px" style="padding:0 40px 72px 40px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
+                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
+                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP NOW</a>
+                      </td></tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E25 -->
+
+          <!-- MODULE:E18 Torn Edge (textured) · Tap Shoe paper -> Ivy grain (assets/o1-edge-papertapshoe-ivy.jpg) -->
+          <tr>
+            <td bgcolor="#2A2B2D" style="padding:0; background-color:#2A2B2D; font-size:0; line-height:0;">
+              <img class="fluid" src="assets/o1-edge-papertapshoe-ivy.jpg" width="600" height="40" alt="" style="display:block; width:600px; max-width:100%; height:auto; border:0;">
+            </td>
+          </tr>
+          <!-- /MODULE:E18 -->
+
+          <!-- MODULE:E25 Textured Band · Ivy Green grain (kit tex-grain-ivy.jpg, fallback #595442: white only, no orange text) · ref C split band between two #FEF4C6 rules -->
+          <tr>
+            <td align="center" class="r2-tex" background="../../../01-brand/email-kit/assets/tex-grain-ivy.jpg" bgcolor="#595442" style="mso-padding-alt:0px; padding:0; background-color:#595442; background-image:url('../../../01-brand/email-kit/assets/tex-grain-ivy.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="../../../01-brand/email-kit/assets/tex-grain-ivy.jpg" color="#595442" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="px band-pad" style="padding:64px 40px 72px 40px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-top:1px solid #FEF4C6; border-bottom:1px solid #FEF4C6;">
+                      <tr>
+                        <td class="stack split" valign="middle" style="width:360px; padding:36px 16px 36px 0; vertical-align:middle; text-align:left; font-family:Helvetica,Arial,sans-serif;">
+                          <h2 style="margin:0 0 14px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:left;">
+                            <span class="e24-lead" style="display:block; font-size:26px; line-height:30px; letter-spacing:1px; white-space:nowrap;">LAYER UP FOR THE</span>
+                            <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:56px; line-height:60px; font-weight:900;">SEASON</span>
+                          </h2>
+                          <p style="margin:0; font-size:16px; line-height:25px; color:#FFFFFF;">Pair the bibs with the Cedar Branch Parka or Bomber for full coverage from stand to field. Waterproof, windproof, and warm enough for the worst mornings of the year.</p>
+                        </td>
+                        <td class="stack split-btn" valign="middle" align="right" style="padding:36px 0 36px 8px; vertical-align:middle;">
+                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="right" class="btn-full">
+                            <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
+                              <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 28px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px; white-space:nowrap;">SHOP HUNTING</a>
+                            </td></tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E25 -->
+
+          <!-- MODULE:E18 Torn Edge (textured) · Ivy grain -> flat Tap Shoe footer (kit) -->
+          <tr>
+            <td bgcolor="#595442" style="padding:0; background-color:#595442; font-size:0; line-height:0;">
+              <img class="fluid" src="../../../01-brand/email-kit/assets/edge-tex-ivy-footer.jpg" width="600" height="40" alt="" style="display:block; width:600px; max-width:100%; height:auto; border:0;">
+            </td>
+          </tr>
+          <!-- /MODULE:E18 -->
+
+          <!-- MODULE:E13 Closing Band -->
+          <tr>
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:56px 40px 32px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
+              <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="../../../01-brand/email-kit/assets/logo-footer.png" width="160" height="71" alt="Habit" style="display:block; width:160px; height:71px; border:0; margin:0 auto;"></a>
+            </td>
+          </tr>
+          <!-- /MODULE:E13 -->
+          <!-- MODULE:E14 Legal Footer + D3 (address + unsubscribe, client copy asks for them) -->
+          <tr>
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:0 40px 48px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 32px auto;">
+                <tr>
+                  <td class="nav-td" style="padding:0 14px;"><a href="{{MENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">MEN&rsquo;S</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{WOMENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">WOMEN&rsquo;S</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{YOUTH_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">YOUTH</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{SALE_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">SALE</a></td>
+                </tr>
+              </table>
+              <p style="margin:0 0 32px 0; font-size:14px; line-height:22px; color:#E2DDD9;">Follow us on Instagram<br><a href="{{INSTAGRAM_URL}}" target="_blank" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:24px; font-weight:800; letter-spacing:1.5px; color:#FFFFFF; text-decoration:none;">@HABITOUTDOORS</a></p>
+              <p style="margin:0 0 12px 0; font-size:12px; line-height:18px; color:#E2DDD9;">&copy; 2026, Habit Outdoors. Built By Wilde Creative.</p>
+              <p style="margin:0 0 12px 0; font-size:12px; line-height:18px; color:#E2DDD9;">[[CONFIRMAR: endere&ccedil;o f&iacute;sico da Habit]]</p>
+              <p style="margin:0; font-size:12px; line-height:18px;"><a href="{{UNSUBSCRIBE_URL}}" target="_blank" style="color:#FFFFFF; text-decoration:underline;">Unsubscribe</a></p>
+            </td>
+          </tr>
+          <!-- /MODULE:E14 -->
+
+        </table>
+        <!--[if mso]></td></tr></table><![endif]-->
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,1146 @@
+[
+ {
+  "email": "01",
+  "band": "grid",
+  "handle": "ahabit-sup-sup-mens-insulated-bib",
+  "variant_id": 49451798790426,
+  "url": "https://www.habitoutdoors.com/products/ahabit-sup-sup-mens-insulated-bib?variant=49451798790426",
+  "title": "Men's Cedar Branch Insulated Waterproof Bibs",
+  "product_type": "Hunting Clothing",
+  "variant_title": "Realtree APX / M",
+  "price": "89.99",
+  "compare_at_price": "89.99",
+  "available": null,
+  "image_src": "https://cdn.shopify.com/s/files/1/1483/3388/files/WB713_RT_APX_A.png?v=1722973154",
+  "image_file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib--49451798790426.png",
+  "all_images": [
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/01.png",
+    "src_name": "WB713_RTEdge_Cub.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs Realtree Edge front on form view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/02.png",
+    "src_name": "WB713RTEdgeCubFront_e149874e-2693-43e7-b3a5-610e4f6fab13.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs Realtree Edge front on model view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/03.png",
+    "src_name": "WB713RTEdgeCubBack_6d7bf878-1532-45fc-b2d2-fd69eae3dd71.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs Realtree Edge back on model view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/04.png",
+    "src_name": "WB713RTEdgeCubFabric.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs outside fabric with Scent-Factor, Rain-Factor Waterproof, Windproof, and Breathable logos",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/05.png",
+    "src_name": "WB713RTEdgeCubInside.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs inside fabric",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/06.png",
+    "src_name": "WB713RTEdgeCubPocket1.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs hand pocket",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/07.png",
+    "src_name": "WB713RTEdgeCubZipperLeg.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs leg zipper",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/08.png",
+    "src_name": "WB713RTEdgeCubZipper.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs 2-way front zipper",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/09.png",
+    "src_name": "WB713_RT_APX_A.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs Realtree APX front on form",
+    "for_this_variant": true
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/10.png",
+    "src_name": "WB713MOCoyoteTimberwolfFront_26477c82-bce6-45ae-a6d5-5be44f578f6a.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs Mossy Oak Terra Coyote front on model view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/11.png",
+    "src_name": "WB713MOCountryDNAFront_d190a90d-3cf2-4663-8ddc-8516a1ce8ea6.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs Mossy Oak DNA front on model view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/12.png",
+    "src_name": "WB713MOBOTTOMLANDTIMBERWOLFFRONT.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs Mossy Oak New Bottomland front on model view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/13.jpg",
+    "src_name": "WB713BlazeandBlackFront.jpg",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs Blaze Orange front on model view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/14.jpg",
+    "src_name": "WB713_RT_Snow_Cub_Front.jpg",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs Realtree Snow front on form view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/15.jpg",
+    "src_name": "WB713_RT_Xtra_Blaze_Black_Front.jpg",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs Realtre Blaze front on model view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/16.jpg",
+    "src_name": "WB713_Veild_Wideland_Wolf_A.jpg",
+    "alt": "Men's Cedar Branch Insulated Waterproof Bibs Veil Wideland Wolf front on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/ahabit-sup-sup-mens-insulated-bib/17.jpg",
+    "src_name": "MensSizeChart_8bc7e5da-1b5c-40e7-b028-b70972572016.jpg",
+    "alt": "Men's Size Chart",
+    "for_this_variant": false
+   }
+  ],
+  "options": [
+   "Color",
+   "Size"
+  ],
+  "body_text": "<p>Insulated waterproof, windproof, breathable outerwear with Scent-Factor and Rain-Factor Waterproof Technologies.</p>\n<ul>\n<li>Scent-Factor and Rain-Factor Waterproof Technology</li>\n<li>Soft and Quiet Tricot Fabric</li>\n<li>2-Way Front Zipper Opening</li>\n<li>Zipper Legs with Reinforced Kick Plate</li>\n<li>Two slash hand warmer pockets and two rear pockets</li>\n<li>Two pass through pockets allow access to pants pockets</li>\n<li><strong>Pairs with <a href=\"https://habitoutdoors.com/products/habit-mens-cedar-branch-insulated-waterproof-parka\" title=\"Men's Cedar Branch Insulated Waterproof Parka\" target=\"_blank\">Men's Cedar Branch Insulated Waterproof Parka</a></strong></li>\n</ul>\n<p>Specs</p>\n<ul>\n<li>Body: 100% Polyester with TPU Lamination</li>\n<li>Lining: 100% Polyester</li>\n<li>Insulation: 100% Polyester</li>\n<li>Machine wash cold with like colors, Only non-chlorine bleach when needed, Tumble dry low, Remove promptly, Cool iron if needed</li>\n<li data-mce-fragment=\"1\">\n<strong>WARNING:<span> </span></strong>This product can expose you to chemicals including Perfluorooctane sulfate (PFOS), which is known to the State of California to cause cancer and birth defects or other reproductive harm.  For more information go to:  ww.P65warnings.ca.gov</li>\n</ul>\n<p>Sizing and Fit</p>\n<ul>\n<li>Model is 6’1” and 215lbs.  He is wearing a size Large.</li>\n<li>Fits true size.  Here in the office we usually wear one size larger than we do in the guide shirts to allow for layering.</li>\n"
+ },
+ {
+  "email": "01",
+  "band": "grid",
+  "handle": "habit-mens-cedar-branch-insulated-waterproof-parka",
+  "variant_id": 49451818385690,
+  "url": "https://www.habitoutdoors.com/products/habit-mens-cedar-branch-insulated-waterproof-parka?variant=49451818385690",
+  "title": "Men's Cedar Branch Insulated Waterproof Parka",
+  "product_type": "Hunting Clothing",
+  "variant_title": "Realtree APX / M",
+  "price": "99.99",
+  "compare_at_price": "89.99",
+  "available": null,
+  "image_src": "https://cdn.shopify.com/s/files/1/1483/3388/files/WJ10010_RT_APX_A.png?v=1722973587",
+  "image_file": "clients/habit-outdoors/01-brand/photos/products/habit-mens-cedar-branch-insulated-waterproof-parka--49451818385690.png",
+  "all_images": [
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/habit-mens-cedar-branch-insulated-waterproof-parka/01.png",
+    "src_name": "WJ10010_RT_APX_A.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Parka Realtree APX front on Form",
+    "for_this_variant": true
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/habit-mens-cedar-branch-insulated-waterproof-parka/02.png",
+    "src_name": "WJ10010_T2_copy-space.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Parka Bullets",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/habit-mens-cedar-branch-insulated-waterproof-parka/03.png",
+    "src_name": "WJ10010_T1_front-callouts.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Parka Realtree APX Front callouts",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/habit-mens-cedar-branch-insulated-waterproof-parka/04.png",
+    "src_name": "WJ10010_RT_APX_B.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Parka Realtree APX back on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/habit-mens-cedar-branch-insulated-waterproof-parka/05.png",
+    "src_name": "WJ10010_T4_model-fit.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Parka Realtree APX on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/habit-mens-cedar-branch-insulated-waterproof-parka/06.png",
+    "src_name": "WJ10010_T3_chest-pocket-closeup.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Parka Realtree APX Chest Pocket",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/habit-mens-cedar-branch-insulated-waterproof-parka/07.png",
+    "src_name": "WJ10010MONEWBOTTOMLANDFRONT.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Parka New Bottomland front on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/habit-mens-cedar-branch-insulated-waterproof-parka/08.png",
+    "src_name": "WJ10010_Blaze_Front.png",
+    "alt": "Men's Cedar Branch Insulated Waterproof Parka Blaze front on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/habit-mens-cedar-branch-insulated-waterproof-parka/09.jpg",
+    "src_name": "menssizingchart_f82559d3-594f-43cb-b1b6-b615d99c4e73.jpg",
+    "alt": "Men's Size chart",
+    "for_this_variant": false
+   }
+  ],
+  "options": [
+   "Color",
+   "Size"
+  ],
+  "body_text": "<p>Insulated waterproof, windproof, breathable outerwear with Scent-Factor and Rain-Factor Waterproof Technologies.</p>\n<ul>\n<li>Scent-Factor and Rain-Factor Waterproof Technology</li>\n<li>Soft and Quiet Tricot Fabric</li>\n<li>Zippered Chest Pocket, two bellow storage pockets with snap closures, and perfectly placed hand warmer pockets</li>\n<li>Detachable High Standing Hood with Zipper Guard</li>\n<li>Adjustable Toggle Hem</li>\n<li>Snap Wrist Cuffs</li>\n<li><strong>﻿Pairs with <a href=\"https://habitoutdoors.com/collections/hunting-apparel/products/ahabit-sup-sup-mens-insulated-bib?variant=15972381917235\" title=\"Men's Cedar Branch Insulated Waterproof Bibs\" target=\"_blank\">Men's Cedar Branch Insulated Waterproof Bibs</a></strong></li>\n</ul>\n<p>Specs</p>\n<ul>\n<li>Body: 100% Polyester with TPU Lamination</li>\n<li>Lining: 100% Polyester</li>\n<li>Insulation: 100% Polyester</li>\n<li>Machine wash cold with like colors, Only non-chlorine bleach when needed, Tumble dry low, Remove promptly, Cool iron if needed</li>\n<li data-mce-fragment=\"1\">\n<strong>WARNING:<span> </span></strong>This product can expose you to chemicals including Perfluorooctane sulfate (PFOS), which is known to the State of California to cause cancer and birth defects or other reproductive harm.  For more information go to:  ww.P65warnings.ca.gov</li>\n</ul>\n<p>Sizing and Fit</p>\n<ul>\n<li>Model is 6’1” and 215lbs.  He is wearing a size Large.</li>\n<li>Fits true size. Here in the office we usually wear one size larger t"
+ },
+ {
+  "email": "02",
+  "band": "grid",
+  "handle": "youth-cedar-branch-insulated-bib",
+  "variant_id": 52632814518554,
+  "url": "https://www.habitoutdoors.com/products/youth-cedar-branch-insulated-bib?variant=52632814518554",
+  "title": "Youth Cedar Branch Insulated Bib",
+  "product_type": "bibs",
+  "variant_title": "Realtree APX / S",
+  "price": "79.99",
+  "compare_at_price": "",
+  "available": null,
+  "image_src": "https://cdn.shopify.com/s/files/1/1483/3388/files/WB10113_Front_RTAPX.png?v=1785866403",
+  "image_file": "clients/habit-outdoors/01-brand/photos/products/youth-cedar-branch-insulated-bib--52632814518554.png",
+  "all_images": [
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/youth-cedar-branch-insulated-bib/01.png",
+    "src_name": "WB10113_Front_RTAPX.png",
+    "alt": "Youth Cedar Branch Insulated Bib Realtree APX Front on form",
+    "for_this_variant": true
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/youth-cedar-branch-insulated-bib/02.png",
+    "src_name": "WB10113_Back_RTAPX.png",
+    "alt": "Youth Cedar Branch Insulated Bib Realtree APX back on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/youth-cedar-branch-insulated-bib/03.jpg",
+    "src_name": "youthsizingchart_58d8c84e-fece-4ef0-9250-1a72d1358022.jpg",
+    "alt": "Youth Size Chart",
+    "for_this_variant": false
+   }
+  ],
+  "options": [
+   "Color",
+   "Size"
+  ],
+  "body_text": "<p>Insulated waterproof, windproof, breathable outerwear with Scent-Factor and Rain-Factor Waterproof Technologies.</p>\n<ul>\n<li>Scent-Factor and Rain-Factor Waterproof Technology</li>\n<li>Windproof and Breathable</li>\n<li>Soft and Quiet Tricot Fabric</li>\n<li>2-Way Front Zipper Opening</li>\n<li>Zipper Legs with Reinforced Kick Plate<br>\n</li>\n<li>Two slash hand warmer pockets and two rear pockets</li>\n<li>Two covered pass through pockets allow access to pants pockets</li>\n<li><strong>Pairs with <a href=\"https://www.habitoutdoors.com/collections/youth/products/youth-cedar-branch-insulated-waterproof-bomber?variant=52632824578330\" target=\"_blank\" title=\"Women's Cedar Branch Insulated Waterproof Bib\" rel=\"noopener\">Youth Cedar Branch Insulated Waterproof Bomber</a><a href=\"https://www.habitoutdoors.com/collections/youth/products/youth-cedar-branch-insulated-bib?variant=52632814518554\" title=\"Women's Cedar Branch Insulated Waterproof Bib\" rel=\"noopener\" target=\"_blank\"></a></strong></li>\n</ul>\n<p>Specs</p>\n<ul>\n<li>Body: 100% Polyester with TPU Lamination</li>\n<li>Lining: 100% Polyester</li>\n<li>Insulation: 100% Polyester</li>\n<li>Machine wash cold with like colors, Only non-chlorine bleach when needed, Tumble dry low, Remove promptly, Cool iron if needed</li>\n</ul>"
+ },
+ {
+  "email": "02",
+  "band": "grid",
+  "handle": "habit-youth-summit-park-performance-hoodie",
+  "variant_id": 51341422592282,
+  "url": "https://www.habitoutdoors.com/products/habit-youth-summit-park-performance-hoodie?variant=51341422592282",
+  "title": "Youth Summit Park Performance Hoodie",
+  "product_type": "Shirts",
+  "variant_title": "Realtree APX / S",
+  "price": "29.99",
+  "compare_at_price": "29.99",
+  "available": null,
+  "image_src": "https://cdn.shopify.com/s/files/1/1483/3388/files/PH10009_RT_APX_Front.png?v=1773418236",
+  "image_file": "clients/habit-outdoors/01-brand/photos/products/habit-youth-summit-park-performance-hoodie--51341422592282.png",
+  "all_images": [
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/habit-youth-summit-park-performance-hoodie/01.png",
+    "src_name": "PH10009_RT_APX_Front.png",
+    "alt": "Youth Summit Park Performance Hoodie Realtree APX Front",
+    "for_this_variant": true
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/habit-youth-summit-park-performance-hoodie/02.png",
+    "src_name": "PH10009_RTEdge_Back.png",
+    "alt": "Youth Summit Park Performance Hoodie Realtree Edge Back",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/habit-youth-summit-park-performance-hoodie/03.png",
+    "src_name": "PH10009_RTEdge_Left.png",
+    "alt": "Youth Summit Park Performance Hoodie Realtree Edge Left",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/habit-youth-summit-park-performance-hoodie/04.png",
+    "src_name": "PH10009_Woodland_Vintage_Camo_Wren_Front.png",
+    "alt": "Youth Summit Park Performance Hoodie Woodland Vintage Camo Wren Front",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/habit-youth-summit-park-performance-hoodie/05.jpg",
+    "src_name": "youthsizingchart_cf51e823-e6ab-444c-a99f-3681682e6abf.jpg",
+    "alt": "Youth Size Chart",
+    "for_this_variant": false
+   }
+  ],
+  "options": [
+   "Color",
+   "Size"
+  ],
+  "body_text": "<p>Soft polyester fleece fabric can be worn as a layer in colder weather or outerwear on chilly mornings. </p>\n<ul>\n<li>Soft and Warm Polyester Fleece</li>\n<li>Large Front Kangaroo Pocket</li>\n</ul>\n<p>Specs</p>\n<ul>\n<li>100% Polyester</li>\n<li>Machine wash cold with like colors, Only non-chlorine bleach when needed, Tumble dry low, Remove promptly, Cool iron if needed</li>\n</ul>"
+ },
+ {
+  "email": "02",
+  "band": "grid",
+  "handle": "youth-bear-cave-6-pocket-camo-pant",
+  "variant_id": 39568503668787,
+  "url": "https://www.habitoutdoors.com/products/youth-bear-cave-6-pocket-camo-pant?variant=39568503668787",
+  "title": "Youth Bear Cave 6 Pocket Camo Pant",
+  "product_type": "Hunting Clothing",
+  "variant_title": "Realtree Edge / S",
+  "price": "29.99",
+  "compare_at_price": "29.99",
+  "available": null,
+  "image_src": "https://cdn.shopify.com/s/files/1/1483/3388/products/TP1113_RTEdge_Front.png?v=1634147173",
+  "image_file": "clients/habit-outdoors/01-brand/photos/products/youth-bear-cave-6-pocket-camo-pant--39568503668787.png",
+  "all_images": [
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/youth-bear-cave-6-pocket-camo-pant/01.png",
+    "src_name": "TP1113_RTEdge_Front.png",
+    "alt": "Youth Bear Cave 6 Pocket Camo Pant Realtree Edge Front",
+    "for_this_variant": true
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/youth-bear-cave-6-pocket-camo-pant/02.png",
+    "src_name": "TP1113_RTEdge_Back.png",
+    "alt": "Youth Bear Cave 6 Pocket Camo Pant Realtree Edge Back",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/youth-bear-cave-6-pocket-camo-pant/03.png",
+    "src_name": "TP1113_Front_RTAPX.png",
+    "alt": "Youth Bear Cave 6 Pocket Camo Pant Realtree APX Front",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/youth-bear-cave-6-pocket-camo-pant/04.png",
+    "src_name": "TP1113MONEWBOTTOMLANDFRONT.png",
+    "alt": "Youth Bear Cave 6 Pocket Camo Pant Mossy Oak New Bottomland Front",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/youth-bear-cave-6-pocket-camo-pant/05.jpg",
+    "src_name": "youthsizingchart_d8e89870-705a-4649-96c6-3df638b8c5e3.jpg",
+    "alt": "Youth Size Chart",
+    "for_this_variant": false
+   }
+  ],
+  "options": [
+   "Color",
+   "Size"
+  ],
+  "body_text": "<p data-mce-fragment=\"1\">Lightweight 100% Cotton Twill Fabric with elastic waist band, comfortable loose fit construction, and cargo pockets with large button closures. </p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">Soft 100% Cotton Twill Fabric</li>\n<li data-mce-fragment=\"1\">Comfortable Loose Fit Construction</li>\n<li data-mce-fragment=\"1\">Side Elastic at Waist</li>\n<li data-mce-fragment=\"1\">Large Button Cargo Pockets</li>\n<li data-mce-fragment=\"1\"><strong data-mce-fragment=\"1\">Pairs with <a href=\"https://habitoutdoors.com/products/youth-bear-cave-long-sleeve-camo-tee\" title=\"Youth Bear Cave Long Sleeve Camo Tee\" target=\"_blank\" rel=\"noopener noreferrer\"><span data-mce-fragment=\"1\">Youth Bear Cave Long Sleeve Tee</span></a></strong></li>\n</ul>\n<p data-mce-fragment=\"1\">Specs</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">100% Cotton</li>\n<li>Machine wash cold with like colors, Only non-chlorine bleach when needed, Tumble dry low, Remove promptly, Cool iron if needed</li>\n</ul>"
+ },
+ {
+  "email": "03",
+  "band": "colors",
+  "handle": "mens-heavy-weight-full-zip-hoodie",
+  "variant_id": 45636943249690,
+  "url": "https://www.habitoutdoors.com/products/mens-heavy-weight-full-zip-hoodie?variant=45636943249690",
+  "title": "Men's Heavy Weight Full Zip Hoodie",
+  "product_type": "Outdoor Apparel",
+  "variant_title": "Major Brown / M",
+  "price": "44.99",
+  "compare_at_price": "44.99",
+  "available": null,
+  "image_src": "https://cdn.shopify.com/s/files/1/1483/3388/files/PH10131_MAJOR_BROWN_A.png?v=1689361444",
+  "image_file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie--45636943249690.png",
+  "all_images": [
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/01.png",
+    "src_name": "PH10131_MAJOR_BROWN_A.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown front on form",
+    "for_this_variant": true
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/02.png",
+    "src_name": "PH10131_MAJOR_BROWN_B.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown back on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/03.png",
+    "src_name": "PH10131_MAJOR_BROWN_C.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown Front on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/04.png",
+    "src_name": "PH10131_MAJOR_BROWN_D.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown back on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/05.png",
+    "src_name": "PH10131_MAJOR_BROWN_E.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown back hood up on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/06.png",
+    "src_name": "PH10131_MAJOR_BROWN_F.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown Hand pockets",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/07.png",
+    "src_name": "PH10131_MAJOR_BROWN_H.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown drawstring",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/08.png",
+    "src_name": "PH10131_MAJOR_BROWN_G.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown side",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/09.png",
+    "src_name": "PH10131_GUNMETAL_A.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Gunmetal front on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/10.png",
+    "src_name": "PH10131_LODEN_GREEN_A.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown Loden Green Front on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/11.jpg",
+    "src_name": "menssizingchart_38c2bc44-e40e-441a-968f-ae21926ba935.jpg",
+    "alt": "Men's Size Chart",
+    "for_this_variant": false
+   }
+  ],
+  "options": [
+   "Color",
+   "Size"
+  ],
+  "body_text": "<p data-mce-fragment=\"1\">Cotton, polyester, and spandex blend offers superior softness and warmth. The drawcord hood opening and hand pockets provide added convenience, while the banded hem construction eliminates unnecessary bulk. Full zip construction for easy on and off.</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">Soft and Warm Cotton/Polyester/Spandex Fabric</li>\n<li data-mce-fragment=\"1\">Full Zip Construction</li>\n<li data-mce-fragment=\"1\">Drawcord Hood Opening</li>\n<li data-mce-fragment=\"1\">Banded Hem Construction</li>\n<li data-mce-fragment=\"1\">Front Handwarmer pockets</li>\n</ul>\n<p data-mce-fragment=\"1\">Specs</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">50% Cotton, 48% Polyester, 2% Spandex</li>\n<li data-mce-fragment=\"1\">Machine wash cold with like colors, Only non-chlorine bleach when needed, Tumble dry low, Remove promptly, Cool iron if needed</li>\n</ul>\n<p data-mce-fragment=\"1\">Fit</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">The model is 6’1” 225lbs he is wearing a size large.</li>\n<li data-mce-fragment=\"1\">Fits true to size.</li>\n</ul>"
+ },
+ {
+  "email": "03",
+  "band": "colors",
+  "handle": "mens-heavy-weight-full-zip-hoodie",
+  "resolved_by_color": "Gunmetal",
+  "variant_id": 45636943446298,
+  "url": "https://www.habitoutdoors.com/products/mens-heavy-weight-full-zip-hoodie?variant=45636943446298",
+  "title": "Men's Heavy Weight Full Zip Hoodie",
+  "product_type": "Outdoor Apparel",
+  "variant_title": "Gunmetal / M",
+  "price": "44.99",
+  "compare_at_price": "44.99",
+  "available": null,
+  "image_src": "https://cdn.shopify.com/s/files/1/1483/3388/files/PH10131_GUNMETAL_A.png?v=1689361444",
+  "image_file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie--45636943446298.png",
+  "all_images": [
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/01.png",
+    "src_name": "PH10131_MAJOR_BROWN_A.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown front on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/02.png",
+    "src_name": "PH10131_MAJOR_BROWN_B.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown back on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/03.png",
+    "src_name": "PH10131_MAJOR_BROWN_C.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown Front on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/04.png",
+    "src_name": "PH10131_MAJOR_BROWN_D.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown back on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/05.png",
+    "src_name": "PH10131_MAJOR_BROWN_E.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown back hood up on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/06.png",
+    "src_name": "PH10131_MAJOR_BROWN_F.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown Hand pockets",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/07.png",
+    "src_name": "PH10131_MAJOR_BROWN_H.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown drawstring",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/08.png",
+    "src_name": "PH10131_MAJOR_BROWN_G.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown side",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/09.png",
+    "src_name": "PH10131_GUNMETAL_A.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Gunmetal front on form",
+    "for_this_variant": true
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/10.png",
+    "src_name": "PH10131_LODEN_GREEN_A.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown Loden Green Front on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/11.jpg",
+    "src_name": "menssizingchart_38c2bc44-e40e-441a-968f-ae21926ba935.jpg",
+    "alt": "Men's Size Chart",
+    "for_this_variant": false
+   }
+  ],
+  "options": [
+   "Color",
+   "Size"
+  ],
+  "body_text": "<p data-mce-fragment=\"1\">Cotton, polyester, and spandex blend offers superior softness and warmth. The drawcord hood opening and hand pockets provide added convenience, while the banded hem construction eliminates unnecessary bulk. Full zip construction for easy on and off.</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">Soft and Warm Cotton/Polyester/Spandex Fabric</li>\n<li data-mce-fragment=\"1\">Full Zip Construction</li>\n<li data-mce-fragment=\"1\">Drawcord Hood Opening</li>\n<li data-mce-fragment=\"1\">Banded Hem Construction</li>\n<li data-mce-fragment=\"1\">Front Handwarmer pockets</li>\n</ul>\n<p data-mce-fragment=\"1\">Specs</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">50% Cotton, 48% Polyester, 2% Spandex</li>\n<li data-mce-fragment=\"1\">Machine wash cold with like colors, Only non-chlorine bleach when needed, Tumble dry low, Remove promptly, Cool iron if needed</li>\n</ul>\n<p data-mce-fragment=\"1\">Fit</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">The model is 6’1” 225lbs he is wearing a size large.</li>\n<li data-mce-fragment=\"1\">Fits true to size.</li>\n</ul>"
+ },
+ {
+  "email": "03",
+  "band": "colors",
+  "handle": "mens-heavy-weight-full-zip-hoodie",
+  "resolved_by_color": "Loden Green",
+  "variant_id": 45636943642906,
+  "url": "https://www.habitoutdoors.com/products/mens-heavy-weight-full-zip-hoodie?variant=45636943642906",
+  "title": "Men's Heavy Weight Full Zip Hoodie",
+  "product_type": "Outdoor Apparel",
+  "variant_title": "Loden Green / M",
+  "price": "44.99",
+  "compare_at_price": "44.99",
+  "available": null,
+  "image_src": "https://cdn.shopify.com/s/files/1/1483/3388/files/PH10131_LODEN_GREEN_A.png?v=1689361454",
+  "image_file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie--45636943642906.png",
+  "all_images": [
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/01.png",
+    "src_name": "PH10131_MAJOR_BROWN_A.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown front on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/02.png",
+    "src_name": "PH10131_MAJOR_BROWN_B.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown back on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/03.png",
+    "src_name": "PH10131_MAJOR_BROWN_C.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown Front on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/04.png",
+    "src_name": "PH10131_MAJOR_BROWN_D.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown back on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/05.png",
+    "src_name": "PH10131_MAJOR_BROWN_E.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown back hood up on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/06.png",
+    "src_name": "PH10131_MAJOR_BROWN_F.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown Hand pockets",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/07.png",
+    "src_name": "PH10131_MAJOR_BROWN_H.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown drawstring",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/08.png",
+    "src_name": "PH10131_MAJOR_BROWN_G.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown side",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/09.png",
+    "src_name": "PH10131_GUNMETAL_A.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Gunmetal front on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/10.png",
+    "src_name": "PH10131_LODEN_GREEN_A.png",
+    "alt": "Men's Heavy Weight Full Zip Hoodie Major Brown Loden Green Front on form",
+    "for_this_variant": true
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-heavy-weight-full-zip-hoodie/11.jpg",
+    "src_name": "menssizingchart_38c2bc44-e40e-441a-968f-ae21926ba935.jpg",
+    "alt": "Men's Size Chart",
+    "for_this_variant": false
+   }
+  ],
+  "options": [
+   "Color",
+   "Size"
+  ],
+  "body_text": "<p data-mce-fragment=\"1\">Cotton, polyester, and spandex blend offers superior softness and warmth. The drawcord hood opening and hand pockets provide added convenience, while the banded hem construction eliminates unnecessary bulk. Full zip construction for easy on and off.</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">Soft and Warm Cotton/Polyester/Spandex Fabric</li>\n<li data-mce-fragment=\"1\">Full Zip Construction</li>\n<li data-mce-fragment=\"1\">Drawcord Hood Opening</li>\n<li data-mce-fragment=\"1\">Banded Hem Construction</li>\n<li data-mce-fragment=\"1\">Front Handwarmer pockets</li>\n</ul>\n<p data-mce-fragment=\"1\">Specs</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">50% Cotton, 48% Polyester, 2% Spandex</li>\n<li data-mce-fragment=\"1\">Machine wash cold with like colors, Only non-chlorine bleach when needed, Tumble dry low, Remove promptly, Cool iron if needed</li>\n</ul>\n<p data-mce-fragment=\"1\">Fit</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">The model is 6’1” 225lbs he is wearing a size large.</li>\n<li data-mce-fragment=\"1\">Fits true to size.</li>\n</ul>"
+ },
+ {
+  "email": "04",
+  "band": "rows",
+  "handle": "mens-crater-valley-performance-hoodie",
+  "variant_id": 52423312867610,
+  "url": "https://www.habitoutdoors.com/products/mens-crater-valley-performance-hoodie?variant=52423312867610",
+  "title": "Men's Crater Valley Performance Hoodie",
+  "product_type": "Hoodie",
+  "variant_title": "Woodland Ghost Khaki / M",
+  "price": "29.99",
+  "compare_at_price": "29.99",
+  "available": null,
+  "image_src": "https://cdn.shopify.com/s/files/1/1483/3388/files/PH10300woodlandghostkhakiFORMfront.png?v=1783021080",
+  "image_file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-performance-hoodie--52423312867610.png",
+  "all_images": [
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-performance-hoodie/01.png",
+    "src_name": "PH10300woodlandvintagecamowrenminiFORMfront.png",
+    "alt": "Crater Valley Performance Hoodie Woodland Vintage Wren",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-performance-hoodie/02.png",
+    "src_name": "PH10300woodlandghostkhakiFORMfront.png",
+    "alt": "Crater Valley Performance Hoodie Ghost Khaki",
+    "for_this_variant": true
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-performance-hoodie/03.png",
+    "src_name": "PH10300Front1-WoodlandGhostKhaki.png",
+    "alt": "Crater Valley Performance Hoodie features",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-performance-hoodie/04.png",
+    "src_name": "PH10300woodlandghostkhakiFORMback.png",
+    "alt": "Crater Valley Performance Hoodie back on from",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-performance-hoodie/05.png",
+    "src_name": "PH10300Model-WoodlandGhost.png",
+    "alt": "Crater Valley Performance Hoodie on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-performance-hoodie/06.png",
+    "src_name": "PH10300woodlandghostkhakiMODELback.png",
+    "alt": "Crater Valley Performance Hoodie on model back",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-performance-hoodie/07.png",
+    "src_name": "PH10300woodlandghostkhakiMODELside.png",
+    "alt": "Crater Valley Performance Hoodie on model side",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-performance-hoodie/08.png",
+    "src_name": "PH10300woodlandghostkhakiMODELhood.png",
+    "alt": "Crater Valley Performance Hoodie hood",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-performance-hoodie/09.png",
+    "src_name": "PH10300woodlandhelixmajorbrownminiFORMfront.png",
+    "alt": "Crater Valley Performance Hoodie Woodland Helix Major Brown",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-performance-hoodie/10.png",
+    "src_name": "PH10300fallenrockFORMfront.png",
+    "alt": "Crater Valley Performance Hoodie Fallen Rock",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-performance-hoodie/11.png",
+    "src_name": "PH10300ivygreenFORMfront.png",
+    "alt": "Crater Valley Performance Hoodie Ivy Green",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-performance-hoodie/12.jpg",
+    "src_name": "menssizingchart_8b283cce-5810-489a-a7d9-beb2176f81ef.jpg",
+    "alt": "Men's Size Chart",
+    "for_this_variant": false
+   }
+  ],
+  "options": [
+   "Color",
+   "Size"
+  ],
+  "body_text": "<p>The Crater Valley Everyday Soft Performance Hoodie delivers lightweight comfort for everything from early morning hikes to evenings around the campfire. Built with our TrailSoft Performance Blend featuring rayon made from bamboo, it combines moisture-wicking performance, anti-odor technology, and an ultra-soft feel you'll reach for every day.</p>\n<ul>\n<li>Scent-Factor Anti-Odor Technology</li>\n<li>TrailSoft Performance Blend with Rayon Made from Bamboo</li>\n<li>Moisture Wicking Technology</li>\n<li>Raglan Sleeves for Easy Movement</li>\n<li>Hooded for Added Coverage<br>\n</li>\n</ul>\n<p>Specs</p>\n<ul>\n<li>58% Polyester, 36% Rayon Made from Bamboo, 6% Spandex</li>\n<li>Machine wash cold with like colors, Only non-chlorine bleach when needed, Tumble dry low, Remove promptly, Cool iron if needed</li>\n</ul>\n<p>Fit</p>\n<ul>\n<li>Regular fit for all-day comfort. Wear it on its own in mild weather or layer it when temperatures drop.</li>\n</ul>"
+ },
+ {
+  "email": "04",
+  "band": "rows",
+  "handle": "mens-crater-valley-full-zip-fleece-jacket",
+  "variant_id": 52630367076634,
+  "url": "https://www.habitoutdoors.com/products/mens-crater-valley-full-zip-fleece-jacket?variant=52630367076634",
+  "title": "Men's Crater Valley Full Zip Fleece Jacket",
+  "product_type": "Coats & Jackets",
+  "variant_title": "Woodland Deadwood Khaki / M",
+  "price": "49.99",
+  "compare_at_price": "",
+  "available": null,
+  "image_src": "https://cdn.shopify.com/s/files/1/1483/3388/files/FJ10166WoodlandDeadwoodKhakiFORMfront.png?v=1787001414",
+  "image_file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-full-zip-fleece-jacket--52630367076634.png",
+  "all_images": [
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-full-zip-fleece-jacket/01.png",
+    "src_name": "FJ10166WoodlandDeadwoodKhakiFORMfront.png",
+    "alt": "Men's Crater Valley Full Zip Fleece Jacket  Woodland Deadwood Khaki front on form",
+    "for_this_variant": true
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-full-zip-fleece-jacket/02.png",
+    "src_name": "FJ10166_DeadwoodKhaki_T2_copyspace.png",
+    "alt": "Men's Crater Valley Full Zip Fleece Jacket Key Features",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-full-zip-fleece-jacket/03.png",
+    "src_name": "FJ10166WoodlandDeadwoodKhakiFORMback.png",
+    "alt": "Men's Crater Valley Full Zip Fleece Jacket  Woodland Deadwood Khaki back on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-full-zip-fleece-jacket/04.png",
+    "src_name": "FJ10166_DeadwoodKhaki_T4_model.png",
+    "alt": "Men's Crater Valley Full Zip Fleece Jacket on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-full-zip-fleece-jacket/05.png",
+    "src_name": "FJ10166WoodlandDeadwoodKhakiMODELangle.png",
+    "alt": "Men's Crater Valley Full Zip Fleece Jacket on model side",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-full-zip-fleece-jacket/06.png",
+    "src_name": "FJ10166WoodlandDeadwoodKhakiMODELpockets.png",
+    "alt": "Men's Crater Valley Full Zip Fleece Jacket hand pockets",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-full-zip-fleece-jacket/07.png",
+    "src_name": "FJ10166WoodlandVintageCamoFORMfront.png",
+    "alt": "Men's Crater Valley Full Zip Fleece Jacket  Woodland Vintage Camo Wren",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-full-zip-fleece-jacket/08.jpg",
+    "src_name": "menssizingchart_4773764c-a200-4d71-a22b-b3922b09ef88.jpg",
+    "alt": "Men's Size Chart",
+    "for_this_variant": false
+   }
+  ],
+  "options": [
+   "Color",
+   "Size"
+  ],
+  "body_text": "<p>Soft and warm sherpa fleece delivers everyday comfort with a casual outdoor look that's easy to layer when temperatures drop.</p>\n<ul>\n<li>Soft and Warm Sherpa Fleece</li>\n<li>Chest Pocket with Snap Closure</li>\n<li>Zipper Hand Pockets</li>\n<li>High Standing Collar to Help Keep the Elements Out</li>\n</ul>\n<p>Specs</p>\n<ul>\n<li>100% Polyester</li>\n<li>Machine wash cold with like colors, Only non-chlorine bleach when needed, Tumble dry low, Remove promptly, Cool iron if needed</li>\n</ul>\n<p>Sizing and Fit</p>\n<ul>\n<li>Fits true size.</li>\n</ul>"
+ },
+ {
+  "email": "04",
+  "band": "rows",
+  "handle": "mens-crater-valley-sweater-fleece-zip-jacket",
+  "variant_id": 52630359834906,
+  "url": "https://www.habitoutdoors.com/products/mens-crater-valley-sweater-fleece-zip-jacket?variant=52630359834906",
+  "title": "Men's Crater Valley Sweater Fleece ¼ Zip Jacket",
+  "product_type": "Jacket",
+  "variant_title": "Realtree APX / M",
+  "price": "54.99",
+  "compare_at_price": "54.99",
+  "available": null,
+  "image_src": "https://cdn.shopify.com/s/files/1/1483/3388/files/FJ10083RTapx_turkishcoffeeheatherfront-comp.png?v=1787002073",
+  "image_file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-sweater-fleece-zip-jacket--52630359834906.png",
+  "all_images": [
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-sweater-fleece-zip-jacket/01.png",
+    "src_name": "FJ10083MOBottomlandFORMfront.png",
+    "alt": "Men's Crater Valley Sweater Fleece Quarter Zip Jacket Mossy Oak New Bottomland front on form view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-sweater-fleece-zip-jacket/02.png",
+    "src_name": "FJ10083WoodlandGhostKhakiFORMfront.png",
+    "alt": "Men's Crater Valley Sweater Fleece Quarter Zip Jacket Woodland Ghost Khaki front on form view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-sweater-fleece-zip-jacket/03.png",
+    "src_name": "FJ10031_MOBottomland.png",
+    "alt": "Men's Crater Valley Sweater Fleece Quarter Zip Jacket Mossy Oak New Bottomland Front on form view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-sweater-fleece-zip-jacket/04.png",
+    "src_name": "FJ10031MOBOTTOMFRONT_469d395a-3291-48e3-a234-a1669ae1ec63.png",
+    "alt": "Men's Crater Valley Sweater Fleece Quarter Zip Jacket Mossy Oak New Bottomland Front on model view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-sweater-fleece-zip-jacket/05.png",
+    "src_name": "FJ10031MOBOTTOMBACK_00c09282-4075-4697-a98c-cfdaf4a6c309.png",
+    "alt": "Men's Crater Valley Sweater Fleece Quarter Zip Jacket Mossy Oak New Bottomland back on model view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-sweater-fleece-zip-jacket/06.png",
+    "src_name": "FJ10031_SweaterFleece_PO_Fabric.png",
+    "alt": "Men's Crater Valley Sweater Fleece Quarter Zip Jacket Outside Fabric",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-sweater-fleece-zip-jacket/07.png",
+    "src_name": "FJ10031_SweaterFleece_PO_ReverseFabric.png",
+    "alt": "Men's Crater Valley Sweater Fleece Quarter Zip inside fabric",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-sweater-fleece-zip-jacket/08.png",
+    "src_name": "FJ10031_SweaterFleece_PO_ChestPkt.png",
+    "alt": "Men's Crater Valley Sweater Fleece Quarter Zip Jacket Button closure chest pocket",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-sweater-fleece-zip-jacket/09.png",
+    "src_name": "FJ10031RTEXCAPEIVYFRONT_377dc1d1-ec1b-4304-be3e-2f8f1e7b58e8.png",
+    "alt": "Men's Crater Valley Sweater Fleece Quarter Zip Jacket Realtree Excape front on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-sweater-fleece-zip-jacket/10.png",
+    "src_name": "FJ10031VeilCamoWidelandTurkishCoffee_91f6bef4-a8ec-4ed0-bd4d-98a7ecdda970.png",
+    "alt": "Men's Crater Valley Sweater Fleece Quarter Zip Jacket Veil Wideland front on form view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-sweater-fleece-zip-jacket/11.jpg",
+    "src_name": "front_1.jpg",
+    "alt": "Men's Crater Valley Sweater Fleece Quarter Zip Jacket Veil Wideland Wolf front on form view",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-sweater-fleece-zip-jacket/12.png",
+    "src_name": "FJ10083RTapx_turkishcoffeeheatherfront-comp.png",
+    "alt": "Men's Crater Valley Sweater Fleece Quarter Zip Jacket Realtree APX front on form view",
+    "for_this_variant": true
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/mens-crater-valley-sweater-fleece-zip-jacket/13.jpg",
+    "src_name": "menssizingchart_0d59bb5d-a5fb-4f87-a0ab-1605e1017986.jpg",
+    "alt": "Men's Size Chart",
+    "for_this_variant": false
+   }
+  ],
+  "options": [
+   "Color",
+   "Size"
+  ],
+  "body_text": "<p data-mce-fragment=\"1\">Soft and Warm Brushed Heather Fleece with stylish Camo Overlay can be worn in the field or to the office.</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">Soft and Warm Brushed Heather Fleece with Camo Overlay</li>\n<li data-mce-fragment=\"1\">Quarter Zip Design with Interior Storm Flap</li>\n<li data-mce-fragment=\"1\">Secure Chest Pocket</li>\n<li data-mce-fragment=\"1\">Great for Layering</li>\n</ul>\n<p data-mce-fragment=\"1\">Specs</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">100% Polyester</li>\n<li data-mce-fragment=\"1\">Machine wash cold with like colors, Only non-chlorine bleach when needed, Tumble dry low, Remove promptly, Cool iron if needed</li>\n</ul>\n<p data-mce-fragment=\"1\">Sizing and Fit</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">Model is 6’1” and 215lbs. He is wearing size Large.</li>\n<li>Fits true size.  Here in the office we usually wear one size larger than we do in the guide shirts to allow for layering.</li>\n</ul>"
+ },
+ {
+  "email": "05",
+  "band": "grid",
+  "handle": "men-s-mid-layer-jacket",
+  "variant_id": 45471499518234,
+  "url": "https://www.habitoutdoors.com/products/men-s-mid-layer-jacket?variant=45471499518234",
+  "title": "Men’s Shadow Series Mid Layer Hooded Jacket",
+  "product_type": "Shadow Series - Hunting",
+  "variant_title": "Mossy Oak Terra Coyote / M",
+  "price": "69.98",
+  "compare_at_price": "99.99",
+  "available": null,
+  "image_src": "https://cdn.shopify.com/s/files/1/1483/3388/files/TJ10051_MO_COYOTE_A.png?v=1690296908",
+  "image_file": "clients/habit-outdoors/01-brand/photos/products/men-s-mid-layer-jacket--45471499518234.png",
+  "all_images": [
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-mid-layer-jacket/01.png",
+    "src_name": "TJ10051_VEIL_WIDELAND_WOLF_A.png",
+    "alt": "Men’s Shadow Series Mid Layer Jacket Veil Wideland Wolf front on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-mid-layer-jacket/02.png",
+    "src_name": "TJ10051_VEIL_WIDELAND_WOLF_B.png",
+    "alt": "Men’s Shadow Series Mid Layer Jacket Veil Wideland Wolf back on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-mid-layer-jacket/03.png",
+    "src_name": "TJ10051_VEIL_WIDELAND_WOLF_C.png",
+    "alt": "Men’s Shadow Series Mid Layer Jacket Veil Wideland Wolf front on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-mid-layer-jacket/04.png",
+    "src_name": "TJ10051_VEIL_WIDELAND_WOLF_D.png",
+    "alt": "Men’s Shadow Series Mid Layer Jacket Veil Wideland Wolf back on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-mid-layer-jacket/05.png",
+    "src_name": "TJ10051_VEIL_WIDELAND_WOLF_E.png",
+    "alt": "Men’s Shadow Series Mid Layer Jacket Veil Wideland Wolf hood up",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-mid-layer-jacket/06.png",
+    "src_name": "TJ10051_VEIL_WIDELAND_WOLF_G.png",
+    "alt": "Men’s Shadow Series Mid Layer Jacket Veil Wideland Wolf chest pocket",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-mid-layer-jacket/07.png",
+    "src_name": "TJ10051_VEIL_WIDELAND_WOLF_F.png",
+    "alt": "Men’s Shadow Series Mid Layer Jacket Veil Wideland Wolf Hand pockets",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-mid-layer-jacket/08.png",
+    "src_name": "TJ10051_VEIL_WIDELAND_WOLF_HOOD.png",
+    "alt": "Men’s Shadow Series Mid Layer Jacket Veil Wideland Wolf removable hood",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-mid-layer-jacket/09.png",
+    "src_name": "TJ10051_MO_COYOTE_A.png",
+    "alt": "Men’s Shadow Series Mid Layer Jacket Coyote front on form",
+    "for_this_variant": true
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-mid-layer-jacket/10.jpg",
+    "src_name": "menssizingchart_1fa2cc6a-1cad-4017-a57d-772163a68992.jpg",
+    "alt": "Men's Size Chart",
+    "for_this_variant": false
+   }
+  ],
+  "options": [
+   "Color",
+   "Size"
+  ],
+  "body_text": "<p data-mce-fragment=\"1\">Active 2-Ply Fabric with Grid Fleece Interior with Scent-Factor and Rain-Factor Water Repellent Technologies to keep you comfortable and outdoors longer.  High Standing Collar with Removable Snap Hood for customized control of the elements.  Zippered Chest and Hand Pockets for secure storage.</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">Active 2-Ply with Grid Fleece Interior</li>\n<li data-mce-fragment=\"1\">Rain-Factor Water Repellent Technology</li>\n<li data-mce-fragment=\"1\">Scent-Factor Scent Inhibitor Technology</li>\n<li data-mce-fragment=\"1\">High Standing Collar to Help Keep the Elements Out</li>\n<li data-mce-fragment=\"1\">Removable Snap Hood</li>\n<li data-mce-fragment=\"1\">Zipper Chest and Hand Pockets</li>\n<li data-mce-fragment=\"1\">Adjustable Cuff Construction</li>\n<li data-mce-fragment=\"1\">Drop Tail Hem with Toggle Adjustment</li>\n<li data-mce-fragment=\"1\">Harness Pass Through</li>\n<li data-mce-fragment=\"1\">Pairs with <a href=\"https://habitoutdoors.com/collections/shadow-series/products/men-s-mid-layer-pant?variant=45471518327066\" title=\"Men’s Shadow Series Mid Layer Pant\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>Men’s Shadow Series Mid Layer Pant</strong></a>\n</li>\n</ul>\n<p data-mce-fragment=\"1\">Specs</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">100% Polyester</li>\n<li data-mce-fragment=\"1\">Machine wash cold with like colors, Close zippers before washing, Only non-chlorine bleach when needed, Tumble dry low, Remove"
+ },
+ {
+  "email": "05",
+  "band": "grid",
+  "handle": "men-s-windproof-fleece-pant",
+  "variant_id": 45471564824858,
+  "url": "https://www.habitoutdoors.com/products/men-s-windproof-fleece-pant?variant=45471564824858",
+  "title": "Men’s Shadow Series Windproof Fleece Pant",
+  "product_type": "Shadow Series - Hunting",
+  "variant_title": "Mossy Oak Terra Coyote / M",
+  "price": "69.98",
+  "compare_at_price": "99.99",
+  "available": null,
+  "image_src": "https://cdn.shopify.com/s/files/1/1483/3388/files/FP10015_MO_COYOTE_A.png?v=1690311888",
+  "image_file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-pant--45471564824858.png",
+  "all_images": [
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-pant/01.png",
+    "src_name": "FP10015_MO_COYOTE_A.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Pant Coyote front on form",
+    "for_this_variant": true
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-pant/02.png",
+    "src_name": "FP10015_VEIL_WIDELAND_WOLF_A.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Pant Veil Wideland Wolf front on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-pant/03.png",
+    "src_name": "FP10015_VEIL_WIDELAND_WOLF_B.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Pant Veil Wideland Wolf back on form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-pant/04.png",
+    "src_name": "FP10015_VEIL_WIDELAND_WOLF_C.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Pant Veil Wideland Wolf front on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-pant/05.png",
+    "src_name": "FP10015_VEIL_WIDELAND_WOLF_D.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Pant Veil Wideland Wolf back on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-pant/06.png",
+    "src_name": "FP10015_VEIL_WIDELAND_WOLF_F.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Pant Veil Wideland Wolf cargo pocket",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-pant/07.png",
+    "src_name": "FP10015_VEIL_WIDELAND_WOLF_G.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Pant Veil Wideland Wolf hand pockets",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-pant/08.png",
+    "src_name": "FP10015_VEIL_WIDELAND_WOLF_HANDWARMER.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Pant Veil Wideland Wolf Handwarmer pockets",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-pant/09.png",
+    "src_name": "FP10015_VEIL_WIDELAND_WOLF_INTERIOR.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Pant Veil Wideland Wolf interior fabric",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-pant/10.png",
+    "src_name": "FP10015_VEIL_WIDELAND_WOLF_VENTING.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Pant Veil Wideland Wolf side venting",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-pant/11.png",
+    "src_name": "WB10045_VEIL_WIDELAND_WOLF_H.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Pant Veil Wideland Wolf leg zip",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-pant/12.jpg",
+    "src_name": "menssizingchart_970c1c48-dadd-47e4-91bf-390575310d9c.jpg",
+    "alt": "Men's Size Chart",
+    "for_this_variant": false
+   }
+  ],
+  "options": [
+   "Color",
+   "Size"
+  ],
+  "body_text": "<p>Soft and Quiet Fabric with Sherpa Fleece Lining for added comfort and warmth.  Scent-Factor and Rain-Factor Water Repellent Technologies keep you outdoors and undetected longer.  Bellowed Zipper Leg pockets and slip hand pockets provide storage with easy access.  High Waist Back for Extra Warmth with Internal Pockets for Hand Warmers (sold separately).</p>\n<ul>\n<li>Soft and Quiet Fabric with Sherpa Fleece Lining</li>\n<li>Rain-Factor Water Resistant Technology and Windproof</li>\n<li>Scent-Factor Scent Inhibitor Technology</li>\n<li>Bellowed Zipper Leg Pockets</li>\n<li>Adjustable Bottom Leg Opening with Zipper</li>\n<li>High Waist Back for Extra Warmth with Internal Pockets for Warmers</li>\n<li>Removable Suspenders</li>\n<li>Pairs with <strong><a href=\"https://habitoutdoors.com/collections/shadow-series/products/men-s-windproof-fleece-jacket?variant=45471553618202\" title=\"Men’s Shadow Series Windproof Fleece Jacket\" rel=\"noopener noreferrer\" target=\"_blank\">Men’s Shadow Series Windproof Fleece Jacket</a></strong>\n</li>\n</ul>\n<p>Specs</p>\n<ul>\n<li>100% Polyester</li>\n<li>Machine wash cold with like colors, Only non-chlorine bleach when needed, Tumble dry low, Remove promptly, Cool iron if needed</li>\n<li>This item cannot be shipped to the states of California or New York.</li>\n<li>\n<strong>WARNING: </strong>This product can expose you to chemicals including Perfluorooctane sulfate (PFOS), which is known to the State of California to cause cancer and birth defects or other reprod"
+ },
+ {
+  "email": "05",
+  "band": "grid",
+  "handle": "men-s-windproof-fleece-jacket",
+  "variant_id": 45471553618202,
+  "url": "https://www.habitoutdoors.com/products/men-s-windproof-fleece-jacket?variant=45471553618202",
+  "title": "Men’s Shadow Series Windproof Fleece Jacket",
+  "product_type": "Shadow Series - Hunting",
+  "variant_title": "Mossy Oak Terra Coyote / M",
+  "price": "69.98",
+  "compare_at_price": "99.99",
+  "available": null,
+  "image_src": "https://cdn.shopify.com/s/files/1/1483/3388/files/FJ10085_MO_COYOTE_A.png?v=1691531470",
+  "image_file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-jacket--45471553618202.png",
+  "all_images": [
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-jacket/01.png",
+    "src_name": "FJ10085_VEIL_WIDELAND_WOLF_A.png",
+    "alt": null,
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-jacket/02.png",
+    "src_name": "FJ10085_MO_COYOTE_A.png",
+    "alt": null,
+    "for_this_variant": true
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-jacket/03.png",
+    "src_name": "FJ10085_MO_COYOTE_B.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Jacket Mossy Oak Coyote Back on Form",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-jacket/04.png",
+    "src_name": "FJ10085_MO_COYOTE_C.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Jacket Mossy Oak Coyote Front on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-jacket/05.png",
+    "src_name": "FJ10085_MO_COYOTE_CHESTPOCKET.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Jacket Mossy Oak Coyote chest pocket",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-jacket/06.png",
+    "src_name": "FJ10085_MO_COYOTE_D.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Jacket Mossy Oak Coyote Back on Model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-jacket/07.png",
+    "src_name": "FJ10085_MO_COYOTE_E.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Jacket Mossy Oak Coyote side view on model",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-jacket/08.png",
+    "src_name": "FJ10085_MO_COYOTE_F.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Jacket Mossy Oak Coyote Front hand pockets",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-jacket/09.png",
+    "src_name": "FJ10085_MO_COYOTE_RANGEFINDER.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Jacket Mossy Oak Coyote Rangefinder pocket",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-jacket/10.png",
+    "src_name": "FJ10085_MO_COYOTE_VENTING.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Jacket Mossy Oak Coyote side venting",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-jacket/11.png",
+    "src_name": "FJ10085_VEIL_WIDELAND_WOLF_ZIPCUFF.png",
+    "alt": "Men’s Shadow Series Windproof Fleece Jacket Zip Cuff",
+    "for_this_variant": false
+   },
+   {
+    "file": "clients/habit-outdoors/01-brand/photos/products/men-s-windproof-fleece-jacket/12.jpg",
+    "src_name": "menssizingchart_c711e783-82dc-49eb-8985-ac4f5c81470f.jpg",
+    "alt": "Men's Size Chart",
+    "for_this_variant": false
+   }
+  ],
+  "options": [
+   "Color",
+   "Size"
+  ],
+  "body_text": "<p data-mce-fragment=\"1\">Soft and Quiet Fabric with Sherpa Fleece Lining for added comfort and warmth.  Scent-Factor and Rain-Factor Water Repellent Technologies keep you outdoors and undetected longer.  Button closure Range Finder Pocket, Zippered Chest and Hand Pockets offer plenty of storage.  Zippered Side Venting and Harness Pass through for additional comfort. </p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">Soft and Quiet Fabric with Sherpa Fleece Lining</li>\n<li data-mce-fragment=\"1\">Rain-Factor Water Resistant Technology and Windproof</li>\n<li data-mce-fragment=\"1\">Scent-Factor Scent Inhibitor Technology</li>\n<li data-mce-fragment=\"1\">Zippered Chest and Hand Pockets</li>\n<li data-mce-fragment=\"1\">Range Finder Pocket at Wearer’s Right Chest</li>\n<li data-mce-fragment=\"1\">Zipper Side Venting</li>\n<li data-mce-fragment=\"1\">Zipper Sleeve Cuff for Adjustability</li>\n<li data-mce-fragment=\"1\">Harness Pass Through</li>\n<li data-mce-fragment=\"1\">Pairs with <a href=\"https://habitoutdoors.com/collections/shadow-series/products/men-s-windproof-fleece-pant?variant=45471564824858\" title=\"Men’s Shadow Series Windproof Fleece Pant\" target=\"_blank\"><strong data-mce-fragment=\"1\">Men’s Shadow Series Windproof Fleece Pant</strong> </a>\n</li>\n</ul>\n<p data-mce-fragment=\"1\">Specs</p>\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">100% Polyester</li>\n<li data-mce-fragment=\"1\">Machine wash cold with like colors, Only non-chlorine bleach when needed, Tumble dry low, Remove pr"
+ }
+]

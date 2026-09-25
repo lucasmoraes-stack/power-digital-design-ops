@@ -1,0 +1,7 @@
+- Lote de outubro (PDF do cliente de 2026-09-25, 5 e-mails aprovados). Estrutura das 4 referências do cliente, com o visual da rodada 2 e o copy do cliente.
+- Referência de cada e-mail: 01 Glossier (headline em etiquetas, reviews em caixa, faixa final dividida) · 02 OFFICE (tabuleiro) · 03 Mario Badescu (um painel por cor) · 04 Supergoop (molduras com o produto quebrando a borda, link por produto, GIF) · 05 OFFICE + Glossier (faixa de 4 atributos, produto sangrando com caixa).
+- Fotos originais da Habit (HabitHuntFinals) nos heros do 01, 03 e 05. Falta o cliente confirmar que podem ser usadas em e-mail.
+- Desvios de copy: sem emoji no assunto (01, 03) · reviews em texto vivo em vez de GIF · nome do autor do review sem travessão · CTAs de produto do 04 como link de texto · ® em Rain-Factor e Scent-Factor.
+- QA r1: 01 e 04 bloqueados e corrigidos (produtos maiores e detalhes de tecido no 01; nenhum rosto cortado e GIF de 245 KB no 04).
+- Para decidir: exceção de peso do 04 com o GIF (887 KB; com a imagem estática, 674 KB) · duas bandas de estrutura no 05 · hero do 03 com o produto sobre a paisagem · 3 exclamações no review do Andrew C.
+- Cliente confirmar: datas (9, 22 e 29/10 não caem numa terça) · Shadow Series em promoção ($69.98, antes $99.99) sem desconto no copy · endereço físico e descadastro no rodapé · URLs de destino.

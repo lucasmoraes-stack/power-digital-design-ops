@@ -35,3 +35,14 @@ Imagens extras da loja (`photos/products/*-N.png`): revisadas as 51. Todas são 
 Não aproveitados: o hero de Sep 2 (paisagem coberta por packshots e texto), a mata atrás do card de Sep 15 (só sobram bordas de 50px) e o hero de Sep 24 acima da porta (texto em cima de toda a parede).
 
 Script dos recortes: `email-kit/tools/crop_sent.py` (roda de novo e refaz os 17). Caixas em pixels do print de 1200px, remoção da linha desenhada por componente conexo mais retoque por mediana em áreas limitadas.
+
+## Originais da Habit (2026-09-25)
+
+Achadas em `Downloads/` da máquina do responsável (arquivos de 2026-04-27, citados no guia `Habit_BrandIdentityGuide_Booklet 2.4.26 Update.pdf`). Reduzidas para 2400px no lado maior, JPG 88; os originais de 30 a 63 MB ficam fora do repo. **Fotos originais, não recortes:** usar no lugar dos `crop-sent-*` sempre que servirem. [[CONFIRMAR]] com o cliente que estão liberadas para e-mail.
+
+| Arquivo | O que mostra | Tamanho | Área calma | Bom para |
+|---|---|---|---|---|
+| `orig-hunt22-three-hunters-field-sunrise.jpg` | três caçadores de costas subindo o campo, sol nascendo entre as árvores de outono | 2400x1600 | topo (céu claro, sol) | hero full-bleed com texto em cima (escurecer o céu) |
+| `orig-hunt40-hunter-forest-back.jpg` | caçador de camo com mochila e arco, de costas, na mata dourada (vertical) | 1762x2400 | topo (copas em contraluz) | hero vertical, foto rasgada, colagem |
+| `orig-hunt50-hunter-oaks-autumn.jpg` | caçador em camo claro entre carvalhos, capim alto e folhas laranja | 2400x1600 | nenhuma forte (topo de folhas) | hero com texto embaixo, feature, colagem |
+| `orig-twofisted-utv-two-men.jpg` | dois homens rindo no UTV, bonés Habit, camisas de pesca | 2400x1600 | nenhuma (retrato próximo) | colagem, momento de estilo de vida |

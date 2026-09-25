@@ -79,3 +79,18 @@ Arquivos `1Duck Camp _ Dashboard _ Milled.html` a `4…`. O e-mail de cada um es
 ### Como isso vira HTML de e-mail
 
 Sobreposição, leque, sangria e colagem **não se fazem com CSS em e-mail** (sem `position`, sem margem negativa confiável no Outlook). O caminho é **compor a imagem**: o cluster, a colagem ou o produto atravessando a borda saem como **uma imagem única já montada** (com as cores das bandas embutidas nas bordas), e o texto continua vivo em HTML acima e abaixo. As composições são geradas por script a partir dos packshots do catálogo e das fotos, e cada módulo diz quais arquivos usou.
+
+---
+
+## Referências de estrutura do cliente (2026-09-25)
+
+Mandadas pelo cliente para o lote de outubro (`03-work/email/2026-10-broadcasts/`): "referências em termos de estrutura, mantendo nosso visual e conteúdo". **Outras marcas: só estrutura.** Nunca cor, pastel, fonte, logo, forma de balão ou copy.
+
+| Arquivo | Estrutura | Usado em |
+|---|---|---|
+| `struct-r3-a-zigzag-panels.png` | painéis separados, um por produto, produto e texto alternando de lado, link sublinhado | E3 Heavy Weight Hoodie |
+| `struct-r3-b-checkerboard.png` | tabuleiro 2 colunas (produto × texto emoldurado, invertendo), faixa de 4 atributos com ícone fino | E2 Youth, E5 Shadow Series (atributos) |
+| `struct-r3-c-label-boxes.png` | headline em etiquetas sobre a foto, produto sangrando + caixa de review com estrelas, faixa dividida texto/botão | E1 Cedar Branch, E5 (produtos) |
+| `struct-r3-d-framed-rows.png` | hero alinhado à esquerda com produto sangrando, retrato em círculo, molduras abertas com produto quebrando a moldura | E4 Crater Valley |
+
+Tradução para a Habit: `03-work/email/2026-10-broadcasts/brief.md`, seção "Como cada estrutura vira Habit". Aspas e estrelas só onde o texto é review real de cliente.

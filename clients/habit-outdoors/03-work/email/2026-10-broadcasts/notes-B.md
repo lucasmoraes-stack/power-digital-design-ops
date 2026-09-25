@@ -1,0 +1,45 @@
+# Notas do Designer B · E3 e E4
+
+> Decisões de construção de `03-heavy-weight-hoodie.html` e `04-crater-valley.html` (2026-09-25), para o responsável consolidar no `brief.md`. Assets: `assets/o3-*` e `assets/o4-*`, todos gerados por `compose_B.py` (importa `email-kit/tools/compose.py` sem editá-lo; rodar de novo refaz tudo igual).
+
+## Decisões registradas
+
+- 2026-09-25 · **E3, foto do hero:** `orig-hunt50-hunter-oaks-autumn.jpg`, só a metade direita (carvalhos e capim, **sem o caçador**), com a cor esfriada, neblina baixa e a névoa de cima gerada da própria foto. O hoodie Major Brown (packshot da variante) fica **de pé na frente das árvores**, como produto sobre paisagem (princípio 4 da rodada 2). Motivo: as fotos de modelo da loja são de estúdio (o kit proíbe estúdio como hero), e compor um modelo de estúdio numa paisagem seria falso lifestyle. O Designer C usa a hunt40 e o A usa a hunt22, então a hunt50 não se repete no lote.
+- 2026-09-25 · **E3, painéis (ref A):** um painel por cor, no tom da cor: Major Brown em `tex-grain-brown`, Gunmetal em `tex-paper-tapshoe` (a paleta não tem cinza-grafite; o Tap Shoe é o mais próximo), Loden Green em `tex-grain-ivy`, sobre papel claro. O hoodie **sobe para fora do painel** (44px acima da borda de cima). Linha 1 = cor, linha 2 = `Men's Heavy Weight Full Zip Hoodie` (nome da loja), preço sublinhado linkado na variante.
+- 2026-09-25 · **E3, emendas:** a parte do painel que está na imagem é assada **na mesma fase do tile** que a `<td>` do texto mostra (`background-position:left top`, 600px), para a junção imagem/texto não aparecer. Cada painel tem 4 arquivos: desktop, mobile, e as gêmeas `-dm` (papel escuro no dark mode). O Outlook desktop mostra a metade do texto em cor lisa (`bgcolor`), sem grão.
+- 2026-09-25 · **E4, hero (ref D):** headline, subtítulo, botão e logo **à esquerda**; o Full Zip Fleece no modelo (foto 05 da loja) sangra pela direita e é **cortado pela borda de cima do e-mail**. O corte da coxa fica escondido embaixo do rasgo para o Major Brown. No desktop é uma imagem dividida em coluna direita + faixa de largura total; no mobile vem texto, depois uma gêmea com uma **tira de papel rasgada por cima do corte** (as fotos de modelo da loja vêm cortadas na testa; desde o QA r1 o corte é abaixo do queixo). Sem o círculo de retrato da ref D (opcional no brief; não há pessoa real para o círculo).
+- 2026-09-25 · **E4, molduras (ref D):** contorno 1px `#FEF4C6`, raio 12. Na imagem ficam a linha de cima, a de baixo e o lado de fora; o lado do texto fecha com borda CSS na `<td>` (conferido no render: as linhas batem no mesmo pixel). **Quebra da moldura** conforme a foto: o Performance Hoodie (capuz inteiro na foto 08) sai por cima da linha; o Full Zip Fleece (foto 06) fica **cortado pelas linhas de cima (na gola, QA r1) e de baixo**, com o cotovelo passando da linha lateral; o Sweater Fleece ¼ Zip sai por cima. Os dois traços laranja ficam no canto de fora, do lado da imagem, uma vez por moldura. No mobile a imagem tem a moldura fechada e o texto vem embaixo, sem moldura.
+- 2026-09-25 · **E4, ¼ Zip sem foto de modelo:** a loja não tem foto de modelo no Realtree APX (a variante do link); as de modelo são Mossy Oak New Bottomland e Realtree Excape. Na moldura usei o **packshot APX** (a imagem mostra o que o link vende). No GIF, que não aponta para variante, entra o modelo em Bottomland.
+- 2026-09-25 · ~~**E4, GIF (D4)**~~ (versão 1, substituída pela entrada "QA r1, GIF" abaixo): `o4-lifestyle.gif`, 600x380 (arquivo 1x), **344,5 KB**, 8 quadros em loop: as três peças juntas (2,6 s, é o quadro que o Outlook desktop mostra e funciona sozinho), depois hoodie, fleece e quarter zip um de cada vez (1,8 s), com um quadro de crossfade de 110 ms entre eles. Fotos de modelo da loja numa janela rasgada no papel Ivy (as tiras escondem os cortes da testa e da coxa). Fundo de cor chapada por cena (manhã fria, dia, fogueira): degradê em GIF vira faixas. Para caber: paleta única de 104 cores, sem dither, filtro mediano 3 e cada quadro depois do primeiro só carrega os pixels que mudaram. A 2x ou com mais quadros de crossfade passava de 1 MB. O fallback JPG estático (`o4-lifestyle-still.jpg`, 29 KB) está gerado e sem link.
+- 2026-09-25 · **E4, texturas por banda:** hero em Tap Shoe paper, molduras em Major Brown (laranja permitido no destaque grande: `LAYERING`), estilo de vida em Ivy (sem laranja, destaque `FIRST LIGHT` em branco), rodapé Tap Shoe liso. Nenhuma vizinha repete. Borda nova `o4-edge-brown-ivy.jpg` (o kit não tinha o par brown/ivy).
+- 2026-09-25 · **QA r1, rostos (E4):** nenhum rosto cortado entre a testa e a boca. As fotos de modelo da loja são cortadas **abaixo do queixo / na gola** (`CHIN` no `compose_B.py`, linha da foto original por imagem), e o corte fica sempre numa borda: a borda de cima do e-mail no hero desktop, a tira de papel rasgado no hero mobile e no GIF, a linha de cima da moldura no Full Zip Fleece. Rosto inteiro só onde a foto tem a cabeça inteira: o Performance Hoodie de capuz (moldura 1 e cena 2 do GIF).
+- 2026-09-25 · **QA r1, GIF (E4), substitui a entrada D4 acima:** `o4-lifestyle.gif` refeito com **3 cenas, 244,9 KB**, 600x380 (1x), loop, corte seco entre as cenas: (1) as três peças juntas, 2,6 s, é o quadro do Outlook desktop e funciona sozinho; (2) o Performance Hoodie de capuz, rosto inteiro, 2 s; (3) o Sweater Fleece ¼ Zip em Realtree Excape, 2 s. O fundo deixou de ser cor chapada: é a mata e o campo **desfocados de uma foto real da Habit** (`crop-sent-sep10-utv-hunters.jpg`, só a faixa da esquerda, sem pessoa; nenhum outro e-mail do lote usa essa foto). Menos posterização: 152 cores, paleta própria por quadro, suavização de 0,8 px, e cada quadro depois do primeiro só leva os pixels que mudam. O dither foi testado e saiu: pesava mais e deixava granulado. Arquivo 2x não coube: 3 quadros fotográficos em 1200x760 dão cerca de 3 vezes o limite. O crossfade saiu porque um quadro de transição por troca dobrava o peso. O estático de reserva (`o4-lifestyle-still.jpg`, 32 KB) foi recomposto com a cena 1 nova, sem link.
+- 2026-09-25 · **QA r1, corpo das molduras (E4):** 15px/23px passou para 16px/25px (kit).
+- 2026-09-25 · **Palavra de destaque em laranja:** E4 hero (`CRATER VALLEY`, sobre Tap Shoe) e E4 banda 3 (`LAYERING`, Major Brown, só grande). E3 hero fica branco (texto sobre névoa de foto, não sobre Tap Shoe) e E3 banda 3 em `#2A2B2D` (papel claro).
+- 2026-09-25 · **Rodapé D3:** igual ao A e ao C: copyright do kit, `[[CONFIRMAR: endereço físico da Habit]]` e `Unsubscribe` em `{{UNSUBSCRIBE_URL}}`.
+
+## Diferente do brief
+
+- **E3, `Men's` na linha 2:** o brief diz "nome do produto na linha 2"; usei o nome da loja com `Men's` (o copy do E3 também diz "Men's Heavy Weight Full Zip Hoodie"). A regra "sem Men's" do brief é só do E4.
+- **E4, botão do hero:** `SHOP CRATER VALLEY` com padding lateral 18px (kit: 36px) e `white-space:nowrap`, porque na coluna de texto de 286px o rótulo quebrava em duas linhas ou alargava a coluna e desalinhava a imagem. Cor, fonte, tracking, raio e altura iguais aos outros botões.
+- **E4, ordem na banda 4:** segui o copy (headline, GIF, texto, botão); o brief põe o GIF primeiro.
+- **E4, GIF:** 3 cenas com corte seco, sem crossfade (D4 pedia crossfade curto), em arquivo 1x, para caber em 250 KB (QA r1).
+- **Peso do E4 acima de ~800 KB** por causa do GIF, dentro do teto de ~900 KB do QA r1 (tabela abaixo).
+
+## Peso
+
+| | HTML | Imagens vistas no desktop claro | Mobile claro | Arquivos referenciados (todas as variantes) |
+|---|---|---|---|---|
+| E3 | 32,1 KB | ~646 KB (hero 144, 4 texturas 351, painéis 120, bordas e logos 31) | ~648 KB | 1.102 KB (inclui gêmeas mobile e `-dm`) |
+| E4 | 33,2 KB | ~887 KB (GIF 245; sem ele ~642) | ~859 KB | 1.208 KB |
+
+Todas as imagens abaixo de 150 KB, exceto o GIF.
+
+## Precisa de decisão do responsável
+
+1. **D4:** registrar no brief a exceção do GIF (244,9 KB; E4 com ~887 KB no desktop) ou trocar pelo JPG estático recomposto (E4 cai para ~674 KB). Pedir ao cliente foto ou vídeo real da linha Crater Valley em uso para um GIF de lifestyle de verdade.
+2. **E3 hero:** aprovar produto sobre paisagem, em vez de foto do hoodie em uso (não existe foto em locação desse produto no banco nem na loja).
+3. **E4, ¼ Zip:** packshot APX na moldura e modelo Bottomland no GIF. Outra opção: trocar o link para uma variante que tenha foto de modelo (mudaria o `products.json`, então é decisão do cliente).
+4. **Módulos novos para o kit** (quando aprovar): Panel Stack (ref A), Open Frame Rows (ref D), hero com texto à esquerda e modelo sangrando, e Lifestyle GIF.
+5. **Outlook app / Gmail no dark mode:** a troca de imagens `-dm` do E3 só acontece no Apple Mail/iOS (mesmo comportamento do E01 da rodada 2). No app do Outlook o papel troca (`dm-tex`) mas as peças dos painéis continuam claras nos cantos. Testar no Litmus antes do envio.
+6. Os mesmos pendentes do brief: `{{CTA_URL}}` dos dois e-mails, endereço, tag de descadastro, C7/C8 (variantes M).

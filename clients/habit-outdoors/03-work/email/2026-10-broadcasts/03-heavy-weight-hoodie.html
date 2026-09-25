@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--
+  Habit Outdoors · October 2026 Broadcasts · 03 Heavy Weight Full Zip Hoodie (send 2026-10-13) · Designer B · built 2026-09-25
+  Subject: Stay Warm Without the Bulk
+  Preheader: Heavyweight warmth in three colors for whatever fall throws at you.
+  Modules: E24 Full-Bleed Photo Hero (text top, logo on photo, hoodie standing in front of the oaks) / E18 textured edge papertapshoe-paperlight (+dm) / E25 Textured Band on tex-paper-light (dm-tex) carrying the NEW Panel Stack (ref A: one textured panel per color, hoodie rising out of the panel, image and text alternating sides) / E18 textured edge paperlight-footer (+dm) / E13 Closing Band / E14 Legal Footer + D3 address and unsubscribe
+  Button: #FF6400 / #2A2B2D
+  Kit: habit-outdoors email-kit v0.2.1 approved (E13, E14, E18) + v0.4 DRAFT (E24, E25, textures) + Panel Stack NEW (October batch, not in the kit yet). Not for sending before the owner approves.
+  Structure: client reference A (struct-r3-a-zigzag-panels.png), structure only. Look: round 2 (art-direction-r2.md).
+  Status: DRAFT for owner review. Not final: {{CTA_URL}}, {{HOME_URL}}, {{MENS_URL}}, {{WOMENS_URL}}, {{YOUTH_URL}}, {{SALE_URL}}, {{INSTAGRAM_URL}}, {{UNSUBSCRIBE_URL}}, [[CONFIRMAR]] address.
+  Source: brief.md (E3) + copy-source.md (Email 3) + products.json (email 03). Assets: assets/o3-* (compose_B.py) and ../../../01-brand/email-kit/assets/.
+-->
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>Stay Warm Without the Bulk</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <style>body, table, td, p, a, h1, h2, h3, span { font-family: Arial, sans-serif !important; }</style>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;800&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    body { margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #EFECE9; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+    a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+    u + #body a { color: inherit; text-decoration: none; }
+    .img-dark, .d-dark, .m-light, .m-dark { display: none; max-height: 0; overflow: hidden; }
+
+    @media screen and (max-width: 620px) {
+      .container { width: 100% !important; }
+      .px { padding-left: 24px !important; padding-right: 24px !important; }
+      .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
+      .btn-full { width: 100% !important; }
+      .btn-full a { display: block !important; padding-left: 16px !important; padding-right: 16px !important; }
+      .nav-td { padding: 0 7px !important; }
+      .nav-a { font-size: 12px !important; letter-spacing: 1.5px !important; }
+      /* v0.4 draft E24 */
+      .e24-logo { padding: 24px 24px 0 24px !important; }
+      .e24-text { padding: 24px 24px 0 24px !important; }
+      .e24-lead { font-size: 26px !important; line-height: 30px !important; }
+      .e24-key { font-size: 58px !important; line-height: 60px !important; }
+      .e24-sub { font-size: 13px !important; line-height: 20px !important; letter-spacing: 1.5px !important; }
+      .e24-space { height: 330px !important; }
+      .r2-tex { background-size: 100% auto !important; }
+      /* Panel Stack (ref A): image first, then the text panel; the desktop pieces swap for mobile pieces */
+      .o3-band { padding: 48px 0 8px 0 !important; }
+      .o3-head { padding: 0 24px 16px 24px !important; }
+      .o3-row { padding: 0 0 24px 0 !important; }
+      .p-cell { display: block !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; padding: 0 16px !important; }
+      .p-gap, .p-mg { display: none !important; }
+      .p-panel { display: block !important; height: auto !important; border-radius: 0 0 12px 12px !important; padding: 20px 24px 28px 24px !important; text-align: left !important; }
+      .d-light, .d-dark { display: none !important; max-height: 0 !important; overflow: hidden !important; }
+      .m-light { display: block !important; max-height: none !important; overflow: visible !important; }
+      .o3-cta { padding: 16px 24px 56px 24px !important; }
+    }
+
+    /* Dark mode (Apple Mail / iOS, Outlook app): the light paper band swaps to the dark paper; the panel
+       pieces and edges baked on light paper swap to their -dm twins. Hero, panels and footer are dark already. */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .dm-page { background-color: #1E1F21 !important; }
+      :root:not([data-theme="light"]) .dm-band { background-color: #34353A !important; }
+      :root:not([data-theme="light"]) .dm-h { color: #F1EEEB !important; }
+      :root:not([data-theme="light"]) .dm-p { color: #D6D0CA !important; }
+      :root:not([data-theme="light"]) .dm-tex { background-color: #34353A !important; background-image: url('../../../01-brand/email-kit/assets/tex-paper-light-dm.jpg') !important; }
+      :root:not([data-theme="light"]) .img-light, :root:not([data-theme="light"]) .d-light { display: none !important; max-height: 0 !important; overflow: hidden !important; }
+      :root:not([data-theme="light"]) .img-dark, :root:not([data-theme="light"]) .d-dark { display: block !important; max-height: none !important; overflow: visible !important; }
+    }
+    @media (prefers-color-scheme: dark) and (max-width: 620px) {
+      :root:not([data-theme="light"]) .d-dark, :root:not([data-theme="light"]) .m-light { display: none !important; max-height: 0 !important; overflow: hidden !important; }
+      :root:not([data-theme="light"]) .m-dark { display: block !important; max-height: none !important; overflow: visible !important; }
+    }
+    :root[data-theme="dark"] .dm-page { background-color: #1E1F21 !important; }
+    :root[data-theme="dark"] .dm-band { background-color: #34353A !important; }
+    :root[data-theme="dark"] .dm-h { color: #F1EEEB !important; }
+    :root[data-theme="dark"] .dm-p { color: #D6D0CA !important; }
+    :root[data-theme="dark"] .dm-tex { background-color: #34353A !important; background-image: url('../../../01-brand/email-kit/assets/tex-paper-light-dm.jpg') !important; }
+    :root[data-theme="dark"] .img-light, :root[data-theme="dark"] .d-light { display: none !important; max-height: 0 !important; overflow: hidden !important; }
+    :root[data-theme="dark"] .img-dark, :root[data-theme="dark"] .d-dark { display: block !important; max-height: none !important; overflow: visible !important; }
+    @media screen and (max-width: 620px) {
+      :root[data-theme="dark"] .d-dark, :root[data-theme="dark"] .m-light { display: none !important; max-height: 0 !important; overflow: hidden !important; }
+      :root[data-theme="dark"] .m-dark { display: block !important; max-height: none !important; overflow: visible !important; }
+    }
+    [data-ogsb] .dm-band { background-color: #34353A !important; }
+    [data-ogsb] .dm-tex { background-color: #34353A !important; background-image: url('../../../01-brand/email-kit/assets/tex-paper-light-dm.jpg') !important; }
+    [data-ogsc] .dm-h { color: #F1EEEB !important; }
+    [data-ogsc] .dm-p { color: #D6D0CA !important; }
+  </style>
+</head>
+<body id="body" class="dm-page" style="margin:0; padding:0; background-color:#EFECE9;">
+
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#EFECE9;">
+    Heavyweight warmth in three colors for whatever fall throws at you.
+    &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="dm-page" style="background-color:#EFECE9;">
+    <tr>
+      <td align="center" style="padding:32px 0 64px 0;">
+        <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+        <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px;">
+
+          <!-- MODULE:E24 Full-Bleed Photo Hero (text top) · o3-hero.jpg: oak edge at first light graded cold, ground mist, Major Brown hoodie in front; melts into Tap Shoe paper -->
+          <tr>
+            <td align="center" valign="top" background="assets/o3-hero.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:0; background-color:#2A2B2D; background-image:url('assets/o3-hero.jpg'); background-size:cover; background-position:center bottom; background-repeat:no-repeat; vertical-align:top;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:820px;"><v:fill type="frame" src="assets/o3-hero.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" class="e24-logo" style="padding:32px 40px 0 40px;">
+                    <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="../../../01-brand/email-kit/assets/logo-dark.png" width="160" height="26" alt="Habit" style="display:block; width:160px; height:26px; border:0; margin:0 auto;"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="e24-text" style="padding:48px 40px 0 40px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
+                    <h1 style="margin:0 0 20px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                      <span class="e24-lead" style="display:block; font-size:44px; line-height:48px; letter-spacing:1px;">YOUR</span>
+                      <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:90px; line-height:88px; font-weight:900;">COLDEST</span>
+                      <span class="e24-lead" style="display:block; font-size:44px; line-height:48px; letter-spacing:1px;">MORNINGS&nbsp;COVERED</span>
+                    </h1>
+                    <p class="e24-sub" style="margin:0 auto 28px auto; max-width:460px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">A HEAVYWEIGHT FULL ZIP HOODIE THAT KEEPS YOU OUTSIDE WHEN THE TEMPERATURE SAYS&nbsp;OTHERWISE.</p>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
+                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
+                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP THE HOODIE</a>
+                      </td></tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td class="e24-space" height="372" style="height:372px; font-size:0; line-height:0;">&nbsp;</td></tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E24 -->
+
+          <!-- MODULE:E18 Torn Edge (textured) · Tap Shoe paper -> light paper (kit, +dm) -->
+          <tr>
+            <td bgcolor="#2A2B2D" style="padding:0; background-color:#2A2B2D; font-size:0; line-height:0;">
+              <img class="fluid img-light" src="../../../01-brand/email-kit/assets/edge-tex-papertapshoe-paperlight.jpg" width="600" height="40" alt="" style="display:block; width:600px; max-width:100%; height:auto; border:0;">
+              <!--[if !mso]><!--><img class="fluid img-dark" src="../../../01-brand/email-kit/assets/edge-tex-papertapshoe-paperlight-dm.jpg" width="600" height="40" alt="" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:600px; max-width:100%; height:auto; border:0;"><!--<![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E18 -->
+
+          <!-- MODULE:E25 Textured Band (tex-paper-light, dm-tex) + Panel Stack (NEW, ref A) · one panel per color in the tone of the color:
+               Major Brown on tex-grain-brown, Gunmetal on tex-paper-tapshoe, Loden Green on tex-grain-ivy. Each row = image piece (band paper
+               + panel + hoodie rising out of it, desktop and mobile twins, -dm twins) + text td on the panel texture. Mobile: image first. -->
+          <tr>
+            <td align="center" class="r2-tex dm-tex o3-band" background="../../../01-brand/email-kit/assets/tex-paper-light.jpg" bgcolor="#E2DDD9" style="mso-padding-alt:0px; padding:64px 0 16px 0; background-color:#E2DDD9; background-image:url('../../../01-brand/email-kit/assets/tex-paper-light.jpg'); background-size:100% auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="../../../01-brand/email-kit/assets/tex-paper-light.jpg" color="#E2DDD9" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" class="o3-head" style="padding:0 48px 24px 48px; text-align:center;">
+                    <h2 class="dm-h" style="margin:0 0 20px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#2A2B2D; text-align:center;">
+                      <span class="e24-key dm-h" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:90px; line-height:88px; font-weight:900; color:#2A2B2D;">WARM</span>
+                      <span class="e24-lead dm-h" style="display:block; font-size:36px; line-height:42px; letter-spacing:1px; color:#2A2B2D;">ENOUGH TO SKIP THE&nbsp;JACKET</span>
+                    </h2>
+                    <p class="dm-p" style="margin:0 auto; max-width:440px; font-size:16px; line-height:26px; color:#2A2B2D; text-align:center;">Soft heavyweight fabric with just enough stretch to move with you, plus handwarmer pockets and a banded hem that cuts the&nbsp;bulk.</p>
+                  </td>
+                </tr>
+
+                <!-- Panel 1 · Major Brown · image left -->
+                <tr>
+                  <td class="o3-row" style="padding:0 0 16px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="ltr">
+                      <tr>
+                        <td class="p-cell" width="300" valign="bottom" style="width:300px; padding:0; font-size:0; line-height:0; vertical-align:bottom;">
+                          <a href="https://www.habitoutdoors.com/products/mens-heavy-weight-full-zip-hoodie?variant=45636943249690" target="_blank" style="text-decoration:none;">
+                            <img class="d-light" src="assets/o3-panel-brown.jpg" width="300" height="294" alt="Habit Men's Heavy Weight Full Zip Hoodie in Major Brown" style="display:block; width:300px; height:294px; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#2A2B2D;">
+                            <!--[if !mso]><!-->
+                            <img class="d-dark" src="assets/o3-panel-brown-dm.jpg" width="300" height="294" alt="Habit Men's Heavy Weight Full Zip Hoodie in Major Brown" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:300px; height:294px; border:0;">
+                            <img class="m-light" src="assets/o3-panel-brown-m.jpg" width="343" height="280" alt="Habit Men's Heavy Weight Full Zip Hoodie in Major Brown" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; height:auto; border:0;">
+                            <img class="m-dark" src="assets/o3-panel-brown-m-dm.jpg" width="343" height="280" alt="Habit Men's Heavy Weight Full Zip Hoodie in Major Brown" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; height:auto; border:0;">
+                            <!--<![endif]-->
+                          </a>
+                        </td>
+                        <td class="p-cell" width="276" valign="top" style="width:276px; padding:0; vertical-align:top;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;">
+                            <tr><td class="p-gap" height="44" style="height:44px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                            <tr>
+                              <td class="p-panel" height="250" valign="middle" background="../../../01-brand/email-kit/assets/tex-grain-brown.jpg" bgcolor="#483F39" style="height:250px; padding:0 24px 0 12px; vertical-align:middle; background-color:#483F39; background-image:url('../../../01-brand/email-kit/assets/tex-grain-brown.jpg'); background-size:600px auto; background-position:left top; background-repeat:repeat; border-radius:0 12px 12px 0; text-align:left; font-family:Helvetica,Arial,sans-serif;">
+                                <p style="margin:0 0 6px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:24px; line-height:28px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;">MAJOR BROWN</p>
+                                <p style="margin:0 0 14px 0; font-size:16px; line-height:22px; color:#E2DDD9;">Men&rsquo;s Heavy Weight Full Zip&nbsp;Hoodie</p>
+                                <p style="margin:0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/mens-heavy-weight-full-zip-hoodie?variant=45636943249690" target="_blank" style="color:#FFFFFF; text-decoration:underline; font-weight:700; letter-spacing:1px;">$44.99 USD</a></p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td class="p-mg" width="24" style="width:24px; font-size:0; line-height:0;">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Panel 2 · Gunmetal · image right (dir=rtl: the image cell comes first in the HTML, so it stacks first on mobile) -->
+                <tr>
+                  <td class="o3-row" style="padding:0 0 16px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="rtl">
+                      <tr>
+                        <td class="p-cell" dir="ltr" width="300" valign="bottom" style="width:300px; padding:0; font-size:0; line-height:0; vertical-align:bottom;">
+                          <a href="https://www.habitoutdoors.com/products/mens-heavy-weight-full-zip-hoodie?variant=45636943446298" target="_blank" style="text-decoration:none;">
+                            <img class="d-light" src="assets/o3-panel-gunmetal.jpg" width="300" height="294" alt="Habit Men's Heavy Weight Full Zip Hoodie in Gunmetal" style="display:block; width:300px; height:294px; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#2A2B2D;">
+                            <!--[if !mso]><!-->
+                            <img class="d-dark" src="assets/o3-panel-gunmetal-dm.jpg" width="300" height="294" alt="Habit Men's Heavy Weight Full Zip Hoodie in Gunmetal" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:300px; height:294px; border:0;">
+                            <img class="m-light" src="assets/o3-panel-gunmetal-m.jpg" width="343" height="280" alt="Habit Men's Heavy Weight Full Zip Hoodie in Gunmetal" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; height:auto; border:0;">
+                            <img class="m-dark" src="assets/o3-panel-gunmetal-m-dm.jpg" width="343" height="280" alt="Habit Men's Heavy Weight Full Zip Hoodie in Gunmetal" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; height:auto; border:0;">
+                            <!--<![endif]-->
+                          </a>
+                        </td>
+                        <td class="p-cell" dir="ltr" width="276" valign="top" style="width:276px; padding:0; vertical-align:top;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;">
+                            <tr><td class="p-gap" height="44" style="height:44px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                            <tr>
+                              <td class="p-panel" height="250" valign="middle" background="../../../01-brand/email-kit/assets/tex-paper-tapshoe.jpg" bgcolor="#2A2B2D" style="height:250px; padding:0 12px 0 24px; vertical-align:middle; background-color:#2A2B2D; background-image:url('../../../01-brand/email-kit/assets/tex-paper-tapshoe.jpg'); background-size:600px auto; background-position:left top; background-repeat:repeat; border-radius:12px 0 0 12px; text-align:left; font-family:Helvetica,Arial,sans-serif;">
+                                <p style="margin:0 0 6px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:24px; line-height:28px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;">GUNMETAL</p>
+                                <p style="margin:0 0 14px 0; font-size:16px; line-height:22px; color:#E2DDD9;">Men&rsquo;s Heavy Weight Full Zip&nbsp;Hoodie</p>
+                                <p style="margin:0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/mens-heavy-weight-full-zip-hoodie?variant=45636943446298" target="_blank" style="color:#FFFFFF; text-decoration:underline; font-weight:700; letter-spacing:1px;">$44.99 USD</a></p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td class="p-mg" width="24" style="width:24px; font-size:0; line-height:0;">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Panel 3 · Loden Green · image left -->
+                <tr>
+                  <td class="o3-row" style="padding:0 0 16px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="ltr">
+                      <tr>
+                        <td class="p-cell" width="300" valign="bottom" style="width:300px; padding:0; font-size:0; line-height:0; vertical-align:bottom;">
+                          <a href="https://www.habitoutdoors.com/products/mens-heavy-weight-full-zip-hoodie?variant=45636943642906" target="_blank" style="text-decoration:none;">
+                            <img class="d-light" src="assets/o3-panel-loden.jpg" width="300" height="294" alt="Habit Men's Heavy Weight Full Zip Hoodie in Loden Green" style="display:block; width:300px; height:294px; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#2A2B2D;">
+                            <!--[if !mso]><!-->
+                            <img class="d-dark" src="assets/o3-panel-loden-dm.jpg" width="300" height="294" alt="Habit Men's Heavy Weight Full Zip Hoodie in Loden Green" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:300px; height:294px; border:0;">
+                            <img class="m-light" src="assets/o3-panel-loden-m.jpg" width="343" height="280" alt="Habit Men's Heavy Weight Full Zip Hoodie in Loden Green" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; height:auto; border:0;">
+                            <img class="m-dark" src="assets/o3-panel-loden-m-dm.jpg" width="343" height="280" alt="Habit Men's Heavy Weight Full Zip Hoodie in Loden Green" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:100%; height:auto; border:0;">
+                            <!--<![endif]-->
+                          </a>
+                        </td>
+                        <td class="p-cell" width="276" valign="top" style="width:276px; padding:0; vertical-align:top;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;">
+                            <tr><td class="p-gap" height="44" style="height:44px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                            <tr>
+                              <td class="p-panel" height="250" valign="middle" background="../../../01-brand/email-kit/assets/tex-grain-ivy.jpg" bgcolor="#595442" style="height:250px; padding:0 24px 0 12px; vertical-align:middle; background-color:#595442; background-image:url('../../../01-brand/email-kit/assets/tex-grain-ivy.jpg'); background-size:600px auto; background-position:left top; background-repeat:repeat; border-radius:0 12px 12px 0; text-align:left; font-family:Helvetica,Arial,sans-serif;">
+                                <p style="margin:0 0 6px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:24px; line-height:28px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;">LODEN GREEN</p>
+                                <p style="margin:0 0 14px 0; font-size:16px; line-height:22px; color:#FFFFFF;">Men&rsquo;s Heavy Weight Full Zip&nbsp;Hoodie</p>
+                                <p style="margin:0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/mens-heavy-weight-full-zip-hoodie?variant=45636943642906" target="_blank" style="color:#FFFFFF; text-decoration:underline; font-weight:700; letter-spacing:1px;">$44.99 USD</a></p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td class="p-mg" width="24" style="width:24px; font-size:0; line-height:0;">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="center" class="o3-cta" style="padding:24px 40px 64px 40px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
+                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
+                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP NOW</a>
+                      </td></tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E25 -->
+
+          <!-- MODULE:E18 Torn Edge (textured) · light paper -> flat Tap Shoe footer (kit, +dm) -->
+          <tr>
+            <td bgcolor="#E2DDD9" class="dm-band" style="padding:0; background-color:#E2DDD9; font-size:0; line-height:0;">
+              <img class="fluid img-light" src="../../../01-brand/email-kit/assets/edge-tex-paperlight-footer.jpg" width="600" height="40" alt="" style="display:block; width:600px; max-width:100%; height:auto; border:0;">
+              <!--[if !mso]><!--><img class="fluid img-dark" src="../../../01-brand/email-kit/assets/edge-tex-paperlight-footer-dm.jpg" width="600" height="40" alt="" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:600px; max-width:100%; height:auto; border:0;"><!--<![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E18 -->
+
+          <!-- MODULE:E13 Closing Band -->
+          <tr>
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:56px 40px 32px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
+              <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="../../../01-brand/email-kit/assets/logo-footer.png" width="160" height="71" alt="Habit" style="display:block; width:160px; height:71px; border:0; margin:0 auto;"></a>
+            </td>
+          </tr>
+          <!-- /MODULE:E13 -->
+          <!-- MODULE:E14 Legal Footer + D3 (address and unsubscribe, client copy [Address] [Unsubscribe]) -->
+          <tr>
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:0 40px 48px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 32px auto;">
+                <tr>
+                  <td class="nav-td" style="padding:0 14px;"><a href="{{MENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">MEN&rsquo;S</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{WOMENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">WOMEN&rsquo;S</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{YOUTH_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">YOUTH</a></td>
+                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{SALE_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">SALE</a></td>
+                </tr>
+              </table>
+              <p style="margin:0 0 32px 0; font-size:14px; line-height:22px; color:#E2DDD9;">Follow us on Instagram<br><a href="{{INSTAGRAM_URL}}" target="_blank" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:24px; font-weight:800; letter-spacing:1.5px; color:#FFFFFF; text-decoration:none;">@HABITOUTDOORS</a></p>
+              <p style="margin:0 0 8px 0; font-size:12px; line-height:18px; color:#E2DDD9;">&copy; 2026, Habit Outdoors. Built By Wilde Creative.</p>
+              <p style="margin:0 0 8px 0; font-size:12px; line-height:18px; color:#E2DDD9;">[[CONFIRMAR: endere&ccedil;o f&iacute;sico da Habit]]</p>
+              <p style="margin:0; font-size:12px; line-height:18px;"><a href="{{UNSUBSCRIBE_URL}}" target="_blank" style="color:#FFFFFF; text-decoration:underline;">Unsubscribe</a></p>
+            </td>
+          </tr>
+          <!-- /MODULE:E14 -->
+
+        </table>
+        <!--[if mso]></td></tr></table><![endif]-->
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
