@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <!--
   Habit Outdoors · email kit · module library + review page.
-  HAND-TAILORED since 2026-09-24 (kit v0.2.1, approved: E01-E18). Draft modules pending approval: v0.3 E19-E23, v0.4 E24-E26 + texture set.
+  HAND-TAILORED since 2026-09-24 (kit v0.2.1, approved: E01-E18). Draft modules pending approval: v0.3 E19-E23, v0.4 E24-E26 + texture set,
+  v0.5 (2026-09-25) global type/button/footer changes on every module + E27-E34 + 3 surfaces, from the owner's revised October emails (references/rev-oct-*).
   Do NOT regenerate with build_kit.py: it would overwrite the tailoring.
-  Composed images (fan, bleed, band-crossing, collage, full-bleed hero, torn photo, textured edges) and the textures are built by tools/compose.py; rerun it to swap products or photos.
+  Composed images (fan, bleed, band-crossing, collage, full-bleed hero, torn photo, textured edges) and the textures are built by tools/compose.py
+  (v0.3/v0.4) and tools/compose_v05.py (v0.5: new surfaces, panels, closing band, label hero, tilted photo, review bleed, icons); rerun them to swap products or photos.
   Color and asset values are written inline here; tokens.json stays the record of each value and its source.
 
   Each module lives between the "MODULE:Exx name" and "/MODULE:Exx" comment markers. Copy verbatim into an email
@@ -14,7 +16,8 @@
   Contrast rule of this brand: orange #FF6400 as TEXT only on Tap Shoe #2A2B2D and Patriot Blue #202944 (4.8:1);
   on Major Brown #483F39 only in large headline text (3.5:1). On white, #E2DDD9 and the Aluminum texture:
   labels #5C5249 (on the texture #2A2B2D), links #2A2B2D underlined, accent word #2A2B2D in the serif.
-  Orange is fine as button fill anywhere, always with Tap Shoe #2A2B2D text.
+  Button (v0.5, owner's choice 2026-09-25): #FF6400 fill with WHITE #FFFFFF text, radius 4px. 2.97:1, below AA (4.5 and 3.0):
+  a recorded exception requested by the owner, flagged by QA, not blocking. It replaces the 2026-09-24 Tap Shoe text decision.
 -->
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -30,7 +33,7 @@
   <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
   <style>body, table, td, p, a, h1, h2, h3, span { font-family: Arial, sans-serif !important; }</style>
   <![endif]-->
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;800&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;800&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
   <style>
     :root { color-scheme: light dark; supported-color-schemes: light dark; }
     body { margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #EFECE9; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
@@ -49,16 +52,20 @@
       .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
       .h1 { font-size: 34px !important; line-height: 38px !important; }
       .h2 { font-size: 28px !important; line-height: 32px !important; }
-      .h1-lead { font-size: 26px !important; line-height: 30px !important; }
-      .h1-key { font-size: 60px !important; line-height: 62px !important; }
+      .h1-lead { font-size: 22px !important; line-height: 24px !important; }
+      .h1-key { font-size: 64px !important; line-height: 58px !important; }
+      /* v0.5 two-voice headline: Prompt 800 caps line + dominant Playfair 900 caps word */
+      .hl-lead { font-size: 22px !important; line-height: 24px !important; }
+      .hl-key { font-size: 64px !important; line-height: 58px !important; }
+      .hl-key-s { font-size: 60px !important; line-height: 56px !important; }
       .btn-full { width: 100% !important; }
       .btn-full a { display: block !important; padding-left: 16px !important; padding-right: 16px !important; }
       .card-gutter { padding-left: 12px !important; padding-right: 12px !important; }
       .hero-card { height: 356px !important; padding: 36px 24px 0 24px !important; }
       .h1-card { font-size: 32px !important; line-height: 36px !important; }
       .card-cell { display: block !important; width: 100% !important; max-width: 100% !important; padding: 0 0 16px 0 !important; }
-      .nav-td { padding: 0 7px !important; }
-      .nav-a { font-size: 12px !important; letter-spacing: 1.5px !important; }
+      .nav-td { padding: 0 9px !important; }
+      .nav-a { font-size: 13px !important; letter-spacing: 1.5px !important; }
       /* v0.3 draft modules */
       .e20-pad { padding: 40px 0 40px 0 !important; }
       .e20-img { padding: 0 !important; box-sizing: border-box !important; }
@@ -72,12 +79,33 @@
       /* v0.4 draft modules */
       .e24-logo { padding: 24px 24px 0 24px !important; }
       .e24-text { padding: 24px 24px 0 24px !important; }
-      .e24-lead { font-size: 26px !important; line-height: 30px !important; }
-      .e24-key { font-size: 58px !important; line-height: 60px !important; }
+      .e24-lead { font-size: 22px !important; line-height: 24px !important; }
+      .e24-key { font-size: 64px !important; line-height: 58px !important; }
       .e24-sub { font-size: 13px !important; line-height: 20px !important; letter-spacing: 1.5px !important; }
       .e24-space { height: 310px !important; }
       .e24b-space { height: 280px !important; }
       .e24b-bottom { height: 56px !important; }
+      /* v0.5 draft modules */
+      .e27-cell { display: block !important; width: 100% !important; max-width: 100% !important; padding: 0 0 16px 0 !important; box-sizing: border-box !important; }
+      .e28-cell { display: block !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
+      .e28-img { width: 100% !important; max-width: 100% !important; height: auto !important; }
+      .e28-info { height: auto !important; padding: 36px 24px !important; }
+      .e29-wrap { padding-left: 16px !important; padding-right: 16px !important; }
+      .e29-panel { display: block !important; width: 100% !important; border-radius: 13px 13px 0 0 !important; }
+      .e29-img { border-radius: 13px 13px 0 0 !important; }
+      .e29-info { display: block !important; width: 100% !important; padding: 24px 20px 28px 20px !important; box-sizing: border-box !important; }
+      .e30-space { height: 430px !important; }
+      .e31-img { display: block !important; width: 100% !important; padding: 0 0 20px 0 !important; box-sizing: border-box !important; }
+      .e31-text { display: block !important; width: 100% !important; }
+      .e32-text { display: block !important; width: 100% !important; padding: 48px 24px 8px 24px !important; box-sizing: border-box !important; }
+      .e32-img { display: block !important; width: 100% !important; }
+      .e33-labels { padding-top: 28px !important; }
+      .lb { padding: 6px 14px 4px 16px !important; font-size: 22px !important; line-height: 28px !important; }
+      .lb-key { padding: 4px 14px 0 16px !important; font-size: 48px !important; line-height: 56px !important; }
+      .e33-space { height: 240px !important; }
+      .e33-text { padding: 0 24px 64px 24px !important; }
+      .e34-card { display: block !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
+      .e34-gap { display: block !important; width: 100% !important; height: 16px !important; }
     }
 
     /* Dark mode. Apple Mail / iOS via prefers-color-scheme; Outlook app via [data-ogsc]/[data-ogsb].
@@ -97,6 +125,7 @@
       :root:not([data-theme="light"]) .logo-light, :root:not([data-theme="light"]) .img-light { display: none !important; max-height: 0 !important; overflow: hidden !important; }
       :root:not([data-theme="light"]) .logo-dark, :root:not([data-theme="light"]) .img-dark { display: block !important; max-height: none !important; overflow: visible !important; }
       :root:not([data-theme="light"]) .dm-tex { background-color: #34353A !important; background-image: url('assets/tex-paper-light-dm.jpg') !important; }
+      :root:not([data-theme="light"]) .dm-tex-camo { background-color: #34353A !important; background-image: url('assets/tex-paper-camo-dm.jpg') !important; }
     }
     :root[data-theme="dark"] .dm-page { background-color: #1E1F21 !important; }
     :root[data-theme="dark"] .dm-surface { background-color: #2A2B2D !important; }
@@ -111,9 +140,11 @@
     :root[data-theme="dark"] .logo-light, :root[data-theme="dark"] .img-light { display: none !important; max-height: 0 !important; overflow: hidden !important; }
     :root[data-theme="dark"] .logo-dark, :root[data-theme="dark"] .img-dark { display: block !important; max-height: none !important; overflow: visible !important; }
     :root[data-theme="dark"] .dm-tex { background-color: #34353A !important; background-image: url('assets/tex-paper-light-dm.jpg') !important; }
+    :root[data-theme="dark"] .dm-tex-camo { background-color: #34353A !important; background-image: url('assets/tex-paper-camo-dm.jpg') !important; }
     [data-ogsb] .dm-surface { background-color: #2A2B2D !important; }
     [data-ogsb] .dm-band { background-color: #34353A !important; }
     [data-ogsb] .dm-tex { background-color: #34353A !important; background-image: url('assets/tex-paper-light-dm.jpg') !important; }
+    [data-ogsb] .dm-tex-camo { background-color: #34353A !important; background-image: url('assets/tex-paper-camo-dm.jpg') !important; }
     [data-ogsc] .dm-h { color: #F1EEEB !important; }
     [data-ogsc] .dm-p { color: #D6D0CA !important; }
     [data-ogsc] .dm-link { color: #F1EEEB !important; }
@@ -135,14 +166,17 @@
 
           <!-- ============ KIT SHEET (review only) ============ -->
           <tr>
-            <td class="px dm-surface" style="padding:40px 40px 32px 40px; background-color:#FFFFFF; font-family:Helvetica,Arial,sans-serif;">
-              <p class="dm-muted" style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; text-transform:uppercase; color:#5C5249;">EMAIL KIT · V0.2.1 APPROVED · E19-E26 AND TEXTURES PENDING</p>
-              <h1 class="h1 dm-h" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:42px; line-height:46px; font-weight:800; color:#2A2B2D;">HABIT OUTDOORS, IN&nbsp;<span class="dm-accent" style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#2A2B2D;">EMAIL</span></h1>
-              <p class="dm-p" style="margin:0; font-size:16px; line-height:26px; color:#5C5249;">Colors measured on the five September 2026 sent emails, the source of truth for this brand. Fonts are provisional: the owner sets final typography in Figma. Every text in the modules is sample copy, adapted from the sent emails and the Strategy Report. Real emails take their copy from the flow brief.</p>
+            <td class="px dm-surface" style="padding:40px 40px 32px 40px; background-color:#FFFFFF; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+              <p class="dm-muted" style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; text-transform:uppercase; color:#5C5249;">EMAIL KIT · V0.2.1 APPROVED · V0.3 TO V0.5 PENDING · V0.5 DRAFT 2026-09-25</p>
+              <h1 class="dm-h" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#2A2B2D; text-align:left;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">HABIT OUTDOORS, IN</span>
+                <span class="hl-key dm-accent" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:100px; line-height:90px; font-weight:900; color:#2A2B2D;">EMAIL</span>
+              </h1>
+              <p class="dm-p" style="margin:0; font-size:16px; line-height:26px; color:#5C5249;">Colors measured on the five September 2026 sent emails, the source of truth for this brand. Fonts are provisional: the owner sets final typography in Figma. v0.5 (owner's revised October emails, 2026-09-25): white button text, 4px radius, body in Prompt, two-voice headline with a dominant serif, centered body under band headlines, product info box, Instagram icon in the footer. Every text in the modules is sample copy, adapted from the sent emails and the Strategy Report. Real emails take their copy from the flow brief.</p>
             </td>
           </tr>
           <tr>
-            <td class="px dm-surface" style="padding:0 40px 16px 40px; background-color:#FFFFFF; font-family:Helvetica,Arial,sans-serif;">
+            <td class="px dm-surface" style="padding:0 40px 16px 40px; background-color:#FFFFFF; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td width="33%" class="stack stack-pad" style="padding:0 8px 16px 0; vertical-align:top;">
@@ -190,22 +224,22 @@
             </td>
           </tr>
           <tr>
-            <td class="px dm-surface" style="padding:8px 40px 40px 40px; background-color:#FFFFFF; font-family:Helvetica,Arial,sans-serif;">
+            <td class="px dm-surface" style="padding:8px 40px 40px 40px; background-color:#FFFFFF; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-                <tr><td class="dm-line" style="padding:12px 0; border-top:1px solid #CFC8BF;"><span class="dm-h" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:46px; line-height:50px; font-weight:800; color:#2A2B2D;">DISPLAY <span class="dm-accent" style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#2A2B2D;">ACCENT</span></span><br><span class="dm-muted" style="font-size:13px; line-height:18px; color:#5C5249;">Prompt 800 caps + one accent word in Playfair Display 900 caps (both provisional) · 46/48 desktop, 34/38 mobile · accent word orange only on Tap Shoe / Patriot Blue (and large on Major Brown), #2A2B2D on light bands</span></td></tr>
-                <tr><td class="dm-line" style="padding:12px 0; border-top:1px solid #CFC8BF;"><span class="dm-h" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:34px; line-height:36px; font-weight:800; color:#2A2B2D;">SECTION HEADING</span><br><span class="dm-muted" style="font-size:13px; line-height:18px; color:#5C5249;">Prompt 800 caps · 34/36 desktop, 28/32 mobile</span></td></tr>
-                <tr><td class="dm-line" style="padding:12px 0; border-top:1px solid #CFC8BF;"><span class="dm-h" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#2A2B2D;">TRACKED SUBHEAD IN CAPS.</span><br><span class="dm-muted" style="font-size:13px; line-height:18px; color:#5C5249;">Prompt 500 · 14/22 · 2px tracking · under the headline, never above</span></td></tr>
-                <tr><td class="dm-line" style="padding:12px 0; border-top:1px solid #CFC8BF;"><span class="dm-h" style="font-size:18px; line-height:22px; font-weight:800; color:#2A2B2D;">ITEM TITLE</span><span class="dm-muted" style="font-size:13px; line-height:18px; color:#5C5249;"> · 800 · 18/22</span><br><span class="dm-p" style="font-size:16px; line-height:26px; color:#5C5249;">Body copy runs at 16/26 in sentence case, never smaller.</span></td></tr>
+                <tr><td class="dm-line" style="padding:12px 0; border-top:1px solid #CFC8BF;"><span class="dm-h" style="display:block; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:30px; line-height:32px; font-weight:800; color:#2A2B2D;">TWO-VOICE HEADLINE:</span><span class="dm-h dm-accent hl-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:100px; line-height:90px; font-weight:900; color:#2A2B2D;">SERIF</span><span class="dm-muted" style="display:block; padding-top:8px; font-size:13px; line-height:18px; color:#5C5249;">v0.5: the serif word is the protagonist. Playfair Display 900 caps 96 to 110px desktop (line-height about 0.9, may wrap to 2 lines), 64 to 72px mobile; Prompt 800 caps line 26 to 32px (mobile 22 to 24), above or below the serif. Serif color: white, orange (only on Tap Shoe, Patriot Blue, Major Brown or a dark photo), Tap Shoe on light paper, or Aluminum light #CFC8BF. Split columns: serif 60 to 64px. Width: Playfair 900 caps runs about 0.66em per letter, so one line holds about 7 letters at 100px in a 520px band and at 64px on a 375px phone; longer words go to 2 lines or a smaller size. Replaces the inline accent word of v0.2</span></td></tr>
+                <tr><td class="dm-line" style="padding:12px 0; border-top:1px solid #CFC8BF;"><span class="dm-h" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:30px; line-height:32px; font-weight:800; color:#2A2B2D;">SANS LINE ALONE</span><br><span class="dm-muted" style="font-size:13px; line-height:18px; color:#5C5249;">Prompt 800 caps · 30/32 desktop, 22/24 mobile · band headings use the two-voice device above (v0.5); a sans line alone only for item titles and small labels</span></td></tr>
+                <tr><td class="dm-line" style="padding:12px 0; border-top:1px solid #CFC8BF;"><span class="dm-h" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#2A2B2D;">TRACKED SUBHEAD IN CAPS.</span><br><span class="dm-muted" style="font-size:13px; line-height:18px; color:#5C5249;">Prompt 500 · 14/22 (15px in heroes) · 2px tracking · under the headline, never above · v0.5: ONLY in heroes; inner bands go headline then body</span></td></tr>
+                <tr><td class="dm-line" style="padding:12px 0; border-top:1px solid #CFC8BF;"><span class="dm-h" style="font-size:18px; line-height:22px; font-weight:800; color:#2A2B2D;">ITEM TITLE</span><span class="dm-muted" style="font-size:13px; line-height:18px; color:#5C5249;"> · 800 · 18/22</span><br><span class="dm-p" style="font-size:17px; line-height:24px; color:#2A2B2D;">Band body: Prompt 400, 17/24, centered right under the headline, sentence case.</span><br><span class="dm-muted" style="font-size:13px; line-height:18px; color:#5C5249;">Cards, lists and footer: Prompt 400/500, 15 or 16px · fallback Helvetica, Arial · #FFFFFF or #E2DDD9 on dark, #2A2B2D on light</span></td></tr>
                 <tr><td class="dm-line" style="padding:12px 0; border-top:1px solid #CFC8BF;"><span class="dm-muted" style="font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; text-transform:uppercase; color:#5C5249;">EYEBROW LABEL · 500 · 13/20 · 2.4PX</span> <span class="dm-muted" style="font-size:13px; line-height:18px; color:#5C5249;">(#5C5249 on light, #FF6400 on Tap Shoe and Patriot Blue, white on photos, brown and olive)</span></td></tr>
                 <tr><td class="dm-line" style="padding:16px 0 12px 0; border-top:1px solid #CFC8BF;">
                   <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                    <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                      <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 36px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP NOW</a>
+                    <tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;">
+                      <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 36px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP NOW</a>
                     </td></tr>
                   </table>
-                  <span class="dm-muted" style="display:block; padding-top:8px; font-size:13px; line-height:18px; color:#5C5249;">Button: #FF6400 fill, #2A2B2D text (4.8:1), caps, 2px tracking, radius 6px, 52px tall. One button style in every email; the sent emails use no other color.</span>
+                  <span class="dm-muted" style="display:block; padding-top:8px; font-size:13px; line-height:18px; color:#5C5249;">Button (v0.5): #FF6400 fill, WHITE #FFFFFF text, Prompt 800 caps 17px, 2px tracking, radius 4px, 52px tall. White on orange is 2.97:1, below AA: exception chosen by the owner on 2026-09-25 (replaces the Tap Shoe text of 2026-09-24), QA flags it without blocking. Small in-card button: 13px, padding 14px 22px (44px tall, the rules minimum; the revision shows 12px). One button style in every email.</span>
                 </td></tr>
-                <tr><td class="dm-line" style="padding:12px 0 0 0; border-top:1px solid #CFC8BF;"><span class="dm-muted" style="font-size:13px; line-height:18px; color:#5C5249;">Case rule: headlines, item titles, subheads and buttons in real uppercase letters in the HTML; body in sentence case. Links on light bands: <a href="{{LINK_URL}}" target="_blank" class="dm-link" style="color:#2A2B2D; text-decoration:underline;">#2A2B2D underlined</a>. Card radius 12px. ESP: Omnisend [[CONFIRMAR]] · first-name merge field: [[CONFIRMAR: Omnisend first name merge tag with fallback]]</span></td></tr>
+                <tr><td class="dm-line" style="padding:12px 0 0 0; border-top:1px solid #CFC8BF;"><span class="dm-muted" style="font-size:13px; line-height:18px; color:#5C5249;">Case rule: headlines, item titles, subheads and buttons in real uppercase letters in the HTML; body in sentence case. Links on light bands: <a href="{{LINK_URL}}" target="_blank" class="dm-link" style="color:#2A2B2D; text-decoration:underline;">#2A2B2D underlined</a>. Card radius 12px (E17), framed card 14px (E29), product info box 10px (E27). ESP: Omnisend [[CONFIRMAR]] · first-name merge field: [[CONFIRMAR: Omnisend first name merge tag with fallback]]</span></td></tr>
               </table>
             </td>
           </tr>
@@ -234,20 +268,20 @@
             </td>
           </tr>
           <tr>
-            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:44px 40px 56px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:44px 40px 56px 40px; background-color:#2A2B2D; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <h1 style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
-                <span class="h1-lead" style="display:block; font-size:34px; line-height:38px; letter-spacing:1px;">MEET FALL ON THE</span>
-                <span class="h1-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:88px; line-height:90px; font-weight:900;">WATER</span>
+                <span class="h1-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">MEET FALL ON THE</span>
+                <span class="h1-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:104px; line-height:94px; font-weight:900;">WATER</span>
               </h1>
               <table role="presentation" width="78%" cellpadding="0" cellspacing="0" border="0" align="center" style="width:78%; margin:14px auto 28px auto;">
                 <tr><td height="3" bgcolor="#FF6400" style="height:3px; background-color:#FF6400; font-size:3px; line-height:3px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
                 <tr><td height="5" style="height:5px; font-size:5px; line-height:5px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
                 <tr><td height="3" bgcolor="#FF6400" style="height:3px; background-color:#FF6400; font-size:3px; line-height:3px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
               </table>
-              <p style="margin:0 auto 32px auto; max-width:420px; font-size:16px; line-height:26px; color:#E2DDD9; text-align:center;">Cool mornings, quiet water and gear that keeps up from the first cast to the&nbsp;last.</p>
+              <p style="margin:0 auto 32px auto; max-width:440px; font-size:17px; line-height:24px; color:#FFFFFF; text-align:center;">Cool mornings, quiet water and gear that keeps up from the first cast to the&nbsp;last.</p>
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
-                <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP FISHING</a>
+                <tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP FISHING</a>
                 </td></tr>
               </table>
             </td>
@@ -258,14 +292,17 @@
           <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E03 · Hero Statement · one big idea on the Aluminum topographic texture (fallback #A39A8C). The texture is mid-tone: eyebrow and text in #2A2B2D here (#5C5249 would be 2.7:1). After E01. SAMPLE COPY adapted from Sep 10, not approved</td></tr>
           <!-- MODULE:E03 Hero Statement -->
           <tr>
-            <td align="center" background="assets/texture-light.jpg" bgcolor="#A39A8C" class="px" style="mso-padding-alt:0px; padding:64px 40px 72px 40px; background-color:#A39A8C; background-image:url('assets/texture-light.jpg'); background-size:cover; background-position:center bottom; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" background="assets/texture-light.jpg" bgcolor="#A39A8C" class="px" style="mso-padding-alt:0px; padding:64px 40px 72px 40px; background-color:#A39A8C; background-image:url('assets/texture-light.jpg'); background-size:cover; background-position:center bottom; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/texture-light.jpg" color="#A39A8C" /><v:textbox style="mso-fit-shape-to-text:true;" inset="40px,64px,40px,72px"><div><![endif]-->
               <p style="margin:0 0 16px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#2A2B2D;">YOUR FIRST LOOK AT FALL</p>
-              <h1 class="h1" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:46px; line-height:50px; font-weight:800; color:#2A2B2D;">GEAR UP FOR THE&nbsp;<span style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#2A2B2D;">SEASON</span></h1>
-              <p style="margin:0 auto 32px auto; max-width:440px; font-size:16px; line-height:26px; color:#2A2B2D;">Layers for a cold morning in the stand and a warm afternoon at camp. Built to work hard, priced so you can get out there&nbsp;more.</p>
+              <h1 style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#2A2B2D; text-align:center;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">GEAR UP FOR THE</span>
+                <span class="hl-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:104px; line-height:94px; font-weight:900; color:#2A2B2D;">SEASON</span>
+              </h1>
+              <p style="margin:0 auto 32px auto; max-width:440px; font-size:17px; line-height:24px; color:#2A2B2D;">Layers for a cold morning in the stand and a warm afternoon at camp. Built to work hard, priced so you can get out there&nbsp;more.</p>
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
-                <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP FALL</a>
+                <tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP FALL</a>
                 </td></tr>
               </table>
               <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
@@ -277,16 +314,19 @@
           <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E04 · Hero Product · one product on the light warm band, text left, packshot right. After E01. Stacks on mobile. SAMPLE COPY adapted from Sep 24, not approved. Packshot: Men&rsquo;s Heavyweight Soft Flannel (catalog handle mens-heavyweight-soft-flannel), assets/pack-mens-heavyweight-soft-flannel-360.png</td></tr>
           <!-- MODULE:E04 Hero Product -->
           <tr>
-            <td class="px py dm-band" style="padding:56px 40px; background-color:#E2DDD9; font-family:Helvetica,Arial,sans-serif;">
+            <td class="px py dm-band" style="padding:56px 40px; background-color:#E2DDD9; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td width="62%" class="stack stack-pad" style="vertical-align:middle; padding:0 16px 0 0;">
                     <p class="dm-muted" style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#5C5249;">HEAVYWEIGHT FLANNEL</p>
-                    <h1 class="h1 dm-h" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:34px; line-height:38px; font-weight:800; color:#2A2B2D;">MEET YOUR NEW&nbsp;<span class="dm-accent" style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#2A2B2D;">FAVORITE</span></h1>
-                    <p class="dm-p" style="margin:0 0 24px 0; font-size:16px; line-height:26px; color:#2A2B2D;">Warm, soft and ready to layer, from morning chores to a night by the&nbsp;fire.</p>
+                    <h1 class="dm-h" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#2A2B2D; text-align:left;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">MEET YOUR NEW</span>
+                <span class="hl-key-s dm-accent" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:64px; line-height:60px; font-weight:900; color:#2A2B2D;">FLANNEL</span>
+              </h1>
+                    <p class="dm-p" style="margin:0 0 24px 0; font-size:17px; line-height:24px; color:#2A2B2D;">Warm, soft and ready to layer, from morning chores to a night by the&nbsp;fire.</p>
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="btn-full">
-                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 36px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">TAKE A LOOK</a>
+                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;">
+                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 36px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">TAKE A LOOK</a>
                       </td></tr>
                     </table>
                   </td>
@@ -306,10 +346,13 @@
             <td class="dm-surface card-gutter" style="padding:0 20px; background-color:#FFFFFF;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td align="center" valign="top" height="600" background="assets/card-fishing.jpg" bgcolor="#2A2B2D" class="hero-card" style="mso-padding-alt:0px; height:552px; padding:48px 40px 0 40px; border-radius:12px; background-color:#2A2B2D; background-image:url('assets/card-fishing.jpg'); background-size:cover; background-position:center top; vertical-align:top; font-family:Helvetica,Arial,sans-serif;">
+                  <td align="center" valign="top" height="600" background="assets/card-fishing.jpg" bgcolor="#2A2B2D" class="hero-card" style="mso-padding-alt:0px; height:552px; padding:48px 40px 0 40px; border-radius:12px; background-color:#2A2B2D; background-image:url('assets/card-fishing.jpg'); background-size:cover; background-position:center top; vertical-align:top; font-family:'Prompt',Helvetica,Arial,sans-serif;">
                     <!--[if gte mso 9]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" arcsize="2%" fill="true" stroke="false" style="width:560px;height:600px;"><v:fill type="frame" src="assets/card-fishing.jpg" color="#2A2B2D" /><v:textbox inset="40px,48px,40px,0px"><![endif]-->
                     <p style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#FFFFFF;">FALL ON THE WATER</p>
-                    <h1 class="h1-card" style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:42px; line-height:46px; font-weight:800; color:#FFFFFF;">BUILT FOR THE&nbsp;<span style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#FFFFFF;">WATER</span></h1>
+                    <h1 style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">BUILT FOR THE</span>
+                <span class="hl-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:100px; line-height:90px; font-weight:900; color:#FFFFFF;">WATER</span>
+              </h1>
                     <!--[if gte mso 9]></v:textbox></v:roundrect><![endif]-->
                   </td>
                 </tr>
@@ -317,11 +360,11 @@
             </td>
           </tr>
           <tr>
-            <td align="center" class="px dm-surface e15-body" style="padding:32px 40px 56px 40px; background-color:#FFFFFF; font-family:Helvetica,Arial,sans-serif;">
-              <p class="dm-p" style="margin:0 auto 28px auto; max-width:440px; font-size:16px; line-height:26px; color:#2A2B2D;">Shirts made for long days on the river. Light enough for the sun, tough enough for the tackle&nbsp;box.</p>
+            <td align="center" class="px dm-surface e15-body" style="padding:32px 40px 56px 40px; background-color:#FFFFFF; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+              <p class="dm-p" style="margin:0 auto 28px auto; max-width:440px; font-size:17px; line-height:24px; color:#2A2B2D;">Shirts made for long days on the river. Light enough for the sun, tough enough for the tackle&nbsp;box.</p>
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
-                <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP FISHING</a>
+                <tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP FISHING</a>
                 </td></tr>
               </table>
             </td>
@@ -337,13 +380,16 @@
             </td>
           </tr>
           <tr>
-            <td align="center" class="px dm-band" style="padding:36px 40px 56px 40px; background-color:#E2DDD9; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" class="px dm-band" style="padding:36px 40px 56px 40px; background-color:#E2DDD9; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <p class="dm-muted" style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#5C5249;">HUNTING SEASON</p>
-              <h1 class="h1 dm-h" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:46px; line-height:50px; font-weight:800; color:#2A2B2D;">BACK FOR THE&nbsp;<span class="dm-accent" style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#2A2B2D;">HUNT</span></h1>
-              <p class="dm-h" style="margin:0 auto 28px auto; max-width:440px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#2A2B2D;">TRUSTED FOR THE HUNT. READY FOR WHATEVER COMES AFTER.</p>
+              <h1 class="dm-h" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#2A2B2D; text-align:center;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">BACK FOR THE</span>
+                <span class="hl-key dm-accent" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:104px; line-height:94px; font-weight:900; color:#2A2B2D;">HUNT</span>
+              </h1>
+              <p class="dm-h" style="margin:0 auto 28px auto; max-width:440px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:22px; font-weight:500; letter-spacing:2px; color:#2A2B2D;">TRUSTED FOR THE HUNT. READY FOR WHATEVER COMES AFTER.</p>
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
-                <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP NOW</a>
+                <tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP NOW</a>
                 </td></tr>
               </table>
             </td>
@@ -351,13 +397,16 @@
           <!-- /MODULE:E16 -->
 
           <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
-          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E05 · Text Block · heading + 2 or 3 sentences + inline link (#2A2B2D, underlined). Angle-shift band. SAMPLE COPY adapted from Sep 2, not approved</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E05 · Text Block · (v0.5: centered, two-voice headline with the serif word first as in rev-oct-03 WARM / ENOUGH TO SKIP THE JACKET, body 17/24 #2A2B2D, one paragraph + link) · heading + 1 or 2 sentences + inline link (#2A2B2D, underlined). Angle-shift band. SAMPLE COPY adapted from Sep 2, not approved</td></tr>
           <!-- MODULE:E05 Text Block -->
           <tr>
-            <td class="px py dm-surface" style="padding:56px 40px; background-color:#FFFFFF; font-family:Helvetica,Arial,sans-serif;">
-              <h2 class="h2 dm-h" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:34px; line-height:38px; font-weight:800; color:#2A2B2D;"><span class="dm-accent" style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#2A2B2D;">MORE</span> THAN A HUNTING&nbsp;JACKET</h2>
-              <p class="dm-p" style="margin:0 0 16px 0; font-size:16px; line-height:26px; color:#5C5249;">It keeps you comfortable in the stand and on the drive home. Wear it to the field, to the game, to the hardware store.</p>
-              <p class="dm-p" style="margin:0; font-size:16px; line-height:26px; color:#5C5249;">Same jacket, more reasons to reach for it. <a href="{{LINK_URL}}" target="_blank" class="dm-link" style="color:#2A2B2D; text-decoration:underline; font-weight:700;">See how it layers</a></p>
+            <td align="center" class="px py dm-surface" style="padding:56px 40px; background-color:#FFFFFF; font-family:'Prompt',Helvetica,Arial,sans-serif; text-align:center;">
+              <h2 class="dm-h" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#2A2B2D; text-align:center;">
+                <span class="hl-key dm-accent" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:100px; line-height:90px; font-weight:900; color:#2A2B2D;">MORE</span>
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">THAN A HUNTING JACKET</span>
+              </h2>
+              <p class="dm-p" style="margin:0 auto 16px auto; max-width:460px; font-size:17px; line-height:24px; color:#2A2B2D;">It keeps you comfortable in the stand and on the drive home. Wear it to the field, to the game, to the hardware&nbsp;store.</p>
+              <p class="dm-p" style="margin:0; font-size:17px; line-height:24px; color:#2A2B2D;"><a href="{{LINK_URL}}" target="_blank" class="dm-link" style="color:#2A2B2D; text-decoration:underline; font-weight:500;">See how it layers</a></p>
             </td>
           </tr>
           <!-- /MODULE:E05 -->
@@ -366,9 +415,12 @@
           <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E06 · Steps · a real sequence only (3 to 5 steps). Orange circle with #2A2B2D number. Repeat the row per step; the last row has no divider. SAMPLE COPY adapted from Sep 24 ("MADE TO LAYER"), not approved</td></tr>
           <!-- MODULE:E06 Steps -->
           <tr>
-            <td class="px py dm-surface" style="padding:56px 40px; background-color:#FFFFFF; font-family:Helvetica,Arial,sans-serif;">
+            <td class="px py dm-surface" style="padding:56px 40px; background-color:#FFFFFF; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <p class="dm-muted" style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#5C5249;">HOW TO WEAR IT</p>
-              <h2 class="h2 dm-h" style="margin:0 0 32px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:34px; line-height:38px; font-weight:800; color:#2A2B2D;">MADE TO&nbsp;<span class="dm-accent" style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#2A2B2D;">LAYER</span></h2>
+              <h2 class="dm-h" style="margin:0 0 32px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#2A2B2D; text-align:left;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">MADE TO</span>
+                <span class="hl-key-s dm-accent" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:64px; line-height:60px; font-weight:900; color:#2A2B2D;">LAYER</span>
+              </h2>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td width="56" style="width:56px; padding:0 16px 24px 0; vertical-align:top;">
@@ -408,7 +460,7 @@
           <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E07 · Product Rows · packshot in a light circle + name, one line, price link. Products only: no portraits (they would imply real staff). Stacks on mobile. SAMPLE: names, packshots and prices from the store catalog on 2026-09-24 (handles mens-heavyweight-soft-flannel, mens-crater-valley-full-zip-fleece-jacket); prices must be re-checked on the send date</td></tr>
           <!-- MODULE:E07 Product Rows -->
           <tr>
-            <td class="px py dm-surface" style="padding:56px 40px; background-color:#FFFFFF; font-family:Helvetica,Arial,sans-serif;">
+            <td class="px py dm-surface" style="padding:56px 40px; background-color:#FFFFFF; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td width="136" class="stack stack-pad" style="width:136px; padding:0 24px 32px 0; vertical-align:middle;">
@@ -440,32 +492,35 @@
           <!-- /MODULE:E07 -->
 
           <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
-          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E17 · Product Cards · (v0.2.1: the card outline sits on the row cell itself, so both cards of a row are always the same height when a name wraps to 2 lines; gutter is its own 16px cell; both stack under 620px) · Sep 15 pattern, 2-up on a line-colored band: Men's #483F39 (below), Youth #7F7064, Women's #595442. The guide assigns Violet Dusk (Women's) and Yellow Plum (Youth), but the sent emails use these band colors, and the sent emails win. Card: 1px #FEF4C6 outline, radius 12px. Stacks under 620px. One button under the grid. Orange text on #483F39 only in the large headline accent (3.5:1). SAMPLE: names, packshots and prices from the store catalog on 2026-09-24 (handles habit-mens-cedar-branch-insulated-waterproof-parka, Realtree APX $99.99; mens-cedar-branch-insulated-bib $99.99). The parka in Blaze is $89.99, so the price follows the color shown. Re-check prices on the send date</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E17 · Product Cards · (v0.5: header centered with the two-voice headline and a sentence-case body instead of the tracked subhead; card text in the product info box type of E27: orange 19px title, white 15px name, 20px white price without underline) (v0.2.1: the card outline sits on the row cell itself, so both cards of a row are always the same height when a name wraps to 2 lines; gutter is its own 16px cell; both stack under 620px) · Sep 15 pattern, 2-up on a line-colored band: Men's #483F39 (below), Youth #7F7064, Women's #595442. The guide assigns Violet Dusk (Women's) and Yellow Plum (Youth), but the sent emails use these band colors, and the sent emails win. Card: 1px #FEF4C6 outline, radius 12px. Stacks under 620px. One button under the grid. Orange text on #483F39 only in the large headline accent (3.5:1). SAMPLE: names, packshots and prices from the store catalog on 2026-09-24 (handles habit-mens-cedar-branch-insulated-waterproof-parka, Realtree APX $99.99; mens-cedar-branch-insulated-bib $99.99). The parka in Blaze is $89.99, so the price follows the color shown. Re-check prices on the send date</td></tr>
           <!-- MODULE:E17 Product Cards -->
           <tr>
-            <td class="px py" bgcolor="#483F39" style="padding:56px 40px; background-color:#483F39; font-family:Helvetica,Arial,sans-serif;">
-              <h2 class="h2" style="margin:0 0 12px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:34px; line-height:38px; font-weight:800; color:#FFFFFF;">FOR HIM. FOR HER.<br>FOR THE&nbsp;<span style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#FF6400;">HUNT.</span></h2>
-              <p style="margin:0 0 32px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">FIND THE GEAR THAT WORKS FOR HOW YOU HUNT.</p>
+            <td align="center" class="px py" bgcolor="#483F39" style="padding:56px 40px; background-color:#483F39; font-family:'Prompt',Helvetica,Arial,sans-serif; text-align:center;">
+              <h2 style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">FOR HIM. FOR HER. FOR THE</span>
+                <span class="hl-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:100px; line-height:90px; font-weight:900; color:#FF6400;">HUNT</span>
+              </h2>
+              <p style="margin:0 auto 32px auto; max-width:460px; font-size:17px; line-height:24px; color:#FFFFFF; text-align:center;">Find the gear that works for how you&nbsp;hunt.</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;">
                 <tr>
                   <td width="252" align="center" valign="top" class="e17-card" style="width:252px; padding:28px 16px 20px 16px; border:1px solid #FEF4C6; border-radius:12px; vertical-align:top;">
-                    <p style="margin:0 0 6px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">MEN&rsquo;S CEDAR BRANCH</p>
-                    <p style="margin:0 0 8px 0; font-size:16px; line-height:22px; color:#FFFFFF;">Insulated Waterproof Parka</p>
-                    <p style="margin:0 0 16px 0; font-size:16px; line-height:22px;"><a href="{{PRODUCT_1_URL}}" target="_blank" style="color:#FFFFFF; text-decoration:underline; letter-spacing:1px;">$99.99 USD</a></p>
+                    <p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:21px; font-weight:800; color:#FF6400;">MEN&rsquo;S CEDAR BRANCH</p>
+                    <p style="margin:0 0 6px 0; font-size:15px; line-height:20px; font-weight:500; color:#FFFFFF;">Insulated Waterproof Parka</p>
+                    <p style="margin:0 0 16px 0; font-size:20px; line-height:24px; font-weight:800;"><a href="{{PRODUCT_1_URL}}" target="_blank" style="color:#FFFFFF; text-decoration:none;">$99.99 USD</a></p>
                     <a href="{{PRODUCT_1_URL}}" target="_blank" style="text-decoration:none;"><img src="assets/pack-mens-cedar-branch-parka-400.png" width="200" height="200" alt="Habit Men&rsquo;s Cedar Branch Insulated Waterproof Parka in Realtree APX camo" style="display:block; width:200px; max-width:100%; height:auto; border:0; margin:0 auto;"></a>
                   </td>
                   <td width="16" class="e17-gap" style="width:16px; font-size:0; line-height:0;">&nbsp;</td>
                   <td width="252" align="center" valign="top" class="e17-card" style="width:252px; padding:28px 16px 20px 16px; border:1px solid #FEF4C6; border-radius:12px; vertical-align:top;">
-                    <p style="margin:0 0 6px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">MEN&rsquo;S CEDAR BRANCH</p>
-                    <p style="margin:0 0 8px 0; font-size:16px; line-height:22px; color:#FFFFFF;">Insulated Bib</p>
-                    <p style="margin:0 0 16px 0; font-size:16px; line-height:22px;"><a href="{{PRODUCT_2_URL}}" target="_blank" style="color:#FFFFFF; text-decoration:underline; letter-spacing:1px;">$99.99 USD</a></p>
+                    <p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:21px; font-weight:800; color:#FF6400;">MEN&rsquo;S CEDAR BRANCH</p>
+                    <p style="margin:0 0 6px 0; font-size:15px; line-height:20px; font-weight:500; color:#FFFFFF;">Insulated Bib</p>
+                    <p style="margin:0 0 16px 0; font-size:20px; line-height:24px; font-weight:800;"><a href="{{PRODUCT_2_URL}}" target="_blank" style="color:#FFFFFF; text-decoration:none;">$99.99 USD</a></p>
                     <a href="{{PRODUCT_2_URL}}" target="_blank" style="text-decoration:none;"><img src="assets/pack-mens-cedar-branch-bib-400.png" width="200" height="200" alt="Habit Men&rsquo;s Cedar Branch Insulated Bib in Realtree APX camo" style="display:block; width:200px; max-width:100%; height:auto; border:0; margin:0 auto;"></a>
                   </td>
                 </tr>
               </table>
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full" style="margin:32px auto 0 auto;">
-                <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP HUNTING</a>
+                <tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP HUNTING</a>
                 </td></tr>
               </table>
             </td>
@@ -476,9 +531,12 @@
           <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E09 · Detail Lines · order facts, shipping, prices. Values only from the store on the send date, USD. SAMPLE labels, values stay [[CONFIRMAR]]</td></tr>
           <!-- MODULE:E09 Detail Lines -->
           <tr>
-            <td class="px py dm-surface" style="padding:56px 40px; background-color:#FFFFFF; font-family:Helvetica,Arial,sans-serif;">
+            <td class="px py dm-surface" style="padding:56px 40px; background-color:#FFFFFF; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <p class="dm-muted" style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#5C5249;">YOUR ORDER</p>
-              <h2 class="h2 dm-h" style="margin:0 0 24px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:34px; line-height:38px; font-weight:800; color:#2A2B2D;">THE&nbsp;<span class="dm-accent" style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#2A2B2D;">DETAILS</span></h2>
+              <h2 class="dm-h" style="margin:0 0 24px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#2A2B2D; text-align:left;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">THE</span>
+                <span class="hl-key-s dm-accent" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:64px; line-height:60px; font-weight:900; color:#2A2B2D;">DETAILS</span>
+              </h2>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td class="dm-line dm-p" style="padding:16px 0; border-top:1px solid #CFC8BF; font-size:16px; line-height:24px; color:#2A2B2D;">Order number</td>
@@ -503,21 +561,24 @@
             </td>
           </tr>
           <tr>
-            <td class="px dm-surface" style="padding:20px 40px 40px 40px; background-color:#FFFFFF; font-family:Helvetica,Arial,sans-serif;">
+            <td class="px dm-surface" style="padding:20px 40px 40px 40px; background-color:#FFFFFF; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <p class="dm-muted" style="margin:0; font-size:14px; line-height:22px; color:#5C5249;">Gear up together. Get out there together.</p>
             </td>
           </tr>
           <!-- /MODULE:E10 -->
 
           <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
-          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E11 · CTA · last call: one line + the button. Patriot Blue band (default; Tap Shoe would touch the footer). Orange accent allowed here (4.8:1). Button always #FF6400 with #2A2B2D text: the sent emails use no other color, so the kit has no button variants. SAMPLE COPY from Sep 10, not approved</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E11 · CTA · last call: one line + the button. Patriot Blue band (default; Tap Shoe would touch the footer). Orange accent allowed here (4.8:1). Button always #FF6400 with white text (v0.5), no color variants. SAMPLE COPY from Sep 10, not approved</td></tr>
           <!-- MODULE:E11 CTA -->
           <tr>
-            <td align="center" class="px" bgcolor="#202944" style="padding:56px 40px; background-color:#202944; font-family:Helvetica,Arial,sans-serif;">
-              <h2 class="h2" style="margin:0 0 28px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:34px; line-height:38px; font-weight:800; color:#FFFFFF;">GET OUT&nbsp;<span style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#FF6400;">THERE</span></h2>
+            <td align="center" class="px" bgcolor="#202944" style="padding:56px 40px; background-color:#202944; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+              <h2 style="margin:0 0 28px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">GET OUT</span>
+                <span class="hl-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:100px; line-height:90px; font-weight:900; color:#FF6400;">THERE</span>
+              </h2>
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
-                <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP NOW</a>
+                <tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP NOW</a>
                 </td></tr>
               </table>
             </td>
@@ -557,22 +618,25 @@
           <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E19 · Product Cluster · pattern: 3 packshots in a fan, front one larger and centred, two behind (darkened 20%, tilted 8°), soft drop shadow · band: Tap Shoe headline row, composed image (grainy Tap Shoe to Major Brown, edge rows exact hex), Major Brown body row · use: band 4, or hero after E01 (on a 375px screen the button falls just under the first screen: as hero, cut the body to one line) · source: Duck Camp #3 fan, in Habit colors · files: assets/e19-cluster-cedar-branch.jpg (compose.py job_e19) from packshots mens-cedar-branch-insulated-bib, habit-womens-cedar-branch-insulated-parka, habit-mens-cedar-branch-insulated-waterproof-parka · fixed dark bands, no dark-mode swap needed · SAMPLE COPY, not approved</td></tr>
           <!-- MODULE:E19 Product Cluster -->
           <tr>
-            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:56px 40px 0 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:56px 40px 0 40px; background-color:#2A2B2D; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <p style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#FF6400;">CEDAR BRANCH INSULATED</p>
-              <h2 class="h2" style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:34px; line-height:38px; font-weight:800; color:#FFFFFF;">WARM FOR THE LONG&nbsp;<span style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#FF6400;">SIT</span></h2>
+              <h2 style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">WARM FOR THE LONG</span>
+                <span class="hl-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:100px; line-height:90px; font-weight:900; color:#FF6400;">SIT</span>
+              </h2>
             </td>
           </tr>
           <tr>
             <td bgcolor="#2A2B2D" style="padding:0; background-color:#2A2B2D; font-size:0; line-height:0;">
-              <a href="{{CTA_URL}}" target="_blank" style="text-decoration:none;"><img class="fluid" src="assets/e19-cluster-cedar-branch.jpg" width="600" height="420" alt="Habit Cedar Branch insulated parka, bib and women&rsquo;s parka in Realtree APX camo" style="display:block; width:600px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;"></a>
+              <a href="{{CTA_URL}}" target="_blank" style="text-decoration:none;"><img class="fluid" src="assets/e19-cluster-cedar-branch.jpg" width="600" height="420" alt="Habit Cedar Branch insulated parka, bib and women&rsquo;s parka in Realtree APX camo" style="display:block; width:600px; max-width:100%; height:auto; border:0; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;"></a>
             </td>
           </tr>
           <tr>
-            <td align="center" class="px" bgcolor="#483F39" style="padding:4px 40px 56px 40px; background-color:#483F39; font-family:Helvetica,Arial,sans-serif;">
-              <p style="margin:0 auto 28px auto; max-width:440px; font-size:16px; line-height:26px; color:#FFFFFF;">Insulated, waterproof and quiet, with <span style="white-space:nowrap;">Scent-Factor&reg;</span> and <span style="white-space:nowrap;">Rain-Factor&reg;</span> Waterproof built&nbsp;in. Parka and bib for him, a parka cut for&nbsp;her.</p>
+            <td align="center" class="px" bgcolor="#483F39" style="padding:4px 40px 56px 40px; background-color:#483F39; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+              <p style="margin:0 auto 28px auto; max-width:460px; font-size:17px; line-height:24px; color:#FFFFFF;">Insulated, waterproof and quiet, with <span style="white-space:nowrap;">Scent-Factor&reg;</span> and <span style="white-space:nowrap;">Rain-Factor&reg;</span> Waterproof built&nbsp;in. Parka and bib for him, a parka cut for&nbsp;her.</p>
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
-                <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP CEDAR BRANCH</a>
+                <tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP CEDAR BRANCH</a>
                 </td></tr>
               </table>
             </td>
@@ -583,7 +647,7 @@
           <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E20 · Technology Bleed · pattern: packshot cut by the right edge of the email, technology rows on the left (name in caps with &reg; / &trade; exactly as guide p.21, one line of the p.21 description), thin rule between rows · band: light warm #E2DDD9 (dark mode #34353A via img-light/img-dark swap) · band 4 · source: Duck Camp #1 apron bleed · files: assets/e20-bleed-buck-hollow.jpg + e20-bleed-buck-hollow-dm.jpg (compose.py job_e20) from packshot mens-buck-hollow-2-0-jacket (Mossy Oak New Bottomland) · only technologies the product page lists (Buck Hollow 2.0 Jacket: Rain-Factor Waterproof, Scent-Factor, windproof, breathable) · mobile: image first (dir=rtl), right-aligned and still cut, capped at 220px wide · SAMPLE COPY, not approved</td></tr>
           <!-- MODULE:E20 Technology Bleed -->
           <tr>
-            <td class="dm-band e20-pad" bgcolor="#E2DDD9" style="padding:56px 0 56px 40px; background-color:#E2DDD9; font-family:Helvetica,Arial,sans-serif;">
+            <td class="dm-band e20-pad" bgcolor="#E2DDD9" style="padding:56px 0 56px 40px; background-color:#E2DDD9; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="rtl">
                 <tr>
                   <td width="240" class="stack e20-img" dir="ltr" align="right" valign="middle" style="width:240px; padding:0; vertical-align:middle;">
@@ -592,7 +656,10 @@
                   </td>
                   <td class="stack e20-text" dir="ltr" align="left" valign="middle" style="padding:0 24px 0 0; vertical-align:middle; text-align:left;">
                     <p class="dm-muted" style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#5C5249;">BUCK HOLLOW 2.0</p>
-                    <h2 class="h2 dm-h" style="margin:0 0 24px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:30px; line-height:34px; font-weight:800; color:#2A2B2D;">READY FOR THE&nbsp;<span class="dm-accent" style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#2A2B2D;">WEATHER</span></h2>
+                    <h2 class="dm-h" style="margin:0 0 24px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#2A2B2D; text-align:left;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">READY FOR THE</span>
+                <span class="hl-key-s dm-accent" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:64px; line-height:60px; font-weight:900; color:#2A2B2D;">RAIN</span>
+              </h2>
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tr><td class="dm-line" style="padding:18px 0; border-top:1px solid #CFC8BF;">
                         <p class="dm-h" style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:16px; line-height:22px; font-weight:800; letter-spacing:1px; color:#2A2B2D;">RAIN-FACTOR&reg; WATERPROOF</p>
@@ -621,12 +688,12 @@
           <!-- MODULE:E21 Band-Crossing Product -->
           <tr>
             <td bgcolor="#2A2B2D" style="padding:0; background-color:#2A2B2D; font-size:0; line-height:0;">
-              <a href="{{PRODUCT_1_URL}}" target="_blank" style="text-decoration:none;"><img class="fluid img-light" src="assets/e21-cross-buck-hollow.jpg" width="600" height="330" alt="Habit Men&rsquo;s Buck Hollow 2.0 Jacket in Realtree APX camo" style="display:block; width:600px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;"><!--[if !mso]><!--><img class="fluid img-dark" src="assets/e21-cross-buck-hollow-dm.jpg" width="600" height="330" alt="Habit Men&rsquo;s Buck Hollow 2.0 Jacket in Realtree APX camo" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:600px; max-width:100%; height:auto; border:0;"><!--<![endif]--></a>
+              <a href="{{PRODUCT_1_URL}}" target="_blank" style="text-decoration:none;"><img class="fluid img-light" src="assets/e21-cross-buck-hollow.jpg" width="600" height="330" alt="Habit Men&rsquo;s Buck Hollow 2.0 Jacket in Realtree APX camo" style="display:block; width:600px; max-width:100%; height:auto; border:0; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;"><!--[if !mso]><!--><img class="fluid img-dark" src="assets/e21-cross-buck-hollow-dm.jpg" width="600" height="330" alt="Habit Men&rsquo;s Buck Hollow 2.0 Jacket in Realtree APX camo" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:600px; max-width:100%; height:auto; border:0;"><!--<![endif]--></a>
             </td>
           </tr>
           <!-- /MODULE:E21 -->
           <tr>
-            <td align="center" class="px dm-band" bgcolor="#E2DDD9" style="padding:8px 40px 48px 40px; background-color:#E2DDD9; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" class="px dm-band" bgcolor="#E2DDD9" style="padding:8px 40px 48px 40px; background-color:#E2DDD9; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <p class="dm-muted" style="margin:0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#5C5249;">NEXT BAND STARTS HERE (CONTEXT)</p>
             </td>
           </tr>
@@ -635,18 +702,21 @@
           <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E22 · Photo Collage · pattern: photos in thin light frames (#E2DDD9), off-axis 1.4 to 3°, overlapping, torn edge on two of them, on grainy Tap Shoe with the topo lines (fades to flat #2A2B2D at the edges), alternating with live-text panels (feature title caps + 1 or 2 lines, orange rule above) · band 4 or 5, the most rustic module · source: Duck Camp #3 "why" collage, in Habit colors and caps · files: assets/e22-collage-a.jpg, e22-collage-b.jpg (compose.py job_e22) · photos: man on hay bale and man in the barn cropped from references/September 24.png (stand-ins, replace with the photo-bank originals), chest-pocket close-up = store image mens-heavyweight-soft-flannel-6 (text label cropped out) · feature copy from the product page bullets · fixed dark band · SAMPLE COPY, not approved</td></tr>
           <!-- MODULE:E22 Photo Collage -->
           <tr>
-            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:56px 40px 0 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:56px 40px 0 40px; background-color:#2A2B2D; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <p style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#FF6400;">HEAVYWEIGHT SOFT FLANNEL</p>
-              <h2 class="h2" style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:34px; line-height:38px; font-weight:800; color:#FFFFFF;">WHY IT&nbsp;<span style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#FF6400;">WORKS</span></h2>
+              <h2 style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">WHY IT</span>
+                <span class="hl-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:100px; line-height:90px; font-weight:900; color:#FF6400;">WORKS</span>
+              </h2>
             </td>
           </tr>
           <tr>
             <td bgcolor="#2A2B2D" style="padding:0; background-color:#2A2B2D; font-size:0; line-height:0;">
-              <img class="fluid" src="assets/e22-collage-a.jpg" width="600" height="450" alt="A man in a Habit plaid flannel sitting on a hay bale, next to a close-up of the flannel chest pocket" style="display:block; width:600px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;">
+              <img class="fluid" src="assets/e22-collage-a.jpg" width="600" height="450" alt="A man in a Habit plaid flannel sitting on a hay bale, next to a close-up of the flannel chest pocket" style="display:block; width:600px; max-width:100%; height:auto; border:0; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;">
             </td>
           </tr>
           <tr>
-            <td class="px e22-panel" bgcolor="#2A2B2D" style="padding:0 200px 32px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif; text-align:left;">
+            <td class="px e22-panel" bgcolor="#2A2B2D" style="padding:0 200px 32px 40px; background-color:#2A2B2D; font-family:'Prompt',Helvetica,Arial,sans-serif; text-align:left;">
               <p style="margin:0; font-size:0; line-height:0;"><span style="display:inline-block; width:48px; height:3px; background-color:#FF6400; font-size:3px; line-height:3px; mso-line-height-rule:exactly;">&nbsp;</span></p>
               <p style="margin:16px 0 6px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; letter-spacing:1px; color:#FFFFFF;">DUAL CHEST POCKETS</p>
               <p style="margin:0; font-size:16px; line-height:26px; color:#E2DDD9;">Two patch pockets up front for the small stuff you want close at&nbsp;hand.</p>
@@ -654,11 +724,11 @@
           </tr>
           <tr>
             <td bgcolor="#2A2B2D" style="padding:0; background-color:#2A2B2D; font-size:0; line-height:0;">
-              <img class="fluid" src="assets/e22-collage-b.jpg" width="600" height="350" alt="A man in a brown Habit plaid flannel working in a horse barn" style="display:block; width:600px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;">
+              <img class="fluid" src="assets/e22-collage-b.jpg" width="600" height="350" alt="A man in a brown Habit plaid flannel working in a horse barn" style="display:block; width:600px; max-width:100%; height:auto; border:0; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#E2DDD9;">
             </td>
           </tr>
           <tr>
-            <td class="px e22-panel" bgcolor="#2A2B2D" align="right" style="padding:0 40px 56px 200px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif; text-align:right;">
+            <td class="px e22-panel" bgcolor="#2A2B2D" align="right" style="padding:0 40px 56px 200px; background-color:#2A2B2D; font-family:'Prompt',Helvetica,Arial,sans-serif; text-align:right;">
               <p style="margin:0; font-size:0; line-height:0;"><span style="display:inline-block; width:48px; height:3px; background-color:#FF6400; font-size:3px; line-height:3px; mso-line-height-rule:exactly;">&nbsp;</span></p>
               <p style="margin:16px 0 6px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; letter-spacing:1px; color:#FFFFFF;">BRUSHED SOFT, BUILT TO&nbsp;MOVE</p>
               <p style="margin:0 0 16px 0; font-size:16px; line-height:26px; color:#E2DDD9;">Heavyweight cotton with a back pleat, for work, camp and everyday&nbsp;life.</p>
@@ -671,7 +741,7 @@
           <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E23 · One Product Per Band · pattern: one large packshot per band, name in caps, color dots, one line, price as the Habit emails write it ($99.99 USD, underlined) · repeat the band per product, alternating light warm #E2DDD9 and white (never two neighbours in the same color) · band 4 (product launch, line story) · source: Duck Camp #2 structure; no NEW badge (the Habit sent emails have none) · files: assets/e23-crater-valley-hoodie.png (Woodland Ghost Khaki, store image mens-crater-valley-performance-hoodie-2), assets/e23-cedar-branch-bib.png (Realtree APX, mens-cedar-branch-insulated-bib), transparent, compose.py job_e23 · dots: HTML table cells, color = median of each variant packshot (compose.py swatch), round in most clients, square in Outlook desktop; the shown color comes first · PRICES from the catalog on 2026-09-24, re-check on the send date · SAMPLE COPY, not approved</td></tr>
           <!-- MODULE:E23 One Product Per Band -->
           <tr>
-            <td align="center" class="px py dm-band" bgcolor="#E2DDD9" style="padding:48px 40px 56px 40px; background-color:#E2DDD9; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" class="px py dm-band" bgcolor="#E2DDD9" style="padding:48px 40px 56px 40px; background-color:#E2DDD9; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <a href="{{PRODUCT_1_URL}}" target="_blank" style="text-decoration:none;"><img class="fluid" src="assets/e23-crater-valley-hoodie.png" width="400" height="400" alt="Habit Men&rsquo;s Crater Valley Performance Hoodie in Woodland Ghost Khaki camo" style="display:block; width:400px; max-width:100%; height:auto; border:0; margin:0 auto;"></a>
               <h2 class="h2 dm-h" style="margin:24px 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:28px; line-height:32px; font-weight:800; color:#2A2B2D;">MEN&rsquo;S CRATER VALLEY PERFORMANCE&nbsp;HOODIE</h2>
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 6px auto;">
@@ -689,7 +759,7 @@
             </td>
           </tr>
           <tr>
-            <td align="center" class="px py dm-surface" bgcolor="#FFFFFF" style="padding:48px 40px 56px 40px; background-color:#FFFFFF; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" class="px py dm-surface" bgcolor="#FFFFFF" style="padding:48px 40px 56px 40px; background-color:#FFFFFF; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <a href="{{PRODUCT_2_URL}}" target="_blank" style="text-decoration:none;"><img class="fluid" src="assets/e23-cedar-branch-bib.png" width="400" height="400" alt="Habit Men&rsquo;s Cedar Branch Insulated Bib in Realtree APX camo" style="display:block; width:400px; max-width:100%; height:auto; border:0; margin:0 auto;"></a>
               <h2 class="h2 dm-h" style="margin:24px 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:28px; line-height:32px; font-weight:800; color:#2A2B2D;">MEN&rsquo;S CEDAR BRANCH INSULATED&nbsp;BIB</h2>
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 6px auto;">
@@ -715,22 +785,25 @@
           <tr>
             <td style="padding:0;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-                <tr><td background="assets/tex-paper-light.jpg" bgcolor="#E2DDD9" class="dm-tex" style="padding:28px 40px; background-color:#E2DDD9; background-image:url('assets/tex-paper-light.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:Helvetica,Arial,sans-serif;"><p class="dm-h" style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#2A2B2D;">PAPER LIGHT</p><p class="dm-muted" style="margin:0; font-size:13px; line-height:20px; color:#5C5249;">tex-paper-light.jpg · fallback #E2DDD9 · text #2A2B2D, labels #5C5249 · dark mode: .dm-tex swaps to tex-paper-light-dm.jpg (#34353A)</p></td></tr>
-                <tr><td background="assets/tex-paper-tapshoe.jpg" bgcolor="#2A2B2D" style="padding:28px 40px; background-color:#2A2B2D; background-image:url('assets/tex-paper-tapshoe.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">PAPER TAP SHOE</p><p style="margin:0; font-size:13px; line-height:20px; color:#E2DDD9;">tex-paper-tapshoe.jpg · fallback #2A2B2D · white, body #E2DDD9, orange text 24px+</p></td></tr>
-                <tr><td background="assets/tex-grain-brown.jpg" bgcolor="#483F39" style="padding:28px 40px; background-color:#483F39; background-image:url('assets/tex-grain-brown.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">GRAIN MAJOR BROWN</p><p style="margin:0; font-size:13px; line-height:20px; color:#E2DDD9;">tex-grain-brown.jpg · fallback #483F39 · white, body #E2DDD9, orange only in the large serif accent</p></td></tr>
-                <tr><td background="assets/tex-grain-patriot-water.jpg" bgcolor="#202944" style="padding:28px 40px; background-color:#202944; background-image:url('assets/tex-grain-patriot-water.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">GRAIN PATRIOT WATER</p><p style="margin:0; font-size:13px; line-height:20px; color:#E2DDD9;">tex-grain-patriot-water.jpg · fallback #202944 · white, body #E2DDD9, orange text 24px+</p></td></tr>
-                <tr><td background="assets/tex-grain-ivy.jpg" bgcolor="#595442" style="padding:28px 40px; background-color:#595442; background-image:url('assets/tex-grain-ivy.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">GRAIN IVY GREEN</p><p style="margin:0; font-size:13px; line-height:20px; color:#FFFFFF;">tex-grain-ivy.jpg · fallback #595442 · white only, no orange text</p></td></tr>
-                <tr><td background="assets/tex-camo-blur.jpg" bgcolor="#483F39" style="padding:28px 40px; background-color:#483F39; background-image:url('assets/tex-camo-blur.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">CAMO, BLURRED</p><p style="margin:0; font-size:13px; line-height:20px; color:#FFFFFF;">tex-camo-blur.jpg · fallback #483F39 · Realtree APX fabric from the store packshot, darkened for white text · white only, no orange text</p></td></tr>
-                <tr><td background="assets/tex-topo-tapshoe.jpg" bgcolor="#2A2B2D" style="padding:28px 40px; background-color:#2A2B2D; background-image:url('assets/tex-topo-tapshoe.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">TOPO ON TAP SHOE</p><p style="margin:0; font-size:13px; line-height:20px; color:#E2DDD9;">tex-topo-tapshoe.jpg · fallback #2A2B2D · topographic lines of guide p.24 · white, body #E2DDD9, orange text 24px+</p></td></tr>
-                <tr><td background="assets/grad-tapshoe-to-brown.jpg" bgcolor="#2A2B2D" style="padding:40px 40px; background-color:#2A2B2D; background-image:url('assets/grad-tapshoe-to-brown.jpg'); background-size:100% 100%; background-repeat:no-repeat; font-family:Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">GRADIENT TAP SHOE TO MAJOR BROWN</p><p style="margin:0; font-size:13px; line-height:20px; color:#E2DDD9;">grad-tapshoe-to-brown.jpg · fallback #2A2B2D · stretch · white, body #E2DDD9</p></td></tr>
-                <tr><td background="assets/grad-patriot-to-tapshoe.jpg" bgcolor="#202944" style="padding:40px 40px; background-color:#202944; background-image:url('assets/grad-patriot-to-tapshoe.jpg'); background-size:100% 100%; background-repeat:no-repeat; font-family:Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">GRADIENT PATRIOT BLUE TO TAP SHOE</p><p style="margin:0; font-size:13px; line-height:20px; color:#E2DDD9;">grad-patriot-to-tapshoe.jpg · fallback #202944 · stretch · white, body #E2DDD9</p></td></tr>
-                <tr><td background="assets/grad-paper-to-aluminum.jpg" bgcolor="#E2DDD9" class="dm-tex" style="padding:40px 40px; background-color:#E2DDD9; background-image:url('assets/grad-paper-to-aluminum.jpg'); background-size:100% 100%; background-repeat:no-repeat; font-family:Helvetica,Arial,sans-serif;"><p class="dm-h" style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#2A2B2D;">GRADIENT LIGHT PAPER TO ALUMINUM</p><p class="dm-h" style="margin:0; font-size:13px; line-height:20px; color:#2A2B2D;">grad-paper-to-aluminum.jpg · fallback #E2DDD9 · stretch · #2A2B2D only (#5C5249 fails on Aluminum) · dark mode: .dm-tex</p></td></tr>
+                <tr><td background="assets/tex-paper-light.jpg" bgcolor="#E2DDD9" class="dm-tex" style="padding:28px 40px; background-color:#E2DDD9; background-image:url('assets/tex-paper-light.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:'Prompt',Helvetica,Arial,sans-serif;"><p class="dm-h" style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#2A2B2D;">PAPER LIGHT</p><p class="dm-muted" style="margin:0; font-size:13px; line-height:20px; color:#5C5249;">tex-paper-light.jpg · fallback #E2DDD9 · text #2A2B2D, labels #5C5249 · dark mode: .dm-tex swaps to tex-paper-light-dm.jpg (#34353A)</p></td></tr>
+                <tr><td background="assets/tex-paper-tapshoe.jpg" bgcolor="#2A2B2D" style="padding:28px 40px; background-color:#2A2B2D; background-image:url('assets/tex-paper-tapshoe.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:'Prompt',Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">PAPER TAP SHOE</p><p style="margin:0; font-size:13px; line-height:20px; color:#E2DDD9;">tex-paper-tapshoe.jpg · fallback #2A2B2D · white, body #E2DDD9, orange text 24px+</p></td></tr>
+                <tr><td background="assets/tex-grain-brown.jpg" bgcolor="#483F39" style="padding:28px 40px; background-color:#483F39; background-image:url('assets/tex-grain-brown.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:'Prompt',Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">GRAIN MAJOR BROWN</p><p style="margin:0; font-size:13px; line-height:20px; color:#E2DDD9;">tex-grain-brown.jpg · fallback #483F39 · white, body #E2DDD9, orange only in the large serif accent</p></td></tr>
+                <tr><td background="assets/tex-grain-patriot-water.jpg" bgcolor="#202944" style="padding:28px 40px; background-color:#202944; background-image:url('assets/tex-grain-patriot-water.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:'Prompt',Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">GRAIN PATRIOT WATER</p><p style="margin:0; font-size:13px; line-height:20px; color:#E2DDD9;">tex-grain-patriot-water.jpg · fallback #202944 · white, body #E2DDD9, orange text 24px+</p></td></tr>
+                <tr><td background="assets/tex-grain-ivy.jpg" bgcolor="#595442" style="padding:28px 40px; background-color:#595442; background-image:url('assets/tex-grain-ivy.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:'Prompt',Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">GRAIN IVY GREEN</p><p style="margin:0; font-size:13px; line-height:20px; color:#FFFFFF;">tex-grain-ivy.jpg · fallback #595442 · white only, no orange text</p></td></tr>
+                <tr><td background="assets/tex-camo-blur.jpg" bgcolor="#483F39" style="padding:28px 40px; background-color:#483F39; background-image:url('assets/tex-camo-blur.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:'Prompt',Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">CAMO, BLURRED</p><p style="margin:0; font-size:13px; line-height:20px; color:#FFFFFF;">tex-camo-blur.jpg · fallback #483F39 · Realtree APX fabric from the store packshot, darkened for white text · white only, no orange text</p></td></tr>
+                <tr><td background="assets/tex-topo-tapshoe.jpg" bgcolor="#2A2B2D" style="padding:28px 40px; background-color:#2A2B2D; background-image:url('assets/tex-topo-tapshoe.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:'Prompt',Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">TOPO ON TAP SHOE</p><p style="margin:0; font-size:13px; line-height:20px; color:#E2DDD9;">tex-topo-tapshoe.jpg · fallback #2A2B2D · topographic lines of guide p.24 · white, body #E2DDD9, orange text 24px+</p></td></tr>
+                <tr><td background="assets/grad-tapshoe-to-brown.jpg" bgcolor="#2A2B2D" style="padding:40px 40px; background-color:#2A2B2D; background-image:url('assets/grad-tapshoe-to-brown.jpg'); background-size:100% 100%; background-repeat:no-repeat; font-family:'Prompt',Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">GRADIENT TAP SHOE TO MAJOR BROWN</p><p style="margin:0; font-size:13px; line-height:20px; color:#E2DDD9;">grad-tapshoe-to-brown.jpg · fallback #2A2B2D · stretch · white, body #E2DDD9</p></td></tr>
+                <tr><td background="assets/grad-patriot-to-tapshoe.jpg" bgcolor="#202944" style="padding:40px 40px; background-color:#202944; background-image:url('assets/grad-patriot-to-tapshoe.jpg'); background-size:100% 100%; background-repeat:no-repeat; font-family:'Prompt',Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">GRADIENT PATRIOT BLUE TO TAP SHOE</p><p style="margin:0; font-size:13px; line-height:20px; color:#E2DDD9;">grad-patriot-to-tapshoe.jpg · fallback #202944 · stretch · white, body #E2DDD9</p></td></tr>
+                <tr><td background="assets/grad-paper-to-aluminum.jpg" bgcolor="#E2DDD9" class="dm-tex" style="padding:40px 40px; background-color:#E2DDD9; background-image:url('assets/grad-paper-to-aluminum.jpg'); background-size:100% 100%; background-repeat:no-repeat; font-family:'Prompt',Helvetica,Arial,sans-serif;"><p class="dm-h" style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#2A2B2D;">GRADIENT LIGHT PAPER TO ALUMINUM</p><p class="dm-h" style="margin:0; font-size:13px; line-height:20px; color:#2A2B2D;">grad-paper-to-aluminum.jpg · fallback #E2DDD9 · stretch · #2A2B2D only (#5C5249 fails on Aluminum) · dark mode: .dm-tex</p></td></tr>
+                <tr><td background="assets/tex-paper-camo.jpg" bgcolor="#E2DDD9" class="dm-tex-camo" style="padding:28px 40px; background-color:#E2DDD9; background-image:url('assets/tex-paper-camo.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:'Prompt',Helvetica,Arial,sans-serif;"><p class="dm-h" style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#2A2B2D;">V0.5 · PAPER LIGHT, CAMO SPLOTCHES</p><p class="dm-muted" style="margin:0; font-size:13px; line-height:20px; color:#5C5249;">tex-paper-camo.jpg · fallback #E2DDD9 · rev-oct-03 · text #2A2B2D, labels #5C5249 (4.6:1 worst) · dark mode: .dm-tex-camo swaps to tex-paper-camo-dm.jpg (#34353A)</p></td></tr>
+                <tr><td background="assets/tex-halftone-brown.jpg" bgcolor="#483F39" style="padding:28px 40px; background-color:#483F39; background-image:url('assets/tex-halftone-brown.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:'Prompt',Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">V0.5 · MAJOR BROWN, HALFTONE</p><p style="margin:0; font-size:13px; line-height:20px; color:#E2DDD9;">tex-halftone-brown.jpg · fallback #483F39 · rev-oct-01 · white, body #E2DDD9, orange only large (3.1:1 worst)</p></td></tr>
+                <tr><td background="assets/grad-tapshoe-to-patriot-topo.jpg" bgcolor="#2A2B2D" style="padding:40px 40px; background-color:#2A2B2D; background-image:url('assets/grad-tapshoe-to-patriot-topo.jpg'); background-size:100% 100%; background-repeat:no-repeat; font-family:'Prompt',Helvetica,Arial,sans-serif;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">V0.5 · GRADIENT TAP SHOE TO PATRIOT BLUE, TOPO</p><p style="margin:0; font-size:13px; line-height:20px; color:#E2DDD9;">grad-tapshoe-to-patriot-topo.jpg · fallback #2A2B2D · stretch · rev-oct-05 · white, body #E2DDD9, orange only large (3.9:1 worst)</p></td></tr>
               </table>
             </td>
           </tr>
 
           <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
-          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E24 · Full-Bleed Photo Hero · TEXT TOP · opens the email, no E01 above it: white HABIT&reg; logotype (assets/logo-dark.png) on the photo, eyebrow + two-voice headline (Prompt 800 caps 40/44 + Playfair 900 key word 90/88) + tracked subhead + button over the calm area, photo subject right under the button · ONE background image (compose.py job_e24): photo edge to edge, no card, no radius; calm top grown from the photo's own top rows ("fog"), bottom melting into Tap Shoe paper, torn edge baked in with the NEXT band's texture below it (sample: Ivy Green grain, so the next band uses tex-grain-ivy.jpg) · desktop 600x780; mobile: sizes step down (26/30 + 58/60), button full width, spacer 310px, the button ends near 350px, inside the first 375x667 screen; background-size:cover crops the sides (about 75% of the width stays) · keep the text block under about 450px desktop / 380px mobile, or raise the spacer · Outlook: VML frame, fallback #2A2B2D keeps the white text readable · photo: crop-sent-sep15-family-forest-walk.jpg (stand-in) · fixed dark band, no dark-mode swap · SAMPLE COPY adapted from Sep 15, not approved</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E24 · Full-Bleed Photo Hero · TEXT TOP · opens the email, no E01 above it: white HABIT&reg; logotype (assets/logo-dark.png) on the photo, eyebrow + two-voice headline (v0.5: Prompt 800 caps 30/32 + Playfair 900 key word 104/94) + tracked subhead + button over the calm area, photo subject right under the button · ONE background image (compose.py job_e24): photo edge to edge, no card, no radius; calm top grown from the photo's own top rows ("fog"), bottom melting into Tap Shoe paper, torn edge baked in with the NEXT band's texture below it (sample: Ivy Green grain, so the next band uses tex-grain-ivy.jpg) · desktop 600x780; mobile: sizes step down (v0.5: 22/24 + 64/58), button full width, spacer 310px, the button ends near 350px, inside the first 375x667 screen; background-size:cover crops the sides (about 75% of the width stays) · keep the text block under about 450px desktop / 380px mobile, or raise the spacer · Outlook: VML frame, fallback #2A2B2D keeps the white text readable · photo: crop-sent-sep15-family-forest-walk.jpg (stand-in) · fixed dark band, no dark-mode swap · SAMPLE COPY adapted from Sep 15, not approved</td></tr>
           <!-- MODULE:E24 Full-Bleed Photo Hero (text top) -->
           <tr>
             <td align="center" valign="top" class="e24-hero" background="assets/e24-hero-forest.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:0; background-color:#2A2B2D; background-image:url('assets/e24-hero-forest.jpg'); background-size:cover; background-position:center bottom; background-repeat:no-repeat; vertical-align:top;">
@@ -742,16 +815,16 @@
                   </td>
                 </tr>
                 <tr>
-                  <td align="center" class="e24-text" style="padding:36px 40px 0 40px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
+                  <td align="center" class="e24-text" style="padding:36px 40px 0 40px; font-family:'Prompt',Helvetica,Arial,sans-serif; text-align:center;">
                     <p style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#FFFFFF;">HUNTING SEASON</p>
                     <h1 style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
-                      <span class="e24-lead" style="display:block; font-size:40px; line-height:44px; letter-spacing:1px;">INTO THE</span>
-                      <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:90px; line-height:88px; font-weight:900;">WOODS</span>
+                      <span class="e24-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">INTO THE</span>
+                      <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:104px; line-height:94px; font-weight:900;">WOODS</span>
                     </h1>
-                    <p class="e24-sub" style="margin:0 auto 28px auto; max-width:420px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">GEAR UP TOGETHER. GET OUT THERE&nbsp;TOGETHER.</p>
+                    <p class="e24-sub" style="margin:0 auto 28px auto; max-width:420px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">GEAR UP TOGETHER. GET OUT THERE&nbsp;TOGETHER.</p>
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
-                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP NOW</a>
+                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;">
+                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP NOW</a>
                       </td></tr>
                     </table>
                   </td>
@@ -763,7 +836,7 @@
           </tr>
           <!-- /MODULE:E24 -->
           <tr>
-            <td align="center" class="px" background="assets/tex-grain-ivy.jpg" bgcolor="#595442" style="padding:8px 40px 40px 40px; background-color:#595442; background-image:url('assets/tex-grain-ivy.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" class="px" background="assets/tex-grain-ivy.jpg" bgcolor="#595442" style="padding:8px 40px 40px 40px; background-color:#595442; background-image:url('assets/tex-grain-ivy.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <p style="margin:0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#FFFFFF;">NEXT BAND STARTS HERE (CONTEXT, TEX-GRAIN-IVY)</p>
             </td>
           </tr>
@@ -782,16 +855,16 @@
                 </tr>
                 <tr><td class="e24b-space" height="350" style="height:350px; font-size:0; line-height:0;">&nbsp;</td></tr>
                 <tr>
-                  <td align="center" class="e24-text" style="padding:0 40px 0 40px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
+                  <td align="center" class="e24-text" style="padding:0 40px 0 40px; font-family:'Prompt',Helvetica,Arial,sans-serif; text-align:center;">
                     <p style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#FFFFFF;">HEAVYWEIGHT FLANNEL</p>
                     <h1 style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
-                      <span class="e24-lead" style="display:block; font-size:40px; line-height:44px; letter-spacing:1px;">MEET YOUR NEW</span>
-                      <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:90px; line-height:88px; font-weight:900;">FAVORITE</span>
+                      <span class="e24-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">MEET YOUR NEW</span>
+                      <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:96px; line-height:88px; font-weight:900;">FLANNEL</span>
                     </h1>
-                    <p class="e24-sub" style="margin:0 auto 28px auto; max-width:440px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">SOFT, HEAVYWEIGHT COMFORT FOR WHEREVER FALL TAKES&nbsp;YOU.</p>
+                    <p class="e24-sub" style="margin:0 auto 28px auto; max-width:440px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">SOFT, HEAVYWEIGHT COMFORT FOR WHEREVER FALL TAKES&nbsp;YOU.</p>
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
-                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">TAKE A LOOK</a>
+                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;">
+                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">TAKE A LOOK</a>
                       </td></tr>
                     </table>
                   </td>
@@ -803,24 +876,26 @@
           </tr>
           <!-- /MODULE:E24B -->
           <tr>
-            <td align="center" class="px" background="assets/tex-grain-brown.jpg" bgcolor="#483F39" style="padding:8px 40px 40px 40px; background-color:#483F39; background-image:url('assets/tex-grain-brown.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" class="px" background="assets/tex-grain-brown.jpg" bgcolor="#483F39" style="padding:8px 40px 40px 40px; background-color:#483F39; background-image:url('assets/tex-grain-brown.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <p style="margin:0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#FFFFFF;">NEXT BAND STARTS HERE (CONTEXT, TEX-GRAIN-BROWN)</p>
             </td>
           </tr>
 
           <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
-          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E25 · Textured Band · the generic content band of round 2, replaces flat-color use of E05: eyebrow, headline (Prompt 800 + serif key word), tracked subhead, 1 or 2 sentences, button or text link, on any texture of the sheet above (background image + VML frame + bgcolor fallback). ONE td per band (a second td would restart the tile). Text colors per texture: see the sheet; on light paper add class dm-tex (dark mode swaps to tex-paper-light-dm.jpg) plus the dm-h / dm-p / dm-muted text classes. Sample below: light paper. The two strips after it are variant examples (Patriot water with a text link, blurred camo), joined by textured E18 edges. SAMPLE COPY adapted from Sep 2, Sep 22, Sep 15, not approved</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E25 · Textured Band · (v0.5: two-voice headline, no tracked subhead, body 17/24 centered right under it) · the generic content band of round 2, replaces flat-color use of E05: eyebrow, headline, 1 or 2 sentences, button or text link, on any texture of the sheet above (background image + VML frame + bgcolor fallback). ONE td per band (a second td would restart the tile). Text colors per texture: see the sheet; on light paper add class dm-tex (dark mode swaps to tex-paper-light-dm.jpg) plus the dm-h / dm-p / dm-muted text classes. Sample below: light paper. The two strips after it are variant examples (Patriot water with a text link, blurred camo), joined by textured E18 edges. SAMPLE COPY adapted from Sep 2, Sep 22, Sep 15, not approved</td></tr>
           <!-- MODULE:E25 Textured Band -->
           <tr>
-            <td align="center" class="px py dm-tex" background="assets/tex-paper-light.jpg" bgcolor="#E2DDD9" style="mso-padding-alt:0px; padding:64px 40px; background-color:#E2DDD9; background-image:url('assets/tex-paper-light.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" class="px py dm-tex" background="assets/tex-paper-light.jpg" bgcolor="#E2DDD9" style="mso-padding-alt:0px; padding:64px 40px; background-color:#E2DDD9; background-image:url('assets/tex-paper-light.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/tex-paper-light.jpg" color="#E2DDD9" /><v:textbox style="mso-fit-shape-to-text:true;" inset="40px,64px,40px,64px"><div><![endif]-->
               <p class="dm-muted" style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#5C5249;">BUCK HOLLOW 2.0</p>
-              <h2 class="h2 dm-h" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:40px; line-height:44px; font-weight:800; color:#2A2B2D;">A JACKET YOU&nbsp;<span class="dm-accent" style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#2A2B2D;">KNOW</span></h2>
-              <p class="dm-h" style="margin:0 auto 20px auto; max-width:440px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#2A2B2D;">TRUSTED FOR THE HUNT. READY FOR WHATEVER COMES&nbsp;AFTER.</p>
-              <p class="dm-p" style="margin:0 auto 32px auto; max-width:440px; font-size:16px; line-height:26px; color:#2A2B2D;">When the season calls, reach for the jacket that&rsquo;s made to be&nbsp;there.</p>
+              <h2 class="dm-h" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#2A2B2D; text-align:center;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">A JACKET YOU</span>
+                <span class="hl-key dm-accent" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:100px; line-height:90px; font-weight:900; color:#2A2B2D;">KNOW</span>
+              </h2>
+              <p class="dm-p" style="margin:0 auto 32px auto; max-width:460px; font-size:17px; line-height:24px; color:#2A2B2D;">Trusted for the hunt, ready for whatever comes after. When the season calls, reach for the jacket that&rsquo;s made to be&nbsp;there.</p>
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
-                <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP NOW</a>
+                <tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP NOW</a>
                 </td></tr>
               </table>
               <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
@@ -835,13 +910,15 @@
             </td>
           </tr>
           <tr>
-            <td align="center" class="px py" background="assets/tex-grain-patriot-water.jpg" bgcolor="#202944" style="mso-padding-alt:0px; padding:64px 40px; background-color:#202944; background-image:url('assets/tex-grain-patriot-water.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" class="px py" background="assets/tex-grain-patriot-water.jpg" bgcolor="#202944" style="mso-padding-alt:0px; padding:64px 40px; background-color:#202944; background-image:url('assets/tex-grain-patriot-water.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/tex-grain-patriot-water.jpg" color="#202944" /><v:textbox style="mso-fit-shape-to-text:true;" inset="40px,64px,40px,64px"><div><![endif]-->
               <p style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#FFFFFF;">SHADOW SERIES</p>
-              <h2 class="h2" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:40px; line-height:44px; font-weight:800; color:#FFFFFF;">MADE FOR THE&nbsp;<span style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#FF6400;">CHANGE</span></h2>
-              <p style="margin:0 auto 20px auto; max-width:440px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">GEAR UP FOR THE COOLER DAYS WITHOUT GIVING UP&nbsp;COMFORT.</p>
-              <p style="margin:0 auto 20px auto; max-width:440px; font-size:16px; line-height:26px; color:#E2DDD9;">Fall brings a little more to the day on the&nbsp;water.</p>
-              <p style="margin:0; font-size:16px; line-height:26px;"><a href="{{CTA_URL}}" target="_blank" style="color:#FFFFFF; text-decoration:underline; font-weight:700;">Shop Shadow Series</a></p>
+              <h2 style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">MADE FOR THE</span>
+                <span class="hl-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:100px; line-height:90px; font-weight:900; color:#FF6400;">CHANGE</span>
+              </h2>
+              <p style="margin:0 auto 20px auto; max-width:460px; font-size:17px; line-height:24px; color:#FFFFFF;">Gear up for the cooler days without giving up comfort. Fall brings a little more to the day on the&nbsp;water.</p>
+              <p style="margin:0; font-size:17px; line-height:24px;"><a href="{{CTA_URL}}" target="_blank" style="color:#FFFFFF; text-decoration:underline; font-weight:500;">Shop Shadow Series</a></p>
               <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
             </td>
           </tr>
@@ -863,14 +940,17 @@
             </td>
           </tr>
           <tr>
-            <td align="center" class="px py" background="assets/tex-camo-blur.jpg" bgcolor="#483F39" style="mso-padding-alt:0px; padding:64px 40px; background-color:#483F39; background-image:url('assets/tex-camo-blur.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" class="px py" background="assets/tex-camo-blur.jpg" bgcolor="#483F39" style="mso-padding-alt:0px; padding:64px 40px; background-color:#483F39; background-image:url('assets/tex-camo-blur.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/tex-camo-blur.jpg" color="#483F39" /><v:textbox style="mso-fit-shape-to-text:true;" inset="40px,64px,40px,64px"><div><![endif]-->
               <p style="margin:0 0 12px 0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#FFFFFF;">MEN&rsquo;S AND WOMEN&rsquo;S HUNTING</p>
-              <h2 class="h2" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:40px; line-height:44px; font-weight:800; color:#FFFFFF;">WHEREVER YOU&nbsp;<span style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#FFFFFF;">HUNT</span></h2>
-              <p style="margin:0 auto 32px auto; max-width:440px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">FIND THE GEAR THAT WORKS FOR HOW YOU&nbsp;HUNT.</p>
+              <h2 style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">WHEREVER YOU</span>
+                <span class="hl-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:100px; line-height:90px; font-weight:900; color:#FFFFFF;">HUNT</span>
+              </h2>
+              <p style="margin:0 auto 32px auto; max-width:460px; font-size:17px; line-height:24px; color:#FFFFFF;">Find the gear that works for how you&nbsp;hunt.</p>
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
-                <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP HUNTING</a>
+                <tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP HUNTING</a>
                 </td></tr>
               </table>
               <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
@@ -887,19 +967,22 @@
           <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E26 · Torn Photo · a photo inside a textured band: thin paper frame, torn on 1 or 2 sides, rotated 1 to 2&deg;, soft shadow, baked on the band texture (compose.py job_e26: compose_torn_photo). The image OPENS its td, so its baked texture rows are the same rows the td background shows (no seam); headline, 1 line and a text link live below · sample: light paper (img-light) + dark twin on the dark paper (img-dark, e26-torn-stable-dm.jpg) · second asset ready on Major Brown grain: e26-torn-camp.jpg (600x300, torn top + left, +1.4&deg;) · band 4 or 5; counts as the "collage" moment of art direction #5 when E22 is not used · photos: crop-sent-sep24-stable-horse.jpg, crop-sent-sep15-camp-chairs-family.jpg (stand-ins) · SAMPLE COPY from Sep 24, not approved</td></tr>
           <!-- MODULE:E26 Torn Photo -->
           <tr>
-            <td align="center" class="dm-tex" background="assets/tex-paper-light.jpg" bgcolor="#E2DDD9" style="mso-padding-alt:0px; padding:0; background-color:#E2DDD9; background-image:url('assets/tex-paper-light.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" class="dm-tex" background="assets/tex-paper-light.jpg" bgcolor="#E2DDD9" style="mso-padding-alt:0px; padding:0; background-color:#E2DDD9; background-image:url('assets/tex-paper-light.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/tex-paper-light.jpg" color="#E2DDD9" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td style="padding:0; font-size:0; line-height:0;">
-                    <img class="fluid img-light" src="assets/e26-torn-stable.jpg" width="600" height="410" alt="A man in a brown Habit plaid flannel in a horse barn, next to a horse in a fly mask" style="display:block; width:600px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#2A2B2D;">
+                    <img class="fluid img-light" src="assets/e26-torn-stable.jpg" width="600" height="410" alt="A man in a brown Habit plaid flannel in a horse barn, next to a horse in a fly mask" style="display:block; width:600px; max-width:100%; height:auto; border:0; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#2A2B2D;">
                     <!--[if !mso]><!--><img class="fluid img-dark" src="assets/e26-torn-stable-dm.jpg" width="600" height="410" alt="A man in a brown Habit plaid flannel in a horse barn, next to a horse in a fly mask" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:600px; max-width:100%; height:auto; border:0;"><!--<![endif]-->
                   </td>
                 </tr>
                 <tr>
-                  <td align="center" class="px" style="padding:8px 40px 64px 40px; font-family:Helvetica,Arial,sans-serif;">
-                    <h2 class="h2 dm-h" style="margin:0 0 12px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:34px; line-height:38px; font-weight:800; color:#2A2B2D;">FROM MORNING TO&nbsp;<span class="dm-accent" style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-weight:900; color:#2A2B2D;">NIGHT</span></h2>
-                    <p class="dm-p" style="margin:0 auto 16px auto; max-width:440px; font-size:16px; line-height:26px; color:#2A2B2D;">For cool mornings, late nights, and everything in&nbsp;between.</p>
+                  <td align="center" class="px" style="padding:8px 40px 64px 40px; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+                    <h2 class="dm-h" style="margin:0 0 12px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#2A2B2D; text-align:center;">
+                <span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">FROM MORNING TO</span>
+                <span class="hl-key dm-accent" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:100px; line-height:90px; font-weight:900; color:#2A2B2D;">NIGHT</span>
+              </h2>
+                    <p class="dm-p" style="margin:0 auto 16px auto; max-width:460px; font-size:17px; line-height:24px; color:#2A2B2D;">For cool mornings, late nights, and everything in&nbsp;between.</p>
                     <p style="margin:0; font-size:16px; line-height:26px;"><a href="{{CTA_URL}}" target="_blank" class="dm-link" style="color:#2A2B2D; text-decoration:underline; font-weight:700;">Shop flannel</a></p>
                   </td>
                 </tr>
@@ -909,28 +992,207 @@
           </tr>
           <!-- /MODULE:E26 -->
 
+          <!-- ============ V0.5 DRAFT (pending approval): E27-E34 + 3 surfaces ============ -->
+          <tr><td height="40" style="height:40px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:14px 16px; background-color:#2A2B2D; font-family:Consolas,Menlo,monospace; font-size:12px; line-height:18px; color:#E2DDD9;">V0.5 DRAFT · 2026-09-25 · PENDING APPROVAL. Source: the owner's revised October emails (references/rev-oct-01..05-*.png, 03-work/email/2026-10-broadcasts/revision-r2.md). Global changes already applied above to every module: white button text on #FF6400 with 4px radius (2.97:1, the owner's recorded AA exception), body and cards in Prompt 400/500 (fallback Helvetica, Arial), two-voice headline with a dominant Playfair 900 word, centered sentence-case body right under band headlines (tracked caps subtitle only in heroes), Instagram icon in the footer. New modules E27 to E34 below; images from tools/compose_v05.py. Product names and prices from the store catalog (2026-09-24): re-check on the send date</td></tr>
           <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
-          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E13 + E14 · Closing Band + Legal Footer · always together, always last. Tap Shoe band as in the sent emails: stacked white logo, MEN'S | WOMEN'S | YOUTH | SALE, Instagram line (live text), legal block, one copyright line. Ends at the copyright line, exactly as the sent emails (owner decision 2026-09-24). Address, unsubscribe and reason for receiving come from the ESP's own footer: confirm Omnisend appends them (CAN-SPAM)</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E27 · Product Info Box · the product text block of every v0.5 product module (rev-oct-01 to 05): centered, 1px #FEF4C6 outline, radius 10px, padding 22px 20px; title Prompt 800 caps ORANGE 19/21 (19px bold counts as large text: orange passes 3:1 on Tap Shoe 4.8, Patriot Blue 4.8, Major Brown 3.5, halftone brown worst 3.1), name Prompt 500 15/20 white, variant Prompt 400 13/18 (#B0A89C on Tap Shoe / Patriot Blue; #CFC8BF on Major Brown, where #B0A89C is 4.4:1), price Prompt 800 20/24 white, NO underline; the whole text block is one link to the product url; optional small button (13px, 14px 22px padding, 44px tall). No orange corner dashes, no orange &ldquo;=&rdquo;. Only on dark bands (white text). Sample band: the new halftone Major Brown surface, two boxes 2-up that stack under 620px. Mobile: box full width. Dark mode: fixed dark band, no swap · SAMPLE: names, variants (from the store image file codes RTAPX / RT_APX) and prices from the catalog on 2026-09-24</td></tr>
+          <!-- MODULE:E27 Product Info Box -->
+          <tr>
+            <td align="center" class="px py" background="assets/tex-halftone-brown.jpg" bgcolor="#483F39" style="mso-padding-alt:0px; padding:56px 40px; background-color:#483F39; background-image:url('assets/tex-halftone-brown.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+<!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/tex-halftone-brown.jpg" color="#483F39" /><v:textbox style="mso-fit-shape-to-text:true;" inset="40px,56px,40px,56px"><div><![endif]-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td width="50%" class="e27-cell" valign="top" style="width:50%; padding:0 8px 0 0; vertical-align:top;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="e27-box" width="100%" style="border-collapse:separate;"><tr><td align="center" style="padding:22px 20px; border:1px solid #FEF4C6; border-radius:10px; text-align:center; font-family:'Prompt',Helvetica,Arial,sans-serif;"><a href="{{PRODUCT_1_URL}}" target="_blank" style="display:block; text-decoration:none; color:#FFFFFF;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:21px; font-weight:800; color:#FF6400;">MEN&rsquo;S CEDAR BRANCH</p><p style="margin:0 0 2px 0; font-size:15px; line-height:20px; font-weight:500; color:#FFFFFF;">Insulated Bib</p><p style="margin:0 0 8px 0; font-size:13px; line-height:18px; font-weight:400; color:#CFC8BF;">Realtree APX</p><p style="margin:0; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">$99.99 USD</p></a></td></tr></table></td>
+<td width="50%" class="e27-cell" valign="top" style="width:50%; padding:0 0 0 8px; vertical-align:top;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="e27-box" width="100%" style="border-collapse:separate;"><tr><td align="center" style="padding:22px 20px; border:1px solid #FEF4C6; border-radius:10px; text-align:center; font-family:'Prompt',Helvetica,Arial,sans-serif;"><a href="{{PRODUCT_2_URL}}" target="_blank" style="display:block; text-decoration:none; color:#FFFFFF;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:21px; font-weight:800; color:#FF6400;">MEN&rsquo;S CEDAR BRANCH</p><p style="margin:0 0 2px 0; font-size:15px; line-height:20px; font-weight:500; color:#FFFFFF;">Insulated Waterproof Parka</p><p style="margin:0 0 8px 0; font-size:13px; line-height:18px; font-weight:400; color:#CFC8BF;">Realtree APX</p><p style="margin:0; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">$99.99 USD</p></a></td></tr></table></td>
+</tr></table>
+            <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+</td>
+          </tr>
+          <!-- /MODULE:E27 -->
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E28 · Checkerboard Product Row · rev-oct-05: each row 300 + 300, no margin: one half the packshot on a FLAT palette panel (pre-built image, compose_v05.py job_e28), the other half Patriot water texture with the E27 box centered; sides alternate row by row. Panel colors: Aluminum #A39A8C, Dusk #ACB1B3, Turkish Coffee #5C5249, Ivy Green #595442 (the guide colors nearest to the ones measured on the revision). Mobile: every cell stacks, image FIRST (the right-image rows use dir=rtl), image full width, info cell 36px 24px. Outlook desktop: the textured info cell shows its flat #202944 fallback (no VML on a nested cell). Dark mode: fixed colors, no swap. Button row after the grid in Patriot Blue. SAMPLE: Men&rsquo;s Shadow Series Mid Layer Hooded Jacket and Windproof Fleece Pant, $69.98 USD each (catalog 2026-09-24); variant names read from the store image file codes (VEIL_WIDELAND_WOLF, MO_COYOTE): confirm the store labels</td></tr>
+          <!-- MODULE:E28 Checkerboard Product Row -->
+          <tr>
+            <td style="padding:0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td width="300" class="e28-cell" dir="ltr" bgcolor="#A39A8C" style="width:300px; padding:0; background-color:#A39A8C; font-size:0; line-height:0; vertical-align:middle;"><a href="{{PRODUCT_1_URL}}" target="_blank" style="text-decoration:none;"><img class="e28-img" src="assets/e28-panel-mid-layer-jacket.jpg" width="300" height="330" alt="Habit Men&rsquo;s Shadow Series Mid Layer Hooded Jacket in Veil Wideland camo" style="display:block; width:300px; height:auto; border:0;"></a></td>
+<td width="300" height="330" class="e28-cell e28-info" dir="ltr" align="center" valign="middle" background="assets/tex-grain-patriot-water.jpg" bgcolor="#202944" style="width:300px; height:330px; padding:0 26px; background-color:#202944; background-image:url('assets/tex-grain-patriot-water.jpg'); background-size:600px auto; vertical-align:middle; font-family:'Prompt',Helvetica,Arial,sans-serif;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="e27-box" width="100%" style="border-collapse:separate;"><tr><td align="center" style="padding:22px 20px; border:1px solid #FEF4C6; border-radius:10px; text-align:center; font-family:'Prompt',Helvetica,Arial,sans-serif;"><a href="{{PRODUCT_1_URL}}" target="_blank" style="display:block; text-decoration:none; color:#FFFFFF;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:21px; font-weight:800; color:#FF6400;">MEN&rsquo;S SHADOW SERIES MID LAYER HOODED JACKET</p><p style="margin:0 0 8px 0; font-size:13px; line-height:18px; font-weight:400; color:#B0A89C;">Veil Wideland Wolf</p><p style="margin:0; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">$69.98 USD</p></a></td></tr></table></td>
+</tr></table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="rtl"><tr>
+<td width="300" class="e28-cell" dir="ltr" bgcolor="#ACB1B3" style="width:300px; padding:0; background-color:#ACB1B3; font-size:0; line-height:0; vertical-align:middle;"><a href="{{PRODUCT_2_URL}}" target="_blank" style="text-decoration:none;"><img class="e28-img" src="assets/e28-panel-windproof-pant.jpg" width="300" height="330" alt="Habit Men&rsquo;s Shadow Series Windproof Fleece Pant in Mossy Oak camo with a grey base layer" style="display:block; width:300px; height:auto; border:0;"></a></td>
+<td width="300" height="330" class="e28-cell e28-info" dir="ltr" align="center" valign="middle" background="assets/tex-grain-patriot-water.jpg" bgcolor="#202944" style="width:300px; height:330px; padding:0 26px; background-color:#202944; background-image:url('assets/tex-grain-patriot-water.jpg'); background-size:600px auto; vertical-align:middle; font-family:'Prompt',Helvetica,Arial,sans-serif;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="e27-box" width="100%" style="border-collapse:separate;"><tr><td align="center" style="padding:22px 20px; border:1px solid #FEF4C6; border-radius:10px; text-align:center; font-family:'Prompt',Helvetica,Arial,sans-serif;"><a href="{{PRODUCT_2_URL}}" target="_blank" style="display:block; text-decoration:none; color:#FFFFFF;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:21px; font-weight:800; color:#FF6400;">MEN&rsquo;S SHADOW SERIES WINDPROOF FLEECE PANT</p><p style="margin:0 0 8px 0; font-size:13px; line-height:18px; font-weight:400; color:#B0A89C;">Mossy Oak Terra Coyote</p><p style="margin:0; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">$69.98 USD</p></a></td></tr></table></td>
+</tr></table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" class="px" background="assets/tex-grain-patriot-water.jpg" bgcolor="#202944" style="mso-padding-alt:0px; padding:32px 40px 56px 40px; background-color:#202944; background-image:url('assets/tex-grain-patriot-water.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+<!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/tex-grain-patriot-water.jpg" color="#202944" /><v:textbox style="mso-fit-shape-to-text:true;" inset="40px,32px,40px,56px"><div><![endif]-->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full"><tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;"><a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP SHADOW SERIES</a></td></tr></table>
+            <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+</td>
+          </tr>
+          <!-- /MODULE:E28 -->
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E29 · Framed Product Card · rev-oct-02 (packshot on a flat panel) and rev-oct-04 (model photo, description and small button): one large card per product, 1px #FEF4C6 outline, radius 14px, 24px side margin; left or right cell = photo panel 200x330 (pre-built, compose_v05.py job_e29), the other cell = the E27 box, optionally with a 1-line description instead of the variant and a small button. Cards alternate sides (dir=rtl) or all photo-left (rev-oct-04). Band: Tap Shoe paper. Mobile: the card stacks, photo panel on top (its cell carries the panel color, the 200px image centered, top corners rounded), box below. Outlook: square corners, flat #2A2B2D band. Dark mode: fixed dark band, no swap. SAMPLE: Youth Cedar Branch Insulated Bib $79.99 USD (store image RTAPX), Men&rsquo;s Crater Valley Full Zip Fleece Jacket $49.99 USD (store model image 4, spec text cropped off; description from the bullets printed on the store image); prices from the catalog on 2026-09-24</td></tr>
+          <!-- MODULE:E29 Framed Product Card -->
+          <tr>
+            <td align="center" class="e29-wrap" background="assets/tex-paper-tapshoe.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:56px 24px 32px 24px; background-color:#2A2B2D; background-image:url('assets/tex-paper-tapshoe.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+<!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/tex-paper-tapshoe.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="24px,56px,24px,32px"><div><![endif]-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate; border:1px solid #FEF4C6; border-radius:14px;"><tr>
+<td width="200" class="e29-panel" dir="ltr" align="center" bgcolor="#595442" style="width:200px; padding:0; background-color:#595442; border-radius:13px 0 0 13px; font-size:0; line-height:0; vertical-align:top;"><a href="{{PRODUCT_1_URL}}" target="_blank" style="text-decoration:none;"><img class="e29-img" src="assets/e29-panel-youth-bib.jpg" width="200" height="330" alt="Habit Youth Cedar Branch Insulated Bib in Realtree APX camo" style="display:block; width:200px; height:330px; border:0; border-radius:13px 0 0 13px; margin:0 auto;"></a></td>
+<td class="e29-info" dir="ltr" align="center" valign="middle" style="padding:28px 44px; vertical-align:middle; font-family:'Prompt',Helvetica,Arial,sans-serif;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="e27-box" width="100%" style="border-collapse:separate;"><tr><td align="center" style="padding:22px 20px; border:1px solid #FEF4C6; border-radius:10px; text-align:center; font-family:'Prompt',Helvetica,Arial,sans-serif;"><a href="{{PRODUCT_1_URL}}" target="_blank" style="display:block; text-decoration:none; color:#FFFFFF;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:21px; font-weight:800; color:#FF6400;">YOUTH CEDAR BRANCH</p><p style="margin:0 0 2px 0; font-size:15px; line-height:20px; font-weight:500; color:#FFFFFF;">Insulated Bib</p><p style="margin:0 0 8px 0; font-size:13px; line-height:18px; font-weight:400; color:#B0A89C;">Realtree APX</p><p style="margin:0; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">$79.99 USD</p></a></td></tr></table></td>
+</tr></table>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr></table>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="rtl" style="border-collapse:separate; border:1px solid #FEF4C6; border-radius:14px;"><tr>
+<td width="200" class="e29-panel" dir="ltr" align="center" bgcolor="#5C5249" style="width:200px; padding:0; background-color:#5C5249; border-radius:0 13px 13px 0; font-size:0; line-height:0; vertical-align:top;"><a href="{{PRODUCT_2_URL}}" target="_blank" style="text-decoration:none;"><img class="e29-img" src="assets/e29-panel-crater-fleece-model.jpg" width="200" height="330" alt="A man wearing the Habit Men&rsquo;s Crater Valley Full Zip Fleece Jacket in Woodland Deadwood Khaki camo" style="display:block; width:200px; height:330px; border:0; border-radius:0 13px 13px 0; margin:0 auto;"></a></td>
+<td class="e29-info" dir="ltr" align="center" valign="middle" style="padding:28px 44px; vertical-align:middle; font-family:'Prompt',Helvetica,Arial,sans-serif;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="e27-box" width="100%" style="border-collapse:separate;"><tr><td align="center" style="padding:22px 20px; border:1px solid #FEF4C6; border-radius:10px; text-align:center; font-family:'Prompt',Helvetica,Arial,sans-serif;"><a href="{{PRODUCT_2_URL}}" target="_blank" style="display:block; text-decoration:none; color:#FFFFFF;"><p style="margin:0 0 4px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:21px; font-weight:800; color:#FF6400;">MEN&rsquo;S CRATER VALLEY</p><p style="margin:0 0 2px 0; font-size:15px; line-height:20px; font-weight:500; color:#FFFFFF;">Full Zip Fleece Jacket</p><p style="margin:4px 0 10px 0; font-size:14px; line-height:19px; font-weight:400; color:#E2DDD9;">Soft sherpa fleece with a high standing collar and a snap chest&nbsp;pocket.</p><p style="margin:0; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">$49.99 USD</p></a><table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:14px auto 0 auto;"><tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;"><a href="{{PRODUCT_2_URL}}" target="_blank" style="display:inline-block; padding:14px 22px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:13px; line-height:16px; font-weight:800; letter-spacing:1.5px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP FLEECE</a></td></tr></table></td></tr></table></td>
+</tr></table>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="padding:32px 0 24px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full"><tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;"><a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP NOW</a></td></tr></table></td></tr></table>
+            <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+</td>
+          </tr>
+          <!-- /MODULE:E29 -->
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E30 · Photo Closing Band · rev-oct-01 and rev-oct-04: the last band before the footer is a full-bleed photo; the two-voice headline, 1 or 2 sentences and a WIDE button (420px, full width on mobile) sit over the dark bottom, where the photo melts into Tap Shoe paper; the bottom tears into the flat Tap Shoe footer (baked in, so E13 follows with no E18). ONE background image (compose_v05.py job_e30: compose.compose_full_bleed_hero) 600x750, background-size:cover, anchored bottom; spacer 430px desktop and mobile, so the text always starts where the photo is fully faded (measured: white 13.3:1, #E2DDD9 9.9:1 over the text area at both widths). Replaces the olive split band. Outlook: VML frame, fallback #2A2B2D. Dark mode: fixed dark, no swap · photo: orig-hunt40-hunter-forest-back.jpg (Habit original, [[CONFIRMAR]] cleared for email), softened 1.1px at 2x to stay under 150KB · the drawn fishing line is not baked in (the kit keeps it to E02) · SAMPLE COPY in the Habit tone, not approved</td></tr>
+          <!-- MODULE:E30 Photo Closing Band -->
+          <tr>
+            <td align="center" valign="top" background="assets/e30-closing-hunter.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:0; background-color:#2A2B2D; background-image:url('assets/e30-closing-hunter.jpg'); background-size:cover; background-position:center bottom; background-repeat:no-repeat; vertical-align:top;">
+<!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:750px;"><v:fill type="frame" src="assets/e30-closing-hunter.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td class="e30-space" height="430" style="height:430px; font-size:0; line-height:0;">&nbsp;</td></tr>
+<tr><td align="center" class="px" style="padding:0 40px 76px 40px; text-align:center; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+<h2 style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;"><span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">LAYER UP FOR THE</span>
+<span class="hl-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:100px; line-height:90px; font-weight:900; color:#FF6400;">SEASON</span></h2>
+<p style="margin:0 auto 28px auto; max-width:460px; font-size:17px; line-height:24px; color:#FFFFFF;">Pair the bib with the parka for full coverage from the stand to the field. Warm, quiet and ready for the worst mornings of the&nbsp;year.</p>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full" width="420" style="width:420px;"><tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;"><a href="{{CTA_URL}}" target="_blank" style="display:block; padding:16px 0; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px; text-align:center;">SHOP HUNTING</a></td></tr></table>
+</td></tr>
+</table>
+            <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+</td>
+          </tr>
+          <!-- /MODULE:E30 -->
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E31 · Tilted Framed Photo · rev-oct-02 closing: a photo in a WHITE frame (6px shown), rotated 4&deg;, 240x323 shown, soft shadow, baked on light paper (compose_v05.py job_e31, + -dm twin on the dark paper), beside a left-aligned two-voice headline (serif Tap Shoe, 64px: keep the serif words short, it wraps to 2 lines), 1 or 2 sentences and a button. Band: light paper (dm-tex). Mobile: stacks, photo centered on top, text below. Dark mode: .dm-tex swaps the band, img-light/img-dark swap the photo, text takes dm-h / dm-p, the serif turns orange (large, 4.1:1 on #34353A). The image sits inside the band (not at the top of its td), so its baked paper grain and the band tile do not line up row by row: invisible on this grain-only paper (mottle about 1 level) · photo: crop-sent-sep2-hunter-blind.jpg (stand-in until the original) · SAMPLE COPY, not approved</td></tr>
+          <!-- MODULE:E31 Tilted Framed Photo -->
+          <tr>
+            <td align="center" class="px py dm-tex" background="assets/tex-paper-light.jpg" bgcolor="#E2DDD9" style="mso-padding-alt:0px; padding:56px 40px 56px 24px; background-color:#E2DDD9; background-image:url('assets/tex-paper-light.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+<!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/tex-paper-light.jpg" color="#E2DDD9" /><v:textbox style="mso-fit-shape-to-text:true;" inset="24px,56px,40px,56px"><div><![endif]-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td width="240" class="e31-img" align="center" valign="middle" style="width:240px; padding:0 24px 0 0; vertical-align:middle; font-size:0; line-height:0;">
+<img class="img-light" src="assets/e31-tilt-blind.jpg" width="240" height="323" alt="A hunter in an orange Habit cap stepping out of a ground blind with his rifle" style="display:block; width:240px; height:323px; border:0; margin:0 auto;">
+<!--[if !mso]><!--><img class="img-dark" src="assets/e31-tilt-blind-dm.jpg" width="240" height="323" alt="A hunter in an orange Habit cap stepping out of a ground blind with his rifle" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:240px; height:323px; border:0; margin:0 auto;"><!--<![endif]-->
+</td>
+<td class="e31-text" valign="middle" style="vertical-align:middle; text-align:left; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+<h2 class="dm-h" style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#2A2B2D; text-align:left;"><span class="hl-lead" style="display:block; font-size:26px; line-height:28px; letter-spacing:0.5px;">BUILT FOR EVERY</span>
+<span class="hl-key-s dm-accent" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:64px; line-height:60px; font-weight:900; color:#2A2B2D;">COLD DAWN</span></h2>
+<p class="dm-p" style="margin:0 0 24px 0; font-size:17px; line-height:24px; color:#2A2B2D;">Layer up before first light and stay out until the work is&nbsp;done.</p>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="left" class="btn-full"><tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;"><a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 40px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP HUNTING</a></td></tr></table>
+</td>
+</tr></table>
+            <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+</td>
+          </tr>
+          <!-- /MODULE:E31 -->
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E32 · Single Review · rev-oct-01: ONE review per email (the owner cut the other two), Tap Shoe paper band: orange serif quote mark, 5 orange stars (text characters, one per point of the real rating), the quote centered in 17/24 white, the name in tracked caps #B0A89C; the reviewed product bleeds off the right edge (pre-built on the same paper, compose_v05.py job_e32). Only a real review with its real name and rating, word for word from the store or the client copy; never an invented or edited quote. Mobile: text first, the product below, still cut by the right edge, 150px. Dark mode: fixed dark band. SAMPLE: the Ryan And L. review of the Men&rsquo;s Cedar Branch Insulated Bib from the client&rsquo;s October copy-source (03-work/email/2026-10-broadcasts/copy-source.md), paired with the bib it talks about (rev-oct-01 shows the parka next to it)</td></tr>
+          <!-- MODULE:E32 Single Review -->
+          <tr>
+            <td align="center" background="assets/tex-paper-tapshoe.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:0; background-color:#2A2B2D; background-image:url('assets/tex-paper-tapshoe.jpg'); background-size:600px auto; background-repeat:repeat-y; background-position:center top; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+<!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/tex-paper-tapshoe.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td class="e32-text" align="center" valign="middle" style="padding:56px 20px 56px 48px; vertical-align:middle; text-align:center; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+<p style="margin:0; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:80px; line-height:56px; font-weight:900; color:#FF6400;" aria-hidden="true">&ldquo;</p>
+<p role="img" aria-label="5 out of 5 stars" style="margin:8px 0 18px 0; font-family:Arial,Helvetica,sans-serif; font-size:22px; line-height:26px; letter-spacing:5px; color:#FF6400;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+<blockquote style="margin:0 0 16px 0; padding:0;"><p style="margin:0; font-size:17px; line-height:24px; font-weight:400; color:#FFFFFF;">These Habits are obviously insulated but also waterproof. They also have the silent tech. I have washed them about 5 times and they are still just as waterproof as day&nbsp;1.</p></blockquote>
+<p style="margin:0; font-size:13px; line-height:18px; font-weight:500; letter-spacing:2px; color:#B0A89C;">RYAN AND L.</p>
+</td>
+<td width="150" class="e32-img" align="right" valign="middle" style="width:150px; padding:0; vertical-align:middle; font-size:0; line-height:0;">
+<a href="{{PRODUCT_1_URL}}" target="_blank" style="text-decoration:none;"><img src="assets/e32-review-bib.jpg" width="150" height="400" alt="Habit Men&rsquo;s Cedar Branch Insulated Bib in Realtree APX camo" style="display:block; width:150px; height:400px; border:0; margin:0 0 0 auto;"></a>
+</td>
+</tr></table>
+            <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+</td>
+          </tr>
+          <!-- /MODULE:E32 -->
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E33 · Label Hero · E24 variant with the headline in paper LABELS (rev-oct-01): opens the email with no E01, white logotype on the darkened sky, the labels flush with the right edge, stepping down: light paper labels (#2A2B2D, sans 30px, then serif 72px) and the LAST label dark Tap Shoe paper with the serif word in ORANGE (4.8:1); tracked subtitle (heroes only) and the button over the dark bottom, where the photo melts into Tap Shoe paper; torn edge baked into the next band (sample: the new halftone Major Brown, so E27 or any halftone band follows). ONE background image 600x700 (compose_v05.py job_e33). Labels are live text in table cells (background image + bgcolor fallback), white-space:nowrap: keep each label 1 to 3 short words. Mobile: labels step down to 22px / 48px, spacer 240px, button full width inside the first 667px. Measured: logo area white 4.8:1 after the sky shade; subtitle area white 13.3:1. Outlook: VML frame, fallback #2A2B2D. Dark mode: fixed, no swap (labels keep their paper) · photo: orig-hunt22-three-hunters-field-sunrise.jpg (Habit original, [[CONFIRMAR]] cleared for email) · SAMPLE COPY, not approved</td></tr>
+          <!-- MODULE:E33 Label Hero -->
+          <tr>
+            <td align="center" valign="top" background="assets/e33-label-hero-field.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:0; background-color:#2A2B2D; background-image:url('assets/e33-label-hero-field.jpg'); background-size:cover; background-position:center top; background-repeat:no-repeat; vertical-align:top;">
+<!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:700px;"><v:fill type="frame" src="assets/e33-label-hero-field.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td align="center" class="e24-logo" style="padding:32px 40px 0 40px;"><a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="assets/logo-dark.png" width="160" height="26" alt="Habit" style="display:block; width:160px; height:26px; border:0; margin:0 auto;"></a></td></tr>
+<tr><td align="right" class="e33-labels" style="padding:40px 0 0 0;">
+<div role="heading" aria-level="1"><table role="presentation" cellpadding="0" cellspacing="0" border="0" align="right">
+<tr><td align="right" style="padding:0 0 6px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" align="right"><tr><td class="lb" background="assets/tex-paper-light.jpg" bgcolor="#E2DDD9" style="padding:8px 24px 6px 26px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:30px; line-height:40px; font-weight:800; letter-spacing:1px; background-color:#E2DDD9; background-image:url('assets/tex-paper-light.jpg'); background-size:600px auto; color:#2A2B2D; white-space:nowrap;">READY FOR</td></tr></table></td></tr>
+<tr><td align="right" style="padding:0 0 6px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" align="right"><tr><td class="lb-key" background="assets/tex-paper-light.jpg" bgcolor="#E2DDD9" style="padding:6px 24px 0 26px; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:72px; line-height:80px; font-weight:900; background-color:#E2DDD9; background-image:url('assets/tex-paper-light.jpg'); background-size:600px auto; color:#2A2B2D; white-space:nowrap;">FIRST</td></tr></table></td></tr>
+<tr><td align="right" style="padding:0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" align="right"><tr><td class="lb-key" background="assets/tex-paper-tapshoe.jpg" bgcolor="#2A2B2D" style="padding:6px 24px 0 26px; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:72px; line-height:80px; font-weight:900; background-color:#2A2B2D; background-image:url('assets/tex-paper-tapshoe.jpg'); background-size:600px auto; color:#FF6400; white-space:nowrap;">LIGHT</td></tr></table></td></tr>
+</table></div>
+</td></tr>
+<tr><td class="e33-space" height="190" style="height:190px; font-size:0; line-height:0;">&nbsp;</td></tr>
+<tr><td align="center" class="e33-text" style="padding:0 40px 64px 40px; text-align:center; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+<p class="e24-sub" style="margin:0 auto 22px auto; max-width:460px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">QUIET, WARM LAYERS FOR THE HOURS BEFORE THE SUN&nbsp;CLEARS.</p>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full"><tr><td align="center" bgcolor="#FF6400" style="border-radius:4px; background-color:#FF6400;"><a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px;">SHOP HUNTING</a></td></tr></table>
+</td></tr>
+</table>
+            <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+</td>
+          </tr>
+          <!-- /MODULE:E33 -->
+          <tr><td align="center" class="px" background="assets/tex-halftone-brown.jpg" bgcolor="#483F39" style="padding:8px 40px 40px 40px; background-color:#483F39; background-image:url('assets/tex-halftone-brown.jpg'); background-size:600px auto; background-repeat:repeat-y; font-family:'Prompt',Helvetica,Arial,sans-serif;"><p style="margin:0; font-size:13px; line-height:20px; font-weight:500; letter-spacing:2.4px; color:#FFFFFF;">NEXT BAND STARTS HERE (CONTEXT, TEX-HALFTONE-BROWN)</p></td></tr>
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E34 · Attribute Grid · rev-oct-05: 2x2 outlined cards (1px #FEF4C6, radius 10px, cells of the same row share their height) with the OFFICIAL technology pictogram of guide p.21 (rendered from the vector PDF, white, its fabric bars orange: compose_v05.py job_icons, 128px PNG shown 64), orange 19px title with the name and &reg; / &trade; exactly as p.21, the p.21 description word for word in 15/20 #E2DDD9. Only technologies the featured product lists. Band: the new Tap Shoe to Patriot Blue topographic gradient (stretch, fallback #2A2B2D). The revision drew thin-line icons; the kit uses the guide&rsquo;s own set instead (open question). Mobile: one column, 16px between cards. Outlook: VML frame, square corners. Dark mode: fixed dark, no swap · SAMPLE: technologies of the Buck Hollow 2.0 Jacket product page (Rain-Factor Waterproof, Scent-Factor, windproof, breathable)</td></tr>
+          <!-- MODULE:E34 Attribute Grid -->
+          <tr>
+            <td align="center" class="px py" background="assets/grad-tapshoe-to-patriot-topo.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:64px 40px; background-color:#2A2B2D; background-image:url('assets/grad-tapshoe-to-patriot-topo.jpg'); background-size:100% 100%; background-repeat:no-repeat; background-position:center top; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+<!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/grad-tapshoe-to-patriot-topo.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="40px,64px,40px,64px"><div><![endif]-->
+<h2 style="margin:0 0 16px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;"><span class="hl-lead" style="display:block; font-size:30px; line-height:32px; letter-spacing:0.5px;">THE LINE THAT OUTLASTS</span>
+<span class="hl-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:100px; line-height:90px; font-weight:900; color:#FFFFFF;">THE WEATHER</span></h2>
+<p style="margin:0 auto 32px auto; max-width:460px; font-size:17px; line-height:24px; color:#FFFFFF;">The tech on the tag, in plain&nbsp;words.</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;">
+<tr><td width="252" align="center" valign="top" class="e34-card" style="width:252px; padding:26px 18px 26px 18px; border:1px solid #FEF4C6; border-radius:10px; vertical-align:top; text-align:center; font-family:'Prompt',Helvetica,Arial,sans-serif;"><img src="assets/icon-rain-factor-waterproof.png" width="64" height="64" alt="Rain-Factor Waterproof icon" style="display:block; width:64px; height:64px; border:0; margin:0 auto 12px auto;"><p style="margin:0 0 6px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:21px; font-weight:800; color:#FF6400;">RAIN-FACTOR&reg; WATERPROOF</p><p style="margin:0; font-size:15px; line-height:20px; font-weight:400; color:#E2DDD9;">Waterproof membrane and critically taped seams are designed to keep you dry and comfortable</p></td><td width="16" class="e34-gap" style="width:16px; font-size:0; line-height:0;">&nbsp;</td><td width="252" align="center" valign="top" class="e34-card" style="width:252px; padding:26px 18px 26px 18px; border:1px solid #FEF4C6; border-radius:10px; vertical-align:top; text-align:center; font-family:'Prompt',Helvetica,Arial,sans-serif;"><img src="assets/icon-scent-factor.png" width="64" height="64" alt="Scent-Factor icon" style="display:block; width:64px; height:64px; border:0; margin:0 auto 12px auto;"><p style="margin:0 0 6px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:21px; font-weight:800; color:#FF6400;">SCENT-FACTOR&reg;</p><p style="margin:0; font-size:15px; line-height:20px; font-weight:400; color:#E2DDD9;">Features a built-in scent reducing technology to inhibit the growth of odor-causing bacteria.</p></td></tr>
+<tr><td colspan="3" height="16" class="e34-gap" style="height:16px; font-size:0; line-height:0;">&nbsp;</td></tr>
+<tr><td width="252" align="center" valign="top" class="e34-card" style="width:252px; padding:26px 18px 26px 18px; border:1px solid #FEF4C6; border-radius:10px; vertical-align:top; text-align:center; font-family:'Prompt',Helvetica,Arial,sans-serif;"><img src="assets/icon-windproof.png" width="64" height="64" alt="Windproof icon" style="display:block; width:64px; height:64px; border:0; margin:0 auto 12px auto;"><p style="margin:0 0 6px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:21px; font-weight:800; color:#FF6400;">WINDPROOF</p><p style="margin:0; font-size:15px; line-height:20px; font-weight:400; color:#E2DDD9;">Designed to keep you comfortable by keeping the wind out</p></td><td width="16" class="e34-gap" style="width:16px; font-size:0; line-height:0;">&nbsp;</td><td width="252" align="center" valign="top" class="e34-card" style="width:252px; padding:26px 18px 26px 18px; border:1px solid #FEF4C6; border-radius:10px; vertical-align:top; text-align:center; font-family:'Prompt',Helvetica,Arial,sans-serif;"><img src="assets/icon-breathable.png" width="64" height="64" alt="Breathable icon" style="display:block; width:64px; height:64px; border:0; margin:0 auto 12px auto;"><p style="margin:0 0 6px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:21px; font-weight:800; color:#FF6400;">BREATHABLE</p><p style="margin:0; font-size:15px; line-height:20px; font-weight:400; color:#E2DDD9;">Made so moisture vapor moves through and away for comfort</p></td></tr>
+</table>
+            <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+</td>
+          </tr>
+          <!-- /MODULE:E34 -->
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#CFC8BF; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#5C5249;">E13 + E14 · Closing Band + Legal Footer · always together, always last. Tap Shoe band as in the sent emails: stacked white logo, MEN'S | WOMEN'S | YOUTH | SALE, (v0.5) the colored Instagram icon assets/icon-instagram.png (72px file shown 36x36) beside "Follow us on Instagram" / @HABITOUTDOORS in live text, one copyright line, all in Prompt. No address and no unsubscribe line in the HTML (owner decision, confirmed again in the 2026-09-25 revision). Ends at the copyright line, exactly as the sent emails (owner decision 2026-09-24). Address, unsubscribe and reason for receiving come from the ESP's own footer: confirm Omnisend appends them (CAN-SPAM)</td></tr>
           <!-- MODULE:E13 Closing Band -->
           <tr>
-            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:56px 40px 32px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
-              <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="assets/logo-footer.png" width="160" height="71" alt="Habit" style="display:block; width:160px; height:71px; border:0; margin:0 auto;"></a>
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:56px 40px 32px 40px; background-color:#2A2B2D; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+              <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="assets/logo-footer.png" width="136" height="61" alt="Habit" style="display:block; width:136px; height:61px; border:0; margin:0 auto;"></a>
             </td>
           </tr>
           <!-- /MODULE:E13 -->
           <!-- MODULE:E14 Legal Footer -->
           <tr>
-            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:0 40px 48px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:0 40px 48px 40px; background-color:#2A2B2D; font-family:'Prompt',Helvetica,Arial,sans-serif;">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 32px auto;">
                 <tr>
-                  <td class="nav-td" style="padding:0 14px;"><a href="{{MENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">MEN&rsquo;S</a></td>
-                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{WOMENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">WOMEN&rsquo;S</a></td>
-                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{YOUTH_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">YOUTH</a></td>
-                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{SALE_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">SALE</a></td>
+                  <td class="nav-td" style="padding:0 25px;"><a href="{{MENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:16px; line-height:20px; font-weight:500; letter-spacing:2.5px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">MEN&rsquo;S</a></td>
+                  <td class="nav-td" style="padding:0 25px; border-left:1px solid #FFFFFF;"><a href="{{WOMENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:16px; line-height:20px; font-weight:500; letter-spacing:2.5px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">WOMEN&rsquo;S</a></td>
+                  <td class="nav-td" style="padding:0 25px; border-left:1px solid #FFFFFF;"><a href="{{YOUTH_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:16px; line-height:20px; font-weight:500; letter-spacing:2.5px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">YOUTH</a></td>
+                  <td class="nav-td" style="padding:0 25px; border-left:1px solid #FFFFFF;"><a href="{{SALE_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:16px; line-height:20px; font-weight:500; letter-spacing:2.5px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">SALE</a></td>
                 </tr>
               </table>
-              <p style="margin:0 0 32px 0; font-size:14px; line-height:22px; color:#E2DDD9;">Follow us on Instagram<br><a href="{{INSTAGRAM_URL}}" target="_blank" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:24px; font-weight:800; letter-spacing:1.5px; color:#FFFFFF; text-decoration:none;">@HABITOUTDOORS</a></p>
-              <p style="margin:0; font-size:12px; line-height:18px; color:#E2DDD9;">&copy; 2026, Habit Outdoors. Built By Wilde Creative.</p>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 32px auto;">
+                <tr>
+                  <td width="44" valign="middle" style="width:44px; padding:0 14px 0 0; vertical-align:middle;"><a href="{{INSTAGRAM_URL}}" target="_blank" style="text-decoration:none;"><img src="assets/icon-instagram.png" width="44" height="44" alt="Instagram" style="display:block; width:44px; height:44px; border:0;"></a></td>
+                  <td align="left" valign="middle" style="vertical-align:middle; text-align:left; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+                    <p style="margin:0; font-size:13px; line-height:18px; font-weight:500; letter-spacing:0.5px; color:#FFFFFF;">Follow us on Instagram</p>
+                    <p style="margin:0; font-size:15px; line-height:22px;"><a href="{{INSTAGRAM_URL}}" target="_blank" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:22px; font-weight:800; letter-spacing:1.5px; color:#FFFFFF; text-decoration:none;">@HABITOUTDOORS</a></p>
+                  </td>
+                </tr>
+              </table>
+              <p style="margin:0; font-size:13px; line-height:18px; letter-spacing:0.5px; color:#E2DDD9;">&copy; 2026, Habit Outdoors. Built By Wilde Creative.</p>
             </td>
           </tr>
           <!-- /MODULE:E14 -->

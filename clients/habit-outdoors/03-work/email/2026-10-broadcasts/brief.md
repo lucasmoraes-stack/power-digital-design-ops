@@ -1,5 +1,17 @@
 # October 2026 Broadcasts · brief
 
+## Rodada 2 (2026-09-25)
+
+A direção de arte da rodada 2 está em [`revision-r2.md`](revision-r2.md) (imagens `email-kit/references/rev-oct-01..05-*.png`) e **vale acima deste brief** onde divergir. QA da rodada: [`qa-r2.md`](qa-r2.md). Decisões do responsável registradas aqui:
+
+- **Botão com texto branco** `#FFFFFF` sobre `#FF6400` (2,97:1, abaixo do AA): exceção pedida pelo responsável; substitui o texto Tap Shoe de 2026-09-24. Um estilo só nos 5 (kit v0.5): Prompt 800, 17px, tracking 2px, raio 4px, padding vertical 16px, 52px de altura, largura fixa por botão. Botão pequeno de card (04): 13px, padding 14px 22px, 44px.
+- **Endereço e descadastro fora do HTML:** vêm do rodapé do Omnisend (CAN-SPAM, conferir num envio de teste). Substitui a regra de rodapé com `[[CONFIRMAR: endereço]]` e `{{UNSUBSCRIBE_URL}}` deste brief. Rodapé E13 + E14 idêntico nos 5 (logo empilhado, menu, ícone do Instagram 44px, copyright).
+- **Um review só no 01** (Ryan And L.); saem Matthew B. e Andrew C.
+- **01, Bloco 2: sai o "CTA: Shop Now"** do copy do cliente (a imagem revisada não tem botão nessa banda). Registro de corte de copy (rules §7).
+- **04: sai o GIF** (resolve a D4) e o e-mail fica com **5 botões** (hero, SHOP HOODIE / SHOP FLEECE / SHOP QUARTER ZIP nos cards, SHOP NOW no fim), todos para a família Crater Valley. Substitui o X5 e o limite de 3 botões para este e-mail.
+- **Fotos provisórias 1x** recortadas das rev-oct (`o1-rev-archer`, `o2-rev-boy`, `o3-rev-hero`, `o4-rev-sunset`); trocar pelos originais antes do envio. Hero do 05 mantém a foto da rodada 1 (a da revisão não é recuperável).
+- **Cores de painel:** 02 mantém ferrugem `#774727` e ardósia `#4F5C5F` (desenho revisado do responsável), agora no kit v0.5 como cor de painel de produto (`color.panel_rust`, `color.panel_slate`). Os painéis do 05 seguem as cores medidas da rev-oct-05, ainda para aprovação junto com o kit v0.5.
+
 > Brief do lote (playbook, etapa 3), montado em 2026-09-25. 5 broadcasts avulsos de outubro, sem gatilho nem cadência. Três Email Designers constroem em paralelo **só a partir deste arquivo**: **A** = 01 e 02 · **B** = 03 e 04 · **C** = 05. Tudo que for decidido depois volta pra cá, com data.
 
 Copy-fonte: `copy-source.md` (PDF do cliente, literal, 5 e-mails "Approved") · Produtos: `products.json` (variante exata, preço de 2026-09-25, packshot, **todas** as imagens da loja em `all_images`, descrição em `body_text`) · Kit: `clients/habit-outdoors/01-brand/email-kit/` v0.2 aprovado + v0.3/v0.4 rascunho (texturas, E24 a E26, bordas texturizadas) · Visual de partida: os 4 e-mails da **rodada 2** em `../2026-broadcasts/*.html` e `../2026-broadcasts/art-direction-r2.md` · Estrutura: as 4 referências do cliente (abaixo).

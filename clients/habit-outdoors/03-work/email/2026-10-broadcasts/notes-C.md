@@ -26,3 +26,36 @@ Decisões de construção de `05-shadow-series.html` (script `compose_C.py`, ass
 3. **Claims conferidos no `body_text`:** "Grid Fleece Interior" só existe no Mid Layer (a calça e a jaqueta Windproof são forradas de sherpa); "Windproof Construction" só existe na calça e na jaqueta Windproof. A faixa fala da linha inteira, então cada claim vale para parte dos produtos (brief C5). Ficou como o cliente escreveu.
 4. **Novos módulos para o kit:** faixa de atributos 2x2 com ícone de traço fino, linha de produto sangrando + caixa emoldurada com os traços laranja, os 4 ícones e a textura de água sem manchas.
 5. Continuam em aberto: `{{CTA_URL}}` (coleção Shadow Series), endereço, tag de descadastro do Omnisend, preço no dia 29/10 (C3), liberação da foto original (C9).
+
+## Rodada 2 (2026-09-25)
+
+Reconstrução de `05-shadow-series.html` pela revisão do responsável (`email-kit/references/rev-oct-05-shadow-series.png` + `revision-r2.md`). Script: `compose_C.py`, jobs novos `grad`, `hero2`, `packs`, `edge2` (os jobs da rodada 1 continuam no script). Conferido lado a lado com a revisão no render 680, e também em 375 e `--dark`.
+
+### O que mudou
+
+- **Bandas:** preheader · hero · banda de atributos · tabuleiro + botão · rasgo · rodapé. Sai o rasgo entre o hero e a banda 2 e entre a banda 2 e os produtos: como na imagem, o hero derrete na banda e a banda termina em Patriot, que continua na água.
+- **Hero (`o5-hero-r2.jpg`, 1200x1400, exibido 600x700, 147 KB):** **mesma foto da rodada 1** (`orig-hunt40`; a foto da revisão não é recuperável porque o texto cobre o sujeito). Reposicionada: cabeça e mochila do caçador ficam entre o logo e a etiqueta, e a metade de baixo puxa para Tap Shoe para o texto vivo. A base são as últimas linhas do tile topográfico do kit, e a banda 2 começa na linha 0 do mesmo tile, então a junção não aparece. Texto novo: etiqueta `#2A2B2D` com "FOR THE MORNINGS THAT" em laranja Prompt 800 23px, **BITE / BACK** Playfair 900 branco 120px / 98px (mobile 72 / 66), subtítulo espaçado 16px, botão. Contraste medido: branco 7,6:1 no pior ponto da headline, 10,0:1 no subtítulo, 4,6:1 no logo.
+- **Banda de atributos (`o5-tex-topo-grad.jpg`, 90 KB):** degradê Tap Shoe → Patriot Blue com as linhas topográficas do kit, `background-size:100% auto`, sem repetição, bgcolor `#202944` (igual ao pé da imagem; no mobile, onde a banda fica mais alta, o resto é Patriot liso). THE LINE THAT OUTLASTS (Prompt 800 28px) / **THE WEATHER** (Playfair 900 64px), corpo 18px em caixa normal (como na imagem, sem subtítulo espaçado). 4 cards com moldura `#FEF4C6` raio 10px, títulos laranja Prompt 800 17px, ® menor em `<sup>`, os mesmos ícones da rodada 1 a 44px.
+- **Tabuleiro 300 + 300 sem margem:** packshot da variante (Mossy Oak Terra Coyote, `image_file` do `products.json`) sobre painel chapado com as cores medidas na imagem: taupe `#A69A89`, cinza `#ABB1B3`, marrom `#5A4538` (`o5-pack-*.jpg`, 600x670, exibidos 300x335; 76 + 47 + 61 KB). Caixa de produto em cima da água: contorno 1px, raio 10px, texto centralizado, título laranja 19px/20px, variante `#CFC8BF` 14px, preço Prompt 800 20px branco sem sublinhado, a caixa inteira num link só para a variante. Sem os dois traços laranja. Linhas 1 e 3 com `dir="rtl"` e a imagem primeiro no código: no mobile empilha sempre com a imagem em cima.
+- **Botões:** `#FF6400` com texto **branco**, Prompt 800, raio 4px (hero 18px, SHOP NOW 18px com tracking 4px e 300px de largura).
+- **Rodapé:** logo empilhado 136px, menu com filetes, **ícone do Instagram** (`email-kit/assets/icon-instagram.png`, 36x36) ao lado de "Follow us on Instagram" / @HABITOUTDOORS, copyright. **Saíram** a linha `[[CONFIRMAR: endereço]]` e o link Unsubscribe (item 5 da revisão).
+- **Rasgo novo `o5-edge-water-footer-r2.jpg`** (6 KB): mais fundo e serrilhado, sem a borda clara de papel, como na imagem.
+- **Copy:** a linha "Insulated Bib" da terceira caixa **não** foi copiada (erro da imagem). Nomes, variantes, preços e URLs do `products.json`. Headline, corpo e botões iguais ao `copy-source.md`.
+- **Peso:** HTML 30,3 KB · imagens 549 KB (hero 147, degradê 90, água 89, packshots 183, ícones 14, logos 13, Instagram 7, rasgo 6).
+
+### Desvios e por quê
+
+1. **Foto do hero:** não é a da revisão (homem sentado nas pedras), é a da rodada 1 com o layout de texto novo. O sujeito fica acima da etiqueta, não por baixo do texto como na imagem.
+2. **Serifa do hero a 120px (a revisão pede 96 a 110):** a BITE/BACK da imagem mede cerca de 315px de largura por 80px de altura de caixa-alta. A Playfair 900 a 110px ficava 15% mais estreita; a 120px a largura chega perto e a altura fica 10% maior. A fonte da imagem é mais larga que a Playfair; não tem como igualar as duas medidas ao mesmo tempo.
+3. **Contorno da caixa em `#FEF4C6` sólido** (a revisão diz "a ~70%"): rgba em borda não funciona no Outlook, e um hex misturado sairia da paleta do kit.
+4. **Ícone do Instagram a 36x36** como o texto da revisão pede; na imagem ele mede uns 45px. Se valer a imagem, o arquivo de 72px aguenta até 44px.
+5. **Títulos das caixas a 19px** (texto da revisão); na imagem eles parecem ter uns 17px. Mantive 19px pelo contraste de texto grande. Por isso a quebra de linha é um pouco diferente ("MEN'S SHADOW / SERIES / WINDPROOF / FLEECE PANT").
+6. **Fonte da sans:** a imagem usa uma geométrica mais larga (Sweet Sans). No HTML vale a Prompt, então textos espaçados e botões ficam um pouco mais estreitos, mesmo com tracking maior.
+
+### Pendências
+
+- **Original da foto do hero da revisão** (homem sentado com o boné HABIT): pedir ao cliente/responsável; com ela, refazer `hero2` trocando só a foto.
+- Endereço físico e descadastro agora dependem do **rodapé do Omnisend** (CAN-SPAM): conferir no envio.
+- Contraste do botão branco sobre `#FF6400` 2,97:1, abaixo do AA: exceção pedida pelo responsável (revision-r2 item 1), fica registrada.
+- Continuam em aberto da rodada 1: `{{CTA_URL}}` e os demais merge fields, preço $69.98 no dia 29/10 (C3), restrição de envio da calça para CA/NY, claims da faixa (C5), duas bandas de estrutura como exceção registrada no brief.
+- Assets da rodada 1 sem uso agora no HTML (`o5-hero.jpg`, `o5-prod-*.jpg`, `o5-edge-topo-water.jpg`, `o5-edge-water-footer.jpg`): ficaram na pasta; dá para apagar quando a rodada 2 for aprovada.

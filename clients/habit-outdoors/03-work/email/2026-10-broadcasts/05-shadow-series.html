@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <!--
-  Habit Outdoors · October 2026 Broadcasts · 05 Shadow Series · Designer C · built 2026-09-25
+  Habit Outdoors · October 2026 Broadcasts · 05 Shadow Series · Designer C · built 2026-09-25 · round 2 (owner revision rev-oct-05-shadow-series.png)
   Subject: Late Season Calls for Shadow Series
   Preheader: The gear that keeps you hunting when everyone else heads home.
-  Modules: E24 Full-Bleed Photo Hero (text top, logo on photo, orig-hunt40 graded late season, tear baked into topo), E25 Textured Band (kit topo-tapshoe) with ref B attribute strip folded 2x2 (4 framed cells, thin-line icons o5-icon-*), E18 textured torn edge, ref C product rows (product bleeding off the email edge + framed box with the two orange rules, zigzag, on o5 water tile) + button, E18 textured torn edge, E13 Closing Band, E14 Legal Footer + D3 (address, unsubscribe)
-  Button: #FF6400 / #2A2B2D
-  Kit: habit-outdoors email-kit v0.2.1 approved (E13, E14, E18) + v0.4 DRAFT (E24, E25, texture set) + new batch modules pending approval (attribute strip, bleeding product row with framed box). Not for sending before the owner approves them.
-  Structure refs: struct-r3-b-checkerboard.png (4-column attribute strip) + struct-r3-c-label-boxes.png (bleeding product rows + framed box). Structure only; the look is round 2.
-  Textured bands: background-size:100% auto, VML frame for Outlook, bgcolor fallback keeps the white text legible alone. Every band is a fixed dark texture: no dark-mode swap, only the page around the column follows.
-  Status: DRAFT for owner review (stage 5). Not final: {{CTA_URL}} (Shadow Series collection, [[CONFIRMAR]]), {{HOME_URL}}, {{MENS_URL}}, {{WOMENS_URL}}, {{YOUTH_URL}}, {{SALE_URL}}, {{INSTAGRAM_URL}}, {{UNSUBSCRIBE_URL}} (Omnisend tag) to wire; [[CONFIRMAR: endereço físico da Habit]] visible in the footer.
+  Modules: E24 Full-Bleed Photo Hero (logo on photo, dark label + BITE / BACK low on the photo, orig-hunt40 kept, base flows into the next band with no tear), E25 Textured Band on o5-tex-topo-grad (Tap Shoe to Patriot Blue topo gradient) with the 2x2 attribute cards (orange titles, thin-line icons o5-icon-*), checkerboard 300+300 (packshot on a flat panel + Product Info Box on the o5 water tile, alternating) + button, E18 textured torn edge, E13 Closing Band, E14 Footer (menu, Instagram icon, copyright; no address and no unsubscribe line in the HTML, per revision-r2 item 5: they come from the Omnisend footer)
+  Button: #FF6400 / #FFFFFF
+  Kit: habit-outdoors email-kit v0.2.1 approved (E13, E14, E18) + v0.4 DRAFT (E24, E25) + v0.5 direction from the owner revision (revision-r2.md): white button text, Product Info Box, checkerboard, Instagram icon. Not for sending before the owner approves the kit update.
+  Textured bands: VML frame for Outlook, bgcolor fallback keeps the white text legible alone. Every band is a fixed dark surface: no dark-mode swap, only the page around the column follows.
+  Status: DRAFT for owner review (stage 5). Not final: {{CTA_URL}} (Shadow Series collection, [[CONFIRMAR]]), {{HOME_URL}}, {{MENS_URL}}, {{WOMENS_URL}}, {{YOUTH_URL}}, {{SALE_URL}}, {{INSTAGRAM_URL}} to wire; physical address and unsubscribe must come from the Omnisend footer (CAN-SPAM, send-time check).
   Prices: $69.98 USD on 2026-09-25 for all three (compare_at $99.99 not shown, brief C3). Re-check on 29/10.
-  Source: brief.md (E5) + copy-source.md (Email 5) + products.json (email 05). Assets: assets/o5-* (compose_C.py) and ../../../01-brand/email-kit/assets/ (logos, tex-topo-tapshoe, tex-paper-tapshoe baked in the hero).
+  Source: revision-r2.md + rev-oct-05-shadow-series.png (layout and copy), brief.md (E5), copy-source.md (Email 5), products.json (email 05: names, variants, prices, URLs). Assets: assets/o5-* (compose_C.py) and ../../../01-brand/email-kit/assets/ (logos, icon-instagram).
 -->
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -24,9 +23,9 @@
   <title>Late Season Calls for Shadow Series</title>
   <!--[if mso]>
   <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
-  <style>body, table, td, p, a, h1, h2, h3, span { font-family: Arial, sans-serif !important; }</style>
+  <style>body, table, td, p, a, h1, h2, h3, span { font-family: Arial, sans-serif !important; } .serif { font-family: Georgia, 'Times New Roman', serif !important; }</style>
   <![endif]-->
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;800&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;800&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
   <style>
     :root { color-scheme: light dark; supported-color-schemes: light dark; }
     body { margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #EFECE9; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
@@ -40,32 +39,33 @@
       .px { padding-left: 24px !important; padding-right: 24px !important; }
       .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
       .btn-full { width: 100% !important; }
-      .btn-full a { display: block !important; padding-left: 16px !important; padding-right: 16px !important; }
-      .nav-td { padding: 0 7px !important; }
-      .nav-a { font-size: 12px !important; letter-spacing: 1.5px !important; }
+      .btn-full a { display: block !important; padding-left: 12px !important; padding-right: 12px !important; }
+      .nav-td { padding: 0 9px !important; }
+      .nav-a { font-size: 13px !important; letter-spacing: 1.5px !important; }
+      .legal { font-size: 12px !important; letter-spacing: 0.5px !important; }
       .stack { display: block !important; width: 100% !important; }
-      /* v0.4 draft E24 */
-      .e24-logo { padding: 24px 24px 0 24px !important; }
-      .e24-text { padding: 28px 24px 0 24px !important; }
-      .e24-lead { font-size: 26px !important; line-height: 30px !important; }
-      .e24-key { font-size: 54px !important; line-height: 58px !important; }
-      .e24-sub { font-size: 13px !important; line-height: 20px !important; letter-spacing: 1.5px !important; }
-      .e24-space { height: 300px !important; }
-      /* this email */
-      .o5-band { padding: 48px 16px 40px 16px !important; }
-      .o5-h2lead { font-size: 26px !important; line-height: 30px !important; }
-      .o5-h2key { font-size: 54px !important; line-height: 60px !important; }
+      /* hero */
+      .h5-logo { padding: 24px 24px 0 24px !important; }
+      .h5-space { height: 150px !important; }
+      .h5-text { padding: 0 20px 36px 20px !important; }
+      .h5-label { font-size: 17px !important; line-height: 22px !important; padding: 7px 12px !important; }
+      .h5-key { font-size: 72px !important; line-height: 66px !important; }
+      .h5-sub { font-size: 13px !important; line-height: 21px !important; letter-spacing: 1.5px !important; }
+      /* attribute band */
+      .o5-band { padding: 40px 16px 44px 16px !important; }
+      .o5-h2lead { font-size: 22px !important; line-height: 27px !important; }
+      .o5-h2key { font-size: 56px !important; line-height: 56px !important; }
+      .o5-body { font-size: 17px !important; line-height: 23px !important; }
       .o5-gap { display: block !important; width: 100% !important; height: 12px !important; }
-      .o5-cell { width: auto !important; padding: 24px 20px 22px 20px !important; }
-      .o5-prods { padding: 16px 0 0 0 !important; }
-      .o5-pic { width: 260px !important; }
-      .o5-txt { width: auto !important; padding: 0 16px !important; }
-      .o5-rowgap { height: 36px !important; }
-      .o5-cta { padding: 36px 16px 64px 16px !important; }
+      .o5-cell { width: auto !important; padding: 26px 20px 24px 20px !important; }
+      /* checkerboard */
+      .o5-info { height: auto !important; padding: 32px 24px 36px 24px !important; box-sizing: border-box !important; }
+      .o5-box { width: 100% !important; max-width: 327px !important; margin: 0 auto !important; }
+      .o5-cta { padding: 36px 16px 40px 16px !important; }
     }
 
-    /* Dark mode: every band is a fixed dark texture (photo, Tap Shoe topo, Patriot water, flat Tap Shoe),
-       no swap. Only the page around the 600px column follows the kit dark page color. */
+    /* Dark mode: every band is a fixed dark surface (photo, topo gradient, Patriot water, flat Tap Shoe) and the
+       packshot panels are images, so nothing swaps. Only the page around the 600px column follows the kit dark page. */
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) .dm-page { background-color: #1E1F21 !important; }
     }
@@ -85,73 +85,74 @@
         <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
         <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px;">
 
-          <!-- MODULE:E24 Full-Bleed Photo Hero (text top) · o5-hero.jpg: bowhunter walking into a dark late-season wood, canopy pulled down to near night for the headline, melts into Tap Shoe paper, tear into the topo band baked in -->
+          <!-- MODULE:E24 Full-Bleed Photo Hero · o5-hero-r2.jpg: round 1 photo (bowhunter walking into a late-season wood) placed so head and pack sit above the label; lower half pulled toward Tap Shoe for the live text; the bottom rows continue into the topo gradient band (no tear, as in rev-oct-05) -->
           <tr>
-            <td align="center" valign="top" class="e24-hero" background="assets/o5-hero.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:0; background-color:#2A2B2D; background-image:url('assets/o5-hero.jpg'); background-size:cover; background-position:center bottom; background-repeat:no-repeat; vertical-align:top;">
-              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:800px;"><v:fill type="frame" src="assets/o5-hero.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
+            <td align="center" valign="top" background="assets/o5-hero-r2.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:0; background-color:#2A2B2D; background-image:url('assets/o5-hero-r2.jpg'); background-size:cover; background-position:center bottom; background-repeat:no-repeat; vertical-align:top;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:700px;"><v:fill type="frame" src="assets/o5-hero-r2.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td align="center" class="e24-logo" style="padding:32px 40px 0 40px;">
+                  <td align="center" class="h5-logo" style="padding:30px 40px 0 40px;">
                     <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="../../../01-brand/email-kit/assets/logo-dark.png" width="160" height="26" alt="Habit" style="display:block; width:160px; height:26px; border:0; margin:0 auto;"></a>
                   </td>
                 </tr>
+                <tr><td class="h5-space" height="184" style="height:184px; font-size:0; line-height:0;">&nbsp;</td></tr>
                 <tr>
-                  <td align="center" class="e24-text" style="padding:52px 40px 0 40px; font-family:Helvetica,Arial,sans-serif; text-align:center;">
-                    <h1 style="margin:0 0 20px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
-                      <span class="e24-lead" style="display:block; font-size:36px; line-height:40px; letter-spacing:1px;">FOR THE MORNINGS&nbsp;THAT</span>
-                      <span class="e24-key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:88px; line-height:90px; font-weight:900;">BITE&nbsp;BACK</span>
-                    </h1>
-                    <p class="e24-sub" style="margin:0 auto 28px auto; max-width:460px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">SHADOW SERIES IS BUILT FOR THE <span style="white-space:nowrap;">LATE-SEASON</span> DAYS THAT TEST EVERYTHING YOU&rsquo;RE&nbsp;WEARING.</p>
+                  <td align="center" class="h5-text" style="padding:0 40px 26px 40px; text-align:center;">
+                    <div role="heading" aria-level="1" style="margin:0; font-weight:900; color:#FFFFFF; text-align:center;">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+                        <tr><td class="h5-label" bgcolor="#2A2B2D" style="padding:8px 20px; background-color:#2A2B2D; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:23px; line-height:27px; font-weight:800; letter-spacing:1px; color:#FF6400; text-align:center;">FOR THE MORNINGS&nbsp;THAT</td></tr>
+                      </table>
+                      <span class="h5-key serif" style="display:block; margin:12px 0 0 0; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:120px; line-height:98px; letter-spacing:1px; font-weight:900; color:#FFFFFF;">BITE<br>BACK</span>
+                    </div>
+                    <p class="h5-sub" style="margin:20px auto 26px auto; max-width:370px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; font-weight:500; letter-spacing:2px; color:#FFFFFF;">SHADOW SERIES IS BUILT FOR THE <span style="white-space:nowrap;">LATE-SEASON</span> DAYS THAT TEST EVERYTHING YOU&rsquo;RE&nbsp;WEARING.</p>
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
-                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP SHADOW SERIES</a>
+                      <tr><td align="center" width="304" bgcolor="#FF6400" style="width:304px; border-radius:4px; background-color:#FF6400;">
+                        <a href="{{CTA_URL}}" target="_blank" style="display:block; padding:16px 12px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; mso-line-height-rule:exactly; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px; text-align:center; white-space:nowrap;">SHOP SHADOW SERIES</a>
                       </td></tr>
                     </table>
                   </td>
                 </tr>
-                <tr><td class="e24-space" height="398" style="height:398px; font-size:0; line-height:0;">&nbsp;</td></tr>
               </table>
               <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
             </td>
           </tr>
           <!-- /MODULE:E24 -->
 
-          <!-- MODULE:E25 Textured Band + attribute strip (ref B, folded 2x2) · kit tex-topo-tapshoe.jpg, fallback #2A2B2D, white text, orange only on the 72px key word -->
+          <!-- MODULE:E25 Textured Band + 2x2 attribute cards · o5-tex-topo-grad.jpg (Tap Shoe to Patriot Blue, kit topo lines), fallback #202944 (= image bottom), white text, orange only on the card titles (Prompt 800 17px bold = large text; 4.1:1 worst on the gradient) -->
           <tr>
-            <td align="center" class="o5-band" background="../../../01-brand/email-kit/assets/tex-topo-tapshoe.jpg" bgcolor="#2A2B2D" style="mso-padding-alt:0px; padding:56px 40px 56px 40px; background-color:#2A2B2D; background-image:url('../../../01-brand/email-kit/assets/tex-topo-tapshoe.jpg'); background-size:100% auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
-              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="../../../01-brand/email-kit/assets/tex-topo-tapshoe.jpg" color="#2A2B2D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="40px,56px,40px,56px"><div><![endif]-->
-              <h2 style="margin:0 0 20px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
-                <span class="o5-h2lead" style="display:block; font-size:34px; line-height:38px; letter-spacing:1px;">THE LINE THAT</span>
-                <span class="o5-h2key" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:72px; line-height:80px; font-weight:900; color:#FF6400;">OUTLASTS</span>
-                <span class="o5-h2lead" style="display:block; font-size:34px; line-height:38px; letter-spacing:1px;">THE&nbsp;WEATHER</span>
+            <td align="center" class="o5-band" background="assets/o5-tex-topo-grad.jpg" bgcolor="#202944" style="mso-padding-alt:0px; padding:34px 40px 56px 40px; background-color:#202944; background-image:url('assets/o5-tex-topo-grad.jpg'); background-size:100% auto; background-repeat:no-repeat; background-position:center top; font-family:'Prompt',Arial,Helvetica,sans-serif;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/o5-tex-topo-grad.jpg" color="#202944" /><v:textbox style="mso-fit-shape-to-text:true;" inset="40px,34px,40px,56px"><div><![endif]-->
+              <h2 style="margin:0 0 12px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-weight:800; color:#FFFFFF; text-align:center;">
+                <span class="o5-h2lead" style="display:block; font-size:28px; line-height:32px; letter-spacing:0.5px;">THE LINE THAT OUTLASTS</span>
+                <span class="o5-h2key serif" style="display:block; font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:64px; line-height:64px; font-weight:900;">THE WEATHER</span>
               </h2>
-              <p style="margin:0 auto 40px auto; max-width:440px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-align:center;">SHADOW SERIES HANDLES THE WORST <span style="white-space:nowrap;">LATE-SEASON</span> WEATHER SO YOU CAN STAY OUT&nbsp;LONGER.</p>
+              <p class="o5-body" style="margin:0 auto 30px auto; max-width:420px; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:18px; line-height:24px; font-weight:400; color:#FFFFFF; text-align:center;">Shadow Series handles the worst <span style="white-space:nowrap;">late-season</span> weather so you can stay out&nbsp;longer.</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;">
                 <tr>
-                  <td width="252" align="center" valign="top" class="stack o5-cell" style="width:252px; padding:28px 20px 24px 20px; border:1px solid #FEF4C6; border-radius:12px; vertical-align:top; text-align:center;">
-                    <img src="assets/o5-icon-rain.png" width="48" height="48" alt="" style="display:block; width:48px; height:48px; border:0; margin:0 auto;">
-                    <p style="margin:16px 0 8px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:16px; line-height:22px; font-weight:800; letter-spacing:1.5px; color:#FFFFFF;">RAIN-FACTOR&reg;</p>
-                    <p style="margin:0; font-size:16px; line-height:24px; color:#E2DDD9;">Water repellent protection that keeps you&nbsp;dry</p>
+                  <td width="252" align="center" valign="top" class="stack o5-cell" style="width:252px; padding:30px 16px 40px 16px; border:1px solid #FEF4C6; border-color:rgba(254,244,198,0.7); border-radius:10px; vertical-align:top; text-align:center;">
+                    <img src="assets/o5-icon-rain.png" width="44" height="44" alt="" style="display:block; width:44px; height:44px; border:0; margin:0 auto;">
+                    <p style="margin:14px 0 8px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:17px; line-height:19px; font-weight:800; letter-spacing:0.5px; color:#FF6400;">RAIN-FACTOR<sup style="font-size:10px; line-height:0; vertical-align:super;">&reg;</sup></p>
+                    <p style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:18px; font-weight:400; color:#E2DDD9;">Water repellent protection<br>that keeps you dry</p>
                   </td>
                   <td width="16" class="o5-gap" style="width:16px; font-size:0; line-height:0;">&nbsp;</td>
-                  <td width="252" align="center" valign="top" class="stack o5-cell" style="width:252px; padding:28px 20px 24px 20px; border:1px solid #FEF4C6; border-radius:12px; vertical-align:top; text-align:center;">
-                    <img src="assets/o5-icon-scent.png" width="48" height="48" alt="" style="display:block; width:48px; height:48px; border:0; margin:0 auto;">
-                    <p style="margin:16px 0 8px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:16px; line-height:22px; font-weight:800; letter-spacing:1.5px; color:#FFFFFF;">SCENT-FACTOR&reg;</p>
-                    <p style="margin:0; font-size:16px; line-height:24px; color:#E2DDD9;">Scent inhibitor tech that keeps you&nbsp;undetected</p>
+                  <td width="252" align="center" valign="top" class="stack o5-cell" style="width:252px; padding:30px 16px 40px 16px; border:1px solid #FEF4C6; border-color:rgba(254,244,198,0.7); border-radius:10px; vertical-align:top; text-align:center;">
+                    <img src="assets/o5-icon-scent.png" width="44" height="44" alt="" style="display:block; width:44px; height:44px; border:0; margin:0 auto;">
+                    <p style="margin:14px 0 8px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:17px; line-height:19px; font-weight:800; letter-spacing:0.5px; color:#FF6400;">SCENT-FACTOR<sup style="font-size:10px; line-height:0; vertical-align:super;">&reg;</sup></p>
+                    <p style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:18px; font-weight:400; color:#E2DDD9;">Scent inhibitor tech that<br>keeps you undetected</p>
                   </td>
                 </tr>
                 <tr><td colspan="3" class="o5-gap" height="16" style="height:16px; font-size:0; line-height:0;">&nbsp;</td></tr>
                 <tr>
-                  <td width="252" align="center" valign="top" class="stack o5-cell" style="width:252px; padding:28px 20px 24px 20px; border:1px solid #FEF4C6; border-radius:12px; vertical-align:top; text-align:center;">
-                    <img src="assets/o5-icon-grid.png" width="48" height="48" alt="" style="display:block; width:48px; height:48px; border:0; margin:0 auto;">
-                    <p style="margin:16px 0 8px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:16px; line-height:22px; font-weight:800; letter-spacing:1.5px; color:#FFFFFF;">GRID FLEECE INTERIOR</p>
-                    <p style="margin:0; font-size:16px; line-height:24px; color:#E2DDD9;">Trapped warmth without the weight or&nbsp;bulk</p>
+                  <td width="252" align="center" valign="top" class="stack o5-cell" style="width:252px; padding:30px 16px 40px 16px; border:1px solid #FEF4C6; border-color:rgba(254,244,198,0.7); border-radius:10px; vertical-align:top; text-align:center;">
+                    <img src="assets/o5-icon-grid.png" width="44" height="44" alt="" style="display:block; width:44px; height:44px; border:0; margin:0 auto;">
+                    <p style="margin:14px 0 8px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:17px; line-height:19px; font-weight:800; letter-spacing:0.5px; color:#FF6400;">GRID FLEECE<br>INTERIOR</p>
+                    <p style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:18px; font-weight:400; color:#E2DDD9;">Trapped warmth without<br>the weight or bulk</p>
                   </td>
                   <td width="16" class="o5-gap" style="width:16px; font-size:0; line-height:0;">&nbsp;</td>
-                  <td width="252" align="center" valign="top" class="stack o5-cell" style="width:252px; padding:28px 20px 24px 20px; border:1px solid #FEF4C6; border-radius:12px; vertical-align:top; text-align:center;">
-                    <img src="assets/o5-icon-wind.png" width="48" height="48" alt="" style="display:block; width:48px; height:48px; border:0; margin:0 auto;">
-                    <p style="margin:16px 0 8px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:16px; line-height:22px; font-weight:800; letter-spacing:1.5px; color:#FFFFFF;">WINDPROOF CONSTRUCTION</p>
-                    <p style="margin:0; font-size:16px; line-height:24px; color:#E2DDD9;">Blocks cold wind so you can sit&nbsp;longer</p>
+                  <td width="252" align="center" valign="top" class="stack o5-cell" style="width:252px; padding:30px 16px 40px 16px; border:1px solid #FEF4C6; border-color:rgba(254,244,198,0.7); border-radius:10px; vertical-align:top; text-align:center;">
+                    <img src="assets/o5-icon-wind.png" width="44" height="44" alt="" style="display:block; width:44px; height:44px; border:0; margin:0 auto;">
+                    <p style="margin:14px 0 8px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:17px; line-height:19px; font-weight:800; letter-spacing:0.5px; color:#FF6400;">WINDPROOF<br>CONSTRUCTION</p>
+                    <p style="margin:0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:18px; font-weight:400; color:#E2DDD9;">Blocks cold wind so<br>you can sit longer</p>
                   </td>
                 </tr>
               </table>
@@ -160,87 +161,66 @@
           </tr>
           <!-- /MODULE:E25 -->
 
-          <!-- MODULE:E18 Torn Edge (textured, paper rim) · topo Tap Shoe -> o5 water (bottom = last rows of the water tile, the next td continues it) -->
+          <!-- MODULE:Checkerboard (rev-oct-05) · each row 300 + 300, no margin: packshot on a flat panel (o5-pack-*.jpg, colors sampled from the revision) + Product Info Box on o5-tex-water.jpg (fallback #202944), alternating.
+               Rows 1 and 3 use dir=rtl with the image first in the source, so mobile always stacks image first. Client order: Mid Layer Hooded Jacket, Windproof Fleece Pant, Windproof Fleece Jacket. -->
           <tr>
-            <td bgcolor="#2A2B2D" style="padding:0; background-color:#2A2B2D; font-size:0; line-height:0;">
-              <img class="fluid" src="assets/o5-edge-topo-water.jpg" width="600" height="40" alt="" style="display:block; width:600px; max-width:100%; height:auto; border:0;">
-            </td>
-          </tr>
-          <!-- /MODULE:E18 -->
-
-          <!-- MODULE:Product rows (ref C: product bleeding off the email edge + framed box) · o5-tex-water.jpg, fallback #202944, white text.
-               Client order: Mid Layer Hooded Jacket (image left), Windproof Fleece Pant (image right, dir=rtl so mobile shows the image first), Windproof Fleece Jacket (image left). -->
-          <tr>
-            <td align="center" background="assets/o5-tex-water.jpg" bgcolor="#202944" style="mso-padding-alt:0px; padding:0; background-color:#202944; background-image:url('assets/o5-tex-water.jpg'); background-size:100% auto; background-repeat:repeat-y; background-position:center top; font-family:Helvetica,Arial,sans-serif;">
+            <td align="center" background="assets/o5-tex-water.jpg" bgcolor="#202944" style="mso-padding-alt:0px; padding:0; background-color:#202944; background-image:url('assets/o5-tex-water.jpg'); background-size:100% auto; background-repeat:repeat-y; background-position:center top; font-family:'Prompt',Arial,Helvetica,sans-serif;">
               <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/o5-tex-water.jpg" color="#202944" /><v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0"><div><![endif]-->
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td class="o5-prods" style="padding:24px 0 0 0;">
-
-                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="ltr">
-                      <tr>
-                        <td width="300" align="left" valign="middle" class="stack" style="width:300px; padding:0; font-size:0; line-height:0; vertical-align:middle;">
-                          <a href="https://www.habitoutdoors.com/products/men-s-mid-layer-jacket?variant=45471499518234" target="_blank" style="text-decoration:none;"><img class="o5-pic" src="assets/o5-prod-midlayer.jpg" width="300" height="410" alt="Habit Men&rsquo;s Shadow Series Mid Layer Hooded Jacket in Mossy Oak Terra Coyote" style="display:block; width:300px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#FFFFFF;"></a>
-                        </td>
-                        <td valign="middle" class="stack o5-txt" style="padding:0 40px 0 8px; vertical-align:middle;">
-                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;">
-                            <tr><td style="padding:22px 24px 26px 24px; border:1px solid #FEF4C6; border-radius:12px; text-align:left; font-family:Helvetica,Arial,sans-serif;">
-                              <table role="presentation" width="32" cellpadding="0" cellspacing="0" border="0" style="width:32px; margin:0 0 16px 0;">
-                                <tr><td height="3" bgcolor="#FF6400" style="height:3px; background-color:#FF6400; font-size:3px; line-height:3px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
-                                <tr><td height="5" style="height:5px; font-size:5px; line-height:5px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
-                                <tr><td height="3" bgcolor="#FF6400" style="height:3px; background-color:#FF6400; font-size:3px; line-height:3px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
-                              </table>
-                              <p style="margin:0 0 8px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:18px; line-height:23px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;">MEN&rsquo;S SHADOW SERIES MID LAYER HOODED&nbsp;JACKET</p>
-                              <p style="margin:0 0 12px 0; font-size:16px; line-height:22px; color:#FFFFFF;">Mossy Oak Terra Coyote</p>
-                              <p style="margin:0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/men-s-mid-layer-jacket?variant=45471499518234" target="_blank" style="color:#FFFFFF; text-decoration:underline; letter-spacing:1px;">$69.98 USD</a></p>
-                            </td></tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-
-                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="o5-rowgap" height="8" style="height:8px; font-size:0; line-height:0;">&nbsp;</td></tr></table>
+                  <td style="padding:0;">
 
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="rtl">
                       <tr>
-                        <td width="300" dir="ltr" align="right" valign="middle" class="stack" style="width:300px; padding:0; font-size:0; line-height:0; vertical-align:middle;">
-                          <a href="https://www.habitoutdoors.com/products/men-s-windproof-fleece-pant?variant=45471564824858" target="_blank" style="text-decoration:none;"><img class="o5-pic" src="assets/o5-prod-pant.jpg" width="300" height="410" alt="Habit Men&rsquo;s Shadow Series Windproof Fleece Pant in Mossy Oak Terra Coyote, with suspenders" style="display:block; width:300px; max-width:100%; height:auto; border:0; margin:0 0 0 auto; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#FFFFFF;"></a>
+                        <td width="300" dir="ltr" valign="top" class="stack" style="width:300px; padding:0; font-size:0; line-height:0;">
+                          <a href="https://www.habitoutdoors.com/products/men-s-mid-layer-jacket?variant=45471499518234" target="_blank" style="text-decoration:none;"><img class="fluid" src="assets/o5-pack-midlayer.jpg" width="300" height="335" alt="Habit Men&rsquo;s Shadow Series Mid Layer Hooded Jacket in Mossy Oak Terra Coyote" style="display:block; width:300px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#2A2B2D;"></a>
                         </td>
-                        <td dir="ltr" valign="middle" class="stack o5-txt" style="padding:0 8px 0 40px; vertical-align:middle;">
-                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;">
-                            <tr><td style="padding:22px 24px 26px 24px; border:1px solid #FEF4C6; border-radius:12px; text-align:left; font-family:Helvetica,Arial,sans-serif;">
-                              <table role="presentation" width="32" cellpadding="0" cellspacing="0" border="0" style="width:32px; margin:0 0 16px 0;">
-                                <tr><td height="3" bgcolor="#FF6400" style="height:3px; background-color:#FF6400; font-size:3px; line-height:3px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
-                                <tr><td height="5" style="height:5px; font-size:5px; line-height:5px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
-                                <tr><td height="3" bgcolor="#FF6400" style="height:3px; background-color:#FF6400; font-size:3px; line-height:3px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
-                              </table>
-                              <p style="margin:0 0 8px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:18px; line-height:23px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;">MEN&rsquo;S SHADOW SERIES WINDPROOF FLEECE&nbsp;PANT</p>
-                              <p style="margin:0 0 12px 0; font-size:16px; line-height:22px; color:#FFFFFF;">Mossy Oak Terra Coyote</p>
-                              <p style="margin:0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/men-s-windproof-fleece-pant?variant=45471564824858" target="_blank" style="color:#FFFFFF; text-decoration:underline; letter-spacing:1px;">$69.98 USD</a></p>
+                        <td width="300" dir="ltr" height="335" align="center" valign="middle" class="stack o5-info" style="width:300px; height:335px; padding:0; vertical-align:middle;">
+                          <table role="presentation" width="246" align="center" class="o5-box" cellpadding="0" cellspacing="0" border="0" style="width:246px; border-collapse:separate; margin:0 auto;">
+                            <tr><td align="center" style="padding:22px 20px 22px 20px; border:1px solid #FEF4C6; border-color:rgba(254,244,198,0.7); border-radius:10px; text-align:center;">
+                              <a href="https://www.habitoutdoors.com/products/men-s-mid-layer-jacket?variant=45471499518234" target="_blank" style="display:block; text-decoration:none;">
+                                <span style="display:block; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:20px; font-weight:800; letter-spacing:0.2px; color:#FF6400;">MEN&rsquo;S SHADOW SERIES MID LAYER HOODED&nbsp;JACKET</span>
+                                <span style="display:block; margin:8px 0 0 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:13px; line-height:18px; font-weight:400; color:#B0A89C;">Mossy Oak Terra Coyote</span>
+                                <span style="display:block; margin:8px 0 0 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">$69.98 USD</span>
+                              </a>
                             </td></tr>
                           </table>
                         </td>
                       </tr>
                     </table>
 
-                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="o5-rowgap" height="8" style="height:8px; font-size:0; line-height:0;">&nbsp;</td></tr></table>
-
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="ltr">
                       <tr>
-                        <td width="300" align="left" valign="middle" class="stack" style="width:300px; padding:0; font-size:0; line-height:0; vertical-align:middle;">
-                          <a href="https://www.habitoutdoors.com/products/men-s-windproof-fleece-jacket?variant=45471553618202" target="_blank" style="text-decoration:none;"><img class="o5-pic" src="assets/o5-prod-jacket.jpg" width="300" height="410" alt="Habit Men&rsquo;s Shadow Series Windproof Fleece Jacket in Mossy Oak Terra Coyote" style="display:block; width:300px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#FFFFFF;"></a>
+                        <td width="300" valign="top" class="stack" style="width:300px; padding:0; font-size:0; line-height:0;">
+                          <a href="https://www.habitoutdoors.com/products/men-s-windproof-fleece-pant?variant=45471564824858" target="_blank" style="text-decoration:none;"><img class="fluid" src="assets/o5-pack-pant.jpg" width="300" height="335" alt="Habit Men&rsquo;s Shadow Series Windproof Fleece Pant in Mossy Oak Terra Coyote, with suspenders" style="display:block; width:300px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#2A2B2D;"></a>
                         </td>
-                        <td valign="middle" class="stack o5-txt" style="padding:0 40px 0 8px; vertical-align:middle;">
-                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;">
-                            <tr><td style="padding:22px 24px 26px 24px; border:1px solid #FEF4C6; border-radius:12px; text-align:left; font-family:Helvetica,Arial,sans-serif;">
-                              <table role="presentation" width="32" cellpadding="0" cellspacing="0" border="0" style="width:32px; margin:0 0 16px 0;">
-                                <tr><td height="3" bgcolor="#FF6400" style="height:3px; background-color:#FF6400; font-size:3px; line-height:3px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
-                                <tr><td height="5" style="height:5px; font-size:5px; line-height:5px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
-                                <tr><td height="3" bgcolor="#FF6400" style="height:3px; background-color:#FF6400; font-size:3px; line-height:3px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
-                              </table>
-                              <p style="margin:0 0 8px 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:18px; line-height:23px; font-weight:800; letter-spacing:0.5px; color:#FFFFFF;">MEN&rsquo;S SHADOW SERIES WINDPROOF FLEECE&nbsp;JACKET</p>
-                              <p style="margin:0 0 12px 0; font-size:16px; line-height:22px; color:#FFFFFF;">Mossy Oak Terra Coyote</p>
-                              <p style="margin:0; font-size:16px; line-height:22px;"><a href="https://www.habitoutdoors.com/products/men-s-windproof-fleece-jacket?variant=45471553618202" target="_blank" style="color:#FFFFFF; text-decoration:underline; letter-spacing:1px;">$69.98 USD</a></p>
+                        <td width="300" height="335" align="center" valign="middle" class="stack o5-info" style="width:300px; height:335px; padding:0; vertical-align:middle;">
+                          <table role="presentation" width="246" align="center" class="o5-box" cellpadding="0" cellspacing="0" border="0" style="width:246px; border-collapse:separate; margin:0 auto;">
+                            <tr><td align="center" style="padding:22px 20px 22px 20px; border:1px solid #FEF4C6; border-color:rgba(254,244,198,0.7); border-radius:10px; text-align:center;">
+                              <a href="https://www.habitoutdoors.com/products/men-s-windproof-fleece-pant?variant=45471564824858" target="_blank" style="display:block; text-decoration:none;">
+                                <span style="display:block; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:20px; font-weight:800; letter-spacing:0.2px; color:#FF6400;">MEN&rsquo;S SHADOW SERIES WINDPROOF FLEECE&nbsp;PANT</span>
+                                <span style="display:block; margin:8px 0 0 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:13px; line-height:18px; font-weight:400; color:#B0A89C;">Mossy Oak Terra Coyote</span>
+                                <span style="display:block; margin:8px 0 0 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">$69.98 USD</span>
+                              </a>
+                            </td></tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" dir="rtl">
+                      <tr>
+                        <td width="300" dir="ltr" valign="top" class="stack" style="width:300px; padding:0; font-size:0; line-height:0;">
+                          <a href="https://www.habitoutdoors.com/products/men-s-windproof-fleece-jacket?variant=45471553618202" target="_blank" style="text-decoration:none;"><img class="fluid" src="assets/o5-pack-jacket.jpg" width="300" height="335" alt="Habit Men&rsquo;s Shadow Series Windproof Fleece Jacket in Mossy Oak Terra Coyote" style="display:block; width:300px; max-width:100%; height:auto; border:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; color:#FFFFFF;"></a>
+                        </td>
+                        <td width="300" dir="ltr" height="335" align="center" valign="middle" class="stack o5-info" style="width:300px; height:335px; padding:0; vertical-align:middle;">
+                          <table role="presentation" width="246" align="center" class="o5-box" cellpadding="0" cellspacing="0" border="0" style="width:246px; border-collapse:separate; margin:0 auto;">
+                            <tr><td align="center" style="padding:22px 20px 22px 20px; border:1px solid #FEF4C6; border-color:rgba(254,244,198,0.7); border-radius:10px; text-align:center;">
+                              <a href="https://www.habitoutdoors.com/products/men-s-windproof-fleece-jacket?variant=45471553618202" target="_blank" style="display:block; text-decoration:none;">
+                                <span style="display:block; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:19px; line-height:20px; font-weight:800; letter-spacing:0.2px; color:#FF6400;">MEN&rsquo;S SHADOW SERIES WINDPROOF FLEECE&nbsp;JACKET</span>
+                                <span style="display:block; margin:8px 0 0 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:13px; line-height:18px; font-weight:400; color:#B0A89C;">Mossy Oak Terra Coyote</span>
+                                <span style="display:block; margin:8px 0 0 0; font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:20px; line-height:24px; font-weight:800; color:#FFFFFF;">$69.98 USD</span>
+                              </a>
                             </td></tr>
                           </table>
                         </td>
@@ -250,10 +230,10 @@
                   </td>
                 </tr>
                 <tr>
-                  <td align="center" class="o5-cta" style="padding:40px 40px 80px 40px;">
+                  <td align="center" class="o5-cta" style="padding:32px 40px 36px 40px;">
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
-                      <tr><td align="center" bgcolor="#FF6400" style="border-radius:6px; background-color:#FF6400;">
-                        <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:16px 64px; font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; font-weight:800; letter-spacing:2px; color:#2A2B2D; text-decoration:none; border-radius:6px;">SHOP NOW</a>
+                      <tr><td align="center" width="300" bgcolor="#FF6400" style="width:300px; border-radius:4px; background-color:#FF6400;">
+                        <a href="{{CTA_URL}}" target="_blank" style="display:block; padding:16px 12px; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:17px; line-height:20px; mso-line-height-rule:exactly; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none; border-radius:4px; text-align:center; white-space:nowrap;">SHOP NOW</a>
                       </td></tr>
                     </table>
                   </td>
@@ -262,38 +242,44 @@
               <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
             </td>
           </tr>
-          <!-- /MODULE:Product rows -->
+          <!-- /MODULE:Checkerboard -->
 
-          <!-- MODULE:E18 Torn Edge (textured, paper rim) · o5 water -> flat Tap Shoe footer -->
+          <!-- MODULE:E18 Torn Edge (textured, paper rim) · o5 water -> flat Tap Shoe footer, round 2: bigger jagged tear, no paper rim (as in rev-oct-05) -->
           <tr>
             <td bgcolor="#202944" style="padding:0; background-color:#202944; font-size:0; line-height:0;">
-              <img class="fluid" src="assets/o5-edge-water-footer.jpg" width="600" height="40" alt="" style="display:block; width:600px; max-width:100%; height:auto; border:0;">
+              <img class="fluid" src="assets/o5-edge-water-footer-r2.jpg" width="600" height="40" alt="" style="display:block; width:600px; max-width:100%; height:auto; border:0;">
             </td>
           </tr>
           <!-- /MODULE:E18 -->
 
-          <!-- MODULE:E13 Closing Band -->
+          <!-- MODULE:E13 Closing Band (v0.5: stacked logo; identical in the five October emails) -->
           <tr>
-            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:56px 40px 32px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
-              <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="../../../01-brand/email-kit/assets/logo-footer.png" width="160" height="71" alt="Habit" style="display:block; width:160px; height:71px; border:0; margin:0 auto;"></a>
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:35px 40px 0 40px; background-color:#2A2B2D; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+              <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="../../../01-brand/email-kit/assets/logo-footer.png" width="136" height="61" alt="Habit" style="display:block; width:136px; height:61px; border:0; margin:0 auto; font-family:Helvetica,Arial,sans-serif; font-size:16px; color:#FFFFFF;"></a>
             </td>
           </tr>
           <!-- /MODULE:E13 -->
-          <!-- MODULE:E14 Legal Footer + D3 (address + unsubscribe, brief 2026-09-25) -->
+          <!-- MODULE:E14 Legal Footer (v0.5: menu, Instagram icon row 44px, copyright; address and unsubscribe come from the Omnisend footer, revision-r2 #5) -->
           <tr>
-            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:0 40px 48px 40px; background-color:#2A2B2D; font-family:Helvetica,Arial,sans-serif;">
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 32px auto;">
+            <td align="center" class="px" bgcolor="#2A2B2D" style="padding:30px 40px 60px 40px; background-color:#2A2B2D; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 44px auto;">
                 <tr>
-                  <td class="nav-td" style="padding:0 14px;"><a href="{{MENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">MEN&rsquo;S</a></td>
-                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{WOMENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">WOMEN&rsquo;S</a></td>
-                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{YOUTH_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">YOUTH</a></td>
-                  <td class="nav-td" style="padding:0 14px; border-left:1px solid #A39A8C;"><a href="{{SALE_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:14px; line-height:20px; font-weight:500; letter-spacing:2px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">SALE</a></td>
+                  <td class="nav-td" style="padding:0 25px;"><a href="{{MENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; mso-line-height-rule:exactly; font-weight:500; letter-spacing:2.5px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">MEN&rsquo;S</a></td>
+                  <td class="nav-td" style="padding:0 25px; border-left:1px solid #FFFFFF;"><a href="{{WOMENS_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; mso-line-height-rule:exactly; font-weight:500; letter-spacing:2.5px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">WOMEN&rsquo;S</a></td>
+                  <td class="nav-td" style="padding:0 25px; border-left:1px solid #FFFFFF;"><a href="{{YOUTH_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; mso-line-height-rule:exactly; font-weight:500; letter-spacing:2.5px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">YOUTH</a></td>
+                  <td class="nav-td" style="padding:0 25px; border-left:1px solid #FFFFFF;"><a href="{{SALE_URL}}" target="_blank" class="nav-a" style="font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:16px; line-height:20px; mso-line-height-rule:exactly; font-weight:500; letter-spacing:2.5px; color:#FFFFFF; text-decoration:none; white-space:nowrap;">SALE</a></td>
                 </tr>
               </table>
-              <p style="margin:0 0 32px 0; font-size:14px; line-height:22px; color:#E2DDD9;">Follow us on Instagram<br><a href="{{INSTAGRAM_URL}}" target="_blank" style="font-family:'Prompt',Arial,Helvetica,sans-serif; font-size:15px; line-height:24px; font-weight:800; letter-spacing:1.5px; color:#FFFFFF; text-decoration:none;">@HABITOUTDOORS</a></p>
-              <p style="margin:0 0 8px 0; font-size:12px; line-height:18px; color:#E2DDD9;">&copy; 2026, Habit Outdoors. Built By Wilde Creative.</p>
-              <p style="margin:0 0 8px 0; font-size:12px; line-height:18px; color:#E2DDD9;">[[CONFIRMAR: endere&ccedil;o f&iacute;sico da Habit]]</p>
-              <p style="margin:0; font-size:12px; line-height:18px;"><a href="{{UNSUBSCRIBE_URL}}" target="_blank" style="color:#FFFFFF; text-decoration:underline;">Unsubscribe</a></p>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 32px auto;">
+                <tr>
+                  <td width="44" valign="middle" style="width:44px; padding:0 14px 0 0; vertical-align:middle;"><a href="{{INSTAGRAM_URL}}" target="_blank" style="text-decoration:none;"><img src="../../../01-brand/email-kit/assets/icon-instagram.png" width="44" height="44" alt="Instagram" style="display:block; width:44px; height:44px; border:0; font-family:Helvetica,Arial,sans-serif; font-size:12px; color:#FFFFFF;"></a></td>
+                  <td valign="middle" align="left" style="vertical-align:middle; text-align:left; font-family:'Prompt',Helvetica,Arial,sans-serif;">
+                    <p style="margin:0 0 3px 0; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:13px; line-height:18px; mso-line-height-rule:exactly; font-weight:500; letter-spacing:1px; color:#FFFFFF;">Follow us on Instagram</p>
+                    <p style="margin:0; font-size:15px; line-height:20px; mso-line-height-rule:exactly;"><a href="{{INSTAGRAM_URL}}" target="_blank" style="font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:15px; line-height:20px; font-weight:800; letter-spacing:2px; color:#FFFFFF; text-decoration:none;">@HABITOUTDOORS</a></p>
+                  </td>
+                </tr>
+              </table>
+              <p class="legal" style="margin:0; font-family:'Prompt',Helvetica,Arial,sans-serif; font-size:13px; line-height:18px; mso-line-height-rule:exactly; font-weight:400; letter-spacing:1px; color:#E2DDD9;">&copy; 2026, Habit Outdoors. Built By Wilde Creative.</p>
             </td>
           </tr>
           <!-- /MODULE:E14 -->

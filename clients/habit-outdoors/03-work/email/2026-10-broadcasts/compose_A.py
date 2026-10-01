@@ -1,11 +1,15 @@
 """compose_A.py - October 2026 Broadcasts, Designer A: assets for emails 01 (Cedar Branch Bibs) and 02 (Youth).
 
+Round 2 (2026-09-25): rebuilt for the owner's revised designs (email-kit/references/rev-oct-01/02-*.png).
+Files named o{nn}-rev-* are PROVISIONAL 1x crops taken from those revised PNGs (the original photos are
+not on this machine): replace them with the originals before send.
+
 Imports the kit's compose.py (never edited) and redirects its output folder to this batch's assets/,
 so nothing in the shared kit is written and nothing collides with compose_B.py / compose_C.py.
 Kit textures are read from email-kit/assets; every file written here is assets/o1-* or assets/o2-*.
 
     python clients/habit-outdoors/03-work/email/2026-10-broadcasts/compose_A.py
-    python .../compose_A.py --only o1-hero o2-packs
+    python .../compose_A.py --only o1-hero o2-panels
 """
 from __future__ import annotations
 
@@ -26,8 +30,9 @@ BATCH_ASSETS.mkdir(exist_ok=True)
 KIT_ASSETS = c.KIT / "assets"
 c.ASSETS = BATCH_ASSETS                      # compose.py writers resolve c.ASSETS at call time
 
-TAUPE = "#7F7064"                            # color.line_youth
-c.TEXTURES["o2-taupe"] = ("o2-tex-taupe.jpg", TAUPE, "tile", "white (large text), youth panels")
+# Round 2 surface: Major Brown grain with halftone dot splotches (rev-oct-01 band 2). Its first rows are the kit
+# grain-brown first rows, so the hero tear (kit grain-brown last rows) runs into it without a step.
+c.TEXTURES["o1-halftone"] = ("o1-tex-halftone.jpg", c.BROWN, "tile", "white, #E2DDD9 body, orange only large")
 
 
 def _tex_path(name: str) -> Path:
@@ -95,44 +100,6 @@ def edge_fade(arr, base, sides, px=60):
     return arr * wt[:, :, None] + base * (1 - wt[:, :, None])
 
 
-def bleed_card(items, out, *, size, tex, bleed, haze_c, haze_s=0.55, seed=0, limit=110 * 1024, dm_tex=None, fade_px=50):
-    """Products big on a soft glow over a fine-grain tile, cut by the `bleed` side (that side touches the
-    email edge); the other sides fade back into the plain tile. items: [{file|img, h, cx, cy, angle}]."""
-    W, H = size
-    outs = []
-    for suffix, t in [("", tex)] + ([("-dm", dm_tex)] if dm_tex else []):
-        base = fine_base(t, W, H)
-        arr = haze(base.copy(), W * 0.5, H * 0.5, W * 0.36, H * 0.32, haze_c if not suffix else "#4A4B50",
-                   haze_s, seed=seed)
-        img = c.to_image(arr)
-        for it in items:
-            p = it["img"] if "img" in it else c.load_packshot(it["file"])
-            p = c.fit(p, h=it["h"])
-            c.place(img, p, it["cx"], it["cy"], it.get("angle", 0), shadow=it.get("shadow", (10, 22, 26, 0.5)))
-        keep = bleed if isinstance(bleed, tuple) else (bleed,)
-        sides = [s for s in ("top", "bottom", "left", "right") if s not in keep]
-        arr = edge_fade(np.asarray(img.convert("RGB"), np.float32), base, sides, px=fade_px)
-        outs.append(save(arr, out.replace(".jpg", f"{suffix}.jpg"), limit=limit, q=78))
-    return outs
-
-
-def detail_photo(src, box, out, *, tex="paper-tapshoe", size=(600, 560), photo_w=560, angle=-1.5,
-                 sides=("bottom", "right"), seed=0, limit=70 * 1024):
-    """D2: detail crop of a store image, flattened, in a thin paper frame torn on 1-2 sides, rotated,
-    soft shadow, baked on the band tile with faded borders (it sits beside a review box)."""
-    im = Image.open(PRODUCTS / src).convert("RGBA")
-    bg = Image.new("RGBA", im.size, (200, 198, 196, 255))
-    bg.alpha_composite(im)
-    ph = bg.convert("RGB").crop(box)
-    fr = c.framed_photo_multi(ph, photo_w, frame=12, sides=sides, frame_color="#E2DDD9", seed=seed)
-    W, H = size
-    base = fine_base(tex, W, H)
-    img = c.to_image(base)
-    c.place(img, fr, W / 2, H / 2, angle, shadow=(6, 16, 20, 0.55))
-    arr = edge_fade(np.asarray(img.convert("RGB"), np.float32), base, ("top", "bottom", "left", "right"), px=24)
-    return save(arr, out, limit=limit, q=78)
-
-
 def soften_top(ph, rows, blur=60):
     """Blend the top `rows` of a photo toward a heavy horizontal blur of themselves (weight 1 at row 0,
     0 at `rows`): compose.py grows the fog from rows 2-14, and branches or trunks there turn into
@@ -149,136 +116,200 @@ def contrast(p, box, texts=("#FFFFFF", "#E2DDD9")):
     print(f"      text area {box}: {c.contrast_report(p, list(texts), box)}")
 
 
-# ---------------------------------------------------------------- 01 Cedar Branch Bibs
+def rrect_mask(size, r, corners=(True, True, True, True)):
+    """L mask of a rounded rectangle; corners = (tl, tr, br, bl)."""
+    from PIL import ImageDraw
+    W, H = size
+    m = Image.new("L", (W * 4, H * 4), 0)
+    ImageDraw.Draw(m).rounded_rectangle((0, 0, W * 4 - 1, H * 4 - 1), r * 4, fill=255, corners=corners)
+    return m.resize((W, H), Image.LANCZOS)
+
+
+def _band_crop(name, box, s=2):
+    """Exact crop of a batch/kit tile at a desktop band position (display box, file = 2x): the image then
+    continues the <td> background of its band with no seam on desktop."""
+    t = c.load_tile(name)
+    x0, y0, x1, y1 = [v * s for v in box]
+    reps = math.ceil(y1 / t.shape[0]) + 1
+    tt = np.concatenate([t] * reps, axis=0)
+    return tt[y0:y1, x0:x1].copy()
+
+
+# ---------------------------------------------------------------- 01 Cedar Branch Bibs (round 2)
 
 BIB = "ahabit-sup-sup-mens-insulated-bib--49451798790426"
 PARKA = "habit-mens-cedar-branch-insulated-waterproof-parka--49451818385690"
 
+# band 2 geometry, display px (file = 2x): row A = bib 210 x 600 at x 0; row B = parka 270 x 480 at x 330
+O1_BAND_H = 1080
+O1_BIB_BOX = (0, 0, 210, 600)
+O1_PARKA_BOX = (330, 600, 600, 1080)
+O1_REVIEW_H = 374                      # review band height (its image cell fixes it)
+
 
 def o1_hero():
-    """E24 hero 01: three hunters walking up the field at sunrise (orig-hunt22). Sky grown up as a fog and
-    pulled toward Tap Shoe paper for the white logo; label boxes (live text) sit over the upper area;
-    the grass melts into Tap Shoe paper for subtitle + button, then tears into Major Brown grain."""
-    ph = c.fit(c.lifestyle("orig-hunt22-three-hunters-field-sunrise.jpg"), w=1200).filter(ImageFilter.GaussianBlur(0.45))
+    """E24 hero 01 (round 2): orig-hunt22 framed like rev-oct-01 (x1.24, hunters left of centre, sky from the
+    top), label boxes over the trees, photo melts into Tap Shoe paper for subtitle + button, tears into the
+    Major Brown halftone band at 717px."""
+    src = c.lifestyle("orig-hunt22-three-hunters-field-sunrise.jpg")
+    ph = c.fit(src, w=1488).filter(ImageFilter.GaussianBlur(0.8))
+    ph = ph.crop((288, 0, 1488, ph.height))
     a = np.asarray(ph, np.float32)
-    a = a * np.array([1.0, 0.97, 0.92], np.float32) * 0.92          # a touch warmer and lower: first light
-    ph = soften_top(Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)), 200)
-    p = c.compose_full_bleed_hero(ph, "o1-hero.jpg", size=(1200, 1400), photo_w=1200, photo_y=260,
-                                  extend_top="fog", top_shade=(620, 0.72), fade=(860, 1050),
-                                  tear_y=1350, next_tex="grain-brown", grain_sd=1.8, seed=501,
-                                  text_boxes={"logo": (440, 50, 760, 130), "sub+button": (100, 1060, 1100, 1320)})
-    return p
+    a = a * 0.82 + a.mean(2, keepdims=True) * 0.18                 # a little muted, like the revised image
+    a = a * np.array([0.98, 0.97, 0.95], np.float32) * 0.86
+    ph = soften_top(Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)), 90)
+    p = c.compose_full_bleed_hero(ph, "o1-hero.jpg", size=(1200, 1480), photo_w=1200, photo_y=90,
+                                     extend_top="fog", top_shade=(300, 0.45), fade=(935, 1075),
+                                     tear_y=1434, next_tex="grain-brown", grain_sd=1.8, seed=501,
+                                     text_boxes={"logo": (440, 60, 760, 120), "sub+button": (140, 1100, 1060, 1390)})
+    # compose.py stops at q52; the new 1480-row hero needs a little more to stay under 150 KB
+    return save(Image.open(p).convert("RGB"), "o1-hero.jpg", limit=150 * 1024, q=60, floor=40)
 
 
 def o1_label():
-    """Label-box paper for the hero headline: a 720x180 crop of the kit paper-light tile (cells are at most
-    360x90 px, shown at background-size 360px), so the email does not download the 88 KB tile for three labels."""
+    """Label-box paper for the hero headline (light boxes): 720x180 crop of the kit paper-light tile."""
     save(tile("paper-light", 180, w=720), "o1-tex-label.jpg", limit=20 * 1024, q=76)
 
 
-def o1_products():
-    """E1 band 3 (QA r1): bib and parka at about 1.5x, 20 to 30% of each garment out through the email edge
-    (bib left, parka right); what passes the bottom of the image dissolves into the grain over 110px."""
-    # bib: 1500px tall (2x the r0 740px; the garment itself is about 405px wide), about 25% out on the left (the trimmed store PNG is wider than the garment: legs splay), chest, straps, logo and thighs in frame
-    bleed_card([{"file": BIB, "h": 1500, "cx": 206, "cy": 776, "angle": 3}], "o1-prod-bibs.jpg",
-               size=(600, 720), tex="grain-brown", bleed="left", haze_c="#7A6C60", haze_s=0.3, seed=511,
-               fade_px=110)
-    # parka: 840px tall (541 wide), 25% out on the right (sleeve cut), hem dissolves at the bottom
-    bleed_card([{"file": PARKA, "h": 840, "cx": 466, "cy": 440, "angle": -4}], "o1-prod-parka.jpg",
-               size=(600, 720), tex="grain-brown", bleed="right", haze_c="#7A6C60", haze_s=0.3, seed=512,
-               fade_px=110)
+def _halftone_density(W, H, s):
+    """Density field 0..1 for the dot splotches, laid out on the desktop band (display px * s)."""
+    yy = np.arange(H, dtype=np.float32)[:, None] / s
+    xx = np.arange(W, dtype=np.float32)[None, :] / s
+    d = np.zeros((H, W), np.float32)
+
+    def blob(cx, cy, rx, ry, k, rot=0.0):
+        nonlocal d
+        cr, sr = math.cos(rot), math.sin(rot)
+        u = ((xx - cx) * cr + (yy - cy) * sr) / rx
+        v = (-(xx - cx) * sr + (yy - cy) * cr) / ry
+        d = np.maximum(d, k * np.exp(-(u ** 2 + v ** 2) ** 1.4))
+
+    # rev-oct-01 band 2, in band-cell px (the tile starts at the band <td> top, page y 740). No dots within
+    # ~30px of the parka image rectangle (x 330-600, y 600-1080): on mobile that image lands at another place
+    # of the tile. The bib image (x 0-210, y 0-600) stays seamless on mobile too (left-aligned, tile unscaled).
+    blob(10, 400, 45, 150, 1.15)                      # dark patch on the left edge beside the bib legs
+    blob(215, 425, 45, 110, 0.75)                     # right of the bib legs
+    blob(200, 600, 230, 62, 0.95, rot=-0.35)          # diagonal sweep under the bib, rising to the right
+    blob(80, 690, 140, 60, 0.95, rot=-0.2)
+    blob(190, 955, 90, 50, 0.95, rot=0.1)             # cluster under the parka card
+    blob(25, 940, 50, 60, 0.55)
+    blob(585, 90, 30, 50, 0.45)                       # small touch top right
+    n = c.periodic_noise(W, H, 40 * s, 40 * s, 707) * 0.18 + c.periodic_noise(W, H, 14 * s, 14 * s, 708) * 0.08
+    d = np.clip(d * (1 + n) - 0.05, 0, 1)
+    x0, y0 = (O1_PARKA_BOX[0] - 30) * s, (O1_PARKA_BOX[1] - 30) * s
+    ramp = 80 * s                                     # keep the parka rectangle and its margin clean, soft edge
+    kx = c.smooth(np.clip((x0 - np.arange(W, dtype=np.float32)) / ramp, 0, 1))[None, :]
+    ky = c.smooth(np.clip((y0 - np.arange(H, dtype=np.float32)) / ramp, 0, 1))[:, None]
+    d *= 1 - (1 - kx) * (1 - ky)
+    return d
 
 
-def detail_cutout(src, box, out, *, tex="paper-tapshoe", size=(600, 560), height=520, angle=-4, top_fade=0.18,
-                  seed=0, limit=70 * 1024):
-    """D2 for a store image that is already cut out (transparent studio background): the garment itself on
-    the band paper with a soft shadow, no frame and no studio backdrop. The source's own top edge (a straight
-    cut through the garment) fades out over `top_fade` of the height."""
-    im = Image.open(PRODUCTS / src).convert("RGBA").crop(box)
-    a = np.asarray(im.getchannel("A"), np.float32)
-    ys = np.arange(a.shape[0], dtype=np.float32)[:, None]
-    a *= c.smooth(np.clip(ys / (top_fade * a.shape[0]), 0, 1))
-    im.putalpha(Image.fromarray(a.astype(np.uint8)))
-    im = c.fit(im.crop(im.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox()), h=height)
-    W, H = size
-    base = fine_base(tex, W, H)
-    img = c.to_image(base)
-    c.place(img, im, W / 2, H / 2 + 6, angle, shadow=(8, 18, 22, 0.55))
-    arr = edge_fade(np.asarray(img.convert("RGB"), np.float32), base, ("top", "bottom", "left", "right"), px=24)
-    return save(arr, out, limit=limit, q=78)
-
-
-def o1_details():
-    """E1 band 4 (D2, QA r1): parka chest pocket (Matthew B.), hand on the bib's front zipper (Ryan And L.),
-    leg zipper over the whole boot (Andrew C.). Each reads as garment construction at a glance."""
-    detail_photo("habit-mens-cedar-branch-insulated-waterproof-parka/06.png", (0, 250, 1080, 1060),
-                 "o1-detail-pocket.jpg", angle=-1.8, sides=("bottom", "right"), seed=521)   # label below y 1090 cut off
-    detail_photo("ahabit-sup-sup-mens-insulated-bib/08.png", (60, 0, 1200, 910),
-                 "o1-detail-zipper.jpg", angle=1.6, sides=("top", "left"), seed=522)
-    detail_cutout("ahabit-sup-sup-mens-insulated-bib/07.png", (0, 0, 1200, 1200), "o1-detail-legzip.jpg",
-                  height=520, angle=-6, top_fade=0.07, seed=523)
-
-
-def o1_edges():
-    """E18 textured edge: Tap Shoe paper (reviews) -> Ivy grain (split band). Kit edges cover the rest."""
-    # Same drawing as compose.compose_torn_edge_textured, but the upper sheet is the tile with its slow
-    # mottle removed (fine_base): the reviews band ends at an arbitrary tile phase, and the tile's last
-    # rows sat 1.7 levels darker than the band above them (a visible step in the render).
-    import random
+def o1_halftone():
+    """Major Brown grain + halftone dot splotches, 1200 x 2160 (the whole desktop band 2, 600 x 1080).
+    Grain = kit grain-brown rows 0..2159 (wrapping at 1600), so its top continues the hero tear; dots are
+    irregular ellipses on a jittered hex grid, radius from a density field, merged into solid patches where
+    dense, in a darker brown at ~80%."""
     from PIL import ImageDraw
-    h, W = 80, 1200
-    up = fine_base("paper-tapshoe", W, h) + 0.6
-    lo = c.tile_rows("grain-ivy", h, end=True)
-    ys = c.torn_line(W, h * 0.45, amp=8, seed=531)
-    m = Image.new("L", (W, h), 0)
-    ImageDraw.Draw(m).polygon([(0, h)] + [(x, y) for x, y in enumerate(ys)] + [(W, h)], fill=255)
-    a = np.asarray(m.filter(ImageFilter.GaussianBlur(0.8)), np.float32)[:, :, None] / 255
-    c.tear_shadow(up, ys)
-    canvas = c.to_image(up * (1 - a) + lo * a)
-    rnd, d = random.Random(532), ImageDraw.Draw(canvas)
-    spot = tuple(int(v) for v in np.median(lo.reshape(-1, 3), 0))
-    for _ in range(30):
-        x = rnd.randrange(W)
-        y = ys[x] - rnd.uniform(3, 10)
-        r = rnd.choice((1.2, 1.6, 2.2))
-        d.ellipse((x - r, y - r, x + r, y + r), fill=spot + (255,))
-    save(canvas, "o1-edge-papertapshoe-ivy.jpg", limit=30 * 1024, q=80, sub=0)
+    import random
+    s = 2
+    W, H = 1200, O1_BAND_H * s
+    base = tile("grain-brown", H, w=W)
+    dens = _halftone_density(W, H, s)
+    step = 10.0 * s
+    m = Image.new("L", (W * 2, H * 2), 0)            # 2x supersampled mask
+    dr = ImageDraw.Draw(m)
+    rnd = random.Random(711)
+    row, y = 0, 0.0
+    while y < H:
+        x = (step / 2) if row % 2 else 0.0
+        while x < W:
+            jx, jy = x + rnd.uniform(-2.5, 2.5) * s, y + rnd.uniform(-2.5, 2.5) * s
+            xi, yi = int(min(W - 1, max(0, jx))), int(min(H - 1, max(0, jy)))
+            k = dens[yi, xi]
+            if k > 0.08:
+                r = step * 0.46 * k ** 0.85 * rnd.uniform(0.85, 1.15)
+                ex, ey = r * rnd.uniform(0.9, 1.25), r * rnd.uniform(0.8, 1.05)
+                dr.ellipse(((jx - ex) * 2, (jy - ey) * 2, (jx + ex) * 2, (jy + ey) * 2), fill=255)
+            x += step
+        y += step * 0.866
+        row += 1
+    m = m.resize((W, H), Image.LANCZOS).filter(ImageFilter.GaussianBlur(0.35))
+    a = np.asarray(m, np.float32)[:, :, None] / 255 * 0.92
+    ink = np.array(c.rgb("#28201A"), np.float32)
+    arr = base * (1 - a) + (base * 0.35 + ink * 0.65) * a
+    p = save(arr, "o1-tex-halftone.jpg", limit=150 * 1024, q=70, floor=45)
+    print("     ", c.contrast_report(p, ["#FFFFFF", "#FF6400"], blur=0))
+    return p
 
 
-# ---------------------------------------------------------------- 02 Youth
+def o1_products():
+    """E1 band 2 (round 2): bib standing whole at the left (row A), parka cut by the right email edge (row B).
+    Each image is the exact halftone-band crop under its desktop cell, so desktop shows no seam at all."""
+    img = c.to_image(_band_crop("o1-halftone", O1_BIB_BOX))
+    c.place(img, c.fit(c.load_packshot(BIB), h=1110), 222, 80 + 555, 0, shadow=(10, 22, 26, 0.5))
+    save(img, "o1-prod-bibs.jpg", limit=110 * 1024, q=78)
+    img = c.to_image(_band_crop("o1-halftone", O1_PARKA_BOX))
+    c.place(img, c.fit(c.load_packshot(PARKA), h=1000), 344, 16 + 500, 0, shadow=(10, 22, 26, 0.5))
+    save(img, "o1-prod-parka.jpg", limit=110 * 1024, q=78)
+
+
+def o1_review_parka():
+    """E1 review band: the parka close (hood + chest), cut by the right edge and the band bottom, on the exact
+    Tap Shoe paper crop under its desktop cell (x 350-600, y 0-374); left side dissolves into the paper."""
+    box = (350, 0, 600, O1_REVIEW_H)
+    base = _band_crop("paper-tapshoe", box)
+    img = c.to_image(base)
+    c.place(img, c.fit(c.load_packshot(PARKA), h=1300), 300, 24 + 650, 0, shadow=(10, 22, 26, 0.5))
+    arr = edge_fade(np.asarray(img.convert("RGB"), np.float32), base, ("left",), px=70)
+    save(arr, "o1-review-parka.jpg", limit=90 * 1024, q=78)
+
+
+def o1_rev_archer():
+    """PROVISIONAL 1x: rev-oct-01 closing photo (archer in camo with the drawn white line), page rows 2171-2517
+    (clean: no live text over them), grown down to 731 rows by fading into near black for the live text."""
+    ref = Image.open(c.REFS / "rev-oct-01-cedar-branch-bibs.png").convert("RGB")
+    top = np.asarray(ref.crop((0, 2171, 600, 2517)), np.float32)
+    H = 731
+    dark = np.array(c.rgb("#141414"), np.float32)
+    arr = np.broadcast_to(dark, (H, 600, 3)).copy()
+    arr[:top.shape[0]] = top
+    ys = np.arange(H, dtype=np.float32)
+    t = c.smooth(np.clip((ys - 250) / (346 - 250), 0, 1))[:, None, None]
+    arr = arr * (1 - t * 0.78) + dark * (t * 0.78)
+    t2 = c.smooth(np.clip((ys - 330) / 30, 0, 1))[:, None, None]
+    arr = arr * (1 - t2) + dark * t2
+    arr += (c.periodic_noise(600, H, 0.75, 0.75, 721) * 2.0)[:, :, None]
+    p = save(arr, "o1-rev-archer.jpg", limit=90 * 1024, q=80)
+    contrast(p, (60, 340, 540, 700))
+
+
+# ---------------------------------------------------------------- 02 Youth (round 2)
 
 YBIB = "youth-cedar-branch-insulated-bib--52632814518554"
 YHOOD = "habit-youth-summit-park-performance-hoodie--51341422592282"
 YPANT = "youth-bear-cave-6-pocket-camo-pant--39568503668787"
 
+# flat panel colours measured on rev-oct-02 (olive = kit Ivy Green)
+PANEL = {"bib": "#595442", "hoodie": "#774727", "pant": "#4F5C5F"}
+
 
 def o2_hero():
-    """E24 hero 02: family in camp chairs, the kid in the middle (crop-sent-sep15). Calm area grown above
-    as fog for logo + two-voice headline; melts into Tap Shoe paper, tears into Major Brown grain."""
+    """E24 hero 02 (round 2): family in camp chairs low in the frame (rev-oct-02), fog above for the two-voice
+    headline + button; the grass melts into Tap Shoe paper and the last rows ARE the kit tile's last rows, so
+    the Tap Shoe band below continues it (straight cut, no tear)."""
+    W, H = 1200, 1344
     ph = soften_top(c.lifestyle("crop-sent-sep15-camp-chairs-family.jpg"), 110)
-    p = c.compose_full_bleed_hero(ph, "o2-hero.jpg", size=(1200, 1500), photo_w=1300, photo_y=830,
-                                  extend_top="fog", top_shade=(880, 0.55), fade=(1250, 1385),
-                                  tear_y=1450, next_tex="grain-brown", grain_sd=2.4, seed=601,
-                                  text_boxes={"desktop": (100, 160, 1100, 820), "mobile": (190, 130, 1010, 830)})
+    tmp = c.compose_full_bleed_hero(ph, "o2-hero-tmp.jpg", size=(W, H + 120), photo_w=1300, photo_y=770,
+                                    extend_top="fog", top_shade=(820, 0.50), fade=(1180, 1300),
+                                    tear_y=H + 60, next_tex="paper-tapshoe", grain_sd=2.4, seed=601)
+    arr = np.asarray(Image.open(tmp).convert("RGB"), np.float32)[:H]
+    tmp.unlink()
+    end = c.tile_rows("paper-tapshoe", 140, end=True)
+    w = c.smooth(np.clip((np.arange(140, dtype=np.float32)) / 90, 0, 1))[:, None, None]
+    arr[H - 140:] = arr[H - 140:] * (1 - w) + end * w
+    p = save(arr, "o2-hero.jpg", limit=150 * 1024, q=74)
+    contrast(p, (120, 200, 1080, 900))
     return p
-
-
-def o2_texture():
-    """Taupe (color.line_youth) paper grain tile for the youth product panels, 600x600, periodic."""
-    arr = c.paper_surface(TAUPE, size=(600, 600), grain_sd=3.0, mottle=1.0, fibre=5, fibre_sign=1, seed=611)
-    p = save(arr, "o2-tex-taupe.jpg", limit=40 * 1024, q=74)
-    print("     ", c.contrast_report(p, ["#FFFFFF"], blur=0))
-
-
-def o2_packs():
-    """E2 band 3 packshots (transparent PNG, sit on the taupe panel td)."""
-    c.product_png(YBIB, 480, "o2-pack-bib.png", pad=0.02, limit=90 * 1024)
-    im = clean_hoodie()
-    im = c.fit(im, w=430) if im.width >= im.height else c.fit(im, h=430)
-    cv = Image.new("RGBA", (480, 480), (0, 0, 0, 0))
-    cv.alpha_composite(im, ((480 - im.width) // 2, (480 - im.height) // 2))
-    c.report(c.save_png_quant(cv, "o2-pack-hoodie.png", limit=90 * 1024), limit=90 * 1024)
-    c.product_png(YPANT, 480, "o2-pack-pant.png", pad=0.02, limit=90 * 1024)
 
 
 def clean_hoodie() -> Image.Image:
@@ -290,17 +321,69 @@ def clean_hoodie() -> Image.Image:
     return im.crop(a.getbbox())
 
 
-def o2_layer():
-    """E2 band 4: Summit Park Hoodie behind the Cedar Branch Bib (layered), transparent PNG with soft shadow:
-    it sits on the light paper td in light mode and on the dark paper in dark mode (no -dm twin, no seam)."""
-    cv = Image.new("RGBA", (600, 800), (0, 0, 0, 0))
-    c.place(cv, c.fit(clean_hoodie(), h=450), 215, 285, 7, shadow=(10, 22, 26, 0.45))
-    c.place(cv, c.fit(c.load_packshot(YBIB), h=650), 330, 420, -3, shadow=(10, 22, 26, 0.45))
-    c.report(c.save_png_quant(cv, "o2-layer.png", limit=110 * 1024), limit=110 * 1024)
+def o2_panels():
+    """E2 framed cards: packshot on a flat colour panel, 196 x 330 (file 392 x 660). Bib and pant are cut by the
+    card bottom as in rev-oct-02; the hoodie sits whole. Flat colour = the td bgcolor, so on mobile the panel
+    widens with the same colour and no seam."""
+    jobs = [("bib", c.load_packshot(YBIB), 820, 196, 62 + 410),
+            ("hoodie", clean_hoodie(), 470, 184, 100 + 235),
+            ("pant", c.load_packshot(YPANT), 712, 188, 60 + 356)]
+    for key, im, h, cx, cy in jobs:
+        base = np.broadcast_to(np.array(c.rgb(PANEL[key]), np.float32), (660, 392, 3)).copy()
+        base += (c.periodic_noise(392, 660, 0.75, 0.75, 731) * 1.4)[:, :, None]
+        img = c.to_image(base)
+        c.place(img, c.fit(im, h=h), cx, cy, 0, shadow=(8, 18, 22, 0.45))
+        save(img, f"o2-panel-{key}.jpg", limit=60 * 1024, q=80)
 
 
-JOBS = {"o1-hero": o1_hero, "o1-label": o1_label, "o1-products": o1_products, "o1-details": o1_details, "o1-edges": o1_edges,
-        "o2-hero": o2_hero, "o2-texture": o2_texture, "o2-packs": o2_packs, "o2-layer": o2_layer}
+def o2_edges():
+    """Tap Shoe paper band -> gradient into Major Brown -> torn into light paper (rev-oct-02, under SHOP NOW),
+    1200 x 120 (600 x 60). -dm twin: the light paper below is the kit dark-mode paper."""
+    import random
+    from PIL import ImageDraw
+    W, h = 1200, 120
+    up = fine_base("paper-tapshoe", W, h)
+    brown = np.array(c.rgb("#443A33"), np.float32)
+    t = c.smooth(np.clip(np.arange(h, dtype=np.float32) / 96, 0, 1))[:, None, None]
+    up = up * (1 - t) + (up - up.mean((0, 1)) + brown) * t
+    ys = c.torn_line(W, 94, amp=7, seed=741)
+    for suffix, tex in (("", "paper-light"), ("-dm", "paper-light-dm")):
+        u = up.copy()
+        lo = c.tile_rows(tex, h, end=True)
+        m = Image.new("L", (W, h), 0)
+        ImageDraw.Draw(m).polygon([(0, h)] + [(x, y) for x, y in enumerate(ys)] + [(W, h)], fill=255)
+        a = np.asarray(m.filter(ImageFilter.GaussianBlur(0.8)), np.float32)[:, :, None] / 255
+        c.tear_shadow(u, ys)
+        canvas = c.to_image(u * (1 - a) + lo * a)
+        rnd, d = random.Random(742), ImageDraw.Draw(canvas)
+        spot = tuple(int(v) for v in np.median(lo.reshape(-1, 3), 0))
+        for _ in range(40):
+            x = rnd.randrange(W)
+            y = ys[x] - rnd.uniform(3, 10)
+            r = rnd.choice((1.2, 1.6, 2.2))
+            d.ellipse((x - r, y - r, x + r, y + r), fill=spot + (255,))
+        save(canvas, f"o2-edge-tapshoe-paperlight{suffix}.jpg", limit=30 * 1024, q=80, sub=0)
+
+
+def o2_rev_boy():
+    """PROVISIONAL 1x: the boy photo inside the tilted frame of rev-oct-02 (page ~0-220 x 2283-2612), rotated
+    back upright and cut inside the white frame, then re-framed (6px white), tilted 5.8 degrees like the
+    image, soft shadow, on a TRANSPARENT canvas: it sits on the light paper and on the dark-mode paper."""
+    ref = Image.open(c.REFS / "rev-oct-02-youth-season.png").convert("RGB")
+    crop = ref.crop((0, 2250, 280, 2650))                    # frame centre ~ (110, 2447) -> (110, 197)
+    up = crop.rotate(-5.8, resample=Image.BICUBIC, center=(110, 197))
+    ph = up.crop((110 - 84, 197 - 145, 110 + 84, 197 + 145))  # inside the 7px frame, a few px of margin
+    fw = 6
+    fr = Image.new("RGBA", (ph.width + fw * 2, ph.height + fw * 2), (255, 255, 255, 255))
+    fr.paste(ph, (fw, fw))
+    cv = Image.new("RGBA", (240, 350), (0, 0, 0, 0))
+    c.place(cv, fr, 104, 172, 5.8, shadow=(4, 8, 10, 0.45))
+    c.report(c.save_png_quant(cv, "o2-rev-boy.png", limit=110 * 1024), limit=110 * 1024)
+
+
+JOBS = {"o1-hero": o1_hero, "o1-label": o1_label, "o1-halftone": o1_halftone, "o1-products": o1_products,
+        "o1-review": o1_review_parka, "o1-archer": o1_rev_archer,
+        "o2-hero": o2_hero, "o2-panels": o2_panels, "o2-edges": o2_edges, "o2-boy": o2_rev_boy}
 
 
 def main() -> None:

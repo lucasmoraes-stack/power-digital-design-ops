@@ -43,3 +43,62 @@ Todas as imagens abaixo de 150 KB, exceto o GIF.
 4. **Módulos novos para o kit** (quando aprovar): Panel Stack (ref A), Open Frame Rows (ref D), hero com texto à esquerda e modelo sangrando, e Lifestyle GIF.
 5. **Outlook app / Gmail no dark mode:** a troca de imagens `-dm` do E3 só acontece no Apple Mail/iOS (mesmo comportamento do E01 da rodada 2). No app do Outlook o papel troca (`dm-tex`) mas as peças dos painéis continuam claras nos cantos. Testar no Litmus antes do envio.
 6. Os mesmos pendentes do brief: `{{CTA_URL}}` dos dois e-mails, endereço, tag de descadastro, C7/C8 (variantes M).
+
+## Rodada 2 (2026-09-25)
+
+> Reconstrução de `03-heavy-weight-hoodie.html` e `04-crater-valley.html` pelas imagens do responsável (`email-kit/references/rev-oct-03-heavy-weight-hoodie.png` e `rev-oct-04-crater-valley.png`), seguindo `revision-r2.md`, que vale acima do `brief.md` e das decisões da rodada 1 acima. Render 680, 375 e `--dark` conferido lado a lado com as duas imagens. `compose_B.py` foi reescrito (importa `email-kit/tools/compose.py` sem editar, não depende de `compose_v05.py`); os assets da rodada 1 que saíram (hero de carvalhos, gêmeas `-dm` dos painéis, molduras, `o4-hero-a/b`, borda brown-ivy, GIF e o still) foram apagados de `assets/`.
+
+### O que mudou
+
+**Nos dois**
+- Botão `#FF6400` com texto **branco**, Prompt 800 caixa-alta, tracking 2px, raio 4px, 17px; largura fixa medida na imagem (03: 326 e 258px; 04: 290 e 300px). Botão pequeno dos cards do 04: 13px, padding 12px 22px.
+- Corpo, cards e rodapé em Prompt (400/500/700/800 carregados). Headlines em duas vozes, em caixa-alta real no HTML.
+- Rodapé v0.5: logo empilhado 136px, menu com filetes brancos, ícone do Instagram (`email-kit/assets/icon-instagram.png`) + "Follow us on Instagram" / @HABITOUTDOORS, copyright. **Sem** `[[CONFIRMAR: endereço]]` e sem Unsubscribe no HTML (revision-r2 #5).
+
+**03 Heavy Weight Hoodie**
+- Hero com **foto de pessoa** (homem de boné camo no capim), logo vivo `logo-light.png` sobre o céu, YOUR / **COLDEST** (Playfair 98px, branco) / MORNINGS COVERED, subtítulo espaçado e botão sobre a foto escurecendo para Tap Shoe.
+- Banda nova de **papel claro com manchas de camo** (`o3-tex-paper-camo.jpg`, gêmea `-dm` para o dark mode), gerada no `compose_B.py`: **WARM** (Playfair 96px, Tap Shoe) / ENOUGH TO SKIP / THE JACKET (Prompt 800 30px), corpo centralizado 18px.
+- Painéis Major Brown / Gunmetal / Loden Green, 552px com 24px de margem, 62px entre eles, hoodie subindo 40px acima do painel. Texto: cor em laranja, `Men’s Heavy Weight / Full Zip Hoodie` em branco, `$44.99 USD` Prompt 800 20px **sem sublinhado** (linkado na variante).
+- Mecânica nova: como as manchas de camo são grandes, nada opaco carrega o papel. As bordas rasgadas (`o3-edge-hero-paper.png`, `o3-edge-paper-footer.png`) e o topo do hoodie (`o3-panel-*-top.png`) são **PNG transparentes** dentro da `<td>` da banda, e o JPG do painel só tem o painel. Assim o papel corre sem emenda, e as gêmeas `-dm` dos painéis deixaram de existir (a pendência 5 da rodada 1 cai).
+
+**04 Crater Valley**
+- Hero à esquerda: MEET THE / **CRATER VALLEY** (Playfair 68px, `#CFC8BF`) / **LINE** (laranja), subtítulo, botão; o Full Zip Fleece no modelo sangra pela direita, cortado abaixo do queixo pela borda de cima do e-mail e sumindo embaixo. Logo abaixo, a **faixa de detalhe** (mão no bolso do tricô) com cantos de cima arredondados e base rasgada.
+- Banda em degradê Tap Shoe → Major Brown: YOUR BEST / LAYERING MOVE / **THIS FALL** (Playfair 60px branco), corpo.
+- **Cards emoldurados** (contorno 1px `#FEF4C6` a 70% com `rgba`, raio 14): foto da loja à esquerda no fundo de estúdio, a altura toda do card; à direita a caixa de produto (contorno 1px, raio 10, centralizada) com título laranja, descrição, preço e botão pequeno SHOP HOODIE / SHOP FLEECE / SHOP QUARTER ZIP. Mobile: foto em cima, caixa embaixo, dentro do mesmo contorno.
+- **Sem GIF.** Fim em banda de foto (silhueta com cachorro no pôr do sol, retícula): FROM FIRST LIGHT TO / **LAST CALL** (Playfair 98px laranja), corpo, SHOP NOW, rasgo para o rodapé.
+
+### Desvios da imagem, e por quê
+
+1. **04, primeiro card:** a imagem diz "YOUTH CEDAR BRANCH"; está `CRATER VALLEY PERFORMANCE HOODIE` / $29.99 (revision-r2). Os três títulos sem "Men's", como os outros dois da imagem e a regra do brief para o E4; o nome da loja tem "Men's" na frente.
+2. **Título laranja da caixa de produto em 19px** (03 e 04), onde a imagem mostra uns 16px: é o tamanho que a revision-r2 #4 pede para o laranja contar como texto grande sobre Major Brown (3,46:1). No 03 a caixa fica um pouco mais pesada que na imagem.
+3. **04, Full Zip Fleece no card:** a imagem mostra o rosto a partir da testa (corte da loja). Mantive o corte **abaixo do queixo na linha de cima do card** (regra do QA r1: nunca cortar entre a testa e a boca). Card 3 com o packshot APX (a variante do link), como na imagem.
+4. **04, faixa de detalhe:** em vez do recorte da imagem, usei a **foto original da loja** (`photos/products/mens-crater-valley-sweater-fleece-zip-jacket/08.png`, 1200px, então 2x). O canto transparente da foto virou estúdio escuro. É a mesma foto da imagem.
+5. **04, fundo da banda final:** a imagem é preto chapado; usei `#1E1F21` (cor escura do kit) porque plano grande de `#000` é proibido (rules §2, inversão do Gmail). A foto do pôr do sol esmaece para essa cor.
+6. **Ícone do Instagram em 44px**, que é o que a imagem mostra (a revision-r2 diz 36). O arquivo tem 72px (1,6x).
+7. **Tipos menores que a faixa da revision-r2 #2 onde a imagem é menor:** THIS FALL 60px e CRATER VALLEY 68px (a imagem manda; a coluna do hero tem 330px).
+8. **Fonte:** Prompt (substituto da Sweet Sans) desenha mais estreita que a fonte da imagem, então quebras de linha do corpo e do subtítulo não são idênticas; ajustei larguras para ficar perto (3 linhas onde a imagem tem 3).
+9. **Botões por produto no 04** (3 pequenos + hero + fim = 5 botões): é o que a imagem pede e substitui o X5 do brief (links sublinhados). Registrar no brief; rules §6 fala em 2 a 3 CTAs, todos vão para a mesma família.
+
+### Fotos provisórias (recorte 1x, trocar pelo original)
+
+- `assets/o3-rev-hero.jpg`: recorte provisório 1x da `rev-oct-03`, linhas 0 a 470 (antes do "YOUR"), **logo HABIT retocado** (interpolação do céu) e o logo vivo por cima. Abaixo da linha 470 a foto é um espelho desfocado escurecendo para Tap Shoe, porque o texto da imagem cobre o resto do corpo. **Pedir o original** (sessão HabitHunt?): com ele o homem continua atrás da headline como na imagem.
+- `assets/o4-rev-sunset.jpg`: recorte provisório 1x da `rev-oct-04`, linhas 2231 a 2494 (entre o rasgo e o "FROM FIRST LIGHT TO"), com rasgo novo sobre o marrom e base esmaecendo para `#1E1F21`. **Pedir o original.**
+- Não são provisórias: hero do 04 e cards (fotos da loja em `photos/products/`), faixa de detalhe (loja, 2x), painéis do 03 (packshots da loja).
+
+### Pesos (medidos 2026-09-25)
+
+| | HTML | Desktop claro | Todos os arquivos referenciados |
+|---|---|---|---|
+| E3 | 31,4 KB | ~544 KB | 765 KB (inclui as peças mobile e o papel `-dm`) |
+| E4 | 35,1 KB | ~731 KB | 1.027 KB (inclui hero e cards mobile) |
+
+Maior imagem: `o4-detail-pocket.jpg` 117 KB; todas abaixo de 150 KB. Sem GIF, o E4 volta para dentro dos 800 KB.
+
+### Pendências
+
+1. **Contraste do botão** (texto branco no laranja, 2,97:1, abaixo do AA): exceção pedida pelo responsável, registrar no brief.
+2. **Originais das duas fotos provisórias** (acima).
+3. **Rodapé sem endereço e sem descadastro no HTML:** conferir no Omnisend que o rodapé automático entra (CAN-SPAM), antes do envio.
+4. **Módulos para o kit v0.5:** papel claro com manchas de camo, borda rasgada em PNG transparente, Panel Stack com topo em PNG, Framed Card Row com Product Info Box, rodapé com ícone do Instagram.
+5. **Outlook desktop:** cantos arredondados de cards, painéis e fotos ficam retos; o contorno `rgba` cai para `#FEF4C6` cheio (mais claro que na imagem). Testar no Litmus. Gmail app no dark mode: o papel camo claro do 03 pode inverter o `bgcolor` e não a imagem (mesmo WARN da rodada 1).
+6. Continuam do brief: `{{CTA_URL}}` dos dois e-mails, URLs do menu e do Instagram, C7/C8 (variantes M).

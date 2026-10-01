@@ -1,12 +1,12 @@
 # Habit Outdoors · Email kit
 
-> Kit criado em 2026-09-24 com `build_kit.py --init`. **Etapa 1 em andamento**: kit v0.2 lapidado (módulos, tokens, assets); aguarda revisão módulo a módulo. Fluxo: `email-ops/playbook.md` · Regras: `email-ops/rules.md` · Checklist: `email-ops/CHECKLIST.md`, parte C.
+> Kit criado em 2026-09-24 com `build_kit.py --init`. **Etapa 1 em andamento**: v0.2.1 aprovado; v0.3, v0.4 e **v0.5 (2026-09-25, rascunho)** aguardam revisão módulo a módulo. Fluxo: `email-ops/playbook.md` · Regras: `email-ops/rules.md` · Checklist: `email-ops/CHECKLIST.md`, parte C.
 
 ## Status
 
 | | |
 |---|---|
-| Status | **aprovado v0.2** em 2026-09-24 pelo responsável (módulos E01 a E18), com os ajustes **v0.2.1** do QA (E15, E17). **Em rascunho, aguardando aprovação:** v0.3 E19 a E23 (módulos rústicos Duck Camp) e **v0.4 E24 a E26 + conjunto de texturas + bordas E18 texturizadas** (rodada 2, `03-work/email/2026-broadcasts/art-direction-r2.md`); não usar em e-mail de envio antes de aprovados |
+| Status | **aprovado v0.2** em 2026-09-24 pelo responsável (módulos E01 a E18), com os ajustes **v0.2.1** do QA (E15, E17). **Em rascunho, aguardando aprovação:** v0.3 E19 a E23 (módulos rústicos Duck Camp) e **v0.4 E24 a E26 + conjunto de texturas + bordas E18 texturizadas** (rodada 2, `03-work/email/2026-broadcasts/art-direction-r2.md`) e **v0.5 (2026-09-25): mudanças globais em todos os módulos + E27 a E34 + 3 superfícies**, a partir dos e-mails de outubro revisados pelo responsável (`references/rev-oct-01..05-*.png`, `03-work/email/2026-10-broadcasts/revision-r2.md`); não usar em e-mail de envio antes de aprovados. **Atenção:** as mudanças globais da v0.5 (botão, fonte do corpo, headline) já estão aplicadas também nos módulos aprovados E01 a E18; se a v0.5 for recusada, voltar pelo git (commit bd51089) |
 | Responsável pelo projeto | Lucas Moraes [[CONFIRMAR]] |
 | Fonte visual oficial | Brand Identity Guide PDF (atualização 2026-02-04), resumo em `clients/habit-outdoors/01-brand/identity/brand-guidelines.md` |
 | Oficial ou extraído | cor e tipografia **oficiais** (PDF); HEX **amostrado** do vetor do PDF, aguardando aprovação; valores do site são **extraídos** |
@@ -19,6 +19,19 @@
 
 **Os e-mails enviados recentemente (`references/`) são a fonte da verdade das informações da marca**: cor em uso, rodapé, menu, tratamento do logo, caixa de texto, botão, linguagem. Quando divergem do Brand Identity Guide ou do site, vale o e-mail. O guia entra onde os e-mails não dizem nada (tecnologias, voz, fotografia, história). Continuam acima de tudo: régua legal (CAN-SPAM: endereço e descadastro) e contraste AA (rules §2).
 
+
+## Decisões do responsável (2026-09-25, e-mails de outubro revisados · v0.5)
+
+Expressas nas imagens `references/rev-oct-01..05-*.png` e listadas em `03-work/email/2026-10-broadcasts/revision-r2.md`. **Onde divergem das decisões de 2026-09-24, valem estas** (as antigas estão marcadas "substituída" abaixo e nas tabelas).
+
+- **Botão:** `#FF6400` com **texto branco** `#FFFFFF`, Prompt 800 caixa-alta 17px, tracking 2px, **raio 4px**. Contraste **2,97:1, abaixo do AA** (4,5 e 3,0): **exceção pedida pelo responsável em 2026-09-25**, registrada; o QA aponta, não bloqueia. Botão pequeno dentro de card: 13px, padding 14px 22px (a revisão mostra 12px, o que dá 40px de altura; subido para os 44px mínimos das regras).
+- **Corpo em Prompt:** todo corpo, card e rodapé em Prompt 400/500 (substituto da Sweet Sans), fallback Helvetica, Arial; Outlook desktop cai em Arial.
+- **Headline em duas vozes, serifa dominante:** Playfair Display 900 caixa-alta 96 a 110px desktop (entrelinha cerca de 0,9, pode quebrar em 2 linhas), 64 a 72px mobile; linha sans Prompt 800 caixa-alta 26 a 32px (mobile 22 a 24), acima ou abaixo da serifa. Cor da serifa: branco, laranja (só em Tap Shoe, Patriot Blue, Major Brown ou foto escura), Tap Shoe em papel claro, ou Aluminum claro `#CFC8BF`.
+- **Corpo centralizado logo abaixo da headline** nas bandas internas, 17/24, sentence case. **Subtítulo espaçado caixa-alta só no hero.**
+- **Caixa de produto (E27):** centralizada, contorno 1px `#FEF4C6`, raio 10px; título laranja Prompt 800, **19px obrigatório sobre Major Brown e retícula** (só passa como texto grande), 16 a 17px permitido sobre Tap Shoe e Patriot Blue (4,8:1, passa em qualquer tamanho; é o que a rev-oct-02 mostra), nome branco 15px, variante apagada 13px, preço 20px branco em negrito **sem sublinhado**; sem os traços laranja nos cantos.
+- **Rodapé:** ícone colorido do Instagram (`assets/icon-instagram.png`, 72px exibido em 44) ao lado de "Follow us on Instagram" / @HABITOUTDOORS; sem linha de endereço e sem descadastro no HTML (confirmação da decisão de 2026-09-24).
+- **Um review só por e-mail** (E32), com nome e nota reais.
+- **Superfícies novas:** papel claro com manchas de camo, Major Brown com retícula de meio-tom, degradê Tap Shoe → Patriot Blue com linhas topográficas.
 
 ## Decisões do responsável (2026-09-24)
 
@@ -73,7 +86,7 @@ Valores em `tokens.json`. Esta tabela registra **de onde veio** cada um. Desde a
 | Token | Hex | Uso | Fonte | Contraste |
 |---|---|---|---|---|
 | `color.primary` | `#FF6400` | preenchimento de botão; texto só em banda escura | e-mails enviados (medido; fora da paleta do guia) | como texto: 4,77 em Tap Shoe, 4,84 em Patriot Blue, **3,46 em Major Brown (só texto grande)**, reprova em claro |
-| `color.on_primary` | `#2A2B2D` | texto do botão | decisão do responsável 2026-09-24 (branco dava 2,97:1) | 4,77:1 |
+| `color.on_primary` | **`#FFFFFF`** (v0.5) | texto do botão | **decisão do responsável 2026-09-25** (e-mails revisados); ~~`#2A2B2D`, decisão de 2026-09-24~~ **substituída** | **2,97:1, abaixo do AA: exceção registrada** (Tap Shoe dava 4,77:1) |
 | `color.text` / `color.dark` | `#2A2B2D` | título, texto, link em fundo claro, rodapé | e-mails enviados = Tap Shoe do guia (p.17) | 10,5 em `#E2DDD9`; branco sobre ela 14,2 |
 | `color.text_muted` | `#5C5249` | corpo, eyebrow em fundo claro | Turkish Coffee do guia (p.17) | 7,6 em branco, 5,65 em `#E2DDD9`, **2,65 na textura** (lá usar `#2A2B2D`) |
 | `color.surface` / `color.surface_alt` | `#FFFFFF` / `#E2DDD9` | bandas claras | branco; `#E2DDD9` medido nos e-mails (fora da paleta) | |
@@ -84,6 +97,10 @@ Valores em `tokens.json`. Esta tabela registra **de onde veio** cada um. Desde a
 | `color.card_outline` | `#FEF4C6` | contorno 1px dos cards | e-mails enviados (fora da paleta) | decorativo |
 | `color.texture_fallback` | `#A39A8C` | fallback da textura Aluminum | derivado (média da textura `#9F9888`) | `#2A2B2D` 5,1 |
 | `color.line` / `color.page` | `#CFC8BF` / `#EFECE9` | filete, fundo da página | derivados | |
+| `color.aluminum_light` (v0.5) | `#CFC8BF` | cor da serifa em banda escura (rev-oct-04, CRATER VALLEY) | o mesmo hex de `color.line` | sobre Tap Shoe 8,5 |
+| `color.info_box_*` (v0.5) | contorno `#FEF4C6`, título `#FF6400`, variante `#B0A89C` (Tap Shoe, Patriot) ou `#CFC8BF` (Major Brown) | E27 | revisão do responsável | título 19px 800 = texto grande: 4,8 Tap Shoe, 4,8 Patriot, 3,5 Major Brown, 3,1 retícula (pior caso); `#B0A89C` em Major Brown daria 4,4, por isso `#CFC8BF` (6,1) |
+| `color.panel_*` (v0.5) | Aluminum `#A39A8C`, Dusk `#ACB1B3`, Turkish Coffee `#5C5249`, Ivy Green `#595442` | painel chapado atrás do packshot (E28, E29) | cores do guia (p.17) mais próximas das medidas na revisão (`#A69A89`, `#ABB1B3`, `#5A4538`, `#575441`) | sem texto em cima |
+| `color.panel_rust` / `color.panel_slate` (v0.5, "product panel") | ferrugem `#774727`, ardósia `#4F5C5F` | painel chapado atrás do packshot (E29), como no 02 Youth | **rev-oct-02, medido** (valores do `02-youth-season.html` e dos JPG `o2-panel-hoodie` / `o2-panel-pant`); fora da paleta do guia, mantidas por decisão do responsável (2026-09-25) | sem texto em cima |
 
 Dark mode (Apple Mail / app do Outlook), tudo derivado de Tap Shoe: página `#1E1F21`, superfície `#2A2B2D`, banda `#34353A`, título `#F1EEEB`, corpo `#D6D0CA`, muted `#B0A89C` (era `#A39A8C`, dava 4,4:1 na banda), link `#F1EEEB` sublinhado (laranja na banda dá 4,1:1), laranja só na palavra de destaque grande.
 
@@ -91,20 +108,25 @@ Dark mode (Apple Mail / app do Outlook), tudo derivado de Tap Shoe: página `#1E
 
 | Papel | Tamanho desktop / mobile | Peso | Nota |
 |---|---|---|---|
-| Display (hero) | 46/50 · 34/38 | Prompt 800, caixa-alta | uma palavra de destaque em Playfair Display 900 caixa-alta |
-| Hero em duas vozes (E02) | linha sans 34/38 · 26/30; palavra serif 88/90 · 60/62 | Prompt 800 + Playfair 900 | dois filetes laranja de 3px com 5px de vão, 78% da largura |
-| Título de banda | 34/38 · 28/32 | Prompt 800, caixa-alta | |
-| Subtítulo espaçado | 14/22, tracking 2px | Prompt 500, caixa-alta | logo abaixo da headline |
-| Título de item | 18/22 (card de produto 20/24) | 800, caixa-alta | |
-| Corpo | 16/26 | Helvetica/Arial 400 | sentence case |
+| **Headline em duas vozes (v0.5, todo hero e toda banda)** | serifa **100/90** (hero 104/94; faixa 96 a 110) · **64/58**; linha sans **30/32** (faixa 26 a 32) · **22/24** | Playfair 900 + Prompt 800, caixa-alta | a serifa é a protagonista, pode quebrar em 2 linhas; cabe cerca de 7 letras por linha a 100px numa banda de 520px e a 64px no celular (Playfair 900 caixa-alta mede cerca de 0,66em por letra) |
+| Headline em coluna dividida (v0.5: E04, E06, E09, E20, E31) | serifa 64/60 · 60/56; sans 30/32 (E31: 26/28) · 22/24 | idem | |
+| ~~Display (hero) 46/50 com uma palavra serifada no meio~~ | | | **substituída pela headline em duas vozes (v0.5)** |
+| ~~Hero em duas vozes (E02) sans 34/38 + serif 88/90~~ | | | **substituída: 30/32 + 104/94** (os dois filetes laranja do E02 continuam; a revisão não os usa, ver "Em aberto") |
+| ~~Título de banda 34/38 · 28/32~~ | | | **substituído pela headline em duas vozes** |
+| Subtítulo espaçado | 15/22 no hero (14/22 antes), tracking 2px | Prompt 500, caixa-alta | **v0.5: só no hero**; banda interna vai headline e corpo |
+| Título de item | 18/22 | 800, caixa-alta | |
+| Caixa de produto (E27, v0.5) | título 19/21 · nome 15/20 · variante 13/18 · preço 20/24 | Prompt 800 / 500 / 400 / 800 | título laranja, preço sem sublinhado |
+| Corpo de banda (v0.5) | **17/24**, centralizado sob a headline | **Prompt 400** | sentence case; ~~Helvetica/Arial 16/26~~ substituído |
+| Corpo de card, lista, rodapé | 15 ou 16px | Prompt 400/500 | |
 | Label / eyebrow | 13/20, tracking 2,4px, caixa-alta | 500 | acima da headline |
-| Legal | 12/18 | 400 | |
+| Etiqueta do Label Hero (E33, v0.5) | sans 30/40 · 22/28; serifa 72/80 · 48/56 | Prompt 800 / Playfair 900 | |
+| Legal | 12 a 13/18 | 400 | |
 
-Família e fallback: Prompt + Playfair Display via Google Fonts (substitutos da Sweet Sans e da serifada licenciadas), corpo em Helvetica/Arial, Outlook cai em Arial. **Regra de caixa:** headline, título de item, subtítulo e botão em **maiúsculas reais no HTML** (não só CSS); corpo em sentence case.
+Família e fallback: Prompt + Playfair Display via Google Fonts (substitutos da Sweet Sans e da serifada licenciadas), pesos Prompt 400, 500 e 800 (v0.5 acrescentou o 400). **v0.5: corpo também em Prompt**, fallback Helvetica, Arial; Outlook cai em Arial. **Regra de caixa:** headline, título de item, subtítulo e botão em **maiúsculas reais no HTML** (não só CSS); corpo em sentence case.
 
 ### Botão e espaçamento
 
-Botão: `#FF6400` com texto `#2A2B2D`, caixa-alta, tracking 2px, raio 6px, padding 16px 36px (hero 16px 64px), 52px de altura, `<td bgcolor>` + `<a>`. **Uma cor de botão só**: os e-mails enviados nunca usam outra, então o kit não tem variante de cor. Espaçamento: escala 8pt, gutter 40px desktop / 24px mobile, banda 56-72px vertical (40px mobile). Card de produto: raio 12px, contorno 1px `#FEF4C6`.
+Botão (**v0.5**): `#FF6400` com **texto branco `#FFFFFF`** (2,97:1, exceção do responsável, 2026-09-25), Prompt 800 caixa-alta **17px**, tracking 2px, **raio 4px**, padding 16px 36px (hero 16px 64px), 52px de altura, `<td bgcolor>` + `<a>`. Pequeno em card (E27/E29): 13px, padding 14px 22px, 44px. Largo de fechamento (E30): 420px, largura total no mobile. ~~Texto `#2A2B2D`, raio 6px, 16px Helvetica~~ (2026-09-24) **substituído**. **Uma cor de botão só**: os e-mails enviados nunca usam outra, então o kit não tem variante de cor. Espaçamento: escala 8pt, gutter 40px desktop / 24px mobile, banda 56-72px vertical (40px mobile). Card de produto: raio 12px, contorno 1px `#FEF4C6`. v0.5: caixa de produto (E27) raio 10px; card emoldurado (E29) raio 14px, 24px de margem lateral.
 
 ## Assets
 
@@ -162,6 +184,10 @@ Tudo gerado por `tools/compose.py` (jobs `textures04`, `edges04`, `e24`, `e26`; 
 | `grad-tapshoe-to-brown.jpg` | stretch | `#2A2B2D` | branco, corpo `#E2DDD9` | branco 9,2 · `#E2DDD9` 6,8 |
 | `grad-patriot-to-tapshoe.jpg` | stretch | `#202944` | branco, corpo `#E2DDD9` | branco 11,7 · `#E2DDD9` 8,7 |
 | `grad-paper-to-aluminum.jpg` | stretch | `#E2DDD9` | só `#2A2B2D` (`#5C5249` reprova no Aluminum); dark mode `dm-tex` | `#2A2B2D` 4,9 · `#5C5249` 2,6 |
+| **v0.5** `tex-paper-camo.jpg` (rev-oct-03) | tile | `#E2DDD9` | `#2A2B2D`, label `#5C5249`; dark mode: classe **`dm-tex-camo`** troca para `tex-paper-camo-dm.jpg` (`#34353A`) | `#2A2B2D` 8,5 · `#5C5249` 4,6 |
+| **v0.5** `tex-paper-camo-dm.jpg` | tile | `#34353A` | só dark mode (dm-h, dm-p, dm-muted) | `#F1EEEB` 9,2 · `#D6D0CA` 7,0 · `#B0A89C` 4,5 |
+| **v0.5** `tex-halftone-brown.jpg` (rev-oct-01) | tile | `#483F39` | branco, corpo `#E2DDD9`, laranja só grande (título da caixa 19px 800 incluso) | branco 9,3 · `#E2DDD9` 6,9 · laranja 3,1 |
+| **v0.5** `grad-tapshoe-to-patriot-topo.jpg` (rev-oct-05) | stretch | `#2A2B2D` | branco, corpo `#E2DDD9`, laranja só grande | branco 11,6 · `#E2DDD9` 8,6 · laranja 3,9 |
 
 Origem: papel e grãos gerados (grão fino, mancha de cerca de 1 nível, fibras; a mancha caiu de 2,6 para 1 nível porque cada `<td>` reinicia o tile e a mancha maior aparecia como degrau reto no papel claro). Água: estrias horizontais dobradas por um campo de ondas lento, mais manchas claras (o azul nublado de Sep 22). Camo: tecido Realtree APX do packshot da loja `habit-mens-cedar-branch-insulated-waterproof-parka-6` (área sem logo, mão nem rótulo), ampliado, emendado por cross-fade (sem espelho), desfocado, 30% dessaturado e escurecido até o 1% mais claro ficar abaixo de 0,12 de luminância. Topo: linhas da p.24 (via `texture-light.jpg`), espelhadas na metade do tile. As texturas da v0.3 (`tex-tapshoe-grain.jpg`, `grad-tapshoe-brown.jpg`) continuam para E19 e E22.
 
@@ -175,6 +201,27 @@ Origem: papel e grãos gerados (grão fino, mancha de cerca de 1 nível, fibras;
 | `e26-torn-camp.jpg` (1200x600) | E26 em Major Brown grain (asset pronto, fora da página) | `crop-sent-sep15-camp-chairs-family.jpg`, moldura `#E2DDD9`, rasgo em cima e à esquerda, +1,4° | 107 KB |
 
 **Peso por e-mail na rodada 2:** hero E24 de cerca de 145 KB, mais 3 ou 4 texturas de 87 a 90 KB (cada textura baixa uma vez, mesmo repetida em várias bandas), mais bordas de cerca de 8 KB: perto de 500 KB antes de produto e colagem. Para caber em cerca de 800 KB: no máximo **4 texturas diferentes** por e-mail e **uma** composição pesada além do hero (E19, E22 ou E26).
+
+### Assets da v0.5 (rascunho: E27 a E34, superfícies novas, ícones)
+
+Tudo gerado por **`tools/compose_v05.py`** (arquivo novo que importa `compose.py`; o `compose.py` não mudou). Jobs: `surfaces` (rodar primeiro), `e28`, `e29`, `e30`, `e31`, `e32`, `e33`, `icons`. Fotos só de `photos/lifestyle/` (INDEX.md) e packshots de `photos/products/`; nada recortado de outra marca.
+
+| Arquivo | Uso | Origem | Fallback | Peso |
+|---|---|---|---|---|
+| `tex-paper-camo.jpg` + `-dm.jpg` (1200x1600) | superfície papel claro com camo (tabela de texturas) | gerado: papel claro + 3 camadas periódicas de manchas `#D5CFC8` / `#D0CAC2` (dark: `#38393E` / `#3A3B40`) | `#E2DDD9` / `#34353A` | 86,9 + 88,3 KB |
+| `tex-halftone-brown.jpg` (1200x1600) | superfície Major Brown com retícula; E27 | gerado: grão Major Brown + grade hexagonal de pontos (16px a 2x, periódica) com raio pelo campo de densidade + spray escuro | `#483F39` | 86,3 KB |
+| `grad-tapshoe-to-patriot-topo.jpg` (1200x1600, stretch, 4:4:4) | E34 | gerado: degradê Tap Shoe → Patriot Blue + linhas topográficas da p.24 | `#2A2B2D` | 87,2 KB |
+| `edge-tex-papertapshoe-papercamo.jpg` (+ `-dm`) · `edge-tex-papercamo-papertapshoe.jpg` (+ `-dm`) · `edge-tex-halftonebrown-papertapshoe.jpg` · `edge-tex-papertapshoe-halftonebrown.jpg` · `edge-tex-halftonebrown-footer.jpg` (1200x80) | E18 texturizado para as superfícies novas | `compose.compose_torn_edge_textured` | banda de cima | 5 a 10 KB cada |
+| `e28-panel-mid-layer-jacket.jpg` · `e28-panel-windproof-pant.jpg` (600x660, exibidos 300x330) | E28 | packshots `men-s-mid-layer-jacket` (Veil Wideland Wolf) em Aluminum, `men-s-windproof-fleece-pant` (Mossy Oak Coyote) em Dusk | `#A39A8C` / `#ACB1B3` | 76,5 + 31,9 KB |
+| `e29-panel-youth-bib.jpg` · `e29-panel-crater-fleece-model.jpg` (400x660, exibidos 200x330) | E29 | packshot `youth-cedar-branch-insulated-bib` (Realtree APX) em Ivy Green; imagem de modelo da loja `mens-crater-valley-full-zip-fleece-jacket-4` (texto de ficha cortado fora) em Turkish Coffee chapado | `#595442` / `#5C5249` | 26,8 + 43,7 KB |
+| `e30-closing-hunter.jpg` (1200x1500) | E30 | `orig-hunt40-hunter-forest-back.jpg` (original Habit), suavizada 1,1px a 2x para caber em 150 KB, derrete em papel Tap Shoe e rasga para o rodapé liso | `#2A2B2D` | 148,6 KB |
+| `e31-tilt-blind.jpg` + `-dm.jpg` (480x646, exibidos 240x323) | E31 | `crop-sent-sep2-hunter-blind.jpg` (recorte provisório) em moldura branca, 4°, sombra, sobre papel claro / escuro | `#E2DDD9` / `#34353A` | 38,6 + 38,8 KB |
+| `e32-review-bib.jpg` (300x800, exibido 150x400) | E32 | packshot `mens-cedar-branch-insulated-bib` (Realtree APX) cortado pela borda direita, sobre papel Tap Shoe | `#2A2B2D` | 33,5 KB |
+| `e33-label-hero-field.jpg` (1200x1400) | E33 | `orig-hunt22-three-hunters-field-sunrise.jpg` (original Habit), céu escurecido para o logo, rasga para a retícula | `#2A2B2D` | 146,3 KB |
+| `icon-rain-factor-waterproof.png` · `icon-scent-factor.png` · `icon-windproof.png` · `icon-breathable.png` (128x128, exibidos 64) | E34 | **pictogramas oficiais da p.21** renderizados do vetor do PDF do guia, brancos, com as barras de "tecido" em laranja (tratamento da rev-oct-05) | transparente | 3,5 a 4,5 KB |
+| `icon-instagram.png` (72x72, exibido 44) | E14 | ícone colorido do Instagram (já criado antes desta rodada) | transparente | 6,7 KB |
+
+Total das imagens novas: cerca de 1.009 KB (a página do kit carrega todas; um e-mail usa só as dos módulos escolhidos). **Peso por e-mail:** E30 e E33 são composições pesadas (cerca de 147 KB cada); a regra da v0.4 continua: no máximo 4 texturas diferentes e uma composição pesada além do hero.
 
 ## Módulos → as 7 bandas
 
@@ -209,6 +256,35 @@ Origem: papel e grãos gerados (grão fino, mancha de cerca de 1 nível, fibras;
 
 O E18 ganhou a versão texturizada (`edge-tex-*.jpg`, tabela de assets da v0.4); a versão lisa (`edge-*.png`) continua para bandas lisas.
 
+**v0.5, rascunho aguardando aprovação** (2026-09-25; e-mails de outubro revisados pelo responsável). Não usar em e-mail de envio antes do ok.
+
+*Mudanças globais aplicadas nos módulos existentes (E01 a E26):*
+
+| Mudança | Onde | O que a revisão substituiu |
+|---|---|---|
+| Botão texto branco, raio 4px, Prompt 800 17px | os 13 botões da página (E02, E03, E04, E11, E15, E16, E17, E19, E24, E24B, E25 x2, folha) | texto Tap Shoe, raio 6px, Helvetica 16px |
+| Corpo, card e rodapé em Prompt 400/500 (fallback Helvetica, Arial) | página inteira | Helvetica/Arial |
+| Headline em duas vozes com serifa dominante | E02, E03, E15, E16, E24, E24B (hero 104/94); E05 (serifa primeiro, como WARM / ENOUGH TO SKIP THE JACKET), E11, E17, E19, E22, E25 x3, E26 (100/90); E04, E06, E09, E20 (coluna dividida, 64/60) | palavra serifada no meio de uma headline sans de 34 a 46px |
+| Corpo centralizado 17/24 logo abaixo da headline, sem subtítulo espaçado nas bandas internas | E05 (centralizado, um parágrafo + link), E17 (subtítulo virou corpo), E19, E25 x3 (subtítulos tirados, texto fundido no corpo), E26; heroes E02, E03, E04, E15 com corpo 17/24 | subtítulo espaçado em caixa-alta nas bandas internas; corpo 16/26 à esquerda no E05 |
+| Texto do card no padrão da caixa de produto | E17 (título laranja 19px, nome 15px, preço 20px branco sem sublinhado) | título branco 20px, preço 16px sublinhado |
+| Rodapé com ícone colorido do Instagram | E14 | linha de texto "Follow us on Instagram" sem ícone |
+| Amostras de palavra serifada trocadas para caber (≤ 7 letras por linha) | E04 e E24B "FAVORITE" → "FLANNEL", E20 "WEATHER" → "RAIN" | |
+
+*Módulos novos:*
+
+| Módulo | Banda | O que é | Referência |
+|---|---|---|---|
+| E27 Product Info Box | dentro de E28, E29 ou de qualquer banda escura | caixa centralizada, contorno 1px `#FEF4C6` raio 10px, título laranja 19px, nome branco 15px, variante 13px, preço 20px branco sem sublinhado, bloco inteiro linkado; botão pequeno opcional; amostra 2-up sobre a retícula Major Brown | rev-oct-01 a 05 |
+| E28 Checkerboard Product Row | 4 | linhas 300 + 300 sem margem: packshot sobre painel chapado da paleta / caixa E27 sobre Patriot com água, alternando; botão em Patriot depois; mobile empilha com a imagem primeiro | rev-oct-05 |
+| E29 Framed Product Card | 4 | card grande de contorno 1px raio 14px: painel de foto 200x330 (packshot em painel chapado ou foto de modelo da loja) + caixa E27, com descrição e botão pequeno opcionais; alterna lado ou tudo à esquerda; mobile empilha, foto em cima | rev-oct-02, rev-oct-04 |
+| E30 Photo Closing Band | 6 (última chamada, logo antes do rodapé) | foto de ponta a ponta que derrete em papel Tap Shoe; headline + corpo + botão largo de 420px sobre a parte escura; rasgo assado para o rodapé liso | rev-oct-01, rev-oct-04 |
+| E31 Tilted Framed Photo | 5 | foto em moldura branca, 4°, sombra, sobre papel claro; headline em duas vozes à esquerda (serifa Tap Shoe), corpo, botão; gêmea dark | rev-oct-02 |
+| E32 Single Review | 5 | um review real (aspas laranja, 5 estrelas, citação centralizada, nome espaçado `#B0A89C`) em papel Tap Shoe, produto sangrando pela direita | rev-oct-01 |
+| E33 Label Hero | 2 + 3 (abre o e-mail sem E01) | variante do E24: headline em etiquetas de papel encostadas na borda direita, a última escura com a serifa laranja; subtítulo e botão sobre a base escura; rasgo para a retícula | rev-oct-01 |
+| E34 Attribute Grid | 4 | 2x2 cards de contorno com o pictograma oficial da p.21, título laranja com ® exato, descrição da p.21, sobre o degradê Tap Shoe → Patriot Blue topográfico; mobile em 1 coluna | rev-oct-05 |
+
+O que a revisão **substituiu** em módulos antigos (continuam no kit, mas a direção nova prefere o módulo novo): a faixa dividida oliva de fim de e-mail → **E30**; os três reviews → **E32** (um só); o GIF de produto do 04 → **E29** com foto de modelo; a linha de corpo à esquerda do E05 → corpo centralizado.
+
 Composições (leque, sangria, travessia de banda, colagem) são imagem única gerada por `tools/compose.py`, com a cor da banda nas bordas; texto sempre vivo no HTML. A linha de pesca desenhada não entrou em nenhum módulo novo (continua só no E02).
 
 Removidos na v0.2:
@@ -230,7 +306,8 @@ Fontes: `strategy/diagnostic-report.md` e `strategy/strategy-report.md`, ambos d
 - **Tom:** de igual pra igual, direto, concreto, humor seco; nunca por cima, nunca se gabando, nunca fresco.
 - **Red flags:** marca de preço baixo, clube fechado de caçador, arrogância técnica ou número sem fonte, jargão, lifestyle de estúdio, imprudência ambiental, urgência falsa.
 - **Provas que existem hoje:** nomes e textos das tecnologias (p.21), presença no varejo dos EUA (qualitativo), história do fundador, frete grátis acima de $100 (site em 2026-09-24).
-- **Provas que ainda não existem:** qualquer número de desempenho, "selling out nationwide", comparação com concorrente, nota e reviews, detalhe atual da parceria de conservação.
+- **Provas que ainda não existem:** qualquer número de desempenho, "selling out nationwide", comparação com concorrente, **nota média e número de reviews**, detalhe atual da parceria de conservação.
+- **Prova que passou a existir (2026-09-25):** reviews individuais reais, com nome e 5 estrelas, no copy-source de outubro do cliente (`03-work/email/2026-10-broadcasts/copy-source.md`). Uso no E32: texto e nome exatos, um por e-mail, só o que o cliente mandar. Nota média e contagem continuam proibidas.
 
 ## Regras só desta marca
 
@@ -249,7 +326,15 @@ Complementam `email-ops/rules.md`.
 ## Em aberto
 
 - [[CONFIRMAR]] **Aprovar os HEX amostrados** do PDF (tabela em `identity/brand-guidelines.md`).
-- ~~Laranja do botão~~: decidido 2026-09-24, `#FF6400` com texto Tap Shoe `#2A2B2D`.
+- ~~Laranja do botão~~: decidido 2026-09-24, `#FF6400` com texto Tap Shoe `#2A2B2D`. **Substituído em 2026-09-25:** texto branco (exceção AA registrada, v0.5).
+- **v0.5, perguntas para o responsável:**
+  - ~~Painéis ferrugem e ardósia da rev-oct-02~~: **fechado em 2026-09-25.** O desenho revisado do responsável usa as duas; entram no kit como cor de painel de produto (só atrás de packshot, sem texto) com os valores medidos usados no e-mail, `#774727` e `#4F5C5F` (a anotação anterior, `#794928` / `#4F5B5E`, fica substituída). Tabela de cor e `tokens.json` atualizados.
+  - **Ícones do E34:** a revisão desenhou ícones de traço fino; o kit usa os pictogramas oficiais da p.21 do guia (mais grossos), com as barras em laranja. Qual vale?
+  - **Filetes laranja duplos do E02:** nenhum dos 5 e-mails revisados usa. Saem do E02?
+  - **Variantes do E28** ("Veil Wideland Wolf", "Mossy Oak Terra Coyote") lidas do código do arquivo de imagem da loja (`VEIL_WIDELAND_WOLF`, `MO_COYOTE`): conferir o rótulo exato da loja.
+  - Fotos originais `orig-hunt22` e `orig-hunt40` (E33, E30): [[CONFIRMAR]] liberadas para e-mail.
+  - E32: a rev-oct-01 põe a parka ao lado de um review do bib; o kit usa o bib (o produto de que o review fala). Confirmar.
+  - As mudanças globais já estão nos módulos aprovados E01 a E18. Aprovar a v0.5 também reaprova esses módulos com o botão branco e a headline nova.
 - **Tipografia:** provisória no kit (Prompt 800 + Playfair Display 900 + Helvetica); o responsável fecha a tipografia no Figma.
 - [[CONFIRMAR]] ESP (Omnisend?) e sintaxe de merge.
 - [[CONFIRMAR]] Endereço físico do rodapé (Mahco, 1202 Melissa Drive, Bentonville, AR 72712?).
@@ -258,6 +343,9 @@ Complementam `email-ops/rules.md`.
 - [[CONFIRMAR]] Headline em imagem (exceção) ou texto vivo.
 
 ## Changelog
+
+- 2026-09-25: **v0.5, cores de painel.** `color.panel_rust` `#774727` e `color.panel_slate` `#4F5C5F` (rev-oct-02, medidas) entram como cor de painel de produto; pergunta em aberto fechada. `tokens.json` espelhado. Ícone do Instagram do E14 registrado em 44px (era 36 no texto).
+- 2026-09-25: **v0.5 draft: mudanças globais + E27-E34 + 3 superfícies, pending approval.** Fonte: e-mails de outubro revisados pelo responsável (`references/rev-oct-01..05-*.png`, `03-work/email/2026-10-broadcasts/revision-r2.md`). Globais em todos os módulos do `components.html`: botão texto branco `#FFFFFF`, raio 4px, Prompt 800 17px (exceção AA 2,97:1 registrada como escolha do responsável, substitui a decisão de 2026-09-24); corpo, card e rodapé em Prompt 400/500 (Google Fonts agora com o peso 400); headline em duas vozes com Playfair 900 dominante (100/90, hero 104/94, coluna 64/60; mobile 64/58, sans 30/32 e 22/24; classes `hl-lead`, `hl-key`, `hl-key-s`); corpo de banda 17/24 centralizado, subtítulo espaçado só no hero; E17 no padrão da caixa de produto; E14 com o ícone do Instagram; folha do kit atualizada. Novos E27 Product Info Box, E28 Checkerboard Product Row, E29 Framed Product Card, E30 Photo Closing Band, E31 Tilted Framed Photo, E32 Single Review, E33 Label Hero, E34 Attribute Grid. Superfícies novas `tex-paper-camo.jpg` (+ `-dm`, classe `dm-tex-camo`), `tex-halftone-brown.jpg`, `grad-tapshoe-to-patriot-topo.jpg`, com fallback e contraste medido; 7 bordas E18 novas. Script novo `tools/compose_v05.py` (importa `compose.py`, que ficou intocado). `tokens.json`: `meta.kit_version` 0.5, `color.on_primary` `#FFFFFF`, `font.family_css` Prompt, grupos novos em `type`, `button`, `radius`, `assets.v05_draft`, `textures_v05`. Para voltar à v0.4: git (commit bd51089).
 
 - 2026-09-24: **v0.4 draft: E24-E26 + texture set pending approval.** Rodada 2 (art-direction-r2.md). Banco de fotos: 17 recortes `crop-sent-*` em `photos/lifestyle/` + INDEX.md (`tools/crop_sent.py`; imagens extras da loja revisadas, nenhuma em locação). 11 texturas 1200x1600 abaixo de 90 KB (8 tiles sem emenda, 3 degradês) com fallback e contraste registrados; 24 bordas E18 texturizadas com gêmeas -dm; novos E24 e E24B Full-Bleed Photo Hero, E25 Textured Band, E26 Torn Photo; folha de texturas na página do kit; dark mode `.dm-tex`. `compose.py`: `make_texture_set`, `compose_full_bleed_hero`, `compose_torn_photo`, `compose_torn_edge_textured`, `tear_shadow` (jobs antigos inalterados, saída idêntica). `tokens.json` ganhou `textures_v04`.
 - 2026-09-24: **v0.2.1** (QA rodada 1). E17: o contorno do card passou para a própria célula da linha (cards da mesma linha sempre com a mesma altura, conferido com nome em 2 linhas) + célula de gutter de 16px. E15: o card mede 600px nos navegadores (height 552 + padding 48), então o VML de 600 estava certo; o atributo `height` da célula passou a 600 para o Outlook (que zera o padding); mobile com 392px renderizados (356 + 36) e 24px acima do corpo, botão a cerca de 654px contando o E01.

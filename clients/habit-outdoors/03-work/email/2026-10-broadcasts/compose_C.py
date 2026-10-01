@@ -14,6 +14,11 @@ Jobs (run "tex" before "products" and "edges": they bake the water tile):
     edges     o5-edge-topo-water.jpg, o5-edge-water-footer.jpg   E18 textured torn edges with paper rim
     products  o5-prod-*.jpg           product bleeding off the email edge, on the water tile (ref C rows)
     icons     o5-icon-*.png           4 thin-line icons, 2px stroke at 48px (96px file), #FEF4C6 + orange
+  round 2 (rev-oct-05, 2026-09-25; the HTML now uses these + tex, icons and o5-edge-water-footer):
+    grad      o5-tex-topo-grad.jpg    Tap Shoe -> Patriot Blue gradient with the kit topo lines (attribute band)
+    hero2     o5-hero-r2.jpg          same photo, hunter above the label, base continues into the grad band
+    packs     o5-pack-*.jpg           checkerboard packshots on flat panels sampled from rev-oct-05
+    edge2     o5-edge-water-footer-r2.jpg   water -> footer tear as drawn in rev-oct-05 (no paper rim)
 
 Mechanics kept from round 2 (../2026-broadcasts/compose_03-04.py, not imported: it rewires compose.py
 at import time): band tds use background-size:100% auto; images baked on a texture only sit on a
@@ -94,7 +99,7 @@ def rim(arr, ys, y_off, seed, alpha=0.55, color=(228, 223, 216)):
     return arr * (1 - m) + np.array(color, np.float32) * m
 
 
-def torn_join(up, lo, ys, seed, shadow=(7.0, 0.4)):
+def torn_join(up, lo, ys, seed, shadow=(7.0, 0.4), rim_alpha=0.55):
     """lower sheet over the upper one along ys: shadow above the line, rim below, a few specks."""
     h, w = up.shape[:2]
     m = Image.new("L", (w, h), 0)
@@ -103,7 +108,7 @@ def torn_join(up, lo, ys, seed, shadow=(7.0, 0.4)):
     yy = np.arange(h, dtype=np.float32)[:, None]
     d = np.array(ys, np.float32)[None, :] - yy
     up = up * (1 - np.where(d > 0, np.exp(-d / shadow[0]), 0) * shadow[1])[:, :, None]
-    out = rim(up * (1 - a) + lo * a, ys, 0, seed)
+    out = rim(up * (1 - a) + lo * a, ys, 0, seed, alpha=rim_alpha)
     img = c.to_image(out)
     dr, rnd = ImageDraw.Draw(img), random.Random(seed + 3)
     spot = tuple(int(v) for v in np.median(lo.reshape(-1, 3), 0))
@@ -301,6 +306,103 @@ def job_icons():
 
 
 JOBS = {"tex": job_tex, "hero": job_hero, "edges": job_edges, "products": job_products, "icons": job_icons}
+
+
+# ---------------------------------------------------------------- round 2 (2026-09-25, rev-oct-05-shadow-series.png)
+# Owner's revised layout: hero text lower on the photo (dark label + BITE / BACK), attribute band on a Tap Shoe ->
+# Patriot Blue topo gradient that flows from the hero with no tear, checkerboard 300+300 (packshot on a flat
+# panel sampled from the revision image, info box on the o5 water tile). Same topo line detail in hero base and band
+# (kit tex-topo-tapshoe rows: hero ends on the tile's last rows, the band starts at row 0), so the join is seamless.
+
+R2_H = 1400                                        # hero file height (700 shown) and band texture height
+PANELS = {"midlayer": "#A69A89", "pant": "#ABB1B3", "jacket": "#5A4538"}   # medians of the rev-oct-05 panels
+
+
+def topo_detail(rows: slice) -> np.ndarray:
+    """Topo line detail of the kit tex-topo-tapshoe tile (tile minus its mean), rows `rows`."""
+    t = c.load_tile("topo-tapshoe")
+    return t[rows] - t.reshape(-1, 3).mean(0)
+
+
+def job_grad():
+    """o5-tex-topo-grad.jpg: Tap Shoe -> Patriot Blue gradient with the kit topo lines (1200x1400, shown 600 wide,
+    background-size:100% auto, no repeat, bgcolor Patriot: the image bottom is already Patriot)."""
+    W, H = 1200, R2_H
+    t = c.smooth(np.clip(np.arange(H, dtype=np.float32) / (H * 0.86), 0, 1))[:, None, None]
+    top, bot = np.array(c.rgb(TAPSHOE), np.float32), np.array(c.rgb(PATRIOT), np.float32)
+    arr = top * (1 - t) + bot * t
+    arr = np.broadcast_to(arr, (H, W, 3)).copy()
+    arr += topo_detail(slice(0, H)) * 0.85
+    arr += (pn(W, H, 0.75, 561) * 1.8)[:, :, None]
+    p = save(arr, "o5-tex-topo-grad.jpg", limit=90 * 1024, q=72)
+    print("     ", c.contrast_report(p, ["#FFFFFF", "#E2DDD9", ORANGE], blur=0))
+
+
+def job_hero2():
+    """o5-hero-r2.jpg: same photo as round 1 (orig-hunt40, graded late season), placed so the hunter's head and
+    pack sit between the logo and the label; lower half pulled toward Tap Shoe for the live text; bottom rows are
+    Tap Shoe + the last rows of the topo tile, so the attribute band (row 0) continues it with no tear."""
+    W, H = 1200, R2_H
+    ph = c.fit(c.lifestyle("orig-hunt40-hunter-forest-back.jpg"), w=W)
+    a = np.asarray(ph, np.float32)[380:380 + H]
+    grey = a.mean(2, keepdims=True)
+    a = (a * 0.55 + grey * 0.45) * np.array([0.86, 0.93, 1.02], np.float32) * 0.80
+    a = 255 * (np.clip(a / 255, 0, 1) ** 1.12)
+    a = 84 * np.tanh(a / 84) * 0.35 + a * 0.65                          # tame the backlit canopy highlights
+    h = a.shape[0]
+    base = np.broadcast_to(np.array(c.rgb(TAPSHOE), np.float32), (H, W, 3)).copy()
+    base += topo_detail(slice(1600 - H, 1600)) * 0.85
+    layer = base.copy()
+    layer[:h] = a
+    y = np.arange(H, dtype=np.float32)
+    top = (1 - c.smooth(np.clip(y / 240, 0, 1))) * 0.5                 # logo on the canopy
+    low = c.smooth(np.clip((y - 430) / 420, 0, 1)) * 0.62              # text area (label to button)
+    fade = c.smooth(np.clip((y - 1020) / 300, 0, 1))                   # photo -> base
+    k = np.clip(top + low * (1 - fade) + fade, 0, 1)[:, None, None]
+    arr = layer * (1 - k) + base * k
+    soft = np.asarray(c.to_image(arr).convert("RGB").filter(ImageFilter.GaussianBlur(2.0)), np.float32)
+    m = c.smooth(np.clip((y - 560) / 300, 0, 1))[:, None, None] * 0.6    # a little mist under the headline
+    arr = arr * (1 - m) + soft * m
+    arr += (pn(W, H, 0.75, 562) * 1.6)[:, :, None]
+    p = save(arr, "o5-hero-r2.jpg", limit=150 * 1024, q=74)
+    for lab, box in {"headline": (60, 620, 1140, 1000), "subtitle": (160, 1040, 1040, 1200),
+                     "logo": (400, 50, 800, 130)}.items():
+        print(f"      {lab:9s}", c.contrast_report(p, ["#FFFFFF"], box))
+
+
+def pack_panel(key, out, *, h=None, w=None, cx=300, cy=335, top=None):
+    """Checkerboard packshot cell: variant packshot on the flat panel color (600x670, shown 300x335)."""
+    W, H = 600, 670
+    img = Image.new("RGBA", (W, H), c.rgb(PANELS[key]) + (255,))
+    pk = c.fit(c.load_packshot(PACK[key]), w=w, h=h)
+    if top is not None:
+        cy = top + pk.height / 2
+    c.place(img, pk, cx, cy, 0, shadow=(0, 8, 14, 0.22))
+    return save(img.convert("RGB"), out, limit=90 * 1024, q=80)
+
+
+def job_packs():
+    """o5-pack-midlayer / pant / jacket.jpg, sizes measured on rev-oct-05 (1x: jacket 290 tall, pant 190 wide
+    and cut by the cell bottom, fleece jacket 257 tall)."""
+    pack_panel("midlayer", "o5-pack-midlayer.jpg", h=580, cx=300, cy=335)
+    pack_panel("pant", "o5-pack-pant.jpg", w=380, cx=300, top=20)
+    pack_panel("jacket", "o5-pack-jacket.jpg", h=514, cx=300, cy=318)
+
+
+def job_edge2():
+    """o5-edge-water-footer-r2.jpg: water -> flat Tap Shoe footer as drawn in rev-oct-05: deeper, jagged tear
+    (two torn_line octaves), dark shadow, no light paper rim."""
+    h = 80
+    up = c.tile_rows("o5-water", h, end=True)
+    lo = c.tile_rows("flat:#2A2B2D", h)
+    a1 = c.torn_line(1200, h * 0.5, amp=14, seed=531)
+    a2 = c.torn_line(1200, 0, amp=5, seed=532)
+    ys = [y1 + y2 for y1, y2 in zip(a1, a2)]
+    return save(torn_join(up, lo, ys, 531, shadow=(6.0, 0.3), rim_alpha=0.0), "o5-edge-water-footer-r2.jpg",
+                limit=30 * 1024, q=78, sub=0)
+
+
+JOBS.update({"grad": job_grad, "hero2": job_hero2, "packs": job_packs, "edge2": job_edge2})
 
 
 def main() -> None:
