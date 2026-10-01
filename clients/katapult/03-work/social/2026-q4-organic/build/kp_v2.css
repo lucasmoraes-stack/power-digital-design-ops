@@ -1,0 +1,143 @@
+/* =================================================================
+   V2 COMPONENTS  (2026-09-28, after the account lead's review)
+   No Bounce line graphics anywhere: motion comes from composition.
+   Slide skeleton: article.kp-post.kp-v2 > .kp-bg (optional, full bleed)
+   + .kp-lay (safe area, flex column) > .kp-track?, .kp-logo-slot?,
+   .kp-copy, .kp-stage (the visual, fills the space left by the copy).
+   Stage children are placed in container units (cqw / cqh), so a
+   composition scales to whatever room the client copy leaves.
+   Text only ever sits on the post ground or inside a solid .kp-ui card.
+   ================================================================= */
+.kp-theme-blue{--kp-bg:var(--k-blue);--kp-ink:var(--k-white);--kp-sub:var(--k-white);--kp-logo:var(--k-white);--kp-pill-stroke:var(--k-white);--kp-pill-ink:var(--k-white);--kp-check:var(--k-white);--kp-cta-bg:var(--k-pink);--kp-cta-ink:var(--k-dark-blue);--kp-disc:var(--k-white);--kp-num:var(--k-white)}
+.kp-theme-orange{--kp-bg:var(--k-orange);--kp-ink:var(--k-dark-blue);--kp-sub:var(--k-dark-blue);--kp-logo:var(--k-dark-blue);--kp-pill-stroke:var(--k-dark-blue);--kp-pill-ink:var(--k-dark-blue);--kp-check:var(--k-dark-blue);--kp-cta-bg:var(--k-dark-blue);--kp-cta-ink:var(--k-white);--kp-disc:var(--k-dark-blue);--kp-num:var(--k-dark-blue)}
+
+.kp-v2 .kp-bg{position:absolute;inset:0;z-index:0}
+.kp-v2 .kp-lay{position:absolute;z-index:2;top:var(--kp-safe-top);bottom:var(--kp-safe-bottom);left:var(--kp-safe-x);right:var(--kp-safe-x);display:flex;flex-direction:column;gap:34px}
+.kp-copy{flex:none;display:flex;flex-direction:column;align-items:flex-start;gap:22px;min-width:0}
+.kp-copy .kp-headline{max-width:100%}
+.kp-stage{position:relative;flex:1 1 auto;min-height:0;container-type:size}
+.kp-stage.bl-b{margin-bottom:calc(-1 * var(--kp-safe-bottom))}
+.kp-stage.bl-t{margin-top:calc(-1 * var(--kp-safe-top))}
+.kp-stage.bl-x{margin-inline:calc(-1 * var(--kp-safe-x))}
+.kp-stage.bl-r{margin-right:calc(-1 * var(--kp-safe-x))}
+.kp-a{position:absolute}
+.kp-push{margin-top:auto}
+
+/* flat shapes: palette fills only, no tints, no shadows */
+.kp-sh{position:absolute;background:var(--f,var(--k-pink))}
+.kp-sh.o{border-radius:50%}
+.kp-sh.r{border-radius:36px}
+.kp-fill{position:absolute;inset:0}
+
+/* icon placeholder: a disc in an approved icon pairing, dashed ring = the line icon to drop in */
+.kp-ico{--d:120px;flex:none;width:var(--d);height:var(--d);border-radius:50%;background:var(--disc);border:4px dashed var(--ring);color:var(--ring);display:grid;place-items:center;text-align:center;padding:calc(var(--d) * .12);font-weight:700;font-size:max(12px,calc(var(--d) * .115));line-height:1.1;letter-spacing:.04em;text-transform:uppercase;overflow:hidden}
+.kp-ico.t-w{--disc:var(--k-white);--ring:var(--k-dark-blue)}   /* Dark Blue icon, Pink accent */
+.kp-ico.t-s{--disc:var(--k-surface);--ring:var(--k-dark-blue)}
+.kp-ico.t-c{--disc:var(--k-cream);--ring:var(--k-dark-blue)}
+.kp-ico.t-p{--disc:var(--k-pink);--ring:var(--k-white)}        /* White icon on Pink */
+.kp-ico.t-db{--disc:var(--k-dark-blue);--ring:var(--k-light-blue)} /* Light Blue icon, Pink accent */
+
+/* photo and cutout placeholders */
+.kp-ph{position:absolute;background:var(--ph,var(--k-light-blue));color:var(--k-dark-blue);outline:4px dashed var(--k-dark-blue);outline-offset:-20px;display:grid;place-items:center;text-align:center;font-weight:700;font-size:20px;letter-spacing:.05em;text-transform:uppercase;line-height:1.3;padding:34px;overflow:hidden}
+.kp-ph span{max-width:26ch}
+.kp-ph.lb{--ph:var(--k-light-blue)} .kp-ph.cr{--ph:var(--k-cream)} .kp-ph.pk{--ph:var(--k-pink)} .kp-ph.bl{--ph:var(--k-blue);color:var(--k-white);outline-color:var(--k-white)} .kp-ph.or{--ph:var(--k-orange)} .kp-ph.wh{--ph:var(--k-white)}
+.kp-cut{position:absolute;inset:14%;border:4px dashed currentColor;border-radius:24px;display:grid;place-items:center;text-align:center;font-weight:700;font-size:15px;letter-spacing:.05em;text-transform:uppercase;line-height:1.2;padding:10px;overflow:hidden;color:var(--k-dark-blue)}
+
+/* solid UI card: White, Dark Blue text, flat offset plate for depth */
+.kp-ui{--kp-ink:var(--k-dark-blue);--kp-sub:var(--k-dark-blue);--kp-logo:var(--k-pink);background:var(--k-white);color:var(--k-dark-blue);border-radius:36px;box-shadow:16px 16px 0 var(--plate,var(--k-dark-blue));display:flex;flex-direction:column;gap:22px;padding:44px 48px}
+.kp-ui.plate-p{--plate:var(--k-pink)} .kp-ui.plate-c{--plate:var(--k-cream)} .kp-ui.plate-lb{--plate:var(--k-light-blue)} .kp-ui.plate-b{--plate:var(--k-blue)} .kp-ui.plate-o{--plate:var(--k-orange)} .kp-ui.plate-w{--plate:var(--k-white)}
+.kp-ui .kp-headline{font-size:var(--kp-h1)}
+.kp-ui-head{display:flex;align-items:center;gap:28px}
+.kp-ui-head .kp-headline{flex:1 1 auto;min-width:0}
+.kp-row{display:flex;align-items:center;gap:22px;min-width:0}
+.kp-grow{flex:1 1 auto;min-width:0}
+
+/* UI controls, all drawn from shapes, no labels */
+.kp-field{position:relative;height:96px;border-radius:22px;background:var(--k-grey-lightest);border:4px solid var(--k-grey-light);display:flex;align-items:center;gap:20px;padding:0 20px}
+.kp-caret{width:6px;height:54px;border-radius:3px;background:var(--k-pink)}
+.kp-btn{height:96px;border-radius:999px;background:var(--k-pink)}
+.kp-send{flex:none;width:96px;height:96px;border-radius:50%;background:var(--k-pink);display:grid;place-items:center}
+.kp-send svg{width:46px;height:46px;color:var(--k-white)}
+.kp-box{flex:none;width:58px;height:58px;border-radius:14px;border:5px solid currentColor;display:grid;place-items:center}
+.kp-box.on{background:var(--k-pink);border-color:var(--k-pink)}
+.kp-box svg,.kp-dot svg{width:70%;height:70%;color:var(--k-white)}
+.kp-radio{flex:none;width:58px;height:58px;border-radius:50%;border:5px solid currentColor;display:grid;place-items:center}
+.kp-radio.on{border-color:var(--k-pink)}
+.kp-radio.on::after{content:"";width:28px;height:28px;border-radius:50%;background:var(--k-pink)}
+.kp-tog{flex:none;position:relative;width:136px;height:76px;border-radius:999px;background:var(--k-grey-light)}
+.kp-tog::after{content:"";position:absolute;top:8px;left:8px;width:60px;height:60px;border-radius:50%;background:var(--k-white)}
+.kp-tog.on{background:var(--k-pink)}
+.kp-tog.on::after{left:68px}
+.kp-segs{display:flex;gap:12px}
+.kp-segs i{flex:1 1 0;height:48px;border-radius:12px;background:var(--k-grey-light)}
+.kp-segs i.on{background:var(--k-pink)}
+.kp-bar{height:22px;border-radius:11px;background:var(--k-grey-light)}
+.kp-bar.db{background:var(--k-dark-blue)}
+.kp-dot{flex:none;width:var(--d,80px);height:var(--d,80px);border-radius:50%;background:var(--k-pink);display:grid;place-items:center}
+.kp-rule{height:4px;background:var(--k-grey-light);border-radius:2px}
+
+/* progress track (board-game journeys): squares only, no numbers */
+.kp-track{flex:none;display:flex;gap:14px;color:var(--kp-ink)}
+.kp-track i{width:40px;height:40px;border-radius:9px;border:5px solid currentColor}
+.kp-track i.on{background:var(--k-pink);border-color:var(--k-pink)}
+.kp-theme-pink .kp-track i.on,.kp-theme-orange .kp-track i.on{background:var(--k-dark-blue);border-color:var(--k-dark-blue)}
+
+/* checklist rows made from one copy line (every character kept, in order) */
+.kp-join{font-size:var(--kp-body-size);display:flex;flex-direction:column;gap:18px;margin:0}
+.kp-join .kp-li{display:flex;align-items:center;gap:22px;font-weight:300;font-size:var(--kp-body-size);line-height:1.25;color:var(--kp-ink)}
+.kp-join .kp-li.b{font-weight:700;color:var(--kp-sub)}
+.kp-join .kp-box{width:50px;height:50px;border-radius:12px}
+
+/* grids: bingo, tic-tac-toe, icon grids, pickers */
+.kp-grid{position:absolute;display:grid;gap:var(--gap,18px)}
+.kp-cell{position:relative;border-radius:var(--cr,28px);background:var(--f,var(--k-white));display:grid;place-items:center;overflow:hidden;min-width:0;min-height:0}
+.kp-cell.sel{box-shadow:inset 0 0 0 8px var(--k-pink)}
+.kp-cell .kp-dot.corner{position:absolute;top:14px;right:14px;--d:64px}
+
+/* picker rows (Stories) */
+.kp-pick{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+.kp-pick .kp-opt{display:flex;align-items:center;gap:18px;min-height:84px;padding:10px 18px 10px 10px;border-radius:24px;background:var(--k-surface);font-weight:700;font-size:30px;line-height:1.15;color:var(--k-dark-blue);min-width:0}
+.kp-pick .kp-thumb{position:relative;flex:none;width:72px;height:72px;border-radius:16px;background:var(--f,var(--k-cream))}
+.kp-pick .kp-thumb .kp-cut{inset:6px;border-width:3px;border-radius:10px;font-size:0;padding:0}
+
+/* priority tiles (Stories, 2x2) */
+.kp-tiles{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.kp-tile{display:flex;align-items:center;gap:20px;padding:22px 24px;border-radius:28px;background:var(--f,var(--k-white));color:var(--k-dark-blue);font-weight:700;font-size:30px;line-height:1.15;min-height:150px}
+
+/* Venn: two circles, the lens filled with a third color */
+.kp-venn{position:absolute;left:50%;top:50%;width:var(--vw);height:var(--vd);transform:translate(-50%,-50%)}
+.kp-venn > .c{position:absolute;top:0;width:var(--vd);height:var(--vd);border-radius:50%;overflow:hidden;background:var(--f)}
+.kp-venn > .c.l{left:0}
+.kp-venn > .c.r{right:0}
+.kp-venn .lens{position:absolute;top:0;width:var(--vd);height:var(--vd);border-radius:50%;background:var(--f)}
+
+/* triangle: a solid shape, icons on its corners */
+.kp-tri{position:absolute;background:var(--f,var(--k-blue));clip-path:polygon(50% 0,100% 100%,0 100%)}
+
+/* fanned / stacked cards */
+.kp-fan{position:absolute;transform-origin:50% 100%;border-radius:36px;background:var(--f,var(--k-white))}
+.kp-print{position:absolute;background:var(--k-white);border-radius:14px;padding:22px 22px 70px;box-shadow:14px 14px 0 var(--plate,var(--k-pink))}
+.kp-print .kp-ph{position:relative;width:100%;height:100%;outline-offset:-14px;padding:22px;font-size:17px}
+
+/* drawn phone frame */
+.kp-phone{position:absolute;background:var(--k-dark-blue);border-radius:72px;padding:26px}
+.kp-phone .scr{position:relative;width:100%;height:100%;background:var(--k-white);border-radius:50px;overflow:hidden}
+.kp-phone .notch{position:absolute;top:18px;left:50%;width:30%;height:26px;border-radius:13px;background:var(--k-dark-blue);transform:translateX(-50%)}
+/* CTA pill that wraps a full-sentence client CTA: pill shape and 34px Bold kept */
+.kp-cta.wrap{height:auto;min-height:88px;padding:18px 52px;line-height:1.15;text-align:center;text-wrap:balance;max-width:100%}
+/* slider (flexibility): track, fill, knob; stops are icon discs above */
+.kp-slider{position:relative;height:40px;border-radius:20px;background:var(--k-grey-light)}
+.kp-slider .fill{position:absolute;left:0;top:0;bottom:0;width:var(--v,50%);border-radius:20px;background:var(--k-pink)}
+.kp-slider .knob{position:absolute;top:50%;left:var(--v,50%);width:96px;height:96px;border-radius:50%;background:var(--k-pink);border:12px solid var(--k-white);box-shadow:0 0 0 5px var(--k-pink);transform:translate(-50%,-50%)}
+/* cutout thumb inside a card */
+.kp-thumb-lg{position:relative;flex:none;width:130px;height:130px;border-radius:24px;background:var(--f,var(--k-surface))}
+.kp-thumb-lg .kp-cut{inset:10px;font-size:12px;padding:6px}
+.kp-v2.kp-tight .kp-lay{gap:24px}
+.kp-v2.kp-tight .kp-copy{gap:18px}
+.kp-v2.kp-tight .kp-pick .kp-opt{min-height:72px;padding-block:8px}
+.kp-v2.kp-tight .kp-pick .kp-thumb{width:60px;height:60px}
+/* copy helpers: a hyphenated word never breaks; U+2026 painted with three brand periods (the OTF's ellipsis glyph is defective) */
+.kp-nw{white-space:nowrap}
+.kp-ell{position:relative;-webkit-text-fill-color:transparent}
+.kp-ell::after{content:"...";position:absolute;left:0;top:0;letter-spacing:.064em;-webkit-text-fill-color:currentColor}
+/* END V2 COMPONENTS */
