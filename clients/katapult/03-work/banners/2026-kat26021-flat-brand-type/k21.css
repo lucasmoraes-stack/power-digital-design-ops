@@ -1,0 +1,25 @@
+/* ============ Banners channel: KAT26021 Flat Brand Type ============ */
+.k21-jobs{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;font-size:13px;color:var(--ink-2)}
+.k21-jobs b{font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.k21-jobs a{font-weight:500;text-decoration:none;border:1px solid var(--rule-strong);border-radius:999px;padding:3px 12px;color:var(--ink)}
+.k21-jobs a[aria-current="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.k21-jobs a:hover{border-color:var(--accent)}
+.k21-frame{position:relative;overflow:hidden;box-shadow:0 0 0 1px var(--rule-strong)}
+.k21-frame > .k21{transform-origin:0 0}
+
+/* banner canvas (fixed brand colors, never theme) */
+.k21{position:relative;overflow:hidden;background:#131540;color:#FFFFFF;font-family:var(--font-brand);font-weight:300;-webkit-font-smoothing:antialiased;flex:none}
+.k21 > *{position:absolute;margin:0}
+.k21-logo{display:block;flex:none;height:auto;aspect-ratio:521/116;color:#EC5370;fill:currentColor}
+.k21-col{display:flex;flex-direction:column;align-items:flex-start}
+.k21-col > .k21-gap{flex:1 1 0;min-height:0}
+.k21-h{margin:0;font-weight:700;line-height:.92;letter-spacing:-.03em;white-space:nowrap}
+.k21-h span{display:block;width:max-content}
+.k21-h .t1{color:#FFFFFF}
+.k21-h .t2{color:#ED5370}
+.k21-s{margin:0;font-weight:500;line-height:1.2;color:#9EB5C0;text-wrap:pretty}
+.k21-cta{display:inline-flex;align-items:center;justify-content:center;text-align:center;border-radius:999px;background:#ED5370;color:#FFFFFF;font-weight:500;line-height:1.15;letter-spacing:-.005em;text-wrap:balance}
+.k21-box{display:flex;align-items:center}
+
+/* safe zone overlay */
+.k21-safe-on .k21::after{content:"";position:absolute;z-index:5;top:var(--sy);bottom:var(--sy);left:var(--sx);right:var(--sx);outline:var(--ow) dashed #00A3FF;box-shadow:0 0 0 2400px rgba(0,120,255,.22);pointer-events:none}
