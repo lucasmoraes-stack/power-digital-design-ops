@@ -6,6 +6,12 @@
 .hub-tab:hover{border-color:var(--k-pink)}
 .hub-tab[aria-selected="true"]{background:var(--k-pink);border-color:var(--k-pink);color:var(--k-dark-blue)}
 .hub-ch-organic{display:contents}
+.kb-jobs-bar{background:var(--panel);border-bottom:1px solid var(--rule)}
+.kb-jobs{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;font-size:13px;color:var(--ink-2);padding-block:12px}
+.kb-jobs b{font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.kb-jobs a{font-weight:500;text-decoration:none;border:1px solid var(--rule-strong);border-radius:999px;padding:3px 12px;color:var(--ink)}
+.kb-jobs a[aria-current="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.kb-jobs a:hover{border-color:var(--accent)}
 
 /* ============ Banners channel: review chrome ============ */
 .kb-job{padding-block:36px 8px;border-bottom:1px solid var(--rule)}
@@ -50,8 +56,8 @@
 .kb-logo{display:block;height:auto;aspect-ratio:521/116;color:#EC5370;fill:currentColor}
 .kb-text{display:flex;flex-direction:column;align-items:flex-start}
 .kb-text.is-center{justify-content:center}
-.kb-h{margin:0;font-weight:500;line-height:1.04;letter-spacing:-.012em;color:#000;text-wrap:balance}
-.kb-s{margin:0;font-weight:700;line-height:1.22;color:#131540;text-wrap:pretty}
+.kb-h{margin:0;font-weight:500;line-height:1.04;letter-spacing:-.012em;color:#131540;text-wrap:balance}
+.kb-s{margin:0;font-weight:400;line-height:1.24;color:#131540;text-wrap:pretty}
 .kb-cta{display:inline-flex;align-items:center;justify-content:center;text-align:center;border-radius:999px;background:#ED5370;color:#FFFFFF;font-weight:500;line-height:1.15;letter-spacing:-.005em;text-wrap:balance}
 .kb-ctabox{display:flex;align-items:center}
 .kb-d{font-weight:500;line-height:1.3;color:#000;text-wrap:pretty}
@@ -59,16 +65,16 @@
 .kb-col{display:flex;flex-direction:column;align-items:flex-start}
 .kb-grid-flex{flex:1 1 0;min-height:0;width:100%}
 .kb-col > .kb-logo{flex:none}
+.kb-col.is-center{justify-content:center}
 .kb-cell{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4%}
 .kb-cell svg{display:block;flex:none}
 .kb-foot{position:absolute;inset:5%;border:1.5px dashed rgba(19,21,64,.3);border-radius:10px;pointer-events:none}
 .kb-lab{font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#4D4D4D;line-height:1}
 .kb-cell{min-width:0;min-height:0;overflow:hidden}
-.kb-cell img{display:block;width:88%;height:88%;object-fit:contain}
+/* the img box hugs the visible product, so edge alignment survives an import into Figma */
+.kb-cell img{display:block;width:auto;height:auto;max-width:88%;max-height:88%}
 .kb-cell.is-first{align-items:flex-start}
-.kb-cell.is-first img{object-position:left center}
 .kb-cell.is-last{align-items:flex-end}
-.kb-cell.is-last img{object-position:right center}
 .kb.is-photo .kb-foot,.kb.is-photo .kb-lab{display:none}
 .kb-hide{visibility:hidden}
 

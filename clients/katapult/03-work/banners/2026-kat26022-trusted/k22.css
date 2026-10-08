@@ -1,0 +1,59 @@
+/* ============ Banners channel: KAT26022 Trusted ============ */
+.k22-frame{position:relative;overflow:hidden}
+.k22-frame > .k22{transform-origin:0 0}
+
+/* banner canvas (fixed brand colors, never theme) */
+.k22{position:relative;overflow:hidden;background:#131540;color:#FFFFFF;font-family:var(--font-brand);font-weight:300;-webkit-font-smoothing:antialiased;flex:none}
+.k22 > *{position:absolute;margin:0}
+.k22-logo{display:block;flex:none;height:auto;aspect-ratio:521/116;color:#EC5370;fill:currentColor}
+.k22-h{margin:0;font-weight:500;line-height:1;letter-spacing:-.015em;color:#FFFFFF;white-space:nowrap;text-align:center}
+.k22-h>span{display:block;width:max-content;margin-inline:auto}
+.k22-s2{margin:0;font-weight:400;line-height:1.2;color:#9EB5C0;white-space:nowrap;text-align:center}
+.k22-s2>span{display:block;width:max-content;margin-inline:auto}
+/* sixth pass (Figma 383:14304): a large circle rising from the bottom edge behind the badge.
+   In Figma it's white 50% on soft-light; flattened here to the color it resolves to over
+   #131540 so the html.to.design import reads the same without a blend mode. */
+.k22-arc{border-radius:50%;background:#282B60;z-index:0}
+.k22-cta{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:#ED5370;color:#FFFFFF;font-weight:500;line-height:1.15;letter-spacing:-.005em;white-space:nowrap}
+
+/* the one trust element: a large white card centered on the bare Dark Blue canvas
+   (no photo seam to straddle anymore -- fifth pass drops the photo entirely). Flat
+   offset plate for depth, never a blurred shadow -- that rule is about simulating
+   card elevation and still applies here. Holds the Trustpilot badge only: wordmark +
+   stars, no quote, no invented TrustScore. Unchanged from the fourth pass, per the
+   account lead: still approved as-is. */
+.k22-tp{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#FFFFFF;border-radius:32px;padding:46px 72px;box-sizing:border-box;box-shadow:20px 20px 0 #D4A574;z-index:2}
+.k22-tp-stars{font-size:62px;color:#00B67A;letter-spacing:9px;line-height:1;white-space:nowrap}
+.k22-tp-word{font-size:42px;font-weight:700;color:#191919;letter-spacing:-.01em;white-space:nowrap}
+
+/* decorative texture only: a dense halo of white review-card shapes clustered tightly
+   around the big centered badge (fifth pass: bigger cards, pulled in close, so the
+   badge reads as "sitting in a pile of reviews" instead of sparse background
+   confetti). Each one carries a mini star row but no quote text (nothing to make
+   legible in the first place), and the whole card gets a CSS Gaussian blur so it reads
+   purely as out-of-focus "lots of activity" texture, never as a readable (and
+   therefore fabricated) testimonial. This blur is unrelated to the flat-offset-plate
+   depth rule above -- that rule covers simulating elevation on real UI cards (the
+   badge itself); this is atmospheric texture only, so a soft shadow + blur filter is
+   correct here, not a plate. */
+.k22-deco{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:#FFFFFF;border-radius:22px;padding:34px 48px;box-sizing:border-box;box-shadow:0 8px 20px rgba(0,0,0,.18);filter:blur(8px);z-index:1}
+.k22-deco-stars{font-size:30px;color:#00B67A;letter-spacing:4px;line-height:1;white-space:nowrap}
+
+/* ============ Pass 7: 8 sizes x 2 options ============ */
+/* Option B and the leaderboard rows set copy flush left (Figma 387:14518) */
+.k22-left{text-align:left}
+.k22-left > span{margin-inline:0}
+
+/* CTA that has to wrap inside a narrow column (300x600, 160x600, leaderboards):
+   same pill and weight, centred text, allowed onto a second line */
+.k22-cta.wrap{white-space:normal;text-align:center;text-wrap:balance}
+
+/* photo placeholder: this brand's own Q4 organic kit convention (kp-ph): Light Blue
+   fill, dashed Dark Blue outline, uppercase label. Option B shows it where the
+   shopper photo goes, so nothing reads as a real or stock photo until the real
+   asset is swapped in. Outline, inset and label are scaled inline per frame. */
+.k22-ph{background:#9EB5C0;color:#131540;outline:4px dashed #131540;outline-offset:-14px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;font-size:18px;letter-spacing:.05em;text-transform:uppercase;line-height:1.3;overflow:hidden;box-sizing:border-box;z-index:0}
+.k22-ph span{max-width:80%}
+
+/* safe zone overlay */
+.k22-safe-on .k22::after{content:"";position:absolute;z-index:5;top:var(--sy);bottom:var(--sy);left:var(--sx);right:var(--sx);outline:var(--ow) dashed #00A3FF;box-shadow:0 0 0 2400px rgba(0,120,255,.22);pointer-events:none}

@@ -26,6 +26,11 @@ css = (HERE / "kb.css").read_text(encoding="utf-8")
 body = (HERE / "kb.html").read_text(encoding="utf-8")
 js = (HERE / "kb.js").read_text(encoding="utf-8")
 
+# the hub ships Light/Medium/Bold; the subhead is set in Regular (client review, 2026-10-05)
+reg = base64.b64encode((HERE / "fonts" / "aktiv-grotesk-400.woff").read_bytes()).decode()
+css = ('@font-face{font-family:"Aktiv Grotesk";font-weight:400;font-style:normal;font-display:swap;'
+       'src:url(data:font/woff;base64,' + reg + ') format("woff")}\n') + css
+
 import io
 from PIL import Image
 
@@ -44,6 +49,13 @@ tabs = """<nav class="hub-tabs" aria-label="Channels">
   <div class="q4-wrap" role="tablist">
     <button type="button" class="hub-tab" role="tab" data-go="banners" aria-selected="true">Banners <small>2 jobs · 24</small></button>
     <button type="button" class="hub-tab" role="tab" data-go="organic" aria-selected="false">Organic Social <small>Q4 2026 · 15 posts</small></button>
+  </div>
+</nav>
+<nav class="kb-jobs-bar" aria-label="Banner jobs" data-ch="banners">
+  <div class="q4-wrap kb-jobs">
+    <b>Jobs</b>
+    <a href="#k21" aria-current="true">KAT26021 Flat Brand Type · 8</a>
+    <a href="#kb-title">KAT26019 Top Items · 16</a>
   </div>
 </nav>
 """

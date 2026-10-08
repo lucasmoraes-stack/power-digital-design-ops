@@ -1,0 +1,34 @@
+/* ============ Banners channel: KAT26020 Holiday Disaster ============ */
+.k20-frame{position:relative;overflow:hidden}
+.k20-frame > .k20{transform-origin:0 0}
+.k20-pair{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:flex-start}
+
+/* banner canvas (fixed brand colors, never theme) */
+.k20{position:relative;overflow:hidden;background:#131540;color:#FFFFFF;font-family:var(--font-brand);font-weight:300;-webkit-font-smoothing:antialiased;flex:none}
+.k20 > *{position:absolute;margin:0}
+.k20-logo{display:block;height:auto;aspect-ratio:521/116;color:#EC5370;fill:currentColor}
+.k20-stack{display:flex;flex-direction:column;align-items:flex-start}
+.k20-stack > *{flex:none}
+/* round 3: everything on the frame's vertical axis */
+.k20-center{align-items:center;text-align:center}
+.k20-center .k20-h > span{margin-inline:auto}
+.k20-mid{display:flex;align-items:center}
+/* full-bleed layout: the headline sits on the photo as solid label strips, so it reads on
+   any part of the picture. Setup on a White strip, punchline in Pink on a Dark Blue strip. */
+.k20-h{margin:0;font-weight:700;line-height:1;letter-spacing:-.025em;white-space:nowrap}
+.k20-h > span{display:block;width:max-content;padding:.07em .2em .11em}
+.k20-h .t1{background:#FFFFFF;color:#131540}
+.k20-h .t2{background:#131540;color:#ED5370}
+.k20-cta{display:inline-flex;align-items:center;justify-content:center;text-align:center;border-radius:999px;background:#ED5370;color:#FFFFFF;font-weight:500;line-height:1.15;letter-spacing:-.005em;white-space:nowrap}
+.k20-cta.wrap{white-space:normal;text-wrap:balance}
+.k20-disc{margin:0;font-weight:500;line-height:1.2;color:#FFFFFF}
+.k20-disc > span{display:block;text-wrap:balance}
+
+/* the photo fills the frame (or the right panel on the leaderboards); the fade melts it into
+   solid Dark Blue where the logo, CTA and disclaimer sit, so the logo is never on the photo */
+.k20-pic{overflow:hidden;background:#282B60}
+.k20-pic img{position:absolute;display:block;max-width:none}
+.k20-fade{pointer-events:none}
+
+/* safe zone overlay */
+.k20-safe-on .k20::after{content:"";position:absolute;z-index:5;top:var(--sy);bottom:var(--sy);left:var(--sx);right:var(--sx);outline:var(--ow) dashed #00A3FF;box-shadow:0 0 0 2400px rgba(0,120,255,.22);pointer-events:none}

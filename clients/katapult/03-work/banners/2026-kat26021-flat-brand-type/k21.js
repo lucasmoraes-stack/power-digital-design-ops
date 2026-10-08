@@ -10,18 +10,18 @@
   var SIZES=[
     {w:1200,h:628,plat:'PMAX',ratio:'1.91:1',sx:60,sy:32,show:.4,type:'col',
       logo:200,L:[["The deals won't wait."],['And now you',"don't have to."]],
-      sf:30,cta:{f:28,py:18,px:42},g:{l:24,s:16,c:26}},
+      sub:true,cta:{f:28,py:18,px:42},g:{l:24,s:16,c:26}},
     {w:1200,h:1200,plat:'PMAX',ratio:'1:1',sx:60,sy:60,show:.4,type:'col',
       logo:240,L:[['The deals',"won't wait."],['And now',"you don't",'have to.']],
-      sf:40,cta:{f:34,py:24,px:52},g:{l:40,s:26,c:38}},
+      sub:true,cta:{f:34,py:24,px:52},g:{l:40,s:26,c:38}},
     {w:960,h:1200,plat:'PMAX',ratio:'4:5',sx:48,sy:60,show:.4,type:'col',
       logo:220,L:[['The deals',"won't wait."],['And now',"you don't",'have to.']],
-      sf:36,cta:{f:32,py:22,px:48},g:{l:36,s:24,c:34}},
+      sub:true,cta:{f:32,py:22,px:48},g:{l:36,s:24,c:34}},
     {w:300,h:600,plat:'Programmatic',sx:12,sy:12,show:1,type:'col',
-      logo:100,L:[['The','deals',"won't",'wait.'],['And now','you',"don't",'have to.']],
-      sf:17,cta:{f:15,py:11,px:18},g:{l:14,s:10,c:16}},
+      logo:100,L:[['The deals',"won't wait."],['And now',"you don't",'have to.']],
+      sub:true,narrow:true,cta:{f:15,py:11,px:18},g:{l:14,s:10,c:16}},
     {w:160,h:600,plat:'Programmatic',sx:8,sy:8,show:1,type:'col',
-      logo:88,L:[['The','deals',"won't",'wait.'],['And','now','you',"don't",'have','to.']],
+      logo:88,L:[['The deals',"won't wait."],['And now',"you don't",'have to.']],
       cta:{f:12,py:8,px:12},g:{l:12,c:14}},
     {w:300,h:250,plat:'Programmatic',sx:8,sy:8,show:1,type:'col',
       logo:76,L:[['The deals',"won't wait."],['And now you',"don't have to."]],
@@ -36,6 +36,11 @@
   SIZES.forEach(function(sz){
     if(sz.L[0].join(' ')!==COPY.h1||sz.L[1].join(' ')!==COPY.h2) console.error('KAT26021: headline lines do not match the copy at '+sz.w+'x'+sz.h);
   });
+  /* a few words break from the sentence's White/Pink into Light Blue, echoing the subhead color for a multicolor feel */
+  var ACCENT={deals:1,now:1};
+  /* sizes with a subhead get the top-left headline / bottom subhead+CTA layout, the subhead forced to these two lines */
+  var SUB_LINES=['Lease-to-own on thousands','of Cyber Week deals'];
+  if(SUB_LINES.join(' ')!==COPY.s) console.error('KAT26021: subhead lines do not match the copy');
 
   var MH=null;
   function el(tag,cls,css){ var e=document.createElement(tag); if(cls) e.className=cls; if(css) e.style.cssText=css; return e; }
@@ -50,14 +55,29 @@
   }
   function headline(L){
     var p=el('p','k21-h');
-    L.forEach(function(lines,i){ lines.forEach(function(t){ var s=el('span','t'+(i+1)); s.textContent=t; p.appendChild(s); }); });
+    L.forEach(function(lines,i){
+      lines.forEach(function(t){
+        var s=el('span','t'+(i+1));
+        t.split(' ').forEach(function(w,wi){
+          if(wi) s.appendChild(document.createTextNode(' '));
+          var key=w.toLowerCase().replace(/[^a-z']/g,'');
+          if(ACCENT[key]){ var a=el('span','ta'); a.textContent=w; s.appendChild(a); }
+          else s.appendChild(document.createTextNode(w));
+        });
+        p.appendChild(s);
+      });
+    });
     return p;
   }
   /* largest font size at which the stack fits w x h */
+  /* headline block sized down proportionally across every frame */
+  var FIT_SCALE=.85;
+  /* subhead trimmed to 2/3 of its width-fit size, per feedback on the enlarged 2-line subhead */
+  var SUB_SCALE=2/3;
   function fit(p,w,h){
     var m=host(); p.style.cssText='position:absolute;font-size:100px'; m.appendChild(p);
     var W=p.offsetWidth, H=p.offsetHeight; m.removeChild(p); p.style.cssText='';
-    return Math.floor(100*Math.min(w/W,h/H)*2)/2;
+    return Math.floor(100*Math.min(w/W,h/H)*FIT_SCALE*2)/2;
   }
   function cta(c){ var b=el('span','k21-cta','font-size:'+c.f+'px;padding:'+c.py+'px '+c.px+'px'); b.textContent=COPY.c; return b; }
 
@@ -75,17 +95,43 @@
       var p=cta(B); p.style.width='100%'; cb.appendChild(p); k.appendChild(cb);
       return k;
     }
-    /* vertical and PMAX: logo on top, then the type stack, subhead and CTA anchored to the bottom */
     var iw=sz.w-2*sz.sx, ihc=sz.h-2*sz.sy, G=sz.g;
     var col=el('div','k21-col','left:'+sz.sx+'px;top:'+sz.sy+'px;width:'+iw+'px;height:'+ihc+'px');
+
+    if(sz.sub){
+      /* headline pinned top-left; subhead (bigger, forced 2 lines) sits right above the CTA at the bottom;
+         logo moves to the bottom-right corner, or below the CTA only on frames too narrow for a side-by-side logo */
+      var vertical=!!sz.narrow;
+      var sub=el('p','k21-s2');
+      SUB_LINES.forEach(function(l){ var ln=el('span'); ln.textContent=l; sub.appendChild(ln); });
+      sub.style.fontSize=(fit(sub,iw,9999)*SUB_SCALE)+'px';
+      sub.style.marginTop=G.s+'px';
+      var used=heightOf(sub,iw)+G.s;
+      var cw=el('div','','margin-top:'+G.c+'px'); cw.appendChild(cta(sz.cta)); used+=heightOf(cw,iw)+G.c;
+      var logoBelow=null;
+      if(vertical){ logoBelow=el('div','','margin-top:'+G.l+'px'); logoBelow.appendChild(logoSvg(sz.logo)); used+=heightOf(logoBelow,iw)+G.l; }
+      hd.style.fontSize=fit(hd,iw,ihc-used)+'px';
+      col.appendChild(hd);
+      col.appendChild(el('div','k21-gap'));
+      col.appendChild(sub);
+      col.appendChild(cw);
+      if(logoBelow) col.appendChild(logoBelow);
+      k.appendChild(col);
+      if(!vertical){
+        var corner=logoSvg(sz.logo);
+        corner.style.cssText+=';position:absolute;right:'+sz.sx+'px;bottom:'+sz.sy+'px';
+        k.appendChild(corner);
+      }
+      return k;
+    }
+
+    /* no subhead on this size: logo on top, headline fills the rest, CTA anchored to the bottom */
     col.appendChild(logoSvg(sz.logo));
     col.appendChild(el('div','k21-gap'));
     var used=sz.logo*116/521+G.l;
-    var sub=null;
-    if(sz.sf){ sub=el('p','k21-s','font-size:'+sz.sf+'px;margin-top:'+G.s+'px'); sub.textContent=COPY.s; used+=heightOf(sub,iw)+G.s; }
     var cw=el('div','','margin-top:'+G.c+'px'); cw.appendChild(cta(sz.cta)); used+=heightOf(cw,iw)+G.c;
     hd.style.fontSize=fit(hd,iw,ihc-used)+'px';
-    col.appendChild(hd); if(sub) col.appendChild(sub); col.appendChild(cw);
+    col.appendChild(hd); col.appendChild(cw);
     k.appendChild(col);
     return k;
   }

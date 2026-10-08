@@ -21,36 +21,36 @@
   var PHOTOS={};
 
   var SIZES=[
-    {w:1200,h:628,plat:'PMAX',ratio:'1.91:1',sx:60,sy:32,show:.4,sb:.3,
+    {w:1200,h:628,plat:'PMAX',ratio:'1.91:1',sx:60,sy:32,show:.4,sb:.3,vcenter:true,
       logo:{x:60,y:32,w:200},
-      text:{x:60,y:118,w:520,hf:58,sf:24,g1:18,g2:30,cta:{f:26,py:18,px:38}},
+      text:{x:60,y:118,w:520,hf:58,sf:26,g1:18,g2:30,cta:{f:28,py:19,px:40}},
       grid:{x:640,y:32,w:500,h:564,c:3,r:3}},
     {w:1200,h:1200,plat:'PMAX',ratio:'1:1',sx:60,sy:60,show:.4,sb:.26,flow:{gap:40,bottom:60},
       logo:{x:60,y:60,w:230},
-      text:{x:60,y:150,w:1000,hf:84,sf:30,sw:880,g1:22,g2:32,cta:{f:30,py:22,px:46}},
+      text:{x:60,y:150,w:1080,hf:84,sf:36,g1:24,g2:36,cta:{f:36,py:26,px:54}},
       grid:{x:60,w:1080,c:4,r:2}},
     {w:960,h:1200,plat:'PMAX',ratio:'4:5',sx:48,sy:60,show:.4,sb:.26,flow:{gap:36,bottom:60},
       logo:{x:48,y:60,w:210},
-      text:{x:48,y:146,w:864,hf:76,sf:28,g1:20,g2:30,cta:{f:28,py:20,px:42}},
+      text:{x:48,y:146,w:864,hf:76,sf:34,g1:22,g2:34,cta:{f:34,py:24,px:50}},
       grid:{x:48,w:864,c:3,r:2}},
     {w:300,h:600,plat:'Programmatic',sx:12,sy:12,show:1,sb:.75,flow:{gap:12,bottom:20},
       logo:{x:16,y:16,w:96},
-      text:{x:16,y:50,w:268,hf:29,sf:13,g1:8},
+      text:{x:16,y:50,w:268,hf:29,sf:15,g1:8},
       grid:{x:16,w:268,c:2,r:3},
-      ctabox:{x:16,y:540,w:268,f:15,py:10,px:16}},
+      ctabox:{x:16,y:540,w:268,f:17,py:11,px:16}},
     {w:160,h:600,plat:'Programmatic',sx:8,sy:8,show:1,sb:.75,flow:{gap:16,bottom:16},
       logo:{x:12,y:14,w:84},
-      text:{x:12,y:46,w:136,hf:20,g2:12,cta:{f:12,py:8,px:13}},
+      text:{x:12,y:46,w:136,hf:24,sf:12,g1:8,g2:12,cta:{f:13,py:8,px:12}},
       grid:{x:12,w:136,c:2,r:3}},
     {w:300,h:250,plat:'Programmatic',sx:8,sy:8,show:1,sb:1,
       logo:{x:12,y:12,w:72},
-      text:{x:12,y:46,w:150,hf:20.5,g2:12,cta:{f:11.5,py:8,px:13}},
+      text:{x:12,y:44,w:154,hf:20.5,sf:10,g1:6,g2:9,cta:{f:11.5,py:7,px:12}},
       grid:{x:172,y:10,w:118,h:230,c:2,r:3}},
     {w:728,h:90,plat:'Programmatic',sx:6,sy:6,show:1,sb:.6,
       logo:{x:14,cy:45,w:92},
       text:{x:118,y:6,w:250,hb:78,hf:25,center:true},
       grid:{x:352,y:2,w:198,h:86,c:3,r:1},
-      ctabox:{x:574,y:6,w:142,hb:78,f:12,py:8,px:12}},
+      ctabox:{x:574,y:6,w:142,hb:78,f:13,py:8,px:12}},
     {w:320,h:50,plat:'Programmatic',sx:4,sy:4,show:1,sb:1,
       logo:{x:6,cy:25,w:44},
       text:{x:56,y:3,w:132,hb:44,hf:14,center:true},
@@ -82,6 +82,8 @@
     var T=sz.text, showText=scene!==1, full=scene===0;
     var t=el('div','kb-text'+(T.center?' is-center':''),'left:'+T.x+'px;top:'+T.y+'px;width:'+T.w+'px;'+(T.hb?'height:'+T.hb+'px;':''));
     var hd=el('p','kb-h','font-size:'+T.hf+'px'); hd.textContent=COPY.h; t.appendChild(hd);
+    /* narrow sizes may break Lease-to-Own: only after "to-", never after "Lease-" (text unchanged) */
+    var hi=COPY.h.indexOf('Lease-to'); if(hi>-1){ hd.textContent=COPY.h.slice(0,hi); var nb=el('span','','white-space:nowrap'); nb.textContent='Lease-to'; hd.appendChild(nb); hd.appendChild(document.createTextNode(COPY.h.slice(hi+8))); }
     if(T.sf){ var s=el('p','kb-s'+(full?'':' kb-hide'),'font-size:'+T.sf+'px;margin-top:'+(T.g1||0)+'px;'+(T.sw?'max-width:'+T.sw+'px':'')); s.textContent=COPY.s; t.appendChild(s); }
     if(T.cta){ var w=el('div',full?'':'kb-hide','margin-top:'+(T.g2||0)+'px'); w.appendChild(cta(T.cta)); t.appendChild(w); }
     if(!showText) t.classList.add('kb-hide');
@@ -112,6 +114,12 @@
     });
     k.appendChild(g);
 
+    if(sz.vcenter){ /* wide sizes: logo and copy travel as one block, centered on the frame's height */
+      var vc=el('div','kb-col is-center','left:'+T.x+'px;top:'+sz.sy+'px;bottom:'+sz.sy+'px;width:'+T.w+'px');
+      logo.style.cssText='width:'+L.w+'px'; vc.appendChild(logo);
+      t.style.cssText='position:static;width:100%;margin-top:'+Math.max(0,Math.round(T.y-L.y-lh))+'px'; vc.appendChild(t);
+      k.appendChild(vc);
+    }
     if(flow){ /* vertical sizes: logo, copy, grid, CTA stacked in one column, so items can never ride over the copy */
       var col=el('div','kb-col','left:'+T.x+'px;top:'+L.y+'px;width:'+T.w+'px;bottom:'+sz.flow.bottom+'px');
       logo.style.cssText='width:'+L.w+'px'; col.appendChild(logo);
@@ -166,7 +174,7 @@
     });
   }
   full.addEventListener('change',applyScale);
-  var fl=document.fonts?Promise.all(['300','500','700'].map(function(w){return document.fonts.load(w+' 20px "Aktiv Grotesk"');})).catch(function(){}):Promise.resolve();
+  var fl=document.fonts?Promise.all(['300','400','500','700'].map(function(w){return document.fonts.load(w+' 20px "Aktiv Grotesk"');})).catch(function(){}):Promise.resolve();
   render(); fl.then(render);
   function applySafe(){ root.classList.toggle('kb-safe-on',safe.checked); }
   safe.addEventListener('change',applySafe); applySafe();
