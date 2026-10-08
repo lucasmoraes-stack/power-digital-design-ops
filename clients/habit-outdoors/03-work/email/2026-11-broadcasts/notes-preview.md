@@ -1,0 +1,6 @@
+- Copy do cliente entrou literal (132 strings conferidas), inclusive os pontos suspeitos: CTA "Shop Flannel" no 05, Hybrid Hoodie ($49.99) em "Under $30", subheadline "Rain-Factor tech meets soft tricot" no 04, "inbox.." no 02. Lista completa em brief.md, "Pontos para o cliente".
+- Preços da loja em 2026-10-07; o Waterproof Insulated Bib do 05 está em promoção ($111.98, de $159.99).
+- Referências Duck Camp usadas só como estrutura: 01 pilha de produtos (ref1) + grupo no hero (ref5); 02 colagem (ref2) + cards 2-up; 03 hero dividido (ref4) + sistema com rótulos (ref3 e imagem do cliente); 04 história de produto único (ref6/7); 05 lista por faixa (ref1) + fechamento (ref5).
+- 01: hero de estúdio porque não há foto de uso feminina no banco nem na loja. Violet Dusk (cor de Women's no guia) não está no kit; usei Ivy.
+- 05: imagens em ~894 KB no celular, acima dos ~800 KB de orientação do kit. Corte possível: faixa UNDER $100 em Tap Shoe liso (menos 87 KB). Decisão sua.
+- QA: 2 rodadas completas + reconferência (qa-r1.md, qa-r2.md). Lint limpo nos 5. Pendente antes do envio: URLs placeholder, rodapé do Omnisend, preços na data, teste real Outlook/Gmail.
