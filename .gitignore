@@ -28,3 +28,16 @@ clients/*/01-brand/email-kit/references/*.png
 clients/*/01-brand/email-kit/references/*.html
 clients/*/01-brand/email-kit/references/*_files/
 __pycache__/
+
+# raw dumps of sent emails received from clients (heavy + confidential; kept on disk/OneDrive)
+clients/*/00-inbox/emails-enviados/**
+!clients/*/00-inbox/emails-enviados/README.md
+clients/*/00-inbox/refs-html/**
+!clients/*/00-inbox/refs-html/README.md
+
+# raw Figma image originals pulled for email kits (heavy; kept on disk/OneDrive)
+clients/*/01-brand/email-kit/assets/source/
+
+# saved third-party web pages used as email references (heavy; kept on disk/OneDrive)
+clients/*/03-work/email/*/references/*.html
+clients/*/03-work/email/*/references/*_files/
