@@ -1,0 +1,21 @@
+{#- M00 Band: one background (color, gradient, texture) holding child modules in a vertical flow.
+  m.bg fills · m.pt / m.pb padding · m.h fixed height (optional) · m.gap default gap between children (40)
+  m.children modules (M04, M05, M06 ...) each with optional `gap` · m.under / m.layers decor and dividers
+  m.cut false = no slice cut at the band top (the band rides with the slice above) -#}
+{%- import '_macros.j2' as k -%}
+<section class="m band" data-module="M00"{% if m.name %} data-name="{{ m.name }}"{% endif %} style="{{ {'height':m.h,'padding-top':m.pt,'padding-bottom':m.pb,'overflow':('hidden' if m.clip else none),'margin-top':m._mt,'background':m.color}|style }}">
+{%- if m.cut is not sameas false %}<i class="cut" data-cut style="top:{{ (m.cut_y or 0)|px }}"></i>{% endif %}
+{{ k.bg(m.bg) }}
+{%- for l in m.under or [] %}
+{{ k.layer(l) }}
+{%- endfor %}
+<div class="inner">
+{%- for c in m.children %}
+{{ r.render_child(c|merge({'_mt': (c.gap if c.gap is defined else (0 if loop.first else (m.gap if m.gap is defined else 40)))})) }}
+{%- endfor %}
+</div>
+{%- for l in m.layers or [] %}
+{{ k.layer(l) }}
+{%- endfor %}
+{{ k.cuts(m.cuts) }}
+</section>

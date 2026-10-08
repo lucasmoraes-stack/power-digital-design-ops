@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>11/3 Rooted in Nature A · Autumn glass · Tom's of Maine</title>
+<!-- SL: What's Inside Matters · PH: Transparency looks good on us. Hero concept from build_0103_concepts.py; band T03 + T09 rows (10/27). -->
+<style>
+@font-face{font-family:"New Kansas";font-weight:500;src:url("../../../01-brand/identity/fonts/New Kansas Medium.otf");}
+@font-face{font-family:"New Kansas";font-weight:600;src:url("../../../01-brand/identity/fonts/New Kansas SemiBold.otf");}
+@font-face{font-family:"New Kansas";font-weight:700;src:url("../../../01-brand/identity/fonts/New Kansas Bold.otf");}
+@font-face{font-family:"Rubik";font-weight:700;src:url("../../../01-brand/identity/fonts/rubik/Rubik-Bold.ttf");}
+/* Gotham not available yet: Montserrat stand-in */
+@font-face{font-family:"Gotham";font-weight:700;src:url("../../../01-brand/identity/fonts/gotham/Gotham-Bold.otf"),url("../../../01-brand/identity/fonts/montserrat/Montserrat-Bold.ttf");}
+@font-face{font-family:"Gotham";font-weight:500;src:url("../../../01-brand/identity/fonts/gotham/Gotham-Medium.otf"),url("../../../01-brand/identity/fonts/montserrat/Montserrat-Medium.ttf");}
+
+:root{--deep:#05453D;--deep2:#044D44;--accent:#008D83;--nav:#00867D;--navy:#295791;--navy-bar:#24436F;
+  --sheen:linear-gradient(225deg,#FFFFFF 2.07%,#C8EEEB 55.4%,#FFFFFF 106.72%);--panel:linear-gradient(180deg,#FFFFFF 0%,#E8E8E8 100%)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+html{overflow-x:hidden}
+body{width:600px;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+img{display:block}
+.nk{font-family:"New Kansas",Georgia,serif}
+.rb{font-family:"Rubik",Arial,sans-serif;font-weight:700}
+.gt{font-family:"Gotham","Montserrat",Arial,sans-serif}
+.trim{text-box:trim-both cap alphabetic}
+section{position:relative;width:600px}
+.abs{position:absolute}
+
+/* placeholders: concept images to be chosen by the owner */
+.ph{position:absolute;inset:0;background:#3C5A52 repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 14px,rgba(255,255,255,0) 14px 28px)}
+.ph.light{background:#DCE8E5 repeating-linear-gradient(135deg,rgba(5,69,61,.06) 0 14px,rgba(5,69,61,0) 14px 28px)}
+.ph .tag{position:absolute;left:14px;top:14px;max-width:300px;padding:7px 10px;border-radius:6px;background:rgba(0,0,0,.45);color:#fff;font:700 11px/1.35 "Rubik",Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.ph.light .tag{background:rgba(5,69,61,.85)}
+.ph.br .tag{left:auto;top:auto;right:14px;bottom:14px}
+.ph.tr .tag{left:auto;right:14px}
+.ph.round{border-radius:50%}
+.ph.round .tag{left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;max-width:180px}
+.missing{width:100%;height:100%;border:2px dashed #7FB8B1;border-radius:12px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;color:#2F6E66;font:700 11px/1.35 "Rubik",Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+
+/* T01 header */
+.header{height:110.5px;background:#fff}
+.header .logo{position:absolute;left:43.2px;top:7.5px;width:126.5px;height:102.5px}
+.header .nav{position:absolute;left:252.2px;top:53.5px;width:325.5px;height:22.5px;font-weight:700;font-size:14px;color:var(--nav);text-transform:uppercase;white-space:pre;line-height:22.5px}
+
+/* L02 announcement bar */
+.topbar{height:50.5px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:23.5px;line-height:1;text-transform:uppercase;white-space:nowrap}
+
+/* B01 / B02 buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;height:50.3px;padding:0 17.55px;border-radius:11.7px;font-size:20.72px;line-height:29.6px;text-transform:uppercase;white-space:nowrap;flex:none}
+.btn span{text-box:trim-both cap alphabetic}
+.btn.white{background:#fff;color:var(--deep)}
+.btn.dark{background:var(--deep);color:#fff}
+.btn.sm{width:139px;height:42.8px;padding:0;border-radius:10.07px;font-size:18.11px;line-height:1}
+
+/* waves and domes */
+.wave{position:absolute;z-index:3;left:-1.8px;bottom:-1px;width:603.6px;height:62.9px}
+.wave.down{transform:scaleX(-1)}
+.wave.top{bottom:auto;top:-1px;transform:scale(-1,-1)}
+.dome{position:absolute;z-index:1;left:-1166.75px;width:2933.5px;height:2933.5px;border-radius:50%}
+
+/* T03 section heading + intro */
+.band{display:flex;flex-direction:column;align-items:center;gap:40px;padding:55px 0 48px}
+.hgroup{display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center}
+.h2{font-weight:700;font-size:42px;line-height:1.05;text-wrap:balance;text-box:trim-both cap alphabetic}
+.lead{font-weight:500;font-size:19.5px;line-height:1.2;letter-spacing:-.01em;text-wrap:balance;text-box:trim-both cap alphabetic}
+.light-t{color:var(--deep)}
+.dark-t{color:#fff}
+
+/* hero text pieces */
+.h1{font-weight:600;font-size:64px;line-height:.9;letter-spacing:-.02em;text-box:trim-both cap alphabetic}
+.kick{font-size:20.31px;line-height:1;text-transform:uppercase;white-space:nowrap}
+.ruled{width:fit-content;display:flex;flex-direction:column;align-items:center;gap:14.6px;font-size:25.2px;line-height:1;text-transform:uppercase;white-space:nowrap}
+.ruled::before,.ruled::after{content:"";display:block;height:1.7px;width:100%;background:currentColor}
+.body{font-weight:500;font-size:19.5px;line-height:1.2;letter-spacing:-.01em;text-wrap:balance;text-box:trim-both cap alphabetic}
+.stack{position:absolute;z-index:4;display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center}
+.stack.left{align-items:flex-start;text-align:left}
+
+/* L05 / LAB 407:3817 product card */
+.grid{display:grid;grid-template-columns:253px 253px;gap:15px}
+.pcard{width:253px;padding:26.5px 6.5px;border-radius:20px;background:var(--sheen);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:20px}
+.pcard .img{width:169.5px;height:167.5px;display:flex;align-items:center;justify-content:center}
+.pcard .img.wide{width:212px}
+.pcard .img img{max-width:100%;max-height:100%;object-fit:contain}
+.pcard .txt{display:flex;flex-direction:column;align-items:center;gap:10.76px;width:240px}
+/* Card names: always a 2-line box, one size per email: the largest of 24/22/20/18 that fits every name in 2 lines (script in page()) */
+.pcard .pname,.wcard .pname,.split .pname,.lrow .pname,.brow .pname{font-size:var(--pn,24px);height:2.4em;width:100%;display:flex;align-items:center;justify-content:center;text-box:none}
+.pname{font-weight:600;font-size:24px;line-height:1.2;letter-spacing:-.01em;color:var(--deep);text-align:center;text-wrap:balance;text-box:trim-both cap alphabetic}
+.mult{mix-blend-mode:multiply}
+
+/* T09 category rows (10/27 height) */
+.rows{width:498.5px;display:flex;flex-direction:column;gap:15px}
+.row{position:relative;height:200px;border-radius:40px;overflow:hidden}
+.row .phot{position:absolute;bottom:0;height:255.6px}
+.row .pan{position:absolute;top:0;height:200px;background:var(--panel);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10.76px}
+.row .pname{width:200px;height:2.4em;display:flex;align-items:center;justify-content:center;text-box:none}
+
+/* T08 label pill */
+.pill{width:521px;padding:18px 32px;border-radius:20px;border:3px solid #91FFF5;background:#0C9389;color:#fff;text-align:center}
+.pill .pname{color:#fff}
+
+/* L09 wide card */
+.wcard{width:521px;height:220.5px;border-radius:20px;background:var(--sheen);display:flex;align-items:center;gap:14px;padding:0 20px 0 20px}
+.wcard.rev{flex-direction:row-reverse}
+.wcard .img{width:190px;height:190px;display:flex;align-items:center;justify-content:center;flex:none}
+.wcard .img img{max-width:100%;max-height:100%;object-fit:contain}
+.wcard .txt{width:277px;display:flex;flex-direction:column;align-items:center;gap:10.76px;flex:none}
+
+/* outline card (T06) */
+.ocard{border:2px solid var(--accent);border-radius:20px;padding:30px 24px;display:flex;align-items:center;justify-content:center;text-align:center}
+.cap{font-weight:500;font-size:21px;line-height:1.2;letter-spacing:-.02em;color:var(--deep);text-wrap:balance;text-box:trim-both cap alphabetic}
+
+/* decor */
+.sprig{position:absolute;width:163.5px;height:194.3px;background:url("../../../01-brand/email-kit/assets/leaf-sprig-008d83.png") center/100% 100% no-repeat}
+.sprig.deep{background-image:url("../../../01-brand/email-kit/assets/leaf-sprig-05453d.png")}
+.fern{position:absolute;width:128.7px;height:195.8px;background:url("../../../01-brand/email-kit/assets/leaf-sprig-fern-ccfffa.png") center/100% 100% no-repeat;mix-blend-mode:soft-light;opacity:.9}
+.shadow{filter:drop-shadow(4px 5px 7px rgba(0,0,0,.3)) drop-shadow(16px 20px 13px rgba(0,0,0,.22)) drop-shadow(36px 45px 17px rgba(0,0,0,.1))}
+
+/* T08 split card as checkerboard (11/9) */
+.split{width:521px;height:210px;border-radius:20px;overflow:hidden;display:flex}
+.split .half{width:260.5px;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.split .half img{height:172px;width:auto}
+.split .half.dark{background:var(--deep);gap:12px;padding:0 6px}
+.split .pname{color:#fff}
+
+/* editorial persona list (11/18) */
+.persona{width:521px;display:flex;flex-direction:column}
+.plabel{font-size:18.1px;line-height:1;text-transform:uppercase;color:var(--accent);padding-bottom:14px;border-bottom:1.5px solid var(--accent);letter-spacing:.02em}
+.lrow{display:flex;align-items:center;gap:20px;padding:16px 0;border-bottom:1px solid #B9DCD7}
+.lrow .txt{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:10.76px}
+.lrow .pname{text-align:left;justify-content:flex-start}
+.lrow .tile{width:170px;height:150px;border-radius:16px;background:var(--sheen);display:flex;align-items:center;justify-content:center;padding:12px;flex:none}
+.lrow .tile img{max-width:100%;max-height:100%}
+
+/* bundle rows (11/28) */
+.brow{width:521px;border-radius:20px;background:var(--sheen);display:flex;align-items:center;gap:20px;padding:18px 22px 18px 18px}
+.brow.dark{background:var(--deep)}
+.brow.dark .pname,.brow.dark .desc{color:#fff}
+.brow .tile{width:180px;height:170px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;padding:10px;flex:none}
+.brow .tile img{max-width:100%;max-height:100%}
+.brow .txt{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.brow .pname{text-align:left;justify-content:flex-start}
+.brow .desc{font-weight:500;font-size:16px;line-height:1.25;letter-spacing:-.01em;color:var(--deep);text-wrap:pretty}
+
+/* T18 footer */
+.footer{height:587px;background:var(--navy-bar)}
+.footer .main{position:absolute;left:0;top:0;width:600px;height:455.5px;background:var(--navy)}
+.footer .t{position:absolute;left:0;width:600px;text-align:center;color:#fff;font-weight:700}
+.footer .learn{top:79px;font-size:14px;line-height:20px;text-decoration:underline;text-underline-offset:2px}
+.footer .flogo{position:absolute;left:249.8px;top:126.5px;width:101.4px;height:82px}
+.footer .social{position:absolute;left:220.3px;top:238.5px;width:160px;height:32px}
+.footer .navlist{top:294px;font-size:14px;line-height:28px}
+.footer .legal{font-size:10px;line-height:28px;white-space:pre}
+.hero{position:relative;width:600px}
+.hero{overflow:hidden}
+.hero .stack{position:absolute;z-index:2;display:flex;flex-direction:column;align-items:center;gap:24px;color:#fff;text-align:center}
+.hero h1{font-weight:600;font-size:64px;line-height:.9;letter-spacing:-.02em;text-box:trim-both cap alphabetic}
+.hero .kicker{font-size:20.31px;line-height:1;text-transform:uppercase;white-space:nowrap}
+.hero .body{font-weight:500;font-size:19.5px;line-height:1.2;letter-spacing:-.01em;text-box:trim-both cap alphabetic}
+.hero .ruled{display:flex;flex-direction:column;align-items:center;gap:14.6px;font-size:25.2px;line-height:1;text-transform:uppercase;white-space:nowrap}
+.hero .ruled::before,.hero .ruled::after{content:"";display:block;height:1.7px;width:100%;background:currentColor}
+.btn span{text-box:trim-both cap alphabetic}
+.pk{position:absolute;display:block}
+
+.hero{height:860px;background:#8a3f0e url("../../../01-brand/email-kit/assets/source/bg-autumn-leaf-macro-orange.jpg") center 42%/600px auto no-repeat}
+.glass{position:absolute;left:40.5px;top:48px;width:521px;padding:44px 0;border-radius:20px;display:flex;flex-direction:column;align-items:center;gap:25px;color:#fff;text-align:center;
+  backdrop-filter:blur(22px) saturate(1.05) brightness(.72);
+  background:linear-gradient(135deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,0) 40%,rgba(0,0,0,.10) 100%);
+  box-shadow:inset 1.5px 1.5px 0 rgba(255,255,255,.28),inset -1px -1px 0 rgba(255,255,255,.10)}
+.glass h1{width:470px;font-size:56px}
+.glass .body{width:430px}
+.cluster-a{position:absolute;z-index:4;inset:0;filter:drop-shadow(0 4px 6px rgba(0,0,0,.28)) drop-shadow(0 16px 18px rgba(0,0,0,.18))}
+.cluster-a img{position:absolute;display:block}
+</style>
+</head>
+<body>
+<section class="header" data-slice="header">
+  <img class="logo" src="../../../01-brand/email-kit/assets/logo-light.png" alt="Tom's of Maine">
+  <div class="nav gt">OUR MISSION      PRODUCTS      SHOP NOW</div>
+</section>
+<section class="hero" data-slice="hero">
+  <div class="glass">
+    <h1 class="nk">Every ingredient<br>has a purpose</h1>
+    <div class="kicker rb">Care You Can Feel Good About</div>
+    <p class="body nk">The holidays are coming, routines are about to get chaotic, and your bathroom shelf should be the last thing you overthink.</p>
+    <span class="btn white rb"><span>See What's Inside</span></span>
+  </div>
+  <!-- product group standing on the teal wave (10/20 T02d cluster), one shared shadow -->
+  <div class="cluster-a">
+    <img src="assets/deo-north-woods.png" style="left:121px;top:570px;height:258px" alt="">
+    <img src="assets/mw-sea-salt.png" style="left:193px;top:532px;height:294px" alt="">
+    <img src="assets/box-coconut.png" style="left:233px;top:745px;width:246px" alt="">
+  </div>
+  <svg class="wave" viewBox="0 0 1207.16 125.73" preserveAspectRatio="none"><path d="M0 33.0894V125.73H1207.16V33.0894C962.957 174.077 779.274 107.999 499.706 33.0894C276.052 -26.8387 73.3793 8.11935 0 33.0894Z" fill="#3DA79D"/></svg>
+</section>
+<section class="band" style="background:linear-gradient(180deg,#3DA79D 0%,#C8EEEB 100%)">
+  <div class="hgroup light-t" data-slice="intro"><h2 class="h2 nk" style="width:420px">Proud of every ingredient</h2><p class="lead nk" style="width:450px">Every Tom's formula is made with naturally sourced and derived ingredients. One less thing to worry about.</p></div>
+  <div class="rows"><div class="row" data-slice="row"><img class="phot" src="../../../01-brand/email-kit/assets/source/figma-10-08/row1-oral-care.png" style="left:-15.25px;width:279.5px" alt=""><div class="pan" style="left:264.25px;width:234.25px"><div class="pname nk">Oral Care</div><span class="btn dark sm rb" style=""><span>shop now</span></span></div></div><div class="row" data-slice="row"><img class="phot" src="../../../01-brand/email-kit/assets/source/figma-10-08/row2-bath-body.png" style="left:264.25px;width:264.5px" alt=""><div class="pan" style="left:-.25px;width:264.5px"><div class="pname nk">Bath &amp; Body</div><span class="btn dark sm rb" style=""><span>shop now</span></span></div></div><div class="row" data-slice="row"><img class="phot" src="../../../01-brand/email-kit/assets/source/figma-10-08/row3-deodorant.png" style="left:-15.25px;width:279.5px" alt=""><div class="pan" style="left:264.25px;width:234.25px"><div class="pname nk">Deodorant &amp; Antiperspirant</div><span class="btn dark sm rb" style=""><span>shop now</span></span></div></div><div class="row" data-slice="row"><img class="phot" src="../../../01-brand/email-kit/assets/source/figma-10-08/row4-value-bundles.png" style="left:264.25px;width:264.5px" alt=""><div class="pan" style="left:-.25px;width:264.5px"><div class="pname nk">Bundles</div><span class="btn dark sm rb" style=""><span>shop now</span></span></div></div></div>
+  <div data-slice="cta"><span class="btn white  rb" style=""><span>Shop Naturally Sourced</span></span></div>
+</section>
+<section class="footer" data-slice="footer">
+  <div class="main"></div>
+  <div class="t gt learn">Learn what we mean by natural on our website.</div>
+  <img class="flogo" src="../../../01-brand/email-kit/assets/logo-dark.png" alt="Tom's of Maine">
+  <img class="social" src="../../../01-brand/email-kit/assets/social-row.png" alt="">
+  <div class="t gt navlist">Our Mission<br>Products<br>Shop Now<br>Blog</div>
+  <div class="t gt legal" style="top:470px">Tom’s of Maine · 2 Storer Street, Suite 302 · Kennebunk, ME 04043 · USA</div>
+  <div class="t gt legal" style="top:503.5px">©%%= v(@CurrentYear) =%% Tom's of Maine, Inc.</div>
+  <div class="t gt legal" style="top:541px">Privacy Policy  l  Terms of Sale  l   Terms of Use  l  Unsubscribe</div>
+</section>
+<script>
+document.fonts.ready.then(() => {
+  const names = [...document.querySelectorAll('.pcard .pname, .wcard .pname, .split .pname, .lrow .pname, .brow .pname')];
+  if (!names.length) return;
+  for (const px of [24, 22, 20, 18]) {
+    document.documentElement.style.setProperty('--pn', px + 'px');
+    if (names.every(n => n.scrollHeight <= n.clientHeight + 1)) { document.documentElement.dataset.pn = px; break; }
+  }
+});
+</script>
+</body>
+</html>

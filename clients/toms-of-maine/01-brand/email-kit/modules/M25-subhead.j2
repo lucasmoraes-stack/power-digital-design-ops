@@ -1,0 +1,6 @@
+{#- M25 Day-part subhead (L16): icon 50.2 + gap 12.2 + NK SemiBold 30.35/27.3 #C8EEEB. -#}
+{%- import '_macros.j2' as k -%}
+<div class="m" data-module="M25" style="{{ {'margin-top':m._mt,'display':'flex','justify-content':'center'}|style }}">
+{%- if m.cut %}<i class="cut" data-cut style="top:{{ (m.cut_y or 0)|px }}"></i>{% endif %}
+{{ k.item({'t':'row','hgap':m.hgap or 12.2,'items':[{'t':'img','src':m.icon,'w':m.icon_size or 50.2,'h':m.icon_size or 50.2,'fit':'contain'},{'t':'subhead','text':m.text,'color':m.color or '#C8EEEB','nowrap':true}]}) }}
+</div>

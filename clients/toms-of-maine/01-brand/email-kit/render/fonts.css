@@ -1,0 +1,30 @@
+/* Tom's of Maine email kit · font faces.
+   __FONTS__ is replaced by the relative path to clients/toms-of-maine/01-brand/identity/fonts
+   when a page is composed (tools/kitlib.py). Font binaries are never copied into tracked folders.
+   - New Kansas: licensed .otf received 2026-10-06.
+   - Rubik: OFL, static instances generated from google/fonts Rubik[wght].ttf (tools/fetch_fonts.py).
+   - Gotham Bold / Medium: NOT AVAILABLE YET. Expected at fonts/gotham/Gotham-Bold.otf and
+     Gotham-Medium.otf. Until they exist the browser falls back to Montserrat (OFL), so every
+     Gotham element (header nav, footer, most hero CTAs) is NOT production-accurate. */
+
+@font-face{font-family:"New Kansas";font-weight:300;font-style:normal;src:url("__FONTS__/New Kansas Light.otf") format("opentype");}
+@font-face{font-family:"New Kansas";font-weight:400;font-style:normal;src:url("__FONTS__/New Kansas Regular.otf") format("opentype");}
+@font-face{font-family:"New Kansas";font-weight:500;font-style:normal;src:url("__FONTS__/New Kansas Medium.otf") format("opentype");}
+@font-face{font-family:"New Kansas";font-weight:600;font-style:normal;src:url("__FONTS__/New Kansas SemiBold.otf") format("opentype");}
+@font-face{font-family:"New Kansas";font-weight:700;font-style:normal;src:url("__FONTS__/New Kansas Bold.otf") format("opentype");}
+@font-face{font-family:"New Kansas";font-weight:800;font-style:normal;src:url("__FONTS__/New Kansas Heavy.otf") format("opentype");}
+@font-face{font-family:"New Kansas";font-weight:900;font-style:normal;src:url("__FONTS__/New Kansas Black.otf") format("opentype");}
+@font-face{font-family:"New Kansas";font-weight:500;font-style:italic;src:url("__FONTS__/New Kansas Medium Italic.otf") format("opentype");}
+@font-face{font-family:"New Kansas";font-weight:600;font-style:italic;src:url("__FONTS__/New Kansas SemiBold Italic.otf") format("opentype");}
+
+@font-face{font-family:"Rubik";font-weight:400;font-style:normal;src:url("__FONTS__/rubik/Rubik-Regular.ttf") format("truetype");}
+@font-face{font-family:"Rubik";font-weight:500;font-style:normal;src:url("__FONTS__/rubik/Rubik-Medium.ttf") format("truetype");}
+@font-face{font-family:"Rubik";font-weight:600;font-style:normal;src:url("__FONTS__/rubik/Rubik-SemiBold.ttf") format("truetype");}
+@font-face{font-family:"Rubik";font-weight:700;font-style:normal;src:url("__FONTS__/rubik/Rubik-Bold.ttf") format("truetype");}
+@font-face{font-family:"Rubik";font-weight:400;font-style:italic;src:url("__FONTS__/rubik/Rubik-Italic.ttf") format("truetype");}
+@font-face{font-family:"Rubik";font-weight:700;font-style:italic;src:url("__FONTS__/rubik/Rubik-BoldItalic.ttf") format("truetype");}
+
+@font-face{font-family:"Gotham";font-weight:700;font-style:normal;src:url("__FONTS__/gotham/Gotham-Bold.otf") format("opentype");}
+@font-face{font-family:"Gotham";font-weight:500;font-style:normal;src:url("__FONTS__/gotham/Gotham-Medium.otf") format("opentype");}
+@font-face{font-family:"Montserrat";font-weight:700;font-style:normal;src:url("__FONTS__/montserrat/Montserrat-Bold.ttf") format("truetype");}
+@font-face{font-family:"Montserrat";font-weight:500;font-style:normal;src:url("__FONTS__/montserrat/Montserrat-Medium.ttf") format("truetype");}

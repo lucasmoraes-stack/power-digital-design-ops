@@ -1,0 +1,101 @@
+/* Tom's of Maine email kit · module CSS (hand-written; tokens come from tokens.css).
+   Everything is laid out at the 600px email size and rendered at deviceScaleFactor 2.
+   Output is an image, so modern CSS is used freely (flex, gradients, backdrop-filter,
+   mix-blend-mode, transforms, text-box trim). Email-client rules do not apply. */
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#FFFFFF;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision;font-kerning:normal}
+img{display:block;max-width:none}
+svg{display:block}
+
+.email{width:600px;margin:0 auto;position:relative;overflow:clip;background:#FFFFFF;color:var(--color-primary)}
+.m{position:relative;width:600px}
+.cut{position:absolute;left:0;width:0;height:0;display:block;pointer-events:none}
+
+/* ---- text roles (Figma leading trim CAP_HEIGHT == text-box trim cap/alphabetic) ---- */
+.t{margin:0;text-box:trim-both cap alphabetic;font-kerning:normal;font-feature-settings:"kern" 1}
+.t b,.t strong{font-weight:700}
+.accent{color:var(--color-heading-accent)}
+.r-headline{font:600 var(--type-display-size)/var(--type-display-line) var(--font-display-family-css);letter-spacing:var(--type-display-tracking)}
+.r-headline-xl{font:600 var(--type-display-compact-size)/var(--type-display-compact-line) var(--font-display-family-css);letter-spacing:var(--type-display-compact-tracking)}
+.r-price{font:600 var(--type-price-size)/var(--type-price-line) var(--font-display-family-css);letter-spacing:var(--type-price-tracking)}
+.r-price-sub{font:600 var(--type-price-sub-size)/var(--type-price-sub-line) var(--font-display-family-css);letter-spacing:var(--type-price-sub-tracking)}
+.r-kicker{font:600 var(--type-kicker-size)/var(--type-kicker-line) var(--font-label-family-css);text-transform:uppercase}
+.r-kicker-sm{font:700 var(--type-kicker-small-size)/var(--type-kicker-small-line) var(--font-label-family-css);text-transform:uppercase}
+.r-body{font:500 var(--type-body-size)/var(--type-body-line) var(--font-display-family-css);letter-spacing:var(--type-body-tracking)}
+.r-intro{font:500 var(--type-intro-size)/var(--type-intro-line) var(--font-display-family-css);letter-spacing:var(--type-intro-tracking)}
+.r-strong{font:700 var(--type-body-size)/var(--type-body-line) var(--font-display-family-css);letter-spacing:var(--type-body-tracking)}
+.r-h2{font:700 var(--type-h2-size)/var(--type-h2-line) var(--font-display-family-css)}
+.r-subtitle{font:700 var(--type-subtitle-size)/var(--type-subtitle-line) var(--font-label-family-css);text-transform:uppercase}
+.r-item{font:600 var(--type-item-size)/var(--type-item-line) var(--font-display-family-css);letter-spacing:var(--type-item-tracking)}
+.r-item-bold{font:700 var(--type-item-size)/var(--type-item-line) var(--font-display-family-css);letter-spacing:var(--type-item-tracking)}
+.r-caption{font:500 var(--type-caption-size)/var(--type-caption-line) var(--font-display-family-css);letter-spacing:var(--type-caption-tracking)}
+.r-card-name{font:500 var(--type-card-name-size)/var(--type-card-name-line) var(--font-display-family-css);letter-spacing:var(--type-card-name-tracking);color:var(--color-text-card)}
+.r-card-name-rubik{font:700 var(--type-card-name-rubik-size)/var(--type-card-name-rubik-line) var(--font-label-family-css);text-transform:uppercase}
+.r-product-name{font:600 var(--type-product-name-size)/var(--type-product-name-line) var(--font-display-family-css);letter-spacing:var(--type-item-tracking)}
+.r-label{font:700 var(--type-label-size)/var(--type-label-line) var(--font-label-family-css);text-transform:uppercase}
+.r-label-sm{font:700 var(--type-label-small-size)/var(--type-label-small-size) var(--font-label-family-css);text-transform:uppercase}
+.r-label-md{font:700 var(--type-label-md-size)/var(--type-label-md-line) var(--font-label-family-css);text-transform:uppercase}
+.r-reviewer{font:700 var(--type-reviewer-size)/var(--type-reviewer-line) var(--font-label-family-css);text-transform:uppercase}
+.r-claim{font:600 var(--type-claim-size)/var(--type-claim-line) var(--font-display-family-css);letter-spacing:var(--type-item-tracking)}
+.r-claim-sm{font:500 var(--type-claim-sm-size)/var(--type-claim-sm-line) var(--font-display-family-css);letter-spacing:var(--type-item-tracking)}
+.r-footnote{font:500 var(--type-footnote-size)/var(--type-footnote-line) var(--font-display-family-css);letter-spacing:var(--type-item-tracking)}
+.r-subhead{font:600 var(--type-subhead-size)/var(--type-subhead-line) var(--font-display-family-css)}
+.r-fineprint{font:italic 400 var(--type-fineprint-size)/var(--type-fineprint-line) var(--font-label-family-css);letter-spacing:var(--type-fineprint-tracking)}
+.r-announce{font:600 var(--type-announce-size)/var(--type-announce-line) var(--font-label-family-css);text-transform:uppercase}
+.r-step-num{font:700 var(--type-step-num-size)/1 var(--font-label-family-css)}
+/* Gotham roles: no leading trim in Figma (nav, footer) */
+.r-nav{font:700 var(--type-nav-size)/normal var(--font-gotham-family-css);text-transform:uppercase;text-box:normal;white-space:pre}
+.r-foot{font:700 var(--type-nav-size)/var(--type-nav-line) var(--font-gotham-family-css);text-box:normal}
+.r-legal{font:700 var(--type-legal-size)/var(--type-legal-line) var(--font-gotham-family-css);text-box:normal;white-space:pre}
+.r-disclaimer{font:500 var(--type-disclaimer-size)/var(--type-disclaimer-line) var(--font-gotham-family-css)}
+
+/* ---- buttons ---- */
+.btn{display:flex;align-items:center;justify-content:center;flex:none;height:var(--button-height);border-radius:var(--button-radius);padding:0 var(--button-pad-x);
+  font:700 var(--button-font-size)/var(--button-line-height) var(--font-label-family-css);text-transform:uppercase;white-space:nowrap;background:var(--color-primary);color:#FFFFFF}
+.btn > span{display:block;text-box:normal}
+.btn.gt{font-family:var(--font-gotham-family-css)}
+.btn.light{background:#FFFFFF;color:var(--color-primary)}
+.btn.sm{height:var(--button-compact-height);width:var(--button-compact-width);padding:0;border-radius:var(--button-compact-radius);font-size:var(--button-compact-font-size);line-height:var(--button-compact-line-height)}
+.btn.cmp{height:var(--button-comparison-height);width:var(--button-comparison-width);padding:0;border-radius:var(--button-comparison-radius);font-size:var(--button-comparison-font-size);line-height:1}
+.btn.left{justify-content:flex-start}
+
+/* ---- layers ---- */
+.lay{position:absolute;display:block}
+.lay.clip{overflow:hidden}
+.lay > svg{width:100%;height:100%}
+.bgl{position:absolute;inset:0}
+.bgl > img{position:absolute}
+
+/* ---- stacks (flow) ---- */
+.stack{position:absolute;display:flex;flex-direction:column;align-items:center;text-align:center}
+.stack.left{align-items:flex-start;text-align:left}
+.stack.flow{position:relative}
+.stack > *{flex:none}
+.ruled{display:flex;flex-direction:column;align-items:stretch}
+.ruled > i{display:block;width:100%}
+.dashed{display:flex;align-items:center;justify-content:space-between}
+.dashed > i{display:block;flex:none}
+.hrow{display:flex;align-items:center;justify-content:center}
+
+/* ---- band container ---- */
+.band{position:relative;width:600px}
+.band > .bgl{z-index:0}
+.band > .inner{position:relative;display:flex;flex-direction:column;align-items:center}
+
+/* ---- product card ---- */
+.card{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;flex:none}
+.card .pimg{position:relative;flex:none}
+.card .pimg > img{width:100%;height:100%;object-fit:contain}
+.grid{display:flex;flex-direction:column;align-items:center}
+.grid .row{position:relative;display:flex;align-items:flex-start}
+
+/* ---- split rows (category, product rows, need cards) ---- */
+.srow{position:relative;overflow:hidden;flex:none}
+.srow > .ph{position:absolute;top:0;bottom:0;overflow:hidden}
+.srow > .pn{position:absolute;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+
+/* ---- header / footer ---- */
+.hdr{height:var(--space-header-height);background:#FFFFFF}
+.ftr{height:var(--space-footer-height);color:#FFFFFF}

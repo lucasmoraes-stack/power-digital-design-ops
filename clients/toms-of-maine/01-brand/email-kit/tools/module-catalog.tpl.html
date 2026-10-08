@@ -1,0 +1,74 @@
+<title>Tom's of Maine Module Catalogue</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap">
+<style>
+@font-face{font-family:"New Kansas";font-weight:700;src:url(data:font/woff;base64,__NK700__) format("woff");}
+/* Layout: reference catalogue. Each module = Figma screenshots at 600px on the left, measured spec on the right. */
+:root{
+  --paper:#F2F6F5; --sheet:#FFFFFF; --ink:#10302B; --ink-soft:#4C6662; --rule:#D5E1DE; --chip:#E3EEEB;
+  --mark:#00867D; --on-mark:#FFFFFF; --warn:#B4441C; --warn-bg:#FBEDE6;
+  --display:"New Kansas",Georgia,serif; --ui:"Rubik",Helvetica,Arial,sans-serif; --mono:ui-monospace,"SF Mono",Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
+  --paper:#0B1715; --sheet:#11201E; --ink:#E2EEEB; --ink-soft:#97ADA9; --rule:#22403B; --chip:#183330; --mark:#4FC2B8; --on-mark:#0B1715; --warn:#F09A72; --warn-bg:#3A2117;}}
+:root[data-theme="dark"]{color-scheme:dark;
+  --paper:#0B1715; --sheet:#11201E; --ink:#E2EEEB; --ink-soft:#97ADA9; --rule:#22403B; --chip:#183330; --mark:#4FC2B8; --on-mark:#0B1715; --warn:#F09A72; --warn-bg:#3A2117;}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 14px/1.55 var(--ui);padding-inline:20px;padding-block:0 64px}
+.wrap{max-width:1320px;margin:0 auto}
+a{color:var(--mark)}
+:focus-visible{outline:2px solid var(--mark);outline-offset:2px}
+header.top{padding-block:36px 20px;display:grid;gap:10px}
+.eyebrow{font:600 12px/1 var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+h1{font:700 clamp(32px,4.6vw,48px)/1.04 var(--display);margin:0;text-wrap:balance}
+.lede{color:var(--ink-soft);max-width:86ch;margin:0}
+.lede b{color:var(--ink);font-weight:500}
+.status{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:14px;margin-block:18px 6px}
+.box{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:16px 18px}
+.box h2{font:700 20px/1.2 var(--display);margin:0 0 8px}
+.box.warn{border-color:var(--warn);background:var(--warn-bg)}
+.box ol,.box ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.box p{margin:0 0 8px}
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-block:1px solid var(--rule);padding-block:10px;display:flex;flex-wrap:wrap;gap:6px 16px;font:500 13px/1.6 var(--ui);margin-top:18px}
+nav.toc a{text-decoration:none;color:var(--ink-soft)} nav.toc a:hover{color:var(--ink)}
+section.fam{padding-block:30px 0;scroll-margin-top:56px}
+section.fam>h2{font:700 30px/1.1 var(--display);margin:0 0 14px}
+.mod{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;margin-bottom:16px;scroll-margin-top:56px;overflow:hidden}
+.mod>header{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;padding:14px 18px;border-bottom:1px solid var(--rule)}
+.mid{font:600 12px/1 var(--mono);background:var(--mark);color:var(--on-mark);padding:5px 7px;border-radius:4px}
+.mod h3{font:700 20px/1.2 var(--display);margin:0;flex:1 1 280px}
+.src{font:500 12px/1 var(--ui);color:var(--ink-soft)}
+.cols{display:grid;grid-template-columns:minmax(0,600px) minmax(0,1fr);gap:0}
+.shots{display:grid;gap:14px;padding:16px;align-content:start;border-right:1px solid var(--rule)}
+figure{margin:0;display:grid;gap:6px}
+figure img{width:100%;height:auto;display:block;border-radius:3px;border:1px solid var(--rule)}
+figcaption{font-size:12px;color:var(--ink-soft)}
+.none{color:var(--ink-soft);font-size:13px;margin:0}
+.spec{padding:16px 20px;font-size:13.5px;overflow-x:auto;max-height:none}
+.spec p{margin:0 0 10px;max-width:72ch}
+.spec ul,.spec ol{margin:0 0 10px;padding-left:20px}
+.spec li{margin-bottom:4px}
+.spec code{font:12.5px var(--mono);background:var(--chip);padding:1px 4px;border-radius:3px}
+.spec table{border-collapse:collapse;font-size:12.5px;margin:6px 0 12px;display:block;overflow-x:auto;max-width:100%}
+.spec th,.spec td{border:1px solid var(--rule);padding:5px 8px;text-align:left;vertical-align:top}
+.spec th{background:var(--chip);font-weight:600}
+.spec h3,.spec h4{font:600 14px/1.3 var(--ui);margin:14px 0 6px}
+@media (max-width:980px){.cols{grid-template-columns:minmax(0,1fr)} .shots{border-right:0;border-bottom:1px solid var(--rule)}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Tom's of Maine · Email kit · work in progress</div>
+  <h1>Module catalogue</h1>
+  <p class="lede">Every module found in the <b>26 approved emails, July to October 2026</b>, as Figma renders with the measured spec at 600px email scale. <b>__COUNT__ entries</b>, <b>__SHOTS__ screenshots</b>. T ids come from the October emails (VAZIO DRAFT file), L ids from July to September (Progressive Global LAB file); where an L module matches a T module, the spec says so. This is the reference the HTML module library is being built from; it is not the library itself yet.</p>
+</header>
+
+<div class="status">
+  <div class="box warn"><h2>Not built yet</h2>__LEFT__</div>
+  <div class="box"><h2>Open questions for the owner</h2>__OPEN__</div>
+</div>
+
+<nav class="toc" aria-label="Module families">__NAV__</nav>
+__BODY__
+</div>

@@ -1,0 +1,105 @@
+{#- _macros.j2 · primitives shared by every module template.
+
+  text(it, mt)      one text element. it = {t: role, text, size, line, tr, weight, color, w, align, family, upper, ...}
+  button(b, mt)     B01 (default), B02 (size "sm"), B03 (size "cmp"). b = {label, fill, color, family gotham|rubik, w, size}
+  item(it, mt)      any stack item: text roles, button, ruled, dashed, rule, stars, img, portrait, split, row, svg, spacer
+  stack(items, gap) items in a vertical flow, each with margin-top = its own `gap` or the stack gap
+  bg(fills)         background fills, bottom to top: {color} | {gradient} | {img, fit, pos, crop}
+  layer(l)          absolutely positioned layer: img | svg | rect | ellipse | wave | scallop | block | text | badge
+  cuts(list)        slice markers (y offsets inside the module) for tools/export_jpg.py
+-#}
+
+{%- macro text(it, mt=none) -%}
+{%- set role = it.t if (it.t is defined and it.t) else 'body' -%}
+{%- set tag = it.tag if it.tag is defined and it.tag else 'p' -%}
+<{{ tag }} class="t r-{{ role }}{{ ' ' ~ it.cls if it.cls is defined and it.cls }}" style="{{ it|tstyle }}{% if mt is not none %};margin-top:{{ mt|px }}{% endif %}">{{ it.text }}</{{ tag }}>
+{%- endmacro -%}
+
+{%- macro button(b, mt=none) -%}
+{%- set size = b.size if b.size is defined else '' -%}
+<div class="btn{{ ' gt' if b.family == 'gotham' }}{{ ' light' if b.light }}{{ ' sm' if size == 'sm' }}{{ ' cmp' if size == 'cmp' }}{{ ' left' if b.label_align == 'left' }}" data-role="button" style="{{ {'background':b.fill,'color':b.color,'width':b.w,'height':b.h,'font-size':b.font_size,'border-radius':b.radius,'padding-left':b.pad_l,'margin-top':mt,'align-self':b.self,'position':('relative' if b.x is defined else none),'left':b.x}|style }}"><span>{{ b.label }}</span></div>
+{%- endmacro -%}
+
+{%- macro item(it, mt=none) -%}
+{%- set ty = it.t if it.t is defined and it.t else 'body' -%}
+{%- if ty == 'button' -%}{{ button(it, mt) }}
+{%- elif ty == 'ruled' -%}
+{%- set rw = it.rule if it.rule is defined else 1.7 -%}{%- set rg = it.rgap if it.rgap is defined else 14.6 -%}{%- set rc = it.rule_color if it.rule_color is defined else (it.color if it.color is defined else '#05453D') -%}
+<div class="ruled" style="{{ {'width':it.w,'margin-top':mt}|style }}"><i style="height:{{ rw|px }};background:{{ rc }}"></i>{{ text(it|merge({'t': it.role if it.role is defined else 'kicker', 'w': none}), rg) }}<i style="height:{{ rw|px }};background:{{ rc }};margin-top:{{ rg|px }}"></i></div>
+{%- elif ty == 'dashed' -%}
+<div class="dashed" style="{{ {'width':it.w,'margin-top':mt}|style }}"><i style="width:{{ (it.dash_w or 21.9)|px }};height:{{ (it.dash_h or 3)|px }};background:{{ it.color or '#FFFFFF' }}"></i>{{ text(it|merge({'t': it.role if it.role is defined else 'kicker-sm', 'w': it.text_w})) }}<i style="width:{{ (it.dash_w or 21.9)|px }};height:{{ (it.dash_h or 3)|px }};background:{{ it.color or '#FFFFFF' }}"></i></div>
+{%- elif ty == 'rule' -%}
+<i style="display:block;{{ {'width':it.w,'height':it.h or 2,'border-radius':it.radius,'background':it.color or '#FFFFFF','margin-top':mt}|style }}"></i>
+{%- elif ty == 'stars' -%}
+<div style="{{ {'width':it.w or 126,'height':it.h or 22,'margin-top':mt}|style }}">{{ svg('stars-row-5-white.svg', it.color) }}</div>
+{%- elif ty == 'svg' -%}
+<div style="{{ {'width':it.w,'height':it.h,'margin-top':mt}|style }}">{{ svg(it.src, it.color) }}</div>
+{%- elif ty == 'img' -%}
+<div class="pimg" style="{{ {'position':'relative','width':it.w,'height':it.h,'border-radius':it.radius,'overflow':'hidden','margin-top':mt,'flex':'none','background':it.fill}|style }}"><img src="{{ it.src|img }}" alt="{{ (it.alt or '')|e }}" style="{{ it|istyle }}"></div>
+{%- elif ty == 'portrait' -%}
+{%- set d = it.d or 279.3 -%}{%- set pd = it.photo_d or 245.3 -%}
+<div style="position:relative;width:{{ d|px }};height:{{ d|px }};flex:none{% if mt is not none %};margin-top:{{ mt|px }}{% endif %}">
+<div style="position:absolute;left:{{ ((d - pd) / 2)|px }};top:{{ ((d - pd) / 2)|px }};width:{{ pd|px }};height:{{ pd|px }};border-radius:50%;overflow:hidden"><img src="{{ it.src|img }}" alt="{{ (it.alt or '')|e }}" style="{{ it|istyle }}"></div>
+{%- if it.ring is not sameas false %}<div style="position:absolute;left:0;top:0;width:{{ d|px }};height:{{ d|px }};border-radius:50%;border:{{ (it.ring_w or 6.5) / 2 }}px solid {{ it.ring_color or '#00867D' }};box-shadow:inset 0 0 0 {{ (it.ring_w or 6.5) / 2 }}px {{ it.ring_color or '#00867D' }}"></div>{% endif %}
+</div>
+{%- elif ty == 'split' -%}
+<div class="hrow" style="{{ {'align-items':it.valign or 'flex-start','gap':it.hgap or 28,'margin-top':mt,'width':it.w}|style }}">{{ item(it.left) }}{{ stack(it.right['items'], it.right.gap if it.right.gap is defined else 24, cls='flow ' ~ (it.right.align or 'left'), st={'width': it.right.w, 'padding-top': it.right.pt}) }}</div>
+{%- elif ty == 'row' -%}
+<div class="hrow" style="{{ {'gap':it.hgap or 12,'margin-top':mt,'width':it.w,'align-items':it.valign}|style }}">{% for c in it['items'] %}{{ item(c) }}{% endfor %}</div>
+{%- elif ty == 'spacer' -%}
+<i style="display:block;height:{{ it.h|px }}{% if mt is not none %};margin-top:{{ mt|px }}{% endif %}"></i>
+{%- else -%}{{ text(it, mt) }}
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro stack(items, gap=24, cls='', st=none) -%}
+<div class="stack {{ cls }}"{% if st %} style="{{ st|style }}"{% endif %}>
+{%- for it in items %}
+{{ item(it, (it.gap if it.gap is defined else (0 if loop.first else gap))) }}
+{%- endfor %}
+</div>
+{%- endmacro -%}
+
+{%- macro bg(fills) -%}
+{%- for f in fills or [] %}
+{%- if f.img is defined and f.img %}
+<div class="bgl" style="{{ {'opacity':f.opacity,'mix-blend-mode':f.blend,'overflow':'hidden','top':f.top,'bottom':f.bottom,'height':f.h}|style }}"><img src="{{ f.img|img }}" alt="" style="{{ f|istyle if f.fit == 'crop' else ('width:100%;height:100%;object-fit:' ~ (f.fit or 'cover') ~ ';object-position:' ~ (f.pos or '50% 50%')) }}"></div>
+{%- elif f.gradient is defined and f.gradient %}
+<div class="bgl" style="{{ {'background':f.gradient,'opacity':f.opacity,'mix-blend-mode':f.blend,'top':f.top,'bottom':f.bottom,'height':f.h}|style }}"></div>
+{%- elif f.color is defined and f.color %}
+<div class="bgl" style="{{ {'background':f.color,'opacity':f.opacity,'top':f.top,'bottom':f.bottom,'height':f.h}|style }}"></div>
+{%- endif %}
+{%- endfor %}
+{%- endmacro -%}
+
+{%- macro layer(l) -%}
+{%- set ty = l.type if l.type is defined and l.type else 'img' -%}
+{%- if ty == 'img' -%}
+<div class="lay{{ ' clip' if l.fit == 'crop' or l.clip }}" data-layer="{{ l.name or l.src }}" style="{{ l|bstyle }}"><img src="{{ l.src|img }}" alt="{{ (l.alt or '')|e }}" style="{{ l|istyle }}"></div>
+{%- elif ty == 'svg' -%}
+<div class="lay" data-layer="{{ l.name or l.src }}" style="{{ l|bstyle }}">{{ svg(l.src, l.color, drop_fill=l.drop_fill) }}</div>
+{%- elif ty == 'rect' -%}
+<div class="lay" data-layer="{{ l.name or 'rect' }}" style="{{ l|bstyle({'background':l.fill,'border':l.border,'box-shadow':l.box_shadow,'backdrop-filter':l.backdrop,'-webkit-backdrop-filter':l.backdrop}) }}"></div>
+{%- elif ty == 'ellipse' -%}
+{%- set ew = l.w or l.d -%}{%- set eh = l.h or l.d -%}
+<div class="lay" data-layer="{{ l.name or 'dome' }}" style="{{ l|merge({'x': (l.x if l.x is defined else (600 - ew) / 2), 'w': ew, 'h': eh})|bstyle({'border-radius':'50%','background':l.fill,'border':l.border}) }}"></div>
+{%- elif ty == 'wave' or ty == 'wave-tall' -%}
+{%- set wh = 166.9 if ty == 'wave-tall' else 62.9 -%}
+<div class="lay" data-layer="{{ ty }}" style="{{ l|merge({'x': l.x if l.x is defined else 0, 'w': 603.6, 'h': wh, 'flipx': l.flip, 'flipy': l.flip})|bstyle }}">{{ svg('wave-tall-05453d.svg' if ty == 'wave-tall' else 'wave.svg', l.color) }}</div>
+{%- elif ty == 'scallop' -%}
+{#- five circles of 201.7, pitch 121.7; `x` = left of the first circle, `y` = top of the circles -#}
+<div class="lay" data-layer="scallop" style="{{ {'left':0,'top':l.y,'bottom':l.bottom,'width':600,'height':l.h or 50.5,'overflow':'hidden','z-index':l.z}|style }}">
+{%- for i in range(l.count or 5) %}<i style="position:absolute;display:block;border-radius:50%;width:201.7px;height:201.7px;left:{{ ((l.x if l.x is defined else -45.9) + i * (l.pitch or 121.7))|px }};top:{{ (l.cy or 0)|px }};background:{{ l.color }}"></i>{% endfor %}
+</div>
+{%- elif ty == 'block' -%}
+<div class="lay" data-layer="{{ l.name or 'block' }}" style="{{ l|bstyle }}">{{ stack(l['items'], l.gap if l.gap is defined else 24, cls='flow ' ~ (l.align or ''), st={'width':'100%'}) }}</div>
+{%- elif ty == 'text' -%}
+<div class="lay" data-layer="{{ l.name or 'text' }}" style="{{ l|bstyle }}">{{ text(l.text_item) }}</div>
+{%- elif ty == 'step-badge' -%}
+<div class="lay" data-layer="step-badge" style="{{ l|merge({'w': l.w or 39, 'h': l.h or 39})|bstyle }}">{{ svg('badge-step-number-70d8ce.svg', l.color, drop_fill='#05453D') }}<p class="t r-step-num" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:{{ l.num_color or '#05453D' }}">{{ l.n }}</p></div>
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro cuts(list) -%}
+{%- for c in list or [] %}<i class="cut" data-cut{% if c.cols is defined %} data-cols="{{ c.cols }}"{% endif %} style="top:{{ (c.y if c.y is defined else c)|px }}"></i>{% endfor %}
+{%- endmacro -%}

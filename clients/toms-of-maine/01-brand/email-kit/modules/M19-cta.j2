@@ -1,0 +1,7 @@
+{#- M19 Closing CTA (T12 / L19): one B01 button, centered, own slice. cut_at "gap" (default: the slice starts where the gap above starts) or "top" (at the button top, 10/8). -#}
+{%- import '_macros.j2' as k -%}
+<div class="m" data-module="M19" style="{{ {'margin-top':m._mt,'display':'flex','justify-content':m.justify or 'center','padding-left':m.x}|style }}">
+{%- if m.cut is not sameas false %}<i class="cut" data-cut style="top:{{ (0 if m.cut_at == 'top' else -(m._mt or 0))|px }}"></i>{% endif %}
+{{ k.button(m.button) }}
+{%- for l in m.layers or [] %}{{ k.layer(l) }}{% endfor %}
+</div>

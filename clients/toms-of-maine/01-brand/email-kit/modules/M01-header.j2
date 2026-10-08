@@ -1,0 +1,5 @@
+{#- M01 Header (T01 / L01). Fixed: logo box 126.5 x 102.5 at 43.2, 7.5; nav one Gotham Bold 14 line at 252.2, 53.5. -#}
+<header class="m hdr" data-module="M01" data-wrapper="header" style="{{ {'height':m.h,'background':m.bg}|style }}">
+<div class="lay" data-layer="logo" style="left:{{ m.logo.x|px }};top:{{ m.logo.y|px }};width:{{ m.logo.w|px }};height:{{ m.logo.h|px }}"><img src="{{ m.logo.src|img }}" alt="Tom's of Maine" style="width:100%;height:100%"></div>
+<p class="t r-nav lay" data-layer="nav" style="left:{{ m.nav.x|px }};top:{{ m.nav.y|px }};width:{{ m.nav.w|px }};height:{{ m.nav.h|px }};color:{{ m.nav.color }}">{{ m.nav.text }}</p>
+</header>

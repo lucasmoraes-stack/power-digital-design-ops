@@ -1,0 +1,11 @@
+{#- M04 Section intro (T03 / L04): H2 (NK Bold 42/44.1) + optional Rubik subtitle (gap 20) + optional intro (NK Medium 19.5/23.4 or 20/24, gap 24). Centered. -#}
+{%- import '_macros.j2' as k -%}
+{%- set items = [] -%}
+{%- if m.h2 %}{% set _ = items.append({'t':'h2','text':m.h2,'w':m.h2_w,'color':m.color}) %}{% endif -%}
+{%- if m.subtitle %}{% set _ = items.append({'t':'subtitle','text':m.subtitle,'w':m.subtitle_w,'color':m.subtitle_color or m.color,'gap':m.gap_subtitle}) %}{% endif -%}
+{%- if m.intro %}{% set _ = items.append({'t':m.intro_role or 'intro','text':m.intro,'w':m.intro_w,'color':m.intro_color or m.color,'gap':(m.gap_intro if items else 0)}) %}{% endif -%}
+<div class="m" data-module="M04" style="{{ {'margin-top':m._mt}|style }}">
+{%- if m.cut %}<i class="cut" data-cut style="top:{{ (m.cut_y or 0)|px }}"></i>{% endif %}
+{{ k.stack(items, 24, cls='flow', st={'width':'600px'}) }}
+{%- for l in m.layers or [] %}{{ k.layer(l) }}{% endfor %}
+</div>

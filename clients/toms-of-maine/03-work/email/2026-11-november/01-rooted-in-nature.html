@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>11/3 Rooted in Nature · Tom's of Maine</title>
+<!-- SL: What's Inside Matters 🌿 · PH: Transparency looks good on us
+     Copy: Tom's _November Broadcast - Copy 2026.pdf, p.65-66 (pre-approved, used verbatim; headings in sentence case as in the approved Oct emails)
+     Built at 600px, exported at 2x (1200px) JPG. Modules: header T01, hero T02f, section intro T03 + category rows T09 (10/27 band), band CTA T12, footer T18. -->
+<style>
+@font-face{font-family:"New Kansas";font-weight:500;src:url("../../../01-brand/identity/fonts/New Kansas Medium.otf");}
+@font-face{font-family:"New Kansas";font-weight:600;src:url("../../../01-brand/identity/fonts/New Kansas SemiBold.otf");}
+@font-face{font-family:"New Kansas";font-weight:700;src:url("../../../01-brand/identity/fonts/New Kansas Bold.otf");}
+@font-face{font-family:"Rubik";font-weight:600;src:url("../../../01-brand/identity/fonts/rubik/Rubik-SemiBold.ttf");}
+@font-face{font-family:"Rubik";font-weight:700;src:url("../../../01-brand/identity/fonts/rubik/Rubik-Bold.ttf");}
+/* Gotham not available yet: Montserrat stand-in */
+@font-face{font-family:"Gotham";font-weight:700;src:url("../../../01-brand/identity/fonts/gotham/Gotham-Bold.otf"),url("../../../01-brand/identity/fonts/montserrat/Montserrat-Bold.ttf");}
+@font-face{font-family:"Gotham";font-weight:500;src:url("../../../01-brand/identity/fonts/gotham/Gotham-Medium.otf"),url("../../../01-brand/identity/fonts/montserrat/Montserrat-Medium.ttf");}
+
+:root{--deep:#05453D;--deep2:#044D44;--accent:#008D83;--nav:#00867D;--navy:#295791;--navy-bar:#24436F;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+body{width:600px;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+img{display:block}
+.nk{font-family:"New Kansas",Georgia,serif}
+.rb{font-family:"Rubik",Arial,sans-serif}
+.gt{font-family:"Gotham","Montserrat",Arial,sans-serif}
+section{position:relative;width:600px;overflow:hidden}
+
+/* T01 header */
+.header{height:110.5px;background:#fff}
+.header .logo{position:absolute;left:43.2px;top:7.5px;width:126.5px;height:102.5px}
+.header .nav{position:absolute;left:252.2px;top:53.5px;width:325.5px;height:22.5px;font-weight:700;font-size:14px;color:var(--nav);text-transform:uppercase;white-space:pre;line-height:22.5px}
+
+/* T02f hero: full-bleed scene, text at the bottom */
+.hero{height:986px;background:#0d2a12 url("../../../01-brand/photos/figma-lab/still-life-whiten-plus-tube-on-moss.jpg") center 100%/auto 1110px no-repeat}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,19,17,0) 52%,rgba(3,19,17,.7) 66%,rgba(3,19,17,.88) 100%)}
+.hero .stack{position:absolute;z-index:2;left:48.5px;width:503px;top:572px;display:flex;flex-direction:column;align-items:center;gap:24px;color:#fff;text-align:center}
+.hero h1{font-weight:600;font-size:64px;line-height:.97;letter-spacing:-.03em;width:503px}
+.hero .kicker{font-weight:600;font-size:25.2px;line-height:1;text-transform:uppercase}
+.hero .body{text-wrap:balance;font-weight:500;font-size:20px;line-height:24px;letter-spacing:-.01em;width:461px}
+.wave{position:absolute;z-index:3;left:-1.8px;bottom:-1px;width:603.6px;height:62.9px}
+
+/* buttons B01 / B02 */
+.btn{display:inline-flex;align-items:center;justify-content:center;height:50.3px;padding:0 17.5px;border-radius:11.7px;font-weight:700;font-size:20.7px;line-height:29.6px;text-transform:uppercase;white-space:nowrap}
+.btn.white{background:#fff;color:var(--deep)}
+.btn.dark{background:var(--deep);color:#fff}
+.btn.sm{width:139px;height:42.8px;padding:0;border-radius:10.1px;font-size:18.1px;line-height:1}
+
+/* T03 intro + T09 category rows, 10/27 band */
+.band{background:linear-gradient(180deg,#3DA79D 0%,#C8EEEB 100%);padding:55.5px 0 48px;display:flex;flex-direction:column;align-items:center}
+.band h2{text-wrap:balance;font-weight:700;font-size:42px;line-height:1.05;color:var(--deep);text-align:center;width:498.5px}
+.band .intro{text-wrap:balance;margin-top:24px;font-weight:500;font-size:19.5px;line-height:23.4px;letter-spacing:-.01em;color:var(--deep);text-align:center;width:470px}
+.rows{margin-top:40px;width:498.5px;display:flex;flex-direction:column;gap:15px}
+.row{position:relative;height:200px;border-radius:40px;overflow:hidden;display:flex}
+.row.rev{flex-direction:row-reverse}
+.row .photo{width:264.3px;flex:none;background-repeat:no-repeat}
+.row .panel{width:234.2px;flex:none;background:linear-gradient(180deg,#FFFFFF 0%,#E8E8E8 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15.8px}
+.row .name{font-weight:700;font-size:24px;line-height:1.2;letter-spacing:-.01em;color:var(--deep2);text-align:center;width:200px}
+.band .cta{margin-top:40px}
+
+/* T18 footer */
+.footer{height:587px;background:var(--navy-bar)}
+.footer .main{position:absolute;left:0;top:0;width:600px;height:455.5px;background:var(--navy)}
+.footer .t{position:absolute;left:0;width:600px;text-align:center;color:#fff;font-weight:700}
+.footer .learn{top:79px;font-size:14px;line-height:20px;text-decoration:underline;text-underline-offset:2px}
+.footer .flogo{position:absolute;left:249.8px;top:126.5px;width:101.4px;height:82px}
+.footer .social{position:absolute;left:220.3px;top:238.5px;width:160px;height:32px}
+.footer .navlist{top:294px;font-size:14px;line-height:28px}
+.footer .legal{font-size:10px;line-height:28px;white-space:pre}
+</style>
+</head>
+<body>
+
+<section class="header" data-slice="header">
+  <img class="logo" src="../../../01-brand/email-kit/assets/logo-light.png" alt="Tom's of Maine">
+  <div class="nav gt">OUR MISSION      PRODUCTS      SHOP NOW</div>
+</section>
+
+<section class="hero" data-slice="hero">
+  <div class="stack">
+    <h1 class="nk">Every ingredient has a purpose</h1>
+    <div class="kicker rb">Care You Can Feel Good About</div>
+    <p class="body nk">The holidays are coming, routines are about to get chaotic, and your bathroom shelf should be the last thing you overthink.</p>
+    <span class="btn white gt">See What's Inside</span>
+  </div>
+  <svg class="wave" viewBox="0 0 1207.16 125.73" preserveAspectRatio="none"><path d="M0 33.0894V125.73H1207.16V33.0894C962.957 174.077 779.274 107.999 499.706 33.0894C276.052 -26.8387 73.3793 8.11935 0 33.0894Z" fill="#3DA79D"/></svg>
+</section>
+
+<section class="band">
+  <div class="bandintro" data-slice="intro" style="display:flex;flex-direction:column;align-items:center">
+  <h2 class="nk">Proud of every ingredient</h2>
+  <p class="intro nk">Every Tom's formula is made with naturally sourced and derived ingredients. One less thing to worry about.</p>
+  </div>
+  <div class="rows">
+    <div class="row" data-slice="row"><div class="photo" style="background-image:url('../../../01-brand/photos/figma-lab/lifestyle-bathroom-shelves-tile.jpg');background-size:auto 500px;background-position:40% 8%"></div><div class="panel"><div class="name nk">Oral Care</div><span class="btn dark sm rb">shop now</span></div></div>
+    <div class="row rev" data-slice="row"><div class="photo" style="background-image:url('../../../01-brand/photos/figma-lab/lifestyle-bathroom-shelves-tile.jpg');background-size:auto 520px;background-position:20% 30%"></div><div class="panel"><div class="name nk">Bath &amp; Body</div><span class="btn dark sm rb">shop now</span></div></div>
+    <div class="row" data-slice="row"><div class="photo" style="background-image:url('../../../01-brand/photos/figma-lab/lifestyle-bathroom-shelves-tile.jpg');background-size:auto 480px;background-position:42% 82%"></div><div class="panel"><div class="name nk">Deodorant &amp; Antiperspirant</div><span class="btn dark sm rb">shop now</span></div></div>
+    <div class="row rev" data-slice="row"><div class="photo" style="background-image:url('../../../01-brand/photos/figma-lab/lifestyle-bathroom-shelf-bundle.png');background-size:cover;background-position:30% 20%"></div><div class="panel"><div class="name nk">Bundles</div><span class="btn dark sm rb">shop now</span></div></div>
+  </div>
+  <span class="btn white rb cta" data-slice="cta">Shop Naturally Sourced</span>
+</section>
+
+<section class="footer" data-slice="footer">
+  <div class="main"></div>
+  <div class="t gt learn">Learn what we mean by natural on our website.</div>
+  <img class="flogo" src="../../../01-brand/email-kit/assets/logo-dark.png" alt="Tom's of Maine">
+  <img class="social" src="../../../01-brand/email-kit/assets/social-row.png" alt="">
+  <div class="t gt navlist">Our Mission<br>Products<br>Shop Now<br>Blog</div>
+  <div class="t gt legal" style="top:470px">Tom’s of Maine · 2 Storer Street, Suite 302 · Kennebunk, ME 04043 · USA</div>
+  <div class="t gt legal" style="top:503.5px">©%%= v(@CurrentYear) =%% Tom's of Maine, Inc.</div>
+  <div class="t gt legal" style="top:541px">Privacy Policy  l  Terms of Sale  l   Terms of Use  l  Unsubscribe</div>
+</section>
+
+</body>
+</html>

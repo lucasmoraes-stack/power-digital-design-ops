@@ -1,0 +1,31 @@
+{#- Positioned-layer engine used by M03 Hero, M18 SMS signup band and M22 standalone dividers.
+  m.h        module height (Figma frame height)          m.bg      background fills, bottom to top
+  m.under    layers behind the text                       m.layers  layers in front of the text
+  m.stacks   text stacks: {y, x (default centered), w, align left|center, gap, items[], card{...}}
+  m.cuts     extra slice markers (y inside the module)    m.cut     false = no slice cut at the top
+-#}
+{%- import '_macros.j2' as k -%}
+<section class="m eng" data-module="{{ m.module }}"{% if m.variant %} data-variant="{{ m.variant }}"{% endif %} style="{{ {'height':m.h,'overflow':(none if m.clip is sameas false else 'hidden'),'background':m.color,'margin-top':m._mt}|style }}">
+{%- if m.cut is not sameas false %}<i class="cut" data-cut style="top:{{ (m.cut_y or 0)|px }}"></i>{% endif %}
+{{ k.bg(m.bg) }}
+{%- for l in m.under or [] %}
+{{ k.layer(l) }}
+{%- endfor %}
+{%- for s in m.stacks or [] %}
+{%- set sw = s.w or 500 -%}
+{%- set gap = s.gap if s.gap is defined else 24 -%}
+{%- if s.card %}
+{%- set c = s.card -%}
+<div class="lay" data-layer="{{ c.name or 'card' }}" style="{{ c|bstyle({'background':c.fill,'border':c.border,'backdrop-filter':c.backdrop,'-webkit-backdrop-filter':c.backdrop,'box-shadow':c.box_shadow,'padding-top':c.pt,'padding-bottom':c.pb,'display':'flex','flex-direction':'column','align-items':('flex-start' if s.align == 'left' else 'center'),'padding-left':c.pl}) }}">
+{%- for l in c.layers or [] %}{{ k.layer(l) }}{% endfor %}
+{{ k.stack(s['items'], gap, cls='flow ' ~ (s.align or ''), st={'width':sw}) }}
+</div>
+{%- else %}
+{{ k.stack(s['items'], gap, cls=(s.align or ''), st={'top':s.y,'left':(s.x if s.x is defined else (600 - sw) / 2),'width':sw,'z-index':s.z}) }}
+{%- endif %}
+{%- endfor %}
+{%- for l in m.layers or [] %}
+{{ k.layer(l) }}
+{%- endfor %}
+{{ k.cuts(m.cuts) }}
+</section>

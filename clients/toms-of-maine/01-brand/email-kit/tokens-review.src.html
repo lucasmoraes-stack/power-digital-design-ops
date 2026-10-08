@@ -1,0 +1,347 @@
+<title>Tom's of Maine Email Tokens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Montserrat:wght@700&display=swap">
+<style>
+@font-face{font-family:"New Kansas";font-weight:500;src:url(data:font/woff;base64,__NK500__) format("woff");}
+@font-face{font-family:"New Kansas";font-weight:600;src:url(data:font/woff;base64,__NK600__) format("woff");}
+@font-face{font-family:"New Kansas";font-weight:700;src:url(data:font/woff;base64,__NK700__) format("woff");}
+
+/* Layout: spec sheet. Left = the 600px email canvas at true size; right = the token values and where they came from. */
+:root{
+  --paper:#F2F6F5; --sheet:#FFFFFF; --ink:#10302B; --ink-soft:#4C6662; --rule:#D5E1DE; --tag:#E3EEEB;
+  --mark:#00867D; --warn:#B4441C; --warn-bg:#FBEDE6; --ok:#1F7A4D;
+  --display:"New Kansas",Georgia,"Times New Roman",serif;
+  --ui:"Rubik",Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Consolas,monospace;
+  /* email tokens, fixed: these are the email's own colors, not page chrome */
+  --t-deep:#05453D; --t-accent:#008D83; --t-nav:#00867D; --t-line:#55B5AC; --t-grey:#E8E8E8;
+  --t-navy:#295791; --t-navy-bar:#24436F; --t-mint:#CCFFFA; --t-leaf:#06554B; --t-bright:#0CAB97;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark; --paper:#0B1715; --sheet:#11201E; --ink:#E2EEEB; --ink-soft:#97ADA9; --rule:#22403B; --tag:#183330;
+  --mark:#4FC2B8; --warn:#F09A72; --warn-bg:#3A2117; --ok:#6FD1A0;}}
+:root[data-theme="dark"]{
+  color-scheme:dark; --paper:#0B1715; --sheet:#11201E; --ink:#E2EEEB; --ink-soft:#97ADA9; --rule:#22403B; --tag:#183330;
+  --mark:#4FC2B8; --warn:#F09A72; --warn-bg:#3A2117; --ok:#6FD1A0;}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 15px/1.55 var(--ui);padding-inline:20px;padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto}
+a{color:var(--mark)}
+:focus-visible{outline:2px solid var(--mark);outline-offset:2px}
+
+header.top{padding-block:40px 28px;border-bottom:1px solid var(--rule);display:grid;gap:14px}
+.eyebrow{font:600 12px/1 var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+h1{font:700 clamp(34px,5vw,52px)/1.02 var(--display);margin:0;text-wrap:balance}
+h1 em{font-style:normal;color:var(--mark)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13.5px;color:var(--ink-soft)}
+.meta b{color:var(--ink);font-weight:500}
+.pill{display:inline-block;font:600 11px/1 var(--ui);letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:4px;background:var(--warn-bg);color:var(--warn)}
+
+nav.toc{display:flex;flex-wrap:wrap;gap:6px 18px;padding-block:14px;font:500 13px/1 var(--ui);position:sticky;top:env(safe-area-inset-top,0px);background:var(--paper);z-index:5;border-bottom:1px solid var(--rule)}
+nav.toc a{text-decoration:none;color:var(--ink-soft);padding-block:4px}
+nav.toc a:hover{color:var(--ink)}
+
+section{padding-block:44px 8px;scroll-margin-top:48px}
+h2{font:700 30px/1.1 var(--display);margin:0 0 6px}
+.lede{color:var(--ink-soft);max-width:68ch;margin:0 0 26px}
+
+/* how it's built */
+.build{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:32px;align-items:start}
+.strip{border:1px solid var(--rule);background:var(--sheet);border-radius:6px;overflow:hidden;font:500 12px/1.3 var(--ui)}
+.strip div{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 12px;border-bottom:1px solid var(--rule)}
+.strip div:last-child{border-bottom:0}
+.strip .img{background:repeating-linear-gradient(135deg,var(--tag) 0 6px,transparent 6px 12px)}
+.strip span.k{font:600 10px/1 var(--ui);letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:3px}
+.k.live{background:var(--mark);color:var(--sheet)}
+.k.pic{border:1px solid var(--ink-soft);color:var(--ink-soft)}
+.build ul{margin:0;padding-left:18px;display:grid;gap:8px;max-width:62ch}
+
+/* color */
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.sw{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.sw .chip{height:92px;display:flex;align-items:flex-end;padding:10px 12px;font:700 18px/1 var(--display)}
+.sw .info{padding:10px 12px 12px;display:grid;gap:4px;font-size:13px}
+.sw code{font:600 13px/1 var(--mono)}
+.sw .role{color:var(--ink-soft)}
+.cr{font:500 12px/1.3 var(--ui);font-variant-numeric:tabular-nums}
+.cr.bad{color:var(--warn)} .cr.good{color:var(--ok)}
+.grads{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin-top:14px}
+.grad{height:70px;border-radius:6px;border:1px solid var(--rule);display:flex;align-items:flex-end;padding:8px 10px;font:600 11.5px/1.2 var(--mono)}
+
+/* specimen rows */
+.rows{display:grid;gap:14px}
+.row{display:grid;grid-template-columns:minmax(0,600px) minmax(0,1fr);gap:28px;align-items:start;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:18px}
+.canvas{width:100%;max-width:600px;border-radius:3px;overflow:hidden}
+.spec{display:grid;gap:6px;font-size:13.5px;align-content:start}
+.spec .name{font:600 12px/1 var(--ui);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.spec dl{display:grid;grid-template-columns:auto 1fr;gap:3px 14px;margin:6px 0 0}
+.spec dt{color:var(--ink-soft)} .spec dd{margin:0;font-variant-numeric:tabular-nums}
+.spec .note{color:var(--ink-soft);font-size:12.5px;margin-top:4px}
+.tag{display:inline-block;font:600 10px/1 var(--ui);letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:3px;margin-right:4px;vertical-align:1px}
+
+/* email specimens, true 600px scale */
+.e-light{background:#fff;color:var(--t-deep)}
+.e-grey{background:linear-gradient(180deg,#fff 0%,var(--t-grey) 100%);color:var(--t-deep)}
+.e-teal{background:linear-gradient(180deg,var(--t-accent) 0%,var(--t-line) 100%);color:#fff}
+.e-deep{background:var(--t-deep);color:#fff}
+.pad{padding:28px 32px}
+.hero-t{font:600 64px/58px var(--display);letter-spacing:-.02em;margin:0;text-align:center;text-wrap:balance}
+.hero-t .ac{color:var(--t-accent)}
+.h-band{font:700 42px/44px var(--display);margin:0;text-align:center;text-wrap:balance}
+.sub{font:700 22px/29px var(--ui);text-transform:uppercase;margin:0;text-align:center}
+.intro{font:500 20px/24px var(--display);letter-spacing:-.01em;margin:0;text-align:center}
+.card-t{font:600 24px/29px var(--display);letter-spacing:-.01em;margin:0;text-align:center}
+.card-b{font:500 18px/22px var(--display);letter-spacing:-.03em;margin:0}
+.lab{font:700 24px/24px var(--ui);text-transform:uppercase;margin:0}
+.lab-s{font:700 18px/18px var(--ui);text-transform:uppercase;margin:0}
+.navbar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:110px;padding:0 30px;background:#fff}
+.navbar .logo{font:700 26px/1 var(--display);color:var(--t-nav)}
+.navbar .links{display:flex;gap:22px;font:700 14px/20px "Gotham","Montserrat",Arial,sans-serif;text-transform:uppercase;color:var(--t-nav)}
+.btn{display:inline-block;font:700 20px/30px var(--ui);text-transform:uppercase;padding:10px 32px;border-radius:12px;text-decoration:none}
+.btn.s{font-size:18px;line-height:18px;padding:13px 22px;border-radius:10px}
+.btn.dk{background:var(--t-deep);color:#fff}
+.btn.lt{background:#fff;color:var(--t-deep)}
+.center{text-align:center}
+.stack{display:flex;flex-direction:column}
+.g24{gap:24px} .g15{gap:15px}
+
+/* spacing ruler */
+.measure{position:relative}
+.gap-mark{display:flex;align-items:center;justify-content:center;font:600 11px/1 var(--mono);color:#B4441C;background:repeating-linear-gradient(45deg,rgba(255,140,90,.28) 0 4px,rgba(255,140,90,.12) 4px 8px)}
+.card-o{border:2px solid var(--t-line);border-radius:20px;padding:32px}
+.card-v{border:2px solid var(--t-nav);border-radius:22px;padding:28px 25px}
+
+/* footer specimen */
+.foot{background:var(--t-navy);color:#fff;font-family:"Gotham","Montserrat",Arial,sans-serif;font-weight:700;text-align:center}
+.foot .main{padding:30px 32px;display:grid;gap:16px;font-size:14px;line-height:20px}
+.foot .links{display:grid;gap:0;line-height:28px}
+.foot .bar{background:var(--t-navy-bar);padding:14px 20px;display:grid;gap:4px;font-size:10px;line-height:14px}
+
+/* open items */
+.open{display:grid;gap:10px;max-width:820px;padding:0;margin:0;list-style:none}
+.open li{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;display:grid;gap:4px}
+.open b{font-weight:600}
+.open span{color:var(--ink-soft);font-size:13.5px}
+.done{color:var(--ok)}
+
+@media (max-width:860px){
+  .row{grid-template-columns:minmax(0,1fr)}
+  .build{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:520px){
+  .hero-t{font-size:40px;line-height:38px}
+  .h-band{font-size:32px;line-height:34px}
+  .pad{padding:22px 18px}
+  .navbar{padding:0 16px;height:80px}.navbar .links{gap:10px;font-size:11px}
+}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Tom's of Maine · Email kit v0.1</div>
+  <h1>Tokens from the <em>approved</em> emails</h1>
+  <div class="meta">
+    <span><span class="pill">draft</span></span>
+    <span>Source: <b>6 Oct 2026 emails</b> in Figma VAZIO DRAFT, page <b>1482:2</b></span>
+    <span>Scale: Figma 1200px ÷ 2 = <b>600px email</b></span>
+    <span>Extracted <b>Oct 6, 2026</b></span>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <a href="#build">Build</a><a href="#color">Color</a><a href="#type">Type</a><a href="#buttons">Buttons</a><a href="#spacing">Spacing</a><a href="#footer">Header and footer</a><a href="#open">Open items</a>
+</nav>
+
+<section id="build">
+  <h2>Image or live text</h2>
+  <p class="lede">What the export slices show in the 6 Figma emails. This describes those 6, not a rule: the 20 sent emails in the inbox folder use other hero types too, and some may carry live text.</p>
+  <div class="build">
+    <div class="strip" aria-label="Structure of the 6 Figma emails">
+      <div style="height:40px"><span>Header + nav</span><span class="k live">text</span></div>
+      <div class="img" style="height:150px"><span>Hero (in these 6)</span><span class="k pic">image</span></div>
+      <div style="height:64px"><span>Band heading + intro</span><span class="k live">text</span></div>
+      <div class="img" style="height:90px"><span>Product photo / card</span><span class="k pic">image</span></div>
+      <div style="height:54px"><span>Product name + button</span><span class="k live">text</span></div>
+      <div style="height:70px"><span>Navy footer</span><span class="k live">text</span></div>
+    </div>
+    <ul>
+      <li><b>Hero in the 6 Figma emails:</b> one image slice with the New Kansas headline, Rubik subtitle and CTA inside.</li>
+      <li><b>Hero in the 20 sent emails:</b> also text on flat or gradient teal with a side photo, text on a gradient with products below, price-led “20% OFF” heroes, and full photos with text on top. When the hero goes live text is an open item.</li>
+      <li><b>Band heading, intro, product name, card body, Rubik labels and buttons</b> ship as HTML.</li>
+      <li><b>The whole footer ships as HTML,</b> in Gotham Bold, with Salesforce Marketing Cloud AMPscript in the copyright line.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="color">
+  <h2>Color</h2>
+  <p class="lede">Hex values read straight from the layers. Deep teal <code>#05453D</code> carries almost all text and buttons; guideline v4.3 doesn't list it, but it is what the client approved. Contrast uses the WCAG formula. Blue backgrounds appear in some sent emails and are not on this sheet yet.</p>
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#05453D;color:#fff">Aa</div><div class="info"><code>#05453D</code><span class="role">primary · text · dark button</span><span class="cr good">10.9:1 on white · 8.9:1 on grey</span></div></div>
+    <div class="sw"><div class="chip" style="background:#008D83;color:#fff">Aa</div><div class="info"><code>#008D83</code><span class="role">highlighted word in a heading</span><span class="cr bad">4.1:1 on white: headings ≥24px bold only</span></div></div>
+    <div class="sw"><div class="chip" style="background:#00867D;color:#fff">Aa</div><div class="info"><code>#00867D</code><span class="role">header nav · values card outline</span><span class="cr">4.46:1 on white, borderline</span></div></div>
+    <div class="sw"><div class="chip" style="background:#55B5AC;color:#05453D">Aa</div><div class="info"><code>#55B5AC</code><span class="role">2px card outline</span><span class="cr">decorative, no text</span></div></div>
+    <div class="sw"><div class="chip" style="background:#295791;color:#fff">Aa</div><div class="info"><code>#295791</code><span class="role">footer (navy, only here)</span><span class="cr good">7.3:1 with white</span></div></div>
+    <div class="sw"><div class="chip" style="background:#24436F;color:#fff">Aa</div><div class="info"><code>#24436F</code><span class="role">footer legal bar</span><span class="cr good">10.0:1 with white</span></div></div>
+    <div class="sw"><div class="chip" style="background:#CCFFFA;color:#05453D">Aa</div><div class="info"><code>#CCFFFA</code><span class="role">light detail on deep teal</span><span class="cr good">10.0:1 on #05453D</span></div></div>
+    <div class="sw"><div class="chip" style="background:#06554B;color:#fff">Aa</div><div class="info"><code>#06554B</code><span class="role">foliage texture · behind photos</span><span class="cr good">8.7:1 with white</span></div></div>
+  </div>
+  <div class="grads">
+    <div class="grad" style="background:linear-gradient(180deg,#FFFFFF 0%,#E8E8E8 100%);color:#05453D">#FFFFFF → #E8E8E8 · light band</div>
+    <div class="grad" style="background:linear-gradient(180deg,#008D83 0%,#55B5AC 100%);color:#fff">#008D83 → #55B5AC · teal band</div>
+    <div class="grad" style="background:linear-gradient(180deg,#05453D 0%,#38A698 51%,#05453D 100%);color:#fff">#05453D → #38A698 → #05453D</div>
+    <div class="grad" style="background:linear-gradient(180deg,#FFFFFF 0%,#0CAB97 100%);color:#05453D">#FFFFFF → #0CAB97 · white at the end: 2.88:1, fails</div>
+  </div>
+</section>
+
+<section id="type">
+  <h2>Typography</h2>
+  <p class="lede">Every sample is at true 600px email size, with copy taken from the approved emails, set in the New Kansas files supplied for the brand.</p>
+  <div class="rows">
+
+    <div class="row">
+      <div class="canvas e-teal pad"><p class="hero-t">Every smile has a <span class="ac" style="color:#CCFFFA">routine</span> behind it</p></div>
+      <div class="spec"><div class="name">Hero headline · <code>type.display</code></div>
+        <dl><dt>Font</dt><dd>New Kansas SemiBold</dd><dt>Size</dt><dd>64 / 58 · tracking -2%</dd><dt>Variant</dt><dd>76 / 69 · tracking -7%</dd><dt>Color</dt><dd>#05453D or white, accent #008D83</dd></dl>
+        <div class="note">Inside the image slice in the 6 Figma emails; can also be live text. Sample from 10/2 (the original accent is #008D83 on a light background).</div></div>
+    </div>
+
+    <div class="row">
+      <div class="canvas e-grey pad"><div class="stack g24"><p class="h-band">Two ingredients worth getting to know</p></div></div>
+      <div class="spec"><div class="name"><span class="tag k live">text</span>Band heading · <code>type.h2</code></div>
+        <dl><dt>Font</dt><dd>New Kansas Bold</dd><dt>Size</dt><dd>42 / 44 · mobile 32 / 34 (proposal)</dd><dt>Color</dt><dd>#05453D · white on teal bands</dd></dl></div>
+    </div>
+
+    <div class="row">
+      <div class="canvas e-light pad"><p class="sub">Discover how our values shape what we make</p></div>
+      <div class="spec"><div class="name"><span class="tag k live">text</span>Band subtitle</div>
+        <dl><dt>Font</dt><dd>Rubik Bold, uppercase</dd><dt>Size</dt><dd>22 / 29</dd><dt>Color</dt><dd>#05453D</dd></dl></div>
+    </div>
+
+    <div class="row">
+      <div class="canvas e-light pad"><p class="intro">Let's zoom in on a couple of the MVPs you'll find across our formulas.</p></div>
+      <div class="spec"><div class="name"><span class="tag k live">text</span>Band intro · <code>type.body</code></div>
+        <dl><dt>Font</dt><dd>New Kansas Medium</dd><dt>Size</dt><dd>20 / 24 · tracking -1%</dd><dt>Color</dt><dd>#05453D</dd></dl></div>
+    </div>
+
+    <div class="row">
+      <div class="canvas e-light pad"><p class="card-t">Whiten Plus Coconut Oil Fluoride Free Gentle Mint Natural Toothpaste</p></div>
+      <div class="spec"><div class="name"><span class="tag k live">text</span>Card title / product name · <code>type.item</code></div>
+        <dl><dt>Font</dt><dd>New Kansas SemiBold</dd><dt>Size</dt><dd>24 / 29 · tracking -1%</dd><dt>Variants</dt><dd>16 (2-col grid) · 18 Medium (10/2)</dd><dt>Color</dt><dd>#05453D · ingredient name in #008D83</dd></dl></div>
+    </div>
+
+    <div class="row">
+      <div class="canvas e-light pad"><p class="card-b">Pure sea salt delivers a refreshing clean without alcohol, artificial sweeteners, or preservatives.</p></div>
+      <div class="spec"><div class="name"><span class="tag k live">text</span>Card body · <code>type.caption</code></div>
+        <dl><dt>Font</dt><dd>New Kansas Medium</dd><dt>Size</dt><dd>18 / 22 · tracking -3%</dd><dt>Color</dt><dd>#05453D or white</dd></dl></div>
+    </div>
+
+    <div class="row">
+      <div class="canvas e-light pad"><div class="stack g15"><p class="lab">Upgrade your brush</p><p class="lab-s" style="color:#044D44">Certified B Corp</p></div></div>
+      <div class="spec"><div class="name"><span class="tag k live">text</span>Card label · <code>type.label</code></div>
+        <dl><dt>Font</dt><dd>Rubik Bold, uppercase</dd><dt>Size</dt><dd>24 / 24 · small 18 / 18</dd><dt>Tracking</dt><dd>0</dd></dl>
+        <div class="note">The guideline says “never Rubik for headlines”. The approved emails use Rubik as a card title, so the kit follows the approved emails.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="buttons">
+  <h2>Buttons</h2>
+  <p class="lede">One shape, a rounded rectangle. The color flips with the background; one button color per email. No navy buttons in the 6 Figma emails.</p>
+  <div class="rows">
+    <div class="row">
+      <div class="canvas e-light pad center"><div class="stack g24" style="align-items:center"><a class="btn dk" href="#buttons">Shop now</a><a class="btn s dk" href="#buttons">Shop now</a></div></div>
+      <div class="spec"><div class="name">Default, light band · <code>button</code></div>
+        <dl><dt>Font</dt><dd>Rubik Bold 20, uppercase, line 30</dd><dt>Padding</dt><dd>10 × 32 → 50 tall</dd><dt>Radius</dt><dd>12px</dd><dt>Color</dt><dd>#05453D, white text</dd><dt>Small</dt><dd>Rubik 18, radius 10, 44 tall</dd></dl>
+        <div class="note">The small one is 43px in Figma, raised to 44, the minimum tap size.</div></div>
+    </div>
+    <div class="row">
+      <div class="canvas e-teal pad center"><div class="stack g24" style="align-items:center"><a class="btn lt" href="#buttons">See what's inside</a><a class="btn s lt" href="#buttons">Shop now</a></div></div>
+      <div class="spec"><div class="name">Inverse, dark band or photo</div>
+        <dl><dt>Color</dt><dd>white, #05453D text</dd><dt>Rest</dt><dd>same as default</dd></dl></div>
+    </div>
+  </div>
+</section>
+
+<section id="spacing">
+  <h2>Spacing</h2>
+  <p class="lede">Measured between text and button boxes in the live-text bands. Orange = measured gap, in email px.</p>
+  <div class="rows">
+    <div class="row">
+      <div class="canvas e-grey">
+        <div class="gap-mark" style="height:60px">60 · band_y</div>
+        <div style="padding:0 65px" class="stack">
+          <p class="h-band">Small changes that make a big difference</p>
+          <div class="gap-mark" style="height:24px">24</div>
+          <p class="intro">Seasonal check-in for your shelf.</p>
+          <div class="gap-mark" style="height:24px">24</div>
+          <div class="center"><a class="btn dk" href="#spacing">Refresh your routine</a></div>
+        </div>
+        <div class="gap-mark" style="height:60px">60 · band_y</div>
+      </div>
+      <div class="spec"><div class="name">Centered band</div>
+        <dl><dt>Top / bottom</dt><dd>60</dd><dt>Heading → intro</dt><dd>24</dd><dt>Intro → button</dt><dd>24</dd><dt>Side gutter</dt><dd>~65 (block ~470)</dd><dt>Header</dt><dd>110 tall, white</dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="canvas e-grey" style="padding:28px 40px">
+        <div class="card-o stack">
+          <p class="card-t" style="color:#008D83">Coconut Oil</p>
+          <div class="gap-mark" style="height:15px">15</div>
+          <p class="card-b center">Coconut oil and mineral polishers gently lift stains for effective whitening without peroxide or harsh abrasives.</p>
+        </div>
+      </div>
+      <div class="spec"><div class="name">Outline card · <code>radius.card</code></div>
+        <dl><dt>Outline</dt><dd>2px #55B5AC</dd><dt>Radius</dt><dd>20</dd><dt>Padding</dt><dd>32</dd><dt>Side margin</dt><dd>40</dd><dt>Title → body</dt><dd>15</dd><dt>Body → button</dt><dd>24</dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="canvas e-light" style="padding:28px 40px">
+        <div class="card-v stack g15" style="max-width:255px;margin:0 auto">
+          <p class="lab-s center" style="color:#044D44">Naturally high standards</p>
+          <p class="card-b center">Safe and effective, with full transparency about what goes in every product.</p>
+        </div>
+      </div>
+      <div class="spec"><div class="name">Values card · <code>radius.frame</code></div>
+        <dl><dt>Outline</dt><dd>2px #00867D, transparent fill</dd><dt>Radius</dt><dd>22</dd><dt>Padding</dt><dd>28 × 25</dd><dt>Use</dt><dd>2×2 grid (10/27)</dd></dl>
+        <div class="note">Body copy shortened for the sample.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="footer">
+  <h2>Header and footer</h2>
+  <p class="lede">Identical across the 6 Figma emails. Both use Gotham Bold, which comes from the SFMC template and is not in the guideline; shown here in Montserrat as a stand-in.</p>
+  <div class="rows">
+    <div class="row">
+      <div class="canvas" style="border:1px solid var(--rule)"><div class="navbar"><span class="logo">Tom's</span><span class="links"><span>Our mission</span><span>Products</span><span>Shop now</span></span></div></div>
+      <div class="spec"><div class="name"><span class="tag k live">text</span>Header</div>
+        <dl><dt>Height</dt><dd>110, white background</dd><dt>Nav</dt><dd>Gotham Bold 14 / 20, uppercase, #00867D</dd><dt>Logo</dt><dd>left (asset pending)</dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="canvas foot">
+        <div class="main"><span>Learn what we mean by natural on our website.</span><div class="links"><span>Our Mission</span><span>Products</span><span>Shop Now</span><span>Blog</span></div></div>
+        <div class="bar"><span>Tom’s of Maine · 2 Storer Street, Suite 302 · Kennebunk, ME 04043 · USA</span><span>©%%= v(@CurrentYear) =%% Tom's of Maine, Inc.</span><span>Privacy Policy  l  Terms of Sale  l  Terms of Use  l  Unsubscribe</span></div>
+      </div>
+      <div class="spec"><div class="name"><span class="tag k live">text</span>Footer · <code>footer</code></div>
+        <dl><dt>Block</dt><dd>#295791, 455 tall</dd><dt>Legal bar</dt><dd>#24436F, 131 tall</dd><dt>Text</dt><dd>Gotham Bold 14 / 20 and 14 / 28, white</dd><dt>Legal</dt><dd>10 / 14 (10/28 in Figma)</dd></dl>
+        <div class="note">This settles the navy hex: the #015695 candidate appears in none of the emails. Social icon images not exported yet.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="open">
+  <h2>Open items</h2>
+  <p class="lede">What is left before the status moves from draft to approved.</p>
+  <ul class="open">
+    <li><b>Live-text hero</b><span>In which situations does the hero ship as live text instead of a single image slice?</span></li>
+    <li><b>Blue backgrounds</b><span>Seen in Relaxation Day, Labor Day Savings End Tonight and Stay Fresh, Naturally Confident. Hex values and when they are allowed (guideline v4.3 deprecates the old Sky).</span></li>
+    <li><b class="done">Resolved · New Kansas files</b><span>All 15 .otf files are in <code>01-brand/identity/fonts/</code> (out of git, licensed). Still open for email: whether the license covers a hosted webfont, or live text falls back to Georgia.</span></li>
+    <li><b>Gotham in header and footer</b><span>Keep it as in the approved emails, or switch to Rubik, the guideline's functional face?</span></li>
+    <li><b>First-name field in SFMC</b><span>No approved email uses personalization. Which AMPscript attribute?</span></li>
+    <li><b>Footer reason line</b><span>The approved emails have no “you're receiving this because…” line. Keep it that way?</span></li>
+    <li><b>Mobile and dark mode</b><span>Mobile sizes (band heading 32/34) and the dark palette derived from #05453D are proposals, not from the Figma.</span></li>
+    <li><b>White → #0CAB97 gradient</b><span>White text at the end of this gradient is 2.88:1. Kit rule: white text never sits in that range.</span></li>
+  </ul>
+</section>
+</div>

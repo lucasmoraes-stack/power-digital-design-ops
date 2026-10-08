@@ -11,7 +11,7 @@ Digest of `_NEW_Tom's of Maine - Brand Universe Guidelines - Client copy 11.11.2
 
 **Explicitly deprecated — do not use**: "old Sky or Navy accents," anywhere (logo, typography, combined with other variants, or stacked on top of each other). The guideline calls this out four separate times on the color-palette-don'ts page (p.51). No hex is given for old Sky/Navy in the PDF text extract — if needed for legacy-asset comparison only, don't source it from the PDF.
 
-**Navy — scoped exception, confirmed 2026-08-31 by the user (not written in the PDF).** For email specifically, dark navy is approved for the **footer background** and **occasionally CTA buttons** — nowhere else (not hero banners, section backgrounds, headlines, or general content blocks, which stay Teal/Tint/White per the PDF above). Exact hex not independently verified yet — the Figma section's `#015695` is the closest known candidate but should be spot-checked against a recently-sent real email before it's locked into a template.
+**Navy — scoped exception, confirmed 2026-08-31 by the user (not written in the PDF).** For email specifically, dark navy is approved for the **footer background** and **occasionally CTA buttons** — nowhere else (not hero banners, section backgrounds, headlines, or general content blocks, which stay Teal/Tint/White per the PDF above). Hex locked 2026-10-06 from the approved Oct 2026 emails: footer block `#295791`, legal bar `#24436F`. The older `#015695` candidate is not used.
 
 **Still open**: the Figma Library's existing `Tom's of Maine Style Guide` section (node 199:1052) lists a 5-color palette including "Tom's Accent Navy" `#015695`, "Tom's Accent Sky" `#02A4EB`, and "Tom's Accent Yellow" `#FDD000` (the last two not mentioned anywhere in this PDF and not part of the scoped navy exception above), and even its "Tom's Green"/"Tom's Green Light" entries (`#04857B` / `#4EA9A2`) are slightly off from this PDF's verified `#00857A` / `#489E98`. That Figma section needs correcting to match this digest — don't treat it as authoritative until then. See `clients/toms-of-maine/README.md` status list.
 
@@ -20,7 +20,7 @@ Digest of `_NEW_Tom's of Maine - Brand Universe Guidelines - Client copy 11.11.2
 - **New Kansas** — primary typeface, headlines and body copy. 70s-inspired serif, "playful," carries the brand's warmth/personality. Sentence case. Weights seen: Regular, SemiBold, Bold ("Large Bold" tier).
 - **Rubik** (Bold) — secondary typeface, *functional information only* (labels, legal, claims-adjacent text) — never headlines. Upper case, Bold weight.
 - Don'ts: no color other than white on Tom's Teal, no stretching/distortion, no wide tracking, no rotation, no italics, never use Rubik for headlines.
-- Exact point sizes aren't in the extracted text (the hierarchy page is mostly a visual chart) — pull from the PDF's page 56-57 visuals directly if a batch needs precise scale.
+- Email sizes are set in `../email-kit/tokens.json` (extracted from the approved emails). Exact point sizes aren't in the extracted guideline text (the hierarchy page is mostly a visual chart) — pull from the PDF's page 56-57 visuals directly if a batch needs precise scale.
 
 ## Foliage texture (graphic device) — page 60-64
 

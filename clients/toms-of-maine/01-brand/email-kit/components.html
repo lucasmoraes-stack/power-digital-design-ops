@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<!--
+  Email kit TEMPLATE · module library + review page (brand-agnostic).
+  Do not edit components.html by hand: edit tokens.json in the kit folder, then run
+    python _studio/email-ops/tools/build_kit.py <kit_dir>
+  which replaces every token placeholder below (two percent signs, group.key, two percent signs) and writes <kit_dir>/components.html.
+
+  Each module lives between the "MODULE:Exx name" and "/MODULE:Exx" comment markers. Copy verbatim into an email
+  built from the base template; the grey "kit-label" rows and the KIT SHEET are review-only and never go into an email.
+  Link placeholders ({{CTA_URL}}, {{HOME_URL}} ...) are wired in the ESP, not by build_kit.py.
+  Layout constants (600px container, 40/24px gutters, 8pt spacing, VML frame sizes) are structural and stay fixed.
+-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>Tom's of Maine Email Kit</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <style>body, table, td, p, a, h1, h2, h3, span { font-family: Georgia, 'Times New Roman', serif !important; }</style>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    body { margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #FFFFFF; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+    a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+    u + #body a { color: inherit; text-decoration: none; }
+    .logo-dark { display: none; max-height: 0; overflow: hidden; }
+
+    @media screen and (max-width: 620px) {
+      .container { width: 100% !important; }
+      .px { padding-left: 24px !important; padding-right: 24px !important; }
+      .py { padding-top: 40px !important; padding-bottom: 40px !important; }
+      .stack { display: block !important; width: 100% !important; max-width: 100% !important; }
+      .stack-pad { padding: 0 0 16px 0 !important; }
+      .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
+      .h1 { font-size: 40px !important; line-height: 38px !important; }
+      .h2 { font-size: 32px !important; line-height: 34px !important; }
+      .stat { font-size: 40px !important; line-height: 38px !important; }
+      .btn-full { width: 100% !important; }
+      .btn-full a { display: block !important; }
+      .vml-h { height: auto !important; }
+      .card-gutter { padding-left: 12px !important; padding-right: 12px !important; }
+      .hero-card { height: 520px !important; padding: 36px 24px 0 24px !important; }
+      .h1-card { font-size: 22px !important; line-height: 26px !important; }
+    }
+
+    /* Dark mode. Apple Mail / iOS via prefers-color-scheme; Outlook app via [data-ogsc]/[data-ogsb].
+       Gmail ignores these and inverts on its own: the kit avoids large pure white/black planes and ships a dark-bg logo. */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .dm-page { background-color: #021F1B !important; }
+      :root:not([data-theme="light"]) .dm-surface { background-color: #032B26 !important; }
+      :root:not([data-theme="light"]) .dm-band { background-color: #05453D !important; }
+      :root:not([data-theme="light"]) .dm-h { color: #FFFFFF !important; }
+      :root:not([data-theme="light"]) .dm-p { color: #E6F5F3 !important; }
+      :root:not([data-theme="light"]) .dm-muted { color: #CCFFFA !important; }
+      :root:not([data-theme="light"]) .dm-link, :root:not([data-theme="light"]) .dm-accent { color: #CCFFFA !important; }
+      :root:not([data-theme="light"]) .dm-line { border-color: #0B5C52 !important; }
+      :root:not([data-theme="light"]) .kit-label { background-color: #032B26 !important; color: #CCFFFA !important; }
+      :root:not([data-theme="light"]) .logo-light { display: none !important; max-height: 0 !important; overflow: hidden !important; }
+      :root:not([data-theme="light"]) .logo-dark { display: block !important; max-height: none !important; overflow: visible !important; }
+    }
+    :root[data-theme="dark"] .dm-page { background-color: #021F1B !important; }
+    :root[data-theme="dark"] .dm-surface { background-color: #032B26 !important; }
+    :root[data-theme="dark"] .dm-band { background-color: #05453D !important; }
+    :root[data-theme="dark"] .dm-h { color: #FFFFFF !important; }
+    :root[data-theme="dark"] .dm-p { color: #E6F5F3 !important; }
+    :root[data-theme="dark"] .dm-muted { color: #CCFFFA !important; }
+    :root[data-theme="dark"] .dm-link, :root[data-theme="dark"] .dm-accent { color: #CCFFFA !important; }
+    :root[data-theme="dark"] .dm-line { border-color: #0B5C52 !important; }
+    :root[data-theme="dark"] .kit-label { background-color: #032B26 !important; color: #CCFFFA !important; }
+    :root[data-theme="dark"] .logo-light { display: none !important; max-height: 0 !important; overflow: hidden !important; }
+    :root[data-theme="dark"] .logo-dark { display: block !important; max-height: none !important; overflow: visible !important; }
+    [data-ogsb] .dm-surface { background-color: #032B26 !important; }
+    [data-ogsb] .dm-band { background-color: #05453D !important; }
+    [data-ogsc] .dm-h { color: #FFFFFF !important; }
+    [data-ogsc] .dm-p { color: #E6F5F3 !important; }
+    [data-ogsc] .dm-link, [data-ogsc] .dm-accent { color: #CCFFFA !important; }
+  </style>
+</head>
+<body id="body" class="dm-page" style="margin:0; padding:0; background-color:#FFFFFF;">
+
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#FFFFFF;">
+    Tom's of Maine email kit: tokens and approved modules for review.
+    &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="dm-page" style="background-color:#FFFFFF;">
+    <tr>
+      <td align="center" style="padding:32px 0 64px 0;">
+        <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+        <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px;">
+
+          <!-- ============ KIT SHEET (review only) ============ -->
+          <tr>
+            <td class="px dm-surface" style="padding:40px 40px 32px 40px; background-color:#FFFFFF; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <p class="dm-accent" style="margin:0 0 12px 0; font-size:24px; line-height:24px; font-weight:700; letter-spacing:0; text-transform:uppercase; color:#05453D;">Email kit · v0.1 · draft for review</p>
+              <h1 class="h1 dm-h" style="margin:0 0 16px 0; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:24px; line-height:29px; font-weight:600; color:#05453D;">Tom's of Maine, in <em class="dm-accent" style="font-family:'New Kansas',Georgia,'Times New Roman',serif; font-style:normal; color:#05453D;">600 pixels</em>.</h1>
+              <p class="dm-p" style="margin:0; font-size:20px; line-height:24px; color:#05453D;">Tokens extracted from the 6 approved Oct 2026 emails (Figma VAZIO DRAFT, page 1482:2). Brand guideline v4.3 is a complement only. Review each module and mark it "looks good" or "needs work". Sample copy is neutral; real emails take their copy from the flow brief.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="px dm-surface" style="padding:0 40px 16px 40px; background-color:#FFFFFF; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td width="33%" class="stack stack-pad" style="padding:0 8px 16px 0; vertical-align:top;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#05453D" height="72" style="height:72px; background-color:#05453D; border-radius:10px 10px 0 0;">&nbsp;</td></tr>
+                    <tr><td class="dm-line" style="padding:10px 12px; border:1px solid #55B5AC; border-top:0; border-radius:0 0 10px 10px; font-size:13px; line-height:18px; color:#05453D;"><strong class="dm-h">Primary</strong><br><span class="dm-muted" style="color:#05453D;">#05453D · action, links</span></td></tr></table>
+                  </td>
+                  <td width="33%" class="stack stack-pad" style="padding:0 4px 16px 4px; vertical-align:top;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#295791" height="72" style="height:72px; background-color:#295791; border-radius:10px 10px 0 0;">&nbsp;</td></tr>
+                    <tr><td class="dm-line" style="padding:10px 12px; border:1px solid #55B5AC; border-top:0; border-radius:0 0 10px 10px; font-size:13px; line-height:18px; color:#05453D;"><strong class="dm-h">Dark</strong><br><span class="dm-muted" style="color:#05453D;">#295791 · dark band, footer</span></td></tr></table>
+                  </td>
+                  <td width="33%" class="stack stack-pad" style="padding:0 0 16px 8px; vertical-align:top;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#E8E8E8" height="72" style="height:72px; background-color:#E8E8E8; border-radius:10px 10px 0 0;">&nbsp;</td></tr>
+                    <tr><td class="dm-line" style="padding:10px 12px; border:1px solid #55B5AC; border-top:0; border-radius:0 0 10px 10px; font-size:13px; line-height:18px; color:#05453D;"><strong class="dm-h">Surface alt</strong><br><span class="dm-muted" style="color:#05453D;">#E8E8E8 · light band</span></td></tr></table>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="33%" class="stack stack-pad" style="padding:0 8px 16px 0; vertical-align:top;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#CCFFFA" height="48" style="height:48px; background-color:#CCFFFA; border-radius:10px 10px 0 0;">&nbsp;</td></tr>
+                    <tr><td class="dm-line" style="padding:10px 12px; border:1px solid #55B5AC; border-top:0; border-radius:0 0 10px 10px; font-size:13px; line-height:18px; color:#05453D;"><strong class="dm-h">Accent on dark</strong><br><span class="dm-muted" style="color:#05453D;">#CCFFFA · labels on dark</span></td></tr></table>
+                  </td>
+                  <td width="33%" class="stack stack-pad" style="padding:0 4px 16px 4px; vertical-align:top;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#008D83" height="48" style="height:48px; background-color:#008D83; border-radius:10px 10px 0 0;">&nbsp;</td></tr>
+                    <tr><td class="dm-line" style="padding:10px 12px; border:1px solid #55B5AC; border-top:0; border-radius:0 0 10px 10px; font-size:13px; line-height:18px; color:#05453D;"><strong class="dm-h">Accent 1</strong><br><span class="dm-muted" style="color:#05453D;">#008D83 · per-email accent</span></td></tr></table>
+                  </td>
+                  <td width="33%" class="stack stack-pad" style="padding:0 0 16px 8px; vertical-align:top;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#0CAB97" height="48" style="height:48px; background-color:#0CAB97; border-radius:10px 10px 0 0;">&nbsp;</td></tr>
+                    <tr><td class="dm-line" style="padding:10px 12px; border:1px solid #55B5AC; border-top:0; border-radius:0 0 10px 10px; font-size:13px; line-height:18px; color:#05453D;"><strong class="dm-h">Accent 2</strong><br><span class="dm-muted" style="color:#05453D;">#0CAB97 · per-email accent</span></td></tr></table>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="33%" class="stack stack-pad" style="padding:0 8px 16px 0; vertical-align:top;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#05453D" height="32" style="height:32px; background-color:#05453D; border-radius:10px 10px 0 0;">&nbsp;</td></tr>
+                    <tr><td class="dm-line" style="padding:10px 12px; border:1px solid #55B5AC; border-top:0; border-radius:0 0 10px 10px; font-size:13px; line-height:18px; color:#05453D;"><strong class="dm-h">Text muted</strong><br><span class="dm-muted" style="color:#05453D;">#05453D · body, notes</span></td></tr></table>
+                  </td>
+                  <td width="33%" class="stack stack-pad" style="padding:0 4px 16px 4px; vertical-align:top;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#55B5AC" height="32" style="height:32px; background-color:#55B5AC; border-radius:10px 10px 0 0;">&nbsp;</td></tr>
+                    <tr><td class="dm-line" style="padding:10px 12px; border:1px solid #55B5AC; border-top:0; border-radius:0 0 10px 10px; font-size:13px; line-height:18px; color:#05453D;"><strong class="dm-h">Line</strong><br><span class="dm-muted" style="color:#05453D;">#55B5AC · dividers</span></td></tr></table>
+                  </td>
+                  <td width="33%" class="stack stack-pad" style="padding:0 0 16px 8px; vertical-align:top;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#FFFFFF" height="32" style="height:32px; background-color:#FFFFFF; border-radius:10px 10px 0 0;">&nbsp;</td></tr>
+                    <tr><td class="dm-line" style="padding:10px 12px; border:1px solid #55B5AC; border-top:0; border-radius:0 0 10px 10px; font-size:13px; line-height:18px; color:#05453D;"><strong class="dm-h">Page</strong><br><span class="dm-muted" style="color:#05453D;">#FFFFFF · around the 600px</span></td></tr></table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px dm-surface" style="padding:8px 40px 40px 40px; background-color:#FFFFFF; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr><td class="dm-line" style="padding:12px 0; border-top:1px solid #55B5AC;"><span class="dm-h" style="font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:64px; line-height:58px; font-weight:600; color:#05453D;">Display <em class="dm-accent" style="font-family:'New Kansas',Georgia,'Times New Roman',serif; font-style:normal; color:#05453D;">accent</em></span><br><span class="dm-muted" style="font-size:13px; line-height:18px; color:#05453D;">New Kansas + Rubik 600 · 64/58 desktop, 40/38 mobile · one accent word per headline, at most</span></td></tr>
+                <tr><td class="dm-line" style="padding:12px 0; border-top:1px solid #55B5AC;"><span class="dm-h" style="font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:42px; line-height:44px; font-weight:600; color:#05453D;">Section heading</span><br><span class="dm-muted" style="font-size:13px; line-height:18px; color:#05453D;">New Kansas + Rubik 600 · 42/44 desktop, 32/34 mobile</span></td></tr>
+                <tr><td class="dm-line" style="padding:12px 0; border-top:1px solid #55B5AC;"><span class="dm-h" style="font-size:24px; line-height:29px; font-weight:600; color:#05453D;">Item title</span><span class="dm-muted" style="font-size:13px; line-height:18px; color:#05453D;"> · 600 · 24/29</span><br><span class="dm-p" style="font-size:20px; line-height:24px; color:#05453D;">Body copy runs at 20/24 in the muted text color, never smaller.</span></td></tr>
+                <tr><td class="dm-line" style="padding:12px 0; border-top:1px solid #55B5AC;"><span class="dm-accent" style="font-size:24px; line-height:24px; font-weight:700; letter-spacing:0; text-transform:uppercase; color:#05453D;">Label · 700 · 24/24 · 0 tracking</span></td></tr>
+                <tr><td class="dm-line" style="padding:12px 0 0 0; border-top:1px solid #55B5AC;"><span class="dm-muted" style="font-size:13px; line-height:18px; color:#05453D;">Case rule: Sentence case for New Kansas headings and body; Rubik labels and buttons always uppercase; one word or phrase per heading may switch to accent teal #008D83, upright. Button radius 12px, card radius 20px. ESP: Salesforce Marketing Cloud · first-name merge field: [[CONFIRMAR: AMPscript first-name field, not used in the approved emails]]</span></td></tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td height="32" style="height:32px; font-size:0; line-height:0;">&nbsp;</td></tr>
+
+          <!-- ============ MODULES ============ -->
+
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E01 · Header · every email except those opening with E02</td></tr>
+          <!-- MODULE:E01 Header -->
+          <tr>
+            <td align="center" class="dm-surface" style="padding:28px 40px; background-color:#FFFFFF;">
+              <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;">
+                <img class="logo-light" src="assets/logo-light.png" width="120" height="50" alt="Tom's of Maine" style="display:block; width:120px; height:50px; border:0; margin:0 auto;">
+                <!--[if !mso]><!--><img class="logo-dark" src="assets/logo-dark.png" width="120" height="50" alt="Tom's of Maine" style="display:none; max-height:0; overflow:hidden; mso-hide:all; width:120px; height:50px; border:0; margin:0 auto;"><!--<![endif]-->
+              </a>
+            </td>
+          </tr>
+          <!-- /MODULE:E01 -->
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E02 · Hero Photo · "about a person" emails (welcome, re-engagement). Replaces E01: the photo may carry the logo, named in the alt</td></tr>
+          <!-- MODULE:E02 Hero Photo -->
+          <tr>
+            <td style="padding:0; background-color:#295791;">
+              <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img class="fluid" src="assets/sample-hero.jpg" width="600" height="380" alt="Sample hero image placeholder" style="display:block; width:600px; max-width:100%; height:auto; border:0;"></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="px" style="padding:40px 40px 48px 40px; background-color:#295791; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <p style="margin:0 0 12px 0; font-size:24px; line-height:24px; font-weight:700; letter-spacing:0; text-transform:uppercase; color:#CCFFFA;">Eyebrow label</p>
+              <h1 class="h1" style="margin:0 0 16px 0; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:64px; line-height:58px; font-weight:600; color:#FFFFFF;">Headline with one <em style="font-family:'New Kansas',Georgia,'Times New Roman',serif; font-style:normal; color:#CCFFFA;">accent</em> word</h1>
+              <p style="margin:0 0 28px 0; font-size:20px; line-height:24px; color:#FFFFFF;">Short supporting line that explains the single idea of this email. One or two sentences, then the button.</p>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="btn-full">
+                <tr><td align="center" bgcolor="#008D83" style="border-radius:12px; background-color:#008D83;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:10px 32px; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:20px; line-height:30px; font-weight:700; color:#FFFFFF; text-decoration:none; border-radius:12px;">Primary action</a>
+                </td></tr>
+              </table>
+            </td>
+          </tr>
+          <!-- /MODULE:E02 -->
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E03 · Hero Statement · one big idea on the light brand texture (solid fallback color). After E01</td></tr>
+          <!-- MODULE:E03 Hero Statement -->
+          <tr>
+            <td align="center" background="assets/texture-light.jpg" bgcolor="#E8E8E8" class="px" style="mso-padding-alt:0px; padding:64px 40px 72px 40px; background-color:#E8E8E8; background-image:url('assets/texture-light.jpg'); background-size:cover; background-position:center bottom; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/texture-light.jpg" color="#E8E8E8" /><v:textbox style="mso-fit-shape-to-text:true;" inset="40px,64px,40px,72px"><div><![endif]-->
+              <p style="margin:0 0 16px 0; font-size:24px; line-height:24px; font-weight:700; letter-spacing:0; text-transform:uppercase; color:#05453D;">Eyebrow label</p>
+              <h1 class="h1" style="margin:0 0 20px 0; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:64px; line-height:58px; font-weight:600; color:#05453D;">One clear idea, <em style="font-family:'New Kansas',Georgia,'Times New Roman',serif; font-style:normal; color:#05453D;">stated</em>&nbsp;plainly</h1>
+              <p style="margin:0 auto 32px auto; max-width:440px; font-size:20px; line-height:24px; color:#05453D;">Short supporting line that explains the single idea of this band, in one or two sentences.</p>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
+                <tr><td align="center" bgcolor="#05453D" style="border-radius:12px; background-color:#05453D;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:10px 32px; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:20px; line-height:30px; font-weight:700; color:#FFFFFF; text-decoration:none; border-radius:12px;">Primary action</a>
+                </td></tr>
+              </table>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E03 -->
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E04 · Hero Product · "about a process" emails (order, delivery, refill, onboarding). After E01. Stacks on mobile</td></tr>
+          <!-- MODULE:E04 Hero Product -->
+          <tr>
+            <td class="px py dm-band" style="padding:56px 40px; background-color:#E8E8E8; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td width="62%" class="stack stack-pad" style="vertical-align:middle; padding:0 16px 0 0;">
+                    <p class="dm-accent" style="margin:0 0 12px 0; font-size:24px; line-height:24px; font-weight:700; letter-spacing:0; text-transform:uppercase; color:#05453D;">Eyebrow label</p>
+                    <h1 class="h1 dm-h" style="margin:0 0 16px 0; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:76px; line-height:69px; font-weight:600; color:#05453D;">A question this email <em class="dm-accent" style="font-family:'New Kansas',Georgia,'Times New Roman',serif; font-style:normal; color:#05453D;">answers</em></h1>
+                    <p class="dm-p" style="margin:0; font-size:20px; line-height:24px; color:#05453D;">One short line about the product or the step.</p>
+                  </td>
+                  <td width="38%" class="stack" align="center" style="vertical-align:middle;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td bgcolor="#FFFFFF" style="background-color:#FFFFFF; border-radius:22px; padding:8px;">
+                      <img src="assets/product-1.png" width="180" height="180" alt="Sample product placeholder" style="display:block; width:180px; height:180px; border:0;">
+                    </td></tr></table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- /MODULE:E04 -->
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E15 · Hero Photo Card · photo leads, short headline on the calm top area of the photo, subhead + button below. After E01. Needs a photo with negative space at the top</td></tr>
+          <!-- MODULE:E15 Hero Photo Card -->
+          <tr>
+            <td class="dm-surface card-gutter" style="padding:0 20px; background-color:#FFFFFF;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" valign="top" height="600" background="assets/sample-card.jpg" bgcolor="#06554B" class="hero-card" style="mso-padding-alt:0px; height:600px; padding:48px 40px 0 40px; border-radius:20px; background-color:#06554B; background-image:url('assets/sample-card.jpg'); background-size:cover; background-position:center top; vertical-align:top; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+                    <!--[if gte mso 9]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" arcsize="4%" fill="true" stroke="false" style="width:560px;height:600px;"><v:fill type="frame" src="assets/sample-card.jpg" color="#06554B" /><v:textbox inset="40px,48px,40px,0px"><![endif]-->
+                    <p style="margin:0 0 14px 0; font-size:24px; line-height:24px; font-weight:700; letter-spacing:0; text-transform:uppercase; color:#05453D;">Eyebrow label</p>
+                    <h1 class="h1-card" style="margin:0; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:24px; line-height:29px; font-weight:600; color:#05453D;">Short headline over the&nbsp;calm&nbsp;<em style="font-family:'New Kansas',Georgia,'Times New Roman',serif; font-style:normal; color:#05453D;">top</em></h1>
+                    <!--[if gte mso 9]></v:textbox></v:roundrect><![endif]-->
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" class="px dm-surface" style="padding:32px 40px 56px 40px; background-color:#FFFFFF; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <p class="dm-p" style="margin:0 auto 28px auto; max-width:440px; font-size:20px; line-height:24px; color:#05453D;">Short supporting line under the photo that completes the headline, in one or two sentences.</p>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
+                <tr><td align="center" bgcolor="#0CAB97" style="border-radius:12px; background-color:#0CAB97;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:10px 32px; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:20px; line-height:30px; font-weight:700; color:#05453D; text-decoration:none; border-radius:12px;">Primary action</a>
+                </td></tr>
+              </table>
+            </td>
+          </tr>
+          <!-- /MODULE:E15 -->
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E16 · Hero Photo Block · large rounded photo (product or person) opens the email, eyebrow + headline + subhead + button below it. After E01. For photos whose subject fills the frame, with no calm area for text on top</td></tr>
+          <!-- MODULE:E16 Hero Photo Block -->
+          <tr>
+            <td class="dm-band card-gutter" style="padding:24px 20px 0 20px; background-color:#E8E8E8;">
+              <img class="fluid" src="assets/sample-feature.jpg" width="560" height="327" alt="Sample feature image placeholder" style="display:block; width:560px; max-width:100%; height:auto; border:0; border-radius:20px; background-color:#06554B;">
+            </td>
+          </tr>
+          <tr>
+            <td class="px dm-band" style="padding:36px 40px 56px 40px; background-color:#E8E8E8; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <p class="dm-accent" style="margin:0 0 12px 0; font-size:24px; line-height:24px; font-weight:700; letter-spacing:0; text-transform:uppercase; color:#05453D;">Eyebrow label</p>
+              <h1 class="h1 dm-h" style="margin:0 0 16px 0; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:24px; line-height:29px; font-weight:600; color:#05453D;">Headline under the photo with one <em class="dm-accent" style="font-family:'New Kansas',Georgia,'Times New Roman',serif; font-style:normal; color:#05453D;">accent</em>&nbsp;word</h1>
+              <p class="dm-p" style="margin:0 0 28px 0; font-size:20px; line-height:24px; color:#05453D;">Short supporting line that explains the single idea of this email in one or two sentences.</p>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="btn-full">
+                <tr><td align="center" bgcolor="#05453D" style="border-radius:12px; background-color:#05453D;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:10px 32px; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:20px; line-height:30px; font-weight:700; color:#FFFFFF; text-decoration:none; border-radius:12px;">Primary action</a>
+                </td></tr>
+              </table>
+            </td>
+          </tr>
+          <!-- /MODULE:E16 -->
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E05 · Text Block · heading + paragraphs + inline link</td></tr>
+          <!-- MODULE:E05 Text Block -->
+          <tr>
+            <td class="px py dm-surface" style="padding:56px 40px; background-color:#FFFFFF; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <h2 class="h2 dm-h" style="margin:0 0 16px 0; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:42px; line-height:44px; font-weight:600; color:#05453D;">Section heading</h2>
+              <p class="dm-p" style="margin:0 0 16px 0; font-size:20px; line-height:24px; color:#05453D;">First paragraph of sample copy. It states what the reader needs to know in plain words and stays within two or three lines on desktop.</p>
+              <p class="dm-p" style="margin:0; font-size:20px; line-height:24px; color:#05453D;">Second paragraph with an inline link to more detail. <a href="{{LINK_URL}}" target="_blank" class="dm-link" style="color:#05453D; text-decoration:underline; font-weight:600;">Read more</a></p>
+            </td>
+          </tr>
+          <!-- /MODULE:E05 -->
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E06 · Steps · a real sequence only (3 to 5 steps). Repeat the row per step; the last row has no divider</td></tr>
+          <!-- MODULE:E06 Steps -->
+          <tr>
+            <td class="px py dm-surface" style="padding:56px 40px; background-color:#FFFFFF; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <p class="dm-accent" style="margin:0 0 12px 0; font-size:24px; line-height:24px; font-weight:700; letter-spacing:0; text-transform:uppercase; color:#05453D;">How it works</p>
+              <h2 class="h2 dm-h" style="margin:0 0 32px 0; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:42px; line-height:44px; font-weight:600; color:#05453D;">Three steps from start to finish</h2>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <!-- step row -->
+                <tr>
+                  <td width="56" style="width:56px; padding:0 16px 24px 0; vertical-align:top;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" width="40" height="40" bgcolor="#05453D" style="width:40px; height:40px; border-radius:20px; background-color:#05453D; font-size:16px; line-height:40px; font-weight:700; color:#FFFFFF;">1</td></tr></table>
+                  </td>
+                  <td class="dm-line" style="padding:0 0 24px 0; vertical-align:top; border-bottom:1px solid #55B5AC;">
+                    <p class="dm-h" style="margin:0 0 4px 0; font-size:24px; line-height:29px; font-weight:600; color:#05453D;">First step title</p>
+                    <p class="dm-p" style="margin:0; font-size:20px; line-height:24px; color:#05453D;">One line that says what happens here.</p>
+                  </td>
+                </tr>
+                <tr><td colspan="2" height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                <tr>
+                  <td width="56" style="width:56px; padding:0 16px 24px 0; vertical-align:top;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" width="40" height="40" bgcolor="#05453D" style="width:40px; height:40px; border-radius:20px; background-color:#05453D; font-size:16px; line-height:40px; font-weight:700; color:#FFFFFF;">2</td></tr></table>
+                  </td>
+                  <td class="dm-line" style="padding:0 0 24px 0; vertical-align:top; border-bottom:1px solid #55B5AC;">
+                    <p class="dm-h" style="margin:0 0 4px 0; font-size:24px; line-height:29px; font-weight:600; color:#05453D;">Second step title</p>
+                    <p class="dm-p" style="margin:0; font-size:20px; line-height:24px; color:#05453D;">One line that says what happens here.</p>
+                  </td>
+                </tr>
+                <tr><td colspan="2" height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                <tr>
+                  <td width="56" style="width:56px; padding:0 16px 0 0; vertical-align:top;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" width="40" height="40" bgcolor="#05453D" style="width:40px; height:40px; border-radius:20px; background-color:#05453D; font-size:16px; line-height:40px; font-weight:700; color:#FFFFFF;">3</td></tr></table>
+                  </td>
+                  <td style="padding:0; vertical-align:top;">
+                    <p class="dm-h" style="margin:0 0 4px 0; font-size:24px; line-height:29px; font-weight:600; color:#05453D;">Third step title</p>
+                    <p class="dm-p" style="margin:0; font-size:20px; line-height:24px; color:#05453D;">One line that says what happens here.</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- /MODULE:E06 -->
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E07 · Photo Rows · circular photo + text, alternating person/product. Stacks on mobile</td></tr>
+          <!-- MODULE:E07 Photo Rows -->
+          <tr>
+            <td class="px py dm-surface" style="padding:56px 40px; background-color:#FFFFFF; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td width="136" class="stack stack-pad" style="width:136px; padding:0 24px 32px 0; vertical-align:middle;">
+                    <img src="assets/portrait-2.jpg" width="112" height="112" alt="Sample portrait placeholder two" style="display:block; width:112px; height:112px; border-radius:56px; border:0;">
+                  </td>
+                  <td class="stack" style="padding:0 0 32px 0; vertical-align:middle;">
+                    <p class="dm-h" style="margin:0 0 4px 0; font-size:24px; line-height:29px; font-weight:600; color:#05453D;">A short benefit title</p>
+                    <p class="dm-p" style="margin:0; font-size:20px; line-height:24px; color:#05453D;">One or two lines that back the title with a concrete fact from the approved source.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="136" class="stack stack-pad" style="width:136px; padding:0 24px 32px 0; vertical-align:middle;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" width="112" height="112" bgcolor="#E8E8E8" style="width:112px; height:112px; border-radius:56px; background-color:#E8E8E8;">
+                      <img src="assets/product-1.png" width="104" height="104" alt="Sample product placeholder" style="display:block; width:104px; height:104px; border:0; margin:0 auto;">
+                    </td></tr></table>
+                  </td>
+                  <td class="stack" style="padding:0 0 32px 0; vertical-align:middle;">
+                    <p class="dm-h" style="margin:0 0 4px 0; font-size:24px; line-height:29px; font-weight:600; color:#05453D;">A short product title</p>
+                    <p class="dm-p" style="margin:0; font-size:20px; line-height:24px; color:#05453D;">One or two lines about the product, exactly as the product page describes it.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="136" class="stack stack-pad" style="width:136px; padding:0 24px 0 0; vertical-align:middle;">
+                    <img src="assets/portrait-1.jpg" width="112" height="112" alt="Sample portrait placeholder one" style="display:block; width:112px; height:112px; border-radius:56px; border:0;">
+                  </td>
+                  <td class="stack" style="padding:0; vertical-align:middle;">
+                    <p class="dm-h" style="margin:0 0 4px 0; font-size:24px; line-height:29px; font-weight:600; color:#05453D;">A person when you need one</p>
+                    <p class="dm-p" style="margin:0 0 8px 0; font-size:20px; line-height:24px; color:#05453D;">A line about how to reach the team, with the real contact channels below.</p>
+                    <p style="margin:0; font-size:20px; line-height:24px; font-weight:600;"><span style="white-space:nowrap;"><a href="tel:{{SUPPORT_PHONE}}" class="dm-link" style="color:#05453D; text-decoration:underline;">{{SUPPORT_PHONE}}</a>&nbsp;&nbsp;·</span> <a href="mailto:{{SUPPORT_EMAIL}}" class="dm-link" style="color:#05453D; text-decoration:underline;">{{SUPPORT_EMAIL}}</a></p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- /MODULE:E07 -->
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E08 · Proof · one verifiable rating as a statistic. Sample figure below: replace with the verified number and source, and match the stars to it</td></tr>
+          <!-- MODULE:E08 Proof -->
+          <tr>
+            <td align="center" class="px py dm-band" style="padding:56px 40px; background-color:#E8E8E8; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <p class="dm-accent" style="margin:0 0 8px 0; font-size:24px; line-height:24px; font-weight:700; letter-spacing:0; text-transform:uppercase; color:#05453D;">Customer reviews</p>
+              <p class="stat dm-h" style="margin:0; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:64px; line-height:58px; font-weight:600; color:#05453D;">4.8<span class="dm-muted" style="font-size:28px; line-height:28px; color:#05453D;">&nbsp;/&nbsp;5</span></p>
+              <p class="dm-accent" style="margin:8px 0 12px 0; font-size:22px; line-height:22px; letter-spacing:4px; color:#05453D;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              <p class="dm-p" style="margin:0; font-size:20px; line-height:24px; color:#05453D;">Sample figure. From [[CONFIRMAR: review count and source]]</p>
+            </td>
+          </tr>
+          <!-- /MODULE:E08 -->
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E09 · Detail Lines · prices, rates, order facts. Values only from an approved source, currency written out when the brand's legal rule asks</td></tr>
+          <!-- MODULE:E09 Detail Lines -->
+          <tr>
+            <td class="px py dm-surface" style="padding:56px 40px; background-color:#FFFFFF; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <h2 class="h2 dm-h" style="margin:0 0 24px 0; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:42px; line-height:44px; font-weight:600; color:#05453D;">Detail heading</h2>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="dm-line dm-p" style="padding:16px 0; border-top:1px solid #55B5AC; font-size:20px; line-height:24px; color:#05453D;">Detail line one</td>
+                  <td align="right" class="dm-line dm-h" style="padding:16px 0; border-top:1px solid #55B5AC; font-size:24px; line-height:24px; font-weight:700; color:#05453D; white-space:nowrap;">[[CONFIRMAR]]</td>
+                </tr>
+                <tr>
+                  <td class="dm-line dm-p" style="padding:16px 0; border-top:1px solid #55B5AC; border-bottom:1px solid #55B5AC; font-size:20px; line-height:24px; color:#05453D;">Detail line two</td>
+                  <td align="right" class="dm-line dm-h" style="padding:16px 0; border-top:1px solid #55B5AC; border-bottom:1px solid #55B5AC; font-size:24px; line-height:24px; font-weight:700; color:#05453D; white-space:nowrap;">[[CONFIRMAR]]</td>
+                </tr>
+              </table>
+              <p class="dm-muted" style="margin:16px 0 0 0; font-size:18px; line-height:22px; color:#05453D;">A short note that qualifies the figures above.</p>
+            </td>
+          </tr>
+          <!-- /MODULE:E09 -->
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E10 · Feature Photo · full-bleed image between sections, with caption. Follows the brand's photography rule</td></tr>
+          <!-- MODULE:E10 Feature Photo -->
+          <tr>
+            <td style="padding:0; background-color:#06554B;">
+              <img class="fluid" src="assets/sample-feature.jpg" width="600" height="350" alt="Sample feature image placeholder" style="display:block; width:600px; max-width:100%; height:auto; border:0;">
+            </td>
+          </tr>
+          <tr>
+            <td class="px dm-surface" style="padding:20px 40px 40px 40px; background-color:#FFFFFF; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <p class="dm-muted" style="margin:0; font-size:18px; line-height:22px; color:#05453D;">A one-line caption that ties the image to the message of the email.</p>
+            </td>
+          </tr>
+          <!-- /MODULE:E10 -->
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E11 · CTA · one primary action. Variants: primary (default), accent 1, accent 2. One fill color per email, repeated identically</td></tr>
+          <!-- MODULE:E11 CTA -->
+          <tr>
+            <td align="center" class="px dm-surface" style="padding:48px 40px; background-color:#FFFFFF; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" class="btn-full">
+                <tr><td align="center" bgcolor="#05453D" style="border-radius:12px; background-color:#05453D;">
+                  <a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:10px 40px; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:20px; line-height:30px; font-weight:700; color:#FFFFFF; text-decoration:none; border-radius:12px;">Primary action</a>
+                </td></tr>
+              </table>
+            </td>
+          </tr>
+          <!-- /MODULE:E11 -->
+          <tr>
+            <td align="center" class="dm-surface" style="padding:0 40px 48px 40px; background-color:#FFFFFF;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                <tr>
+                  <td align="center" bgcolor="#008D83" style="border-radius:12px; background-color:#008D83;"><a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:13px 22px; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:18px; line-height:30px; font-weight:700; color:#FFFFFF; text-decoration:none; border-radius:12px;">Accent 1 variant</a></td>
+                  <td width="12" style="width:12px;">&nbsp;</td>
+                  <td align="center" bgcolor="#0CAB97" style="border-radius:12px; background-color:#0CAB97;"><a href="{{CTA_URL}}" target="_blank" style="display:inline-block; padding:13px 22px; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:18px; line-height:30px; font-weight:700; color:#05453D; text-decoration:none; border-radius:12px;">Accent 2 variant</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E12 · Letter · personal note with team sign-off. Never a named person until one is confirmed</td></tr>
+          <!-- MODULE:E12 Letter -->
+          <tr>
+            <td class="px py dm-surface" style="padding:56px 40px; background-color:#FFFFFF; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <p class="dm-h" style="margin:0 0 20px 0; font-family:'New Kansas',Georgia,'Times New Roman',serif; font-size:20px; line-height:24px; font-weight:600; color:#05453D;">Hi [[CONFIRMAR: AMPscript first-name field, not used in the approved emails]],</p>
+              <p class="dm-p" style="margin:0 0 16px 0; font-size:20px; line-height:24px; color:#05453D;">First paragraph of a short personal note. It speaks to one reader, in the second person, about one thing.</p>
+              <p class="dm-p" style="margin:0 0 32px 0; font-size:20px; line-height:24px; color:#05453D;">Second paragraph that says what happens next and what the reader can expect from the team.</p>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="padding:0 6px 0 0;"><img src="assets/portrait-2.jpg" width="44" height="44" alt="" style="display:block; width:44px; height:44px; border-radius:22px; border:0;"></td>
+                  <td style="padding:0 6px 0 0;"><img src="assets/portrait-1.jpg" width="44" height="44" alt="" style="display:block; width:44px; height:44px; border-radius:22px; border:0;"></td>
+                  <td style="padding:0 16px 0 0;"><img src="assets/portrait-3.jpg" width="44" height="44" alt="" style="display:block; width:44px; height:44px; border-radius:22px; border:0;"></td>
+                  <td style="vertical-align:middle;">
+                    <p class="dm-h" style="margin:0; font-size:15px; line-height:20px; font-weight:700; color:#05453D;">Warmly,</p>
+                    <p class="dm-muted" style="margin:0; font-size:15px; line-height:20px; color:#05453D;">The Tom's of Maine team</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- /MODULE:E12 -->
+
+          <tr><td height="24" style="height:24px; font-size:0; line-height:0;">&nbsp;</td></tr>
+          <tr><td class="kit-label" style="padding:10px 16px; background-color:#55B5AC; font-family:Consolas,Menlo,monospace; font-size:11px; line-height:16px; color:#05453D;">E13 + E14 · Closing Band + Legal Footer · always together, always last</td></tr>
+          <!-- MODULE:E13 Closing Band -->
+          <tr>
+            <td align="center" background="assets/texture-dark.jpg" bgcolor="#05453D" class="px" style="mso-padding-alt:0px; padding:64px 40px 56px 40px; background-color:#05453D; background-image:url('assets/texture-dark.jpg'); background-size:cover; background-position:center bottom; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;"><v:fill type="frame" src="assets/texture-dark.jpg" color="#05453D" /><v:textbox style="mso-fit-shape-to-text:true;" inset="40px,64px,40px,56px"><div><![endif]-->
+              <a href="{{HOME_URL}}" target="_blank" style="text-decoration:none;"><img src="assets/logo-dark.png" width="200" height="84" alt="Tom's of Maine" style="display:block; width:200px; height:84px; border:0; margin:0 auto;"></a>
+              <!--[if gte mso 9]></div></v:textbox></v:rect><![endif]-->
+            </td>
+          </tr>
+          <!-- /MODULE:E13 -->
+          <!-- MODULE:E14 Legal Footer -->
+          <tr>
+            <td align="center" class="px" style="padding:32px 40px 40px 40px; background-color:#295791; font-family:'New Kansas',Georgia,'Times New Roman',serif;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 28px auto;">
+                <tr>
+                  <td style="padding:0 12px;"><a href="{{HELP_URL}}" target="_blank" style="font-size:18px; line-height:22px; font-weight:600; color:#FFFFFF; text-decoration:none;">Privacy Policy</a></td>
+                  <td style="padding:0 12px; border-left:1px solid #24436F;"><a href="{{ACCOUNT_URL}}" target="_blank" style="font-size:18px; line-height:22px; font-weight:600; color:#FFFFFF; text-decoration:none;">Terms of Sale</a></td>
+                  <td style="padding:0 12px; border-left:1px solid #24436F;"><a href="{{CONTACT_URL}}" target="_blank" style="font-size:18px; line-height:22px; font-weight:600; color:#FFFFFF; text-decoration:none;">Terms of Use</a></td>
+                </tr>
+              </table>
+              <p style="margin:0 0 12px 0; font-size:10px; line-height:14px; color:#FFFFFF;">[[CONFIRMAR: no reason line in the approved emails; keep or drop]] Learn what we mean by natural on our website.</p>
+              <p style="margin:0 0 12px 0; font-size:10px; line-height:14px; color:#FFFFFF;">Tom's of Maine · Tom&rsquo;s of Maine &middot; 2 Storer Street, Suite 302 &middot; Kennebunk, ME 04043 &middot; USA</p>
+              <p style="margin:0; font-size:10px; line-height:14px; color:#FFFFFF;"><a href="{{UNSUBSCRIBE_URL}}" target="_blank" style="color:#FFFFFF; text-decoration:underline;">Unsubscribe</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="{{PREFERENCES_URL}}" target="_blank" style="color:#FFFFFF; text-decoration:underline;">Email preferences</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="{{PRIVACY_URL}}" target="_blank" style="color:#FFFFFF; text-decoration:underline;">Privacy policy</a></p>
+              <p style="margin:12px 0 0 0; font-size:10px; line-height:14px; color:#FFFFFF;">&copy; %%= v(@CurrentYear) =%% Tom's of Maine</p>
+            </td>
+          </tr>
+          <!-- /MODULE:E14 -->
+
+        </table>
+        <!--[if mso]></td></tr></table><![endif]-->
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

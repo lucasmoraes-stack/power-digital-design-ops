@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>11/9 The Deo That Actually Works · Tom's of Maine</title>
+<!-- SL: Yes, Natural Deo Actually Works · PH: Fresh all day. naturally. Hero: full-bleed photo, text at the bottom, L21 seal carrying the subheadline. Scents: T08 split cards as a checkerboard (ref Each & Every), tints alternating. -->
+<style>
+@font-face{font-family:"New Kansas";font-weight:500;src:url("../../../01-brand/identity/fonts/New Kansas Medium.otf");}
+@font-face{font-family:"New Kansas";font-weight:600;src:url("../../../01-brand/identity/fonts/New Kansas SemiBold.otf");}
+@font-face{font-family:"New Kansas";font-weight:700;src:url("../../../01-brand/identity/fonts/New Kansas Bold.otf");}
+@font-face{font-family:"Rubik";font-weight:700;src:url("../../../01-brand/identity/fonts/rubik/Rubik-Bold.ttf");}
+/* Gotham not available yet: Montserrat stand-in */
+@font-face{font-family:"Gotham";font-weight:700;src:url("../../../01-brand/identity/fonts/gotham/Gotham-Bold.otf"),url("../../../01-brand/identity/fonts/montserrat/Montserrat-Bold.ttf");}
+@font-face{font-family:"Gotham";font-weight:500;src:url("../../../01-brand/identity/fonts/gotham/Gotham-Medium.otf"),url("../../../01-brand/identity/fonts/montserrat/Montserrat-Medium.ttf");}
+
+:root{--deep:#05453D;--deep2:#044D44;--accent:#008D83;--nav:#00867D;--navy:#295791;--navy-bar:#24436F;
+  --sheen:linear-gradient(225deg,#FFFFFF 2.07%,#C8EEEB 55.4%,#FFFFFF 106.72%);--panel:linear-gradient(180deg,#FFFFFF 0%,#E8E8E8 100%)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+html{overflow-x:hidden}
+body{width:600px;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+img{display:block}
+.nk{font-family:"New Kansas",Georgia,serif}
+.rb{font-family:"Rubik",Arial,sans-serif;font-weight:700}
+.gt{font-family:"Gotham","Montserrat",Arial,sans-serif}
+.trim{text-box:trim-both cap alphabetic}
+section{position:relative;width:600px}
+.abs{position:absolute}
+
+/* placeholders: concept images to be chosen by the owner */
+.ph{position:absolute;inset:0;background:#3C5A52 repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 14px,rgba(255,255,255,0) 14px 28px)}
+.ph.light{background:#DCE8E5 repeating-linear-gradient(135deg,rgba(5,69,61,.06) 0 14px,rgba(5,69,61,0) 14px 28px)}
+.ph .tag{position:absolute;left:14px;top:14px;max-width:300px;padding:7px 10px;border-radius:6px;background:rgba(0,0,0,.45);color:#fff;font:700 11px/1.35 "Rubik",Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.ph.light .tag{background:rgba(5,69,61,.85)}
+.ph.br .tag{left:auto;top:auto;right:14px;bottom:14px}
+.ph.tr .tag{left:auto;right:14px}
+.ph.round{border-radius:50%}
+.ph.round .tag{left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;max-width:180px}
+.missing{width:100%;height:100%;border:2px dashed #7FB8B1;border-radius:12px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;color:#2F6E66;font:700 11px/1.35 "Rubik",Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+
+/* T01 header */
+.header{height:110.5px;background:#fff}
+.header .logo{position:absolute;left:43.2px;top:7.5px;width:126.5px;height:102.5px}
+.header .nav{position:absolute;left:252.2px;top:53.5px;width:325.5px;height:22.5px;font-weight:700;font-size:14px;color:var(--nav);text-transform:uppercase;white-space:pre;line-height:22.5px}
+
+/* L02 announcement bar */
+.topbar{height:50.5px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:23.5px;line-height:1;text-transform:uppercase;white-space:nowrap}
+
+/* B01 / B02 buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;height:50.3px;padding:0 17.55px;border-radius:11.7px;font-size:20.72px;line-height:29.6px;text-transform:uppercase;white-space:nowrap;flex:none}
+.btn span{text-box:trim-both cap alphabetic}
+.btn.white{background:#fff;color:var(--deep)}
+.btn.dark{background:var(--deep);color:#fff}
+.btn.sm{width:139px;height:42.8px;padding:0;border-radius:10.07px;font-size:18.11px;line-height:1}
+
+/* waves and domes */
+.wave{position:absolute;z-index:3;left:-1.8px;bottom:-1px;width:603.6px;height:62.9px}
+.wave.down{transform:scaleX(-1)}
+.wave.top{bottom:auto;top:-1px;transform:scale(-1,-1)}
+.dome{position:absolute;z-index:1;left:-1166.75px;width:2933.5px;height:2933.5px;border-radius:50%}
+
+/* T03 section heading + intro */
+.band{display:flex;flex-direction:column;align-items:center;gap:40px;padding:55px 0 48px}
+.hgroup{display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center}
+.h2{font-weight:700;font-size:42px;line-height:1.05;text-wrap:balance;text-box:trim-both cap alphabetic}
+.lead{font-weight:500;font-size:19.5px;line-height:1.2;letter-spacing:-.01em;text-wrap:balance;text-box:trim-both cap alphabetic}
+.light-t{color:var(--deep)}
+.dark-t{color:#fff}
+
+/* hero text pieces */
+.h1{font-weight:600;font-size:64px;line-height:.9;letter-spacing:-.02em;text-box:trim-both cap alphabetic}
+.kick{font-size:20.31px;line-height:1;text-transform:uppercase;white-space:nowrap}
+.ruled{width:fit-content;display:flex;flex-direction:column;align-items:center;gap:14.6px;font-size:25.2px;line-height:1;text-transform:uppercase;white-space:nowrap}
+.ruled::before,.ruled::after{content:"";display:block;height:1.7px;width:100%;background:currentColor}
+.body{font-weight:500;font-size:19.5px;line-height:1.2;letter-spacing:-.01em;text-wrap:balance;text-box:trim-both cap alphabetic}
+.stack{position:absolute;z-index:4;display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center}
+.stack.left{align-items:flex-start;text-align:left}
+
+/* L05 / LAB 407:3817 product card */
+.grid{display:grid;grid-template-columns:253px 253px;gap:15px}
+.pcard{width:253px;padding:26.5px 6.5px;border-radius:20px;background:var(--sheen);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:20px}
+.pcard .img{width:169.5px;height:167.5px;display:flex;align-items:center;justify-content:center}
+.pcard .img.wide{width:212px}
+.pcard .img img{max-width:100%;max-height:100%;object-fit:contain}
+.pcard .txt{display:flex;flex-direction:column;align-items:center;gap:10.76px;width:240px}
+/* Card names: always a 2-line box, one size per email: the largest of 24/22/20/18 that fits every name in 2 lines (script in page()) */
+.pcard .pname,.wcard .pname,.split .pname,.lrow .pname,.brow .pname{font-size:var(--pn,24px);height:2.4em;width:100%;display:flex;align-items:center;justify-content:center;text-box:none}
+.pname{font-weight:600;font-size:24px;line-height:1.2;letter-spacing:-.01em;color:var(--deep);text-align:center;text-wrap:balance;text-box:trim-both cap alphabetic}
+.mult{mix-blend-mode:multiply}
+
+/* T09 category rows (10/27 height) */
+.rows{width:498.5px;display:flex;flex-direction:column;gap:15px}
+.row{position:relative;height:200px;border-radius:40px;overflow:hidden}
+.row .phot{position:absolute;bottom:0;height:255.6px}
+.row .pan{position:absolute;top:0;height:200px;background:var(--panel);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10.76px}
+.row .pname{width:200px;height:2.4em;display:flex;align-items:center;justify-content:center;text-box:none}
+
+/* T08 label pill */
+.pill{width:521px;padding:18px 32px;border-radius:20px;border:3px solid #91FFF5;background:#0C9389;color:#fff;text-align:center}
+.pill .pname{color:#fff}
+
+/* L09 wide card */
+.wcard{width:521px;height:220.5px;border-radius:20px;background:var(--sheen);display:flex;align-items:center;gap:14px;padding:0 20px 0 20px}
+.wcard.rev{flex-direction:row-reverse}
+.wcard .img{width:190px;height:190px;display:flex;align-items:center;justify-content:center;flex:none}
+.wcard .img img{max-width:100%;max-height:100%;object-fit:contain}
+.wcard .txt{width:277px;display:flex;flex-direction:column;align-items:center;gap:10.76px;flex:none}
+
+/* outline card (T06) */
+.ocard{border:2px solid var(--accent);border-radius:20px;padding:30px 24px;display:flex;align-items:center;justify-content:center;text-align:center}
+.cap{font-weight:500;font-size:21px;line-height:1.2;letter-spacing:-.02em;color:var(--deep);text-wrap:balance;text-box:trim-both cap alphabetic}
+
+/* decor */
+.sprig{position:absolute;width:163.5px;height:194.3px;background:url("../../../01-brand/email-kit/assets/leaf-sprig-008d83.png") center/100% 100% no-repeat}
+.sprig.deep{background-image:url("../../../01-brand/email-kit/assets/leaf-sprig-05453d.png")}
+.fern{position:absolute;width:128.7px;height:195.8px;background:url("../../../01-brand/email-kit/assets/leaf-sprig-fern-ccfffa.png") center/100% 100% no-repeat;mix-blend-mode:soft-light;opacity:.9}
+.shadow{filter:drop-shadow(4px 5px 7px rgba(0,0,0,.3)) drop-shadow(16px 20px 13px rgba(0,0,0,.22)) drop-shadow(36px 45px 17px rgba(0,0,0,.1))}
+
+/* T08 split card as checkerboard (11/9) */
+.split{width:521px;height:210px;border-radius:20px;overflow:hidden;display:flex}
+.split .half{width:260.5px;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.split .half img{height:172px;width:auto}
+.split .half.dark{background:var(--deep);gap:12px;padding:0 6px}
+.split .pname{color:#fff}
+
+/* editorial persona list (11/18) */
+.persona{width:521px;display:flex;flex-direction:column}
+.plabel{font-size:18.1px;line-height:1;text-transform:uppercase;color:var(--accent);padding-bottom:14px;border-bottom:1.5px solid var(--accent);letter-spacing:.02em}
+.lrow{display:flex;align-items:center;gap:20px;padding:16px 0;border-bottom:1px solid #B9DCD7}
+.lrow .txt{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:10.76px}
+.lrow .pname{text-align:left;justify-content:flex-start}
+.lrow .tile{width:170px;height:150px;border-radius:16px;background:var(--sheen);display:flex;align-items:center;justify-content:center;padding:12px;flex:none}
+.lrow .tile img{max-width:100%;max-height:100%}
+
+/* bundle rows (11/28) */
+.brow{width:521px;border-radius:20px;background:var(--sheen);display:flex;align-items:center;gap:20px;padding:18px 22px 18px 18px}
+.brow.dark{background:var(--deep)}
+.brow.dark .pname,.brow.dark .desc{color:#fff}
+.brow .tile{width:180px;height:170px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;padding:10px;flex:none}
+.brow .tile img{max-width:100%;max-height:100%}
+.brow .txt{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.brow .pname{text-align:left;justify-content:flex-start}
+.brow .desc{font-weight:500;font-size:16px;line-height:1.25;letter-spacing:-.01em;color:var(--deep);text-wrap:pretty}
+
+/* T18 footer */
+.footer{height:587px;background:var(--navy-bar)}
+.footer .main{position:absolute;left:0;top:0;width:600px;height:455.5px;background:var(--navy)}
+.footer .t{position:absolute;left:0;width:600px;text-align:center;color:#fff;font-weight:700}
+.footer .learn{top:79px;font-size:14px;line-height:20px;text-decoration:underline;text-underline-offset:2px}
+.footer .flogo{position:absolute;left:249.8px;top:126.5px;width:101.4px;height:82px}
+.footer .social{position:absolute;left:220.3px;top:238.5px;width:160px;height:32px}
+.footer .navlist{top:294px;font-size:14px;line-height:28px}
+.footer .legal{font-size:10px;line-height:28px;white-space:pre}
+</style>
+</head>
+<body>
+<section class="header" data-slice="header">
+  <img class="logo" src="../../../01-brand/email-kit/assets/logo-light.png" alt="Tom's of Maine">
+  <div class="nav gt">OUR MISSION      PRODUCTS      SHOP NOW</div>
+</section>
+<section data-slice="hero" style="height:810px;overflow:hidden">
+  <div class="ph tr" style=""><span class="tag">Image placeholder · Close-up: hand holding North Woods deodorant, outdoors, fresh light; subject in the upper half</span></div>
+  <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(3,19,17,0) 45%,rgba(3,19,17,.78) 70%,rgba(3,19,17,.92) 100%)"></div>
+  <div class="abs seal" style="left:410px;top:245px;width:150px;height:150px;z-index:6;transform:rotate(-12deg)"><svg width="150" height="150" viewBox="0 0 100 100" style="position:absolute;inset:0"><defs><linearGradient id="sg410245" x1="0" y1="0" x2="1" y2="1"><stop offset=".24" stop-color="#05453D"/><stop offset=".48" stop-color="#0CAB97"/><stop offset=".68" stop-color="#05453D"/></linearGradient></defs><polygon points="50.00,0.00 55.87,5.38 62.94,1.70 67.22,8.43 75.00,6.70 77.39,14.30 85.36,14.64 85.70,22.61 93.30,25.00 91.57,32.78 98.30,37.06 94.62,44.13 100.00,50.00 94.62,55.87 98.30,62.94 91.57,67.22 93.30,75.00 85.70,77.39 85.36,85.36 77.39,85.70 75.00,93.30 67.22,91.57 62.94,98.30 55.87,94.62 50.00,100.00 44.13,94.62 37.06,98.30 32.78,91.57 25.00,93.30 22.61,85.70 14.64,85.36 14.30,77.39 6.70,75.00 8.43,67.22 1.70,62.94 5.38,55.87 0.00,50.00 5.38,44.13 1.70,37.06 8.43,32.78 6.70,25.00 14.30,22.61 14.64,14.64 22.61,14.30 25.00,6.70 32.78,8.43 37.06,1.70 44.13,5.38" fill="url(#sg410245)"/><polygon points="50.00,8.00 54.96,12.33 60.87,9.43 64.54,14.89 71.00,13.63 73.13,19.85 79.70,20.30 80.15,26.87 86.37,29.00 85.11,35.46 90.57,39.13 87.67,45.04 92.00,50.00 87.67,54.96 90.57,60.87 85.11,64.54 86.37,71.00 80.15,73.13 79.70,79.70 73.13,80.15 71.00,86.37 64.54,85.11 60.87,90.57 54.96,87.67 50.00,92.00 45.04,87.67 39.13,90.57 35.46,85.11 29.00,86.37 26.87,80.15 20.30,79.70 19.85,73.13 13.63,71.00 14.89,64.54 9.43,60.87 12.33,54.96 8.00,50.00 12.33,45.04 9.43,39.13 14.89,35.46 13.63,29.00 19.85,26.87 20.30,20.30 26.87,19.85 29.00,13.63 35.46,14.89 39.13,9.43 45.04,12.33" fill="none" stroke="#3DA79D" stroke-width=".9"/></svg><div class="nk" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;font-weight:600;font-size:18.8px;line-height:.92;letter-spacing:-.04em;padding:0 30px">48 Hours.<br>Zero Aluminum.</div></div>
+  <div class="stack" style="left:30px;width:540px;top:430px;color:#fff">
+    <h1 class="h1 nk" style="width:540px">Protection<br>that shows up</h1>
+    <p class="body nk" style="width:470px">Let's skip the part where you wonder if natural deodorant actually works. Ours delivers 48 hour odor protection. This is the one you'll want a backup of.</p>
+    <span class="btn white  rb" style=""><span>Shop Deodorant</span></span>
+  </div>
+  <svg class="wave " viewBox="0 0 1207.16 125.73" preserveAspectRatio="none"><path d="M0 33.0894V125.73H1207.16V33.0894C962.957 174.077 779.274 107.999 499.706 33.0894C276.052 -26.8387 73.3793 8.11935 0 33.0894Z" fill="#FFFFFF"/></svg>
+</section>
+<section class="band" style="background:var(--panel);padding-top:40px">
+  <div class="hgroup light-t" data-slice="intro"><h2 class="h2 nk" style="width:498.5px">A scent for every vibe</h2></div>
+  <div style="display:flex;flex-direction:column;gap:12px"><div class="split" data-slice="card"><div class="half" style="background:#A0E0FB"><img src="assets/deo-mountain-spring.png" alt=""></div><div class="half dark"><div class="pname nk">Mountain Spring<br>Aluminum Free Deodorant</div><span class="btn white sm rb" style=""><span>shop now</span></span></div></div><div class="split" data-slice="card"><div class="half dark"><div class="pname nk">North Woods<br>Aluminum Free Deodorant</div><span class="btn white sm rb" style=""><span>shop now</span></span></div><div class="half" style="background:#C8EEEB"><img src="assets/deo-north-woods.png" alt=""></div></div><div class="split" data-slice="card"><div class="half" style="background:#A0E0FB"><img src="assets/deo-moonlit-meadow.png" alt=""></div><div class="half dark"><div class="pname nk">Moonlit Meadow<br>Aluminum Free Deodorant</div><span class="btn white sm rb" style=""><span>shop now</span></span></div></div><div class="split" data-slice="card"><div class="half dark"><div class="pname nk">Twilight Breeze<br>Aluminum Free Deodorant</div><span class="btn white sm rb" style=""><span>shop now</span></span></div><div class="half" style="background:#C8EEEB"><img src="assets/deo-twilight-breeze.png" alt=""></div></div><div class="split" data-slice="card"><div class="half" style="background:#A0E0FB"><img src="assets/deo-tropical-island.png" alt=""></div><div class="half dark"><div class="pname nk">Tropical Island<br>Aluminum Free Deodorant</div><span class="btn white sm rb" style=""><span>shop now</span></span></div></div><div class="split" data-slice="card"><div class="half dark"><div class="pname nk">Unscented<br>Aluminum Free Deodorant</div><span class="btn white sm rb" style=""><span>shop now</span></span></div><div class="half" style="background:#C8EEEB"><img src="assets/deo-unscented.png" alt=""></div></div></div>
+  <div data-slice="cta"><span class="btn dark  rb" style=""><span>Shop All Deodorant</span></span></div>
+</section>
+<section class="footer" data-slice="footer">
+  <div class="main"></div>
+  <div class="t gt learn">Learn what we mean by natural on our website.</div>
+  <img class="flogo" src="../../../01-brand/email-kit/assets/logo-dark.png" alt="Tom's of Maine">
+  <img class="social" src="../../../01-brand/email-kit/assets/social-row.png" alt="">
+  <div class="t gt navlist">Our Mission<br>Products<br>Shop Now<br>Blog</div>
+  <div class="t gt legal" style="top:470px">Tom’s of Maine · 2 Storer Street, Suite 302 · Kennebunk, ME 04043 · USA</div>
+  <div class="t gt legal" style="top:503.5px">©%%= v(@CurrentYear) =%% Tom's of Maine, Inc.</div>
+  <div class="t gt legal" style="top:541px">Privacy Policy  l  Terms of Sale  l   Terms of Use  l  Unsubscribe</div>
+</section>
+<script>
+document.fonts.ready.then(() => {
+  const names = [...document.querySelectorAll('.pcard .pname, .wcard .pname, .split .pname, .lrow .pname, .brow .pname')];
+  if (!names.length) return;
+  for (const px of [24, 22, 20, 18]) {
+    document.documentElement.style.setProperty('--pn', px + 'px');
+    if (names.every(n => n.scrollHeight <= n.clientHeight + 1)) { document.documentElement.dataset.pn = px; break; }
+  }
+});
+</script>
+</body>
+</html>

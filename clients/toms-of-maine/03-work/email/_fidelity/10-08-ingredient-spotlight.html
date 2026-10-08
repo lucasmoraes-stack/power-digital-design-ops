@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>10/8 Ingredient Spotlight · fidelity rebuild</title>
+<!-- Calibration test: rebuild of the approved 10/8 email (VAZIO DRAFT 1482:2979) in HTML, to compare against the Figma render
+     (_fidelity/figma/10-08-ingredient-spotlight-figma.png). All measures from get_design_context (2x file) halved to 600px.
+     Modules: header T01, hero T02b (glass card), ingredient spotlight T06 centred + side, category rows T09 (10/8 deep band), band CTA T12, footer T18. -->
+<style>
+@font-face{font-family:"New Kansas";font-weight:500;src:url("../../../01-brand/identity/fonts/New Kansas Medium.otf");}
+@font-face{font-family:"New Kansas";font-weight:600;src:url("../../../01-brand/identity/fonts/New Kansas SemiBold.otf");}
+@font-face{font-family:"New Kansas";font-weight:700;src:url("../../../01-brand/identity/fonts/New Kansas Bold.otf");}
+@font-face{font-family:"Rubik";font-weight:700;src:url("../../../01-brand/identity/fonts/rubik/Rubik-Bold.ttf");}
+/* Gotham not available yet: Montserrat stand-in */
+@font-face{font-family:"Gotham";font-weight:700;src:url("../../../01-brand/identity/fonts/gotham/Gotham-Bold.otf"),url("../../../01-brand/identity/fonts/montserrat/Montserrat-Bold.ttf");}
+@font-face{font-family:"Gotham";font-weight:500;src:url("../../../01-brand/identity/fonts/gotham/Gotham-Medium.otf"),url("../../../01-brand/identity/fonts/montserrat/Montserrat-Medium.ttf");}
+
+:root{--deep:#05453D;--deep2:#044D44;--accent:#008D83;--nav:#00867D;--navy:#295791;--navy-bar:#24436F;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+html{overflow-x:hidden}
+body{width:600px;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+img{display:block}
+.nk{font-family:"New Kansas",Georgia,serif}
+.rb{font-family:"Rubik",Arial,sans-serif;font-weight:700}
+.gt{font-family:"Gotham","Montserrat",Arial,sans-serif}
+.trim{text-box:trim-both cap alphabetic}
+section{position:relative;width:600px}
+.abs{position:absolute}
+/* rotated element: box = Figma bounding box, child rotated around its centre */
+.rot{position:absolute;display:flex;align-items:center;justify-content:center}
+.rot>*{flex:none}
+.sprig{position:absolute;width:163.5px;height:194.3px;background:url("../../../01-brand/email-kit/assets/leaf-sprig-008d83.png") center/100% 100% no-repeat}
+.sprig.sm{width:121.6px;height:144.5px}
+.wave{position:absolute;left:0;width:603.6px;height:62.9px}
+
+/* T01 header */
+.header{height:110.5px;background:#fff}
+.header .logo{position:absolute;left:43.2px;top:7.5px;width:126.5px;height:102.5px}
+.header .nav{position:absolute;left:252.2px;top:53.5px;width:325.5px;height:22.5px;font-weight:700;font-size:14px;color:var(--nav);text-transform:uppercase;white-space:pre;line-height:22.5px}
+
+/* buttons B01 / B02 */
+.btn{display:inline-flex;align-items:center;justify-content:center;height:50.3px;padding:0 17.55px;border-radius:11.7px;font-size:20.72px;line-height:29.6px;text-transform:uppercase;white-space:nowrap}
+.btn span{text-box:trim-both cap alphabetic}
+.btn.white{background:#fff;color:var(--deep)}
+.btn.dark{background:var(--deep);color:#fff}
+.btn.sm{width:139px;height:42.8px;padding:0;border-radius:10.07px;font-size:18.11px;line-height:1}
+
+/* T02b hero: glass card on photo */
+.hero{height:759px;overflow:hidden;background:#1d6b1f url("../../../01-brand/email-kit/assets/source/figma-10-08/hero-bg-leaf-rot90.jpg") -28.5px -37.5px/630px 840px no-repeat}
+.glass{position:absolute;left:40.5px;top:102.5px;width:521px;padding:36px 0;border-radius:20px;display:flex;flex-direction:column;align-items:center;gap:25px;color:#fff;text-align:center;
+  backdrop-filter:blur(22px) saturate(1.12) brightness(.9);
+  background:linear-gradient(135deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,0) 40%,rgba(0,0,0,.08) 100%);
+  box-shadow:inset 1.5px 1.5px 0 rgba(255,255,255,.28),inset -1px -1px 0 rgba(255,255,255,.10)}
+.glass h1{font-weight:600;font-size:64px;line-height:.9;letter-spacing:-.02em;width:260px}
+.glass .kicker{font-size:20.31px;line-height:1;text-transform:uppercase;white-space:nowrap}
+.glass .body{font-weight:500;font-size:19.5px;line-height:1.2;letter-spacing:-.01em;width:459.5px}
+.pack-mw{filter:drop-shadow(4px 5px 7.25px rgba(0,0,0,.29)) drop-shadow(16.5px 20px 13px rgba(0,0,0,.26)) drop-shadow(36.5px 45.5px 17.5px rgba(0,0,0,.15)) drop-shadow(65.5px 80.5px 20.75px rgba(0,0,0,.04))}
+.pack-box{filter:drop-shadow(4px 5px 6.75px rgba(0,0,0,.54)) drop-shadow(15.5px 19px 12.25px rgba(0,0,0,.47)) drop-shadow(35px 43px 16.5px rgba(0,0,0,.28)) drop-shadow(62px 76.5px 19.75px rgba(0,0,0,.08))}
+.crop{position:relative;overflow:hidden}
+.crop img{position:absolute;max-width:none}
+
+/* T03 heading + intro */
+.h2{font-weight:700;font-size:42px;line-height:1.05;text-align:center}
+.intro{font-weight:500;font-size:19.5px;line-height:1.2;letter-spacing:-.01em;text-align:center}
+
+/* T06 ingredient spotlight */
+.spot{background:linear-gradient(180deg,#fff 0%,#E8E8E8 100%)}
+.ocard{position:absolute;left:40.5px;width:521px;border:2px solid var(--accent);border-radius:20px;padding:38px 30px;display:flex;justify-content:center}
+/* Figma inside stroke does not push the auto-layout padding: 40/32 minus the 2px border */
+.ocard .col{display:flex;flex-direction:column;gap:15px;align-items:center}
+.ocard .name{font-weight:600;font-size:24px;line-height:1.2;letter-spacing:-.01em;color:var(--accent);white-space:nowrap}
+.ocard .desc{font-weight:500;font-size:18px;line-height:1.2;letter-spacing:-.03em;color:var(--deep)}
+.pblock{position:absolute;left:calc(50% - .25px);transform:translateX(-50%);width:313.5px;display:flex;flex-direction:column;align-items:center;gap:24px}
+.pblock .pname{font-weight:600;font-size:24px;line-height:1.2;letter-spacing:-.01em;color:var(--deep);text-align:center;flex:none}
+
+/* T09 category rows, 10/8 deep band */
+.deep{height:1423.5px;background:linear-gradient(180deg,#05453D 0%,#38A698 50.961%,#05453D 100%)}
+.deep .stack{position:absolute;left:calc(50% - .25px);transform:translateX(-50%);top:45.01px;width:498.5px;display:flex;flex-direction:column;align-items:center;gap:40px}
+.rows{width:498.5px;display:flex;flex-direction:column;gap:15px}
+.row{position:relative;height:255.6px;border-radius:40px;overflow:hidden}
+.row .ph{position:absolute;top:0;height:255.6px}
+.row .panel{position:absolute;top:0;height:255.6px;width:234px;background:linear-gradient(180deg,#fff 0%,#E8E8E8 100%)}
+.row .txt{position:absolute;top:50%;transform:translateY(-50%);width:139px;display:flex;flex-direction:column;align-items:center;gap:15.76px}
+.row .cat{font-weight:700;font-size:24px;line-height:1.2;letter-spacing:-.01em;color:var(--deep2);text-align:center}
+
+/* T18 footer */
+.footer{height:587px;background:var(--navy-bar)}
+.footer .main{position:absolute;left:0;top:0;width:600px;height:455.5px;background:var(--navy)}
+.footer .t{position:absolute;left:0;width:600px;text-align:center;color:#fff;font-weight:700}
+.footer .learn{top:79px;font-size:14px;line-height:20px;text-decoration:underline;text-underline-offset:2px}
+.footer .flogo{position:absolute;left:249.8px;top:126.5px;width:101.4px;height:82px}
+.footer .social{position:absolute;left:220.3px;top:238.5px;width:160px;height:32px}
+.footer .navlist{top:294px;font-size:14px;line-height:28px}
+.footer .legal{font-size:10px;line-height:28px;white-space:pre}
+</style>
+</head>
+<body>
+
+<section class="header" data-slice="header">
+  <img class="logo" src="../../../01-brand/email-kit/assets/logo-light.png" alt="Tom's of Maine">
+  <div class="nav gt">OUR MISSION      PRODUCTS      SHOP NOW</div>
+</section>
+
+<!-- T02b hero (1482:2985), 600 x 759 -->
+<section class="hero" data-slice="hero">
+  <div class="glass">
+    <h1 class="nk trim">What's inside matters</h1>
+    <div class="kicker rb">Let's Talk About It</div>
+    <p class="body nk trim">Do you actually know what's in your routine?<br>Here's our philosophy: if an ingredient is in the formula, you should know what it does.</p>
+    <span class="btn white rb"><span>See What's Inside</span></span>
+  </div>
+  <!-- Sea Salt mouthwash 1482:2996 -->
+  <div class="rot" style="left:-93.635px;top:32.045px;width:292.53px;height:386.54px">
+    <div class="crop pack-mw" style="width:151.5px;height:356.19px;transform:rotate(26.05deg)"><img src="../../../01-brand/email-kit/assets/source/packshot-sea-salt-mouthwash.png" style="height:100%;left:-66.81%;top:0;width:235.1%" alt=""></div>
+  </div>
+  <!-- Whiten Plus Coconut Oil box 1482:2997 -->
+  <div class="rot" style="left:317.265px;top:460.945px;width:302.38px;height:243.43px">
+    <div class="crop pack-box" style="width:296.21px;height:98.62px;transform:rotate(-32.82deg)"><img src="../../../01-brand/email-kit/assets/source/packshot-whiten-plus-coconut-oil-gentle-mint-toothpaste-box.png" style="height:311.96%;left:-1.9%;top:-105.72%;width:103.87%" alt=""></div>
+  </div>
+  <div class="sprig" style="left:429.75px;top:-21.05px;transform:rotate(-158.15deg)"></div>
+  <div class="sprig" style="left:13.85px;top:530.75px;transform:rotate(138.25deg) scaleX(-1)"></div>
+  <svg class="wave" style="bottom:-1.87px" viewBox="0 0 1207.16 125.73" preserveAspectRatio="none"><path d="M0 33.0894V125.73H1207.16V33.0894C962.957 174.077 779.274 107.999 499.706 33.0894C276.052 -26.8387 73.3793 8.11935 0 33.0894Z" fill="#fff"/></svg>
+</section>
+
+<!-- T06 centred (1482:3001), 600 x 727 -->
+<section class="spot" style="height:727px;z-index:1">
+  <div class="abs" data-slice="spot1" style="left:51px;top:53px;width:498.5px;display:flex;flex-direction:column;align-items:center;gap:24px;color:var(--deep)">
+    <h2 class="h2 nk trim" style="width:487.5px">Two ingredients worth getting to know</h2>
+    <p class="intro nk trim" style="width:381.5px">Let's zoom in on a couple of the MVPs you'll find across our formulas.</p>
+  </div>
+  <div class="ocard" style="top:228.5px;height:205px">
+    <div class="col"><div class="name nk trim">Coconut Oil</div><p class="desc nk trim" style="width:448.5px;text-align:center">Coconut oil and mineral polishers gently lift stains for effective whitening without peroxide or harsh abrasives.</p></div>
+  </div>
+  <div class="crop abs" style="left:110px;top:366.5px;width:385.5px;height:128.5px"><img src="../../../01-brand/email-kit/assets/source/packshot-whiten-plus-coconut-oil-gentle-mint-toothpaste-box.png" style="height:311.96%;left:-1.9%;top:-105.72%;width:103.87%" alt=""></div>
+  <div class="pblock" style="top:535px">
+    <div class="pname nk trim" style="width:460.5px">Whiten Plus Coconut Oil Fluoride Free Gentle Mint Natural Toothpaste</div>
+    <span class="btn dark rb"><span>Shop Now</span></span>
+  </div>
+  <div class="sprig sm" style="left:464.2px;top:582.95px;transform:rotate(-135.37deg)"></div>
+  <svg class="wave" style="bottom:.135px;left:.87px;transform:scaleX(-1)" viewBox="0 0 1207.16 125.73" preserveAspectRatio="none"><path d="M0 33.0894V125.73H1207.16V33.0894C962.957 174.077 779.274 107.999 499.706 33.0894C276.052 -26.8387 73.3793 8.11935 0 33.0894Z" fill="#fff"/></svg>
+</section>
+
+<!-- T06 side (1482:3020), 600 x 475.5 -->
+<section class="spot" data-slice="spot2" style="height:475.5px;z-index:2;background:linear-gradient(180deg,#fff 0%,#E8E8E8 100%)">
+  <div class="ocard" style="top:45px;height:170.5px;justify-content:flex-start">
+    <div class="col" style="align-items:flex-start"><div class="name nk trim">Sea Salt</div><p class="desc nk trim" style="width:273px">Pure sea salt delivers a refreshing clean without alcohol, artificial sweeteners, or preservatives.</p></div>
+  </div>
+  <div class="pblock" style="top:247px">
+    <div class="pname nk trim" style="width:269.5px">Refreshing Mint Sea Salt Fluoride-Free Natural Mouthwash</div>
+    <span class="btn dark rb"><span>Shop Now</span></span>
+  </div>
+  <div class="rot" style="left:209px;top:-122.5px;width:534.93px;height:534.93px">
+    <img src="../../../01-brand/email-kit/assets/source/packshot-sea-salt-mouthwash.png" style="width:398.5px;height:398.5px;object-fit:cover;transform:rotate(-26.66deg)" alt="">
+  </div>
+  <div class="sprig sm" style="left:-8.9px;top:238.15px;transform:rotate(169.01deg) scaleX(-1)"></div>
+  <svg class="wave" style="bottom:-2.86px;left:.87px;transform:scaleX(-1);z-index:3" viewBox="0 0 1207.16 125.73" preserveAspectRatio="none"><path d="M0 33.0894V125.73H1207.16V33.0894C962.957 174.077 779.274 107.999 499.706 33.0894C276.052 -26.8387 73.3793 8.11935 0 33.0894Z" fill="#05453D"/></svg>
+</section>
+
+<!-- T09 deep band (1482:3034), 600 x 1423.5 -->
+<section class="deep" style="z-index:0">
+  <div class="stack">
+    <div data-slice="intro2" style="display:flex;flex-direction:column;align-items:center;gap:24px;color:#fff">
+      <h2 class="h2 nk trim" style="width:468.5px">Transparency across every category</h2>
+      <p class="intro nk trim" style="width:326px">The same ingredient philosophy applies to everything we make.</p>
+    </div>
+    <div class="rows">
+      <div class="row" data-slice="row">
+        <img class="ph" style="left:-15.25px;width:279.5px" src="../../../01-brand/email-kit/assets/source/figma-10-08/row1-oral-care.png" alt="">
+        <div class="panel" style="right:.25px"></div>
+        <div class="txt" style="left:314.29px"><div class="cat nk trim" style="white-space:nowrap">Oral Care</div><span class="btn dark sm rb"><span>shop now</span></span></div>
+      </div>
+      <div class="row" data-slice="row">
+        <div class="panel" style="left:-.25px;width:264.5px"></div>
+        <img class="ph" style="left:264.25px;width:264.5px" src="../../../01-brand/email-kit/assets/source/figma-10-08/row2-bath-body.png" alt="">
+        <div class="txt" style="left:62.6px"><div class="cat nk trim" style="width:177.5px">Bath &amp; Body</div><span class="btn dark sm rb"><span>shop now</span></span></div>
+      </div>
+      <div class="row" data-slice="row">
+        <img class="ph" style="left:-15.25px;top:-.23px;width:279.5px;height:256px" src="../../../01-brand/email-kit/assets/source/figma-10-08/row3-deodorant.png" alt="">
+        <div class="panel" style="left:264.25px;width:264.5px"></div>
+        <div class="txt" style="left:314.3px"><div class="cat nk trim" style="width:191.5px">Deodorant &amp; Antiperspirant</div><span class="btn dark sm rb"><span>shop now</span></span></div>
+      </div>
+      <div class="row" data-slice="row">
+        <div class="panel" style="left:-.25px;width:264.5px"></div>
+        <img class="ph" style="left:264.25px;width:264.5px" src="../../../01-brand/email-kit/assets/source/figma-10-08/row4-value-bundles.png" alt="">
+        <div class="txt" style="left:62.6px"><div class="cat nk trim" style="width:125px">Value Bundles</div><span class="btn dark sm rb"><span>shop now</span></span></div>
+      </div>
+    </div>
+    <span class="btn white rb" data-slice="cta"><span>Explore All Products</span></span>
+  </div>
+</section>
+
+<section class="footer" data-slice="footer">
+  <div class="main"></div>
+  <div class="t gt learn">Learn what we mean by natural on our website.</div>
+  <img class="flogo" src="../../../01-brand/email-kit/assets/logo-dark.png" alt="Tom's of Maine">
+  <img class="social" src="../../../01-brand/email-kit/assets/social-row.png" alt="">
+  <div class="t gt navlist">Our Mission<br>Products<br>Shop Now<br>Blog</div>
+  <div class="t gt legal" style="top:470px">Tom’s of Maine · 2 Storer Street, Suite 302 · Kennebunk, ME 04043 · USA</div>
+  <div class="t gt legal" style="top:503.5px">©%%= v(@CurrentYear) =%% Tom's of Maine, Inc.</div>
+  <div class="t gt legal" style="top:541px">Privacy Policy  l  Terms of Sale  l   Terms of Use  l  Unsubscribe</div>
+</section>
+
+</body>
+</html>

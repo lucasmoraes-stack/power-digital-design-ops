@@ -1,0 +1,5 @@
+{#- M20 Fine print (L20): Rubik Italic 14.5/17.4 -1% (or 10/12 small), centered or left. -#}
+{%- import '_macros.j2' as k -%}
+<div class="m" data-module="M20" style="{{ {'margin-top':m._mt}|style }}">
+{{ k.stack([{'t':'fineprint','text':m.text,'size':m.size,'line':m.line,'color':m.color,'w':m.w,'align':m.align}], 0, cls='flow ' ~ (m.align or ''), st={'width':'600px','padding-left':m.x}) }}
+</div>

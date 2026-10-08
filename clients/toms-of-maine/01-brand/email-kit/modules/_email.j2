@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=600">
+<!--
+Subject: {{ spec.subject }}
+Preheader: {{ spec.preheader }}
+Source: {{ spec.source }}
+Modules: {{ spec.modules | map(attribute='module') | join(', ') }}
+Production: sliced JPG at 1200px (tools/export_jpg.py). Composed by tools/compose.py from the Tom's of Maine module library.
+-->
+<title>{{ spec.subject | e }}</title>
+<style>
+{{ css }}
+</style>
+</head>
+<body>
+<main class="email" data-email="{{ spec.slug }}">
+{{ body }}
+</main>
+</body>
+</html>
