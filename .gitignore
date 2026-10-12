@@ -41,13 +41,3 @@ clients/*/01-brand/email-kit/assets/source/
 # saved third-party web pages used as email references (heavy; kept on disk/OneDrive)
 clients/*/03-work/email/*/references/*.html
 clients/*/03-work/email/*/references/*_files/
-
-# Desktop cleanup 2026-10-12
-# Artifact snapshots, old repo copy (has its own .git) and video project media: local only.
-_exports/
-_archive/
-_media/
-# Video renders (Mossy Auto etc.) are heavy; keep on disk/OneDrive.
-*.mp4
-# Product shots in WebP follow the same out-of-git rule as the other photo originals.
-clients/*/01-brand/photos/**/*.webp
