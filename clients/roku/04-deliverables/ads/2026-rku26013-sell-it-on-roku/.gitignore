@@ -1,0 +1,5 @@
+# kept on disk/OneDrive only: superseded rounds, Figma import bundle (zip > GitHub's 100 MB limit), HTML sources of the PNGs
+_superseded-v2-v3/
+figma-import/
+*-figma-import.zip
+html/

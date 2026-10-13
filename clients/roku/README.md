@@ -4,7 +4,21 @@ Client onboarded under PowerDigital Lab. Roku's advertiser-facing product ("Roku
 
 Tokens and basic elements are tracked against the [Figma Library style guide](https://www.figma.com/design/pcf9QNPjvBBzqDPnBLefVS/Claude-Design-Ops---Lab?node-id=74-8964) — still lighter than Katapult's (no verified color/logo export yet), but it's where the real asset libraries (ilovemyroku.com, Brandfolder) are linked from. See `01-brand/identity/brand-notes.md`.
 
-## Current scope
+## Review pages (artifacts)
+
+| Page | URL | Built by |
+|---|---|---|
+| Roku Design System | https://claude.ai/code/artifact/bc7915dd-8473-4414-a915-a25334150616 | `01-brand/build_ds.py` |
+| Roku Deliverables Hub | https://claude.ai/code/artifact/39370946-f238-45ad-a924-31f30d9266dd | `04-deliverables/build_hub.py` (add a job to `JOBS` + its body function) |
+
+Both pages share `01-brand/rk_common.py` (embedded Roku Display subset, logo vectors, the RKU26013 direction sketch). The published artifact is the source of truth: before rebuilding, read the live page, then rebuild from the script and republish to the same URL.
+
+## Jobs
+
+- **RKU26013 Sell it on Roku** (2026-10-12, in design): `03-work/ads/2026-rku26013-sell-it-on-roku/brief.md`. Meta 1:1/4:5/9:16 + CTV 16:9 spot, illustrated living room direction. Three open questions in the brief.
+- **Holiday MOF/BOF reframes** (2026-08, delivered in Figma): see "Current scope" below.
+
+## Holiday reframes (2026-08)
 
 First deliverable: reframe already-approved 16:9 ad creative into 9:16 and 1:1, across every section of one Figma file. Copy and layout are fixed (client-approved); the job was recomposing backgrounds, text, and decorative elements to the new aspect ratios, not rewriting anything.
 
@@ -30,10 +44,16 @@ First deliverable: reframe already-approved 16:9 ad creative into 9:16 and 1:1, 
 ```
 roku/
 ├── README.md                              this file
-├── 00-inbox/                               (empty — no client-supplied files yet)
+├── 00-inbox/2026-10-12-rku26013-previous-work/   RKU26008 snapshots + Roku style guide screenshots
 ├── 01-brand/
+│   ├── build_ds.py, rk_common.py          Design System page builder (+ shared assets)
+│   ├── roku-design-system.html            last published Design System (local copy)
 │   └── identity/
-│       └── brand-notes.md                 visual identity observed while reframing (not a full ingestion)
+│       ├── brand-notes.md                 palette, type, logo notes
+│       ├── roku-wordmark.svg, roku-ads-manager.svg   clean logo vectors (Figma Library 74:8964)
+│       ├── fonts/                         Roku Display OTF + WOFF subsets for review pages
+│       └── guideline-snaps/               core/accent palette and photography pages of the 2024 guideline
+├── 04-deliverables/build_hub.py, deliverables-hub.html
 └── 03-work/
     └── figma-reframe-playbook.md          technique playbook from the reframe session — font-lock workarounds,
                                              Figma Plugin API bugs and fixes, composition judgment calls, orchestration notes

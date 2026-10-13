@@ -11,7 +11,15 @@ Not a full brand-guidelines ingestion — just what was observed working across 
 
 Roku's written brand guidelines say the headline font is **Gotham — do not use it.** The font actually in use is **"Roku Display"** (confirmed both in production files and the Library style guide).
 
-## Palette
+## Palette (confirmed 2026-10-12 from the 2024 guideline pages in the style guide)
+
+Core: Primary Purple `#4F01A3`, Midnight Purple `#20004C` (only where Primary fails contrast), Deep Purple (print only, Pantone Violet C).
+Accent: Electric Purple `#853DFF`, Pink `#EC4AF0`, Orange `#FF8553`, Teal `#1BCECB`. Neutrals: Black, Gray 1 `#646464`, Gray 2 `#969696`, Gray 3 `#C8C8C8`, White.
+Gradients: diagonal, horizontal or vertical; copy and logo over the darkest part. Snapshots in `guideline-snaps/`.
+
+Roku Display is installed on the build machine (user fonts); OTFs and review-page WOFF subsets live in `fonts/`.
+
+### Observed in the reframe session (2026-08)
 
 - Dark purple base: `rgb(0.1255, 0, 0.298)` ≈ `#20004C` — the solid background under most gradient scenes.
 - Purple → magenta/pink glow: large blurred ellipses (blur radius commonly ~876px at 2560×1440 scale), usually positioned to bleed mostly off-frame so only the soft glow edge shows inside the crop. This is a deliberate technique, not a mispositioned layer — see the playbook for how to tell the difference.

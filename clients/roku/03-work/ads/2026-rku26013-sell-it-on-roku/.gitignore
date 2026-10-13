@@ -1,0 +1,11 @@
+# heavy intermediates, regenerable from the scripts; kept on disk/OneDrive only
+build/
+export/
+img/cache/
+img/raw/
+img/review/
+img/split/
+img/v4/
+img/gpt-refs/
+img/_crop*.png
+*.npz
