@@ -1,0 +1,52 @@
+/* Builder B components (posts 03, 06, 09, 10, 12, 13, 14). Extends kit.css; values measured from the October finals PNGs.
+   October grounds sample as Cream #EAD0B6 and Blue #364488 (Figma library values), not kit --cream/--blue: used here as grounds to match the finals. */
+:root{--b-cream-l:#EAD0B6; --b-blue:#364488}
+.b-creaml{background:var(--b-cream-l);color:var(--dblue)}
+.b-blueg{background:var(--b-blue);color:var(--white)}
+.g-surface.b-db,.g-pink{color:var(--dblue)}
+.a{color:var(--pink)}
+.g-pink .a{color:var(--white)}
+
+/* positioning */
+.b-x{position:absolute}
+.b-logo{position:absolute;width:250px;height:auto;display:block}
+.b-logo.w{filter:brightness(0) invert(1)}  /* White logo on solid color */
+
+/* type */
+.b-hl{position:absolute;font-weight:500;letter-spacing:-0.01em;line-height:1.0;white-space:nowrap}
+.b-body{position:absolute;font-weight:400;font-size:36px;line-height:1.3;white-space:nowrap}
+.b-bold{font-weight:700}
+
+/* cards: solid White, rounded, with an offset plate (a sibling .b-plate drawn first) */
+.b-card{position:absolute;background:var(--white);border-radius:40px;overflow:hidden}
+.b-plate{position:absolute;border-radius:40px}
+.b-photo{position:absolute;border-radius:40px;overflow:hidden}
+.b-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* flat shapes and tiles */
+.b-disc{position:absolute;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.b-tile{position:absolute;border-radius:28px;overflow:hidden}
+.b-prod{position:absolute;display:block}
+.b-ico{display:block}
+
+/* line accent: one SVG over the whole frame, below the visual */
+.b-accent{position:absolute;left:0;top:0;pointer-events:none}
+
+/* poll (03) */
+.b-opt{position:absolute;left:36px;right:36px;height:124px;border-radius:30px;background:var(--grey-xl);display:flex;align-items:center}
+.b-opt .th{width:96px;height:96px;border-radius:22px;margin-left:14px;position:relative;overflow:hidden;flex:none}
+.b-opt .th img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.b-opt .t{font-size:46px;font-weight:500;color:var(--dblue);margin-left:34px;flex:1;letter-spacing:-0.005em}
+.b-opt .r{width:50px;height:50px;border-radius:50%;border:5px solid var(--dblue);margin-right:36px;flex:none}
+
+/* option cards (14 s2) */
+.b-opt3{position:absolute;width:288px;height:400px}
+
+/* Cream grounds: Pink text fails contrast on Cream. Headline in Blue with the accent word in Dark Blue
+   (the approved KAT26021 V2 Cream treatment); body stays Dark Blue. */
+.b-creaml .b-hl{color:var(--b-blue)}
+.b-creaml .a{color:var(--dblue)}
+
+/* feed plan grounds (2026-10-16): Surface text Dark Blue; Orange takes a White accent word (no Pink text on Orange) */
+.g-surface{color:var(--dblue)}
+.g-orange .a{color:var(--white)}

@@ -1,0 +1,89 @@
+/* Builder A components (posts 01, 02, 04, 05, 08, 11). Measured from the October finals in Figma "kat os":
+   margins 80 side / 90 top, headline 88px at -1.2% tracking and 1.04 line height, body 36/46.8,
+   cards radius 36 with a 16px solid offset plate, icon discs 150px, logo 250px wide.
+   Headline weight: the October frames are set in Aktiv Grotesk "SemiBold" in Figma, which the licensed family
+   renders at 500. One switch here (--hlw) if the month should go to Regular 400. */
+:root{ --hlw:500; --plate:16px;
+  /* feed-plan grounds (Figma library values, see feed-plan.md) */
+  --blue2:#364488; --lcream:#EAD0B6; }
+.g-blue2{background:var(--blue2);color:var(--white)}
+.g-lcream{background:var(--lcream);color:var(--dblue)}
+.g-lcream .k{color:var(--blue2)}
+.hlbar{background:var(--white);color:var(--dblue);padding:0 14px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+.pad{position:absolute;left:80px;right:80px;top:80px}
+.h{font-weight:var(--hlw);font-size:88px;line-height:1.04;letter-spacing:-0.012em}
+.h.xl{font-size:120px}
+.h.xxl{font-size:172px;line-height:0.98;letter-spacing:-0.02em}
+.b{font-weight:400;font-size:36px;line-height:46.8px}
+.b.l{font-size:40px;line-height:52px}
+.sub{font-weight:500;font-size:52px;line-height:1.12;letter-spacing:-0.01em}
+.k{color:var(--pink)}
+.on-pink .k{color:var(--white)}
+.c-white{color:var(--white)} .c-dblue{color:var(--dblue)} .c-black{color:var(--black)}
+
+/* logo: supplied artwork inlined by build_a.py, coloured through currentColor (Pink / White / Dark Blue) */
+.lg{display:block;width:250px;height:55.66px;color:var(--logo-pink)}
+.lg svg{display:block;width:250px;height:55.66px}
+.lg.white{color:var(--white)} .lg.dblue{color:var(--dblue)}
+.lg.at-tl{position:absolute;left:80px;top:80px}
+.lg.at-foot{position:absolute;left:415px;bottom:80px}
+
+/* white card with solid offset plate */
+.card{position:absolute;background:var(--white);border-radius:36px;color:var(--dblue)}
+.plate-db{box-shadow:var(--plate) var(--plate) 0 0 var(--dblue)}
+.plate-pk{box-shadow:var(--plate) var(--plate) 0 0 var(--pink)}
+
+/* icon discs */
+.disc{position:absolute;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.disc.pk{background:var(--pink)} .disc.sf{background:var(--surface)} .disc.wh{background:var(--white)} .disc.db{background:var(--dblue)}
+.disc svg{display:block}
+
+/* photos */
+.ph{position:absolute;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph.r{border-radius:36px}
+
+/* product tile */
+.tile{position:absolute;background:var(--white);border-radius:36px;display:flex;align-items:center;justify-content:center}
+.tile img{display:block;object-fit:contain}
+.tile.on{outline:8px solid var(--pink);outline-offset:-8px}
+
+/* chat bubbles: headline-size type, rounded, with a tail drawn by clip-path */
+.bub{position:absolute;font-weight:500;font-size:66px;line-height:1.08;letter-spacing:-0.012em;
+     padding:30px 46px 34px;border-radius:52px;white-space:nowrap}
+.bub::after{content:"";position:absolute;bottom:0;width:38px;height:44px;background:inherit}
+.bub.tl::after{left:-30px;clip-path:path('M38 0 C38 26 24 40 0 44 L38 44 Z')}
+.bub.tr::after{right:-30px;clip-path:path('M0 0 C0 26 14 40 38 44 L0 44 Z')}
+.bub.tl{border-bottom-left-radius:0} .bub.tr{border-bottom-right-radius:0}
+.bub.w{background:var(--white);color:var(--dblue)}
+.bub.p{background:var(--pink);color:var(--white)}
+.bub.d{background:var(--dblue);color:var(--white)}
+
+/* step rows (post 01) */
+.step{position:absolute;left:80px;width:560px;padding-left:112px}
+.step .n{position:absolute;left:0;top:-6px;width:84px;height:84px;border-radius:50%;background:var(--pink);color:var(--white);
+         font-weight:500;font-size:46px;line-height:84px;text-align:center}
+.step .lab{font-weight:700;font-size:30px;line-height:36px;letter-spacing:0.04em;color:var(--pink)}
+.step .tx{font-weight:400;font-size:32px;line-height:41px;margin-top:8px}
+
+/* line accent and other drawn vectors */
+svg.acc{position:absolute;left:0;top:0;width:1080px;height:1350px;overflow:visible;pointer-events:none}
+
+/* bubbles (post 08) */
+.ball{position:absolute;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;
+      font-weight:500;letter-spacing:-0.012em;line-height:1.04}
+
+/* sticker (post 05) */
+.sticker{position:absolute;font-weight:700;text-transform:none;letter-spacing:0.01em}
+
+/* spacing.md (Lucas 2026-10-16): logo top 80, logo to headline 40, headline to body 20, body to visual 56,
+   card padding 40/44, label to body 10, list gap 28 */
+.col{position:absolute;left:80px;display:flex;flex-direction:column}
+.hb{margin-top:20px}
+.stepcard{position:relative;background:#fff;border-radius:36px;box-shadow:16px 16px 0 0 var(--dblue);
+  padding:40px 44px 40px 148px;color:var(--dblue)}
+.stepcard .num{position:absolute;left:44px;top:40px;width:80px;height:80px;border-radius:50%;background:var(--pink);
+  color:#fff;font-weight:500;font-size:44px;line-height:80px;text-align:center}
+.stepcard .lab{font-weight:700;font-size:30px;line-height:36px;letter-spacing:0.04em;color:var(--pink)}
+.stepcard .tx{font-size:30px;line-height:1.3;margin-top:10px}

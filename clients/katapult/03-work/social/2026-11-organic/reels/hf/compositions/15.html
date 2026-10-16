@@ -1,0 +1,79 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Katapult reel 15</title>
+<style>@font-face{font-family:"Aktiv Grotesk";font-weight:400;src:url("../assets/fonts/AktivGrotesk-Regular.otf") format("opentype")}
+@font-face{font-family:"Aktiv Grotesk";font-weight:500;src:url("../assets/fonts/AktivGrotesk-Medium.otf") format("opentype")}
+@font-face{font-family:"Aktiv Grotesk";font-weight:700;src:url("../assets/fonts/AktivGrotesk-Bold.otf") format("opentype")}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#131540}
+#st{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:"Aktiv Grotesk",sans-serif;color:#131540;background:#EAEAE8;
+  -webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.L{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.abs{position:absolute}
+.acc{position:absolute;left:0;top:0;overflow:visible}
+.logo{position:absolute;display:block}
+.hl{position:absolute;font-weight:400;letter-spacing:-.015em;line-height:1.04}
+.hl em{font-style:normal;color:#ED5370}
+.hl span{display:block}
+.shape{position:absolute;border-radius:56px}
+.prod{position:absolute;display:block;object-fit:contain}
+/* phone */
+#phone{position:absolute;left:270px;top:600px;width:540px;height:1000px}
+#phone .plate{position:absolute;left:26px;top:26px;width:540px;height:1000px;border-radius:78px;background:#ED5370}
+#phone .body{position:absolute;left:0;top:0;width:540px;height:1000px;border-radius:78px;background:#131540}
+#screen{position:absolute;left:18px;top:18px;width:504px;height:964px;border-radius:60px;background:#fff;overflow:hidden}
+.notch{position:absolute;z-index:5;left:192px;top:16px;width:120px;height:32px;border-radius:16px;background:#131540}
+.sb{position:absolute;z-index:5;top:26px;height:12px;border-radius:6px;background:#131540}
+.scr{position:absolute;left:0;top:0;width:504px;height:964px}
+.hd{position:absolute;left:24px;top:76px;display:flex;align-items:center;gap:14px;font-size:32px;font-weight:500;color:#131540}
+.hd svg{width:34px;height:34px}
+.row{position:absolute;left:28px;width:448px;height:112px}
+.tile{position:absolute;left:0;top:0;width:112px;height:112px;border-radius:20px;background:#F0F0F0}
+.tile img{position:absolute;left:10px;top:10px;width:92px;height:92px;object-fit:contain}
+.bar{position:absolute;height:16px;border-radius:8px;background:#D8D8D8}
+.bar.d{background:#131540}
+.lab{position:absolute;left:28px;font-size:26px;font-weight:500;color:#4D4D4D}
+.opt{position:absolute;left:28px;width:448px;height:84px;border-radius:20px;border:2px solid #D8D8D8;background:#fff}
+.opt.sel{border:3px solid #ED5370;background:#FDEBEF}
+.radio{position:absolute;left:22px;top:25px;width:30px;height:30px;border-radius:50%;border:3px solid #A4A4A4;background:#fff}
+.opt.sel .radio{border-color:#ED5370}
+.radio i{position:absolute;left:4px;top:4px;width:16px;height:16px;border-radius:50%;background:#ED5370}
+.opt .oi{position:absolute;left:70px;top:23px;width:34px;height:34px;color:#131540}
+.opt .ot{position:absolute;left:70px;top:22px;font-size:30px;font-weight:500;color:#131540}
+.btn{position:absolute;left:28px;top:852px;width:448px;height:84px;border-radius:42px;background:#D8D8D8;color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:500}
+.btn.on{background:#ED5370}
+.btn svg{width:44px;height:44px}
+.disc{position:absolute;border-radius:50%;background:#ED5370;color:#fff;display:flex;align-items:center;justify-content:center}
+.fld{position:absolute;left:28px;width:448px;height:92px;border-radius:20px;border:2px solid #D8D8D8;background:#fff}
+.fld.focus{border:3px solid #ED5370}
+.dots{position:absolute;left:28px;top:0;height:100%;display:flex;align-items:center;gap:12px}
+.dots i{width:14px;height:14px;border-radius:50%;background:#131540;flex:none}
+.dots i.gap{width:6px;background:none}
+.caret{position:absolute;top:26px;width:3px;height:40px;border-radius:2px;background:#ED5370}
+.box{position:absolute;width:62px;height:80px;border-radius:16px;border:2px solid #D8D8D8;background:#fff}
+.box.focus{border:3px solid #ED5370}
+.box i{position:absolute;left:24px;top:33px;width:14px;height:14px;border-radius:50%;background:#131540}
+.chk{position:absolute;width:38px;height:38px;border-radius:10px;border:3px solid #A4A4A4;background:#fff;color:#fff}
+.chk.on{border-color:#ED5370;background:#ED5370}
+.chk svg{position:absolute;left:3px;top:3px;width:26px;height:26px}
+.sq{position:absolute;width:56px;height:40px;border-radius:12px;background:#D8D8D8}
+.sq.p{background:#ED5370}
+#touch{position:absolute;left:0;top:0;width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.75);border:5px solid #131540;z-index:30}
+#ring{position:absolute;left:0;top:0;border-radius:50%;border:5px solid #ED5370;z-index:29}
+.stepn{position:absolute;left:120px;top:262px;width:76px;height:76px;font-size:38px;font-weight:500}
+.stepn span{position:absolute;left:0;top:0;width:76px;height:76px;display:flex;align-items:center;justify-content:center}
+/* 15: full height. Headline 364-622, product shape 650-1290, cart card 1330-1564 (+16 plate) */
+.cart{position:absolute;left:93px;top:1330px;width:894px;height:234px}
+.cart .plate{position:absolute;left:16px;top:16px;width:894px;height:234px;border-radius:44px;background:#131540}
+.cart .face{position:absolute;left:0;top:0;width:894px;height:234px;border-radius:44px;background:#fff}
+.slot{position:absolute;top:52px;width:150px;height:150px;border-radius:28px;background:#F0F0F0;border:2px solid #D8D8D8}
+.slot.on{background:#fff;border:3px solid #ED5370}
+.pshape{position:absolute;left:220px;top:650px;width:640px;height:640px}
+</style></head><body>
+<div id="st" data-composition-id="kat-reel-15" data-start="0" data-duration="10.8" data-width="1080" data-height="1920" data-fps="30">
+<div class="L" style="background:#EAD0B6"></div><svg id="lg1" class="logo" viewBox="0 0 521 116" style="left:415px;top:268px;width:250px;height:55.7px"><path d="M182.466 2.32001V22.4267H202.654V35.5733H182.466V69.2133C182.466 69.7083 184.842 73.2656 185.588 73.8379C191.271 78.1685 202.235 75.0907 206.971 70.3733C207.375 69.6 204.223 59.5312 204.161 56.8555C203.369 27.9483 236.042 9.52747 258.559 29.4021V22.4421H274.88V67.6821C274.88 68.0997 276.681 71.7963 277.178 72.3531C280.796 76.3899 287.847 75.9413 292.738 75.8021V22.4267H309.044V29.3867C320.132 19.3024 334.651 18.8384 347.354 26.4171C382.807 47.5755 353.457 104.462 317.29 87.2939C314.137 85.7936 312.134 83.1643 309.044 81.9733V116H292.738V89.7067C281.713 92.7381 269.181 87.0928 263.606 77.3179C262.457 77.3179 255.5 84.4325 253.388 85.7008C240.763 93.3877 225.265 90.0469 214.689 80.6432C203.136 91.6245 185.883 94.2848 172.761 84.5253C158.987 94.5168 140.755 91.8256 131.593 77.3024C127.773 79.5915 125.226 83.3808 121.375 85.6853C103.734 96.2491 81.3878 85.9637 74.7258 67.4656C63.048 35.0629 99.5723 6.44961 126.562 29.3712V22.4112H142.883V67.6512C142.883 68.3627 145.274 72.3376 146.051 73.0027C150.865 77.1941 161.502 76.4208 166.829 73.3275L166.176 35.5579H154.53V22.4112H166.176V6.18667L182.482 2.32001H182.466ZM106.234 34.9701C80.4095 36.7952 82.2885 76.4517 108.284 75.8021C134.28 75.1525 133.317 33.0677 106.234 34.9701ZM238.231 34.9701C212.236 36.7952 213.975 76.4672 240.281 75.8021C266.587 75.1371 265.019 33.0832 238.231 34.9701ZM326.747 34.9701C300.969 36.7952 302.848 76.3435 328.828 75.8331C355.445 75.3227 353.985 33.0368 326.747 34.9701Z" fill="#EC5370"/><path d="M16.3055 0V42.92C16.3055 43.0128 17.4391 44.4667 17.8584 43.7088L56.2928 0H76.0924L40.329 41.3424L76.8689 88.9333H57.0693L29.117 53.3755L16.3055 67.6667V88.9333H0V0H16.3055Z" fill="#EC5370"/><path d="M387.45 22.4267V63.0267C387.45 63.5371 389.655 67.976 390.214 68.7803C397.792 79.7925 414.377 75.9568 418.664 63.9701C418.943 63.2123 420.046 59.5312 420.046 59.16V22.4267H435.575V88.9333H420.046V81.2C408.259 93.7589 385.602 92.8928 375.928 78.3541C373.955 75.3845 371.129 68.7803 371.129 65.3467V22.4267H387.435H387.45Z" fill="#EC5370"/><path d="M500.036 2.32013V22.4268H520.224V35.5735H500.036V68.4401C500.036 76.1889 516 76.0497 521 73.4668V88.9335C509.959 91.5319 495.75 91.6711 488.389 81.5868C487.256 80.0247 484.507 73.8689 484.507 72.3068V35.5735H472.084V22.4268H484.507V6.1868L500.036 2.32013Z" fill="#EC5370"/><path d="M464.319 0H448.79V88.9333H464.319V0Z" fill="#EC5370"/></svg><h1 class="hl" id="hl" style="left:0;top:364px;width:1080px;text-align:center;font-size:124px;color:#131540"><span id="h0">Cyber Monday</span><span id="h1"><em>finds</em></span></h1><div class="pshape" id="ps0"><div class="shape" style="left:0;top:0;width:640px;height:640px;border-radius:50%;background:#9EB5C0"></div></div><div class="pshape" id="ps1"><div class="shape" style="left:0;top:0;width:640px;height:640px;border-radius:88px;background:#ED5370"></div></div><div class="pshape" id="ps2"><div class="shape" style="left:0;top:0;width:640px;height:640px;border-radius:50%;background:#131540"></div></div><div class="pshape" id="ps3"><div class="shape" style="left:0;top:0;width:640px;height:640px;border-radius:88px;background:#9EB5C0"></div></div><div class="pshape" id="ps4"><div class="shape" style="left:0;top:0;width:640px;height:640px;border-radius:50%;background:#ED5370"></div></div><div class="cart" id="cart"><div class="plate"></div><div class="face"></div><div class="slot" id="sl0" style="left:32px"></div><div class="slot" id="sl1" style="left:202px"></div><div class="slot" id="sl2" style="left:372px"></div><div class="slot" id="sl3" style="left:542px"></div><div class="slot" id="sl4" style="left:712px"></div></div><div class="disc" id="bagd" style="left:0;top:0;width:360px;height:360px;z-index:25"><div style="width:190px;height:190px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12.5H6z"/><path d="M9 10.5V7a3 3 0 0 1 6 0v3.5"/></svg></div></div><div class="disc" id="cok" style="left:890px;top:1290px;width:80px;height:80px;z-index:25"><div style="width:46px;height:46px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></div></div><img id="p0" class="prod" src="../assets/products/tv.webp" style="left:0;top:0;width:500px;height:500px;z-index:20"><img id="p1" class="prod" src="../assets/products/headphones.webp" style="left:0;top:0;width:500px;height:500px;z-index:20"><img id="p2" class="prod" src="../assets/products/laptop.webp" style="left:0;top:0;width:500px;height:500px;z-index:20"><img id="p3" class="prod" src="../assets/products/console.webp" style="left:0;top:0;width:500px;height:500px;z-index:20"><img id="p4" class="prod" src="../assets/products/couch.webp" style="left:0;top:0;width:500px;height:500px;z-index:20">
+</div>
+<script>const CFG={"comp": "kat-reel-15", "dur": 10.8, "W": 1080, "H": 1920, "safe": {"top": 250, "bottom": 340, "side": 90}, "p15": [["tv", "#9EB5C0", "50%"], ["headphones", "#ED5370", "64px"], ["laptop", "#131540", "50%"], ["console", "#9EB5C0", "64px"], ["couch", "#ED5370", "50%"]], "slot": {"x0": 200, "dx": 170, "y": 1457, "box": 500, "in": 132}};</script>
+<script src="../assets/gsap.min.js"></script>
+<script src="../assets/common.js"></script>
+<script src="../assets/t15.js"></script>
+</body></html>

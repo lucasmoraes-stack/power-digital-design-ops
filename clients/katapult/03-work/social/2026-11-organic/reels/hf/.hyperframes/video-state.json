@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "historyId": null,
+  "currentRevision": null,
+  "pendingChanges": true,
+  "files": {},
+  "revisions": {},
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "682e9e34-d254-4025-862e-4f71942e121b",
+      "completedAt": 1792183969074,
+      "output": "C:\\Users\\lucas\\OneDrive\\Desktop\\VAZIO\\power-digital-ops\\clients\\katapult\\04-deliverables\\social\\2026-11-organic\\reels\\07-katapult-at-checkout_reel-9x16.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}

@@ -1,0 +1,486 @@
+[
+  {
+    "post": "01",
+    "title": "What Is Lease-to-Own?",
+    "format": "Carousel 4:5",
+    "section_id": "599:7585",
+    "frames": [
+      {
+        "id": "599:7586",
+        "name": "01-what-is-lease-to-own/01-what-is-lease-to-own_carousel-4x5_01",
+        "file": "png/01-what-is-lease-to-own/01-what-is-lease-to-own_carousel-4x5_01.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:7613",
+        "name": "01-what-is-lease-to-own/01-what-is-lease-to-own_carousel-4x5_02",
+        "file": "png/01-what-is-lease-to-own/01-what-is-lease-to-own_carousel-4x5_02.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:7637",
+        "name": "01-what-is-lease-to-own/01-what-is-lease-to-own_carousel-4x5_03",
+        "file": "png/01-what-is-lease-to-own/01-what-is-lease-to-own_carousel-4x5_03.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:7650",
+        "name": "01-what-is-lease-to-own/01-what-is-lease-to-own_carousel-4x5_04",
+        "file": "png/01-what-is-lease-to-own/01-what-is-lease-to-own_carousel-4x5_04.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:7682",
+        "name": "01-what-is-lease-to-own/01-what-is-lease-to-own_carousel-4x5_05",
+        "file": "png/01-what-is-lease-to-own/01-what-is-lease-to-own_carousel-4x5_05.png",
+        "w": 1080,
+        "h": 1350
+      }
+    ]
+  },
+  {
+    "post": "02",
+    "title": "Lease-to-Own vs. Traditional Credit",
+    "format": "Carousel 4:5",
+    "section_id": "599:7709",
+    "frames": [
+      {
+        "id": "599:7710",
+        "name": "02-lease-to-own-vs-traditional-credit/02-lease-to-own-vs-traditional-credit_carousel-4x5_01",
+        "file": "png/02-lease-to-own-vs-traditional-credit/02-lease-to-own-vs-traditional-credit_carousel-4x5_01.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:7737",
+        "name": "02-lease-to-own-vs-traditional-credit/02-lease-to-own-vs-traditional-credit_carousel-4x5_02",
+        "file": "png/02-lease-to-own-vs-traditional-credit/02-lease-to-own-vs-traditional-credit_carousel-4x5_02.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:7755",
+        "name": "02-lease-to-own-vs-traditional-credit/02-lease-to-own-vs-traditional-credit_carousel-4x5_03",
+        "file": "png/02-lease-to-own-vs-traditional-credit/02-lease-to-own-vs-traditional-credit_carousel-4x5_03.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:7779",
+        "name": "02-lease-to-own-vs-traditional-credit/02-lease-to-own-vs-traditional-credit_carousel-4x5_04",
+        "file": "png/02-lease-to-own-vs-traditional-credit/02-lease-to-own-vs-traditional-credit_carousel-4x5_04.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:7808",
+        "name": "02-lease-to-own-vs-traditional-credit/02-lease-to-own-vs-traditional-credit_carousel-4x5_05",
+        "file": "png/02-lease-to-own-vs-traditional-credit/02-lease-to-own-vs-traditional-credit_carousel-4x5_05.png",
+        "w": 1080,
+        "h": 1350
+      }
+    ]
+  },
+  {
+    "post": "03",
+    "title": "How Katapult Works",
+    "format": "Carousel 4:5",
+    "section_id": "599:7835",
+    "frames": [
+      {
+        "id": "599:7836",
+        "name": "03-how-katapult-works/03-how-katapult-works_carousel-4x5_01",
+        "file": "png/03-how-katapult-works/03-how-katapult-works_carousel-4x5_01.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:7910",
+        "name": "03-how-katapult-works/03-how-katapult-works_carousel-4x5_02",
+        "file": "png/03-how-katapult-works/03-how-katapult-works_carousel-4x5_02.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:7939",
+        "name": "03-how-katapult-works/03-how-katapult-works_carousel-4x5_03",
+        "file": "png/03-how-katapult-works/03-how-katapult-works_carousel-4x5_03.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:7970",
+        "name": "03-how-katapult-works/03-how-katapult-works_carousel-4x5_04",
+        "file": "png/03-how-katapult-works/03-how-katapult-works_carousel-4x5_04.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:7999",
+        "name": "03-how-katapult-works/03-how-katapult-works_carousel-4x5_05",
+        "file": "png/03-how-katapult-works/03-how-katapult-works_carousel-4x5_05.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8064",
+        "name": "03-how-katapult-works/03-how-katapult-works_carousel-4x5_06",
+        "file": "png/03-how-katapult-works/03-how-katapult-works_carousel-4x5_06.png",
+        "w": 1080,
+        "h": 1350
+      }
+    ]
+  },
+  {
+    "post": "04",
+    "title": "When You Need It, You Need It",
+    "format": "Carousel 4:5",
+    "section_id": "599:8096",
+    "frames": [
+      {
+        "id": "599:8097",
+        "name": "04-when-you-need-it-you-need-it/04-when-you-need-it-you-need-it_carousel-4x5_01",
+        "file": "png/04-when-you-need-it-you-need-it/04-when-you-need-it-you-need-it_carousel-4x5_01.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8131",
+        "name": "04-when-you-need-it-you-need-it/04-when-you-need-it-you-need-it_carousel-4x5_02",
+        "file": "png/04-when-you-need-it-you-need-it/04-when-you-need-it-you-need-it_carousel-4x5_02.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8155",
+        "name": "04-when-you-need-it-you-need-it/04-when-you-need-it-you-need-it_carousel-4x5_03",
+        "file": "png/04-when-you-need-it-you-need-it/04-when-you-need-it-you-need-it_carousel-4x5_03.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8185",
+        "name": "04-when-you-need-it-you-need-it/04-when-you-need-it-you-need-it_carousel-4x5_04",
+        "file": "png/04-when-you-need-it-you-need-it/04-when-you-need-it-you-need-it_carousel-4x5_04.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8203",
+        "name": "04-when-you-need-it-you-need-it/04-when-you-need-it-you-need-it_carousel-4x5_05",
+        "file": "png/04-when-you-need-it-you-need-it/04-when-you-need-it-you-need-it_carousel-4x5_05.png",
+        "w": 1080,
+        "h": 1350
+      }
+    ]
+  },
+  {
+    "post": "05",
+    "title": "Your Next Chapter Starts With What You Need",
+    "format": "Carousel 4:5",
+    "section_id": "599:8226",
+    "frames": [
+      {
+        "id": "599:8227",
+        "name": "05-your-next-chapter-starts-with-what-you-need/05-your-next-chapter-starts-with-what-you-need_carousel-4x5_01",
+        "file": "png/05-your-next-chapter-starts-with-what-you-need/05-your-next-chapter-starts-with-what-you-need_carousel-4x5_01.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8252",
+        "name": "05-your-next-chapter-starts-with-what-you-need/05-your-next-chapter-starts-with-what-you-need_carousel-4x5_02",
+        "file": "png/05-your-next-chapter-starts-with-what-you-need/05-your-next-chapter-starts-with-what-you-need_carousel-4x5_02.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8263",
+        "name": "05-your-next-chapter-starts-with-what-you-need/05-your-next-chapter-starts-with-what-you-need_carousel-4x5_03",
+        "file": "png/05-your-next-chapter-starts-with-what-you-need/05-your-next-chapter-starts-with-what-you-need_carousel-4x5_03.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8314",
+        "name": "05-your-next-chapter-starts-with-what-you-need/05-your-next-chapter-starts-with-what-you-need_carousel-4x5_04",
+        "file": "png/05-your-next-chapter-starts-with-what-you-need/05-your-next-chapter-starts-with-what-you-need_carousel-4x5_04.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8334",
+        "name": "05-your-next-chapter-starts-with-what-you-need/05-your-next-chapter-starts-with-what-you-need_carousel-4x5_05",
+        "file": "png/05-your-next-chapter-starts-with-what-you-need/05-your-next-chapter-starts-with-what-you-need_carousel-4x5_05.png",
+        "w": 1080,
+        "h": 1350
+      }
+    ]
+  },
+  {
+    "post": "06",
+    "title": "More Choices Can Make a Difference",
+    "format": "Carousel 4:5",
+    "section_id": "599:8347",
+    "frames": [
+      {
+        "id": "599:8348",
+        "name": "06-more-choices-can-make-a-difference/06-more-choices-can-make-a-difference_carousel-4x5_01",
+        "file": "png/06-more-choices-can-make-a-difference/06-more-choices-can-make-a-difference_carousel-4x5_01.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8383",
+        "name": "06-more-choices-can-make-a-difference/06-more-choices-can-make-a-difference_carousel-4x5_02",
+        "file": "png/06-more-choices-can-make-a-difference/06-more-choices-can-make-a-difference_carousel-4x5_02.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8415",
+        "name": "06-more-choices-can-make-a-difference/06-more-choices-can-make-a-difference_carousel-4x5_03",
+        "file": "png/06-more-choices-can-make-a-difference/06-more-choices-can-make-a-difference_carousel-4x5_03.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8460",
+        "name": "06-more-choices-can-make-a-difference/06-more-choices-can-make-a-difference_carousel-4x5_04",
+        "file": "png/06-more-choices-can-make-a-difference/06-more-choices-can-make-a-difference_carousel-4x5_04.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8490",
+        "name": "06-more-choices-can-make-a-difference/06-more-choices-can-make-a-difference_carousel-4x5_05",
+        "file": "png/06-more-choices-can-make-a-difference/06-more-choices-can-make-a-difference_carousel-4x5_05.png",
+        "w": 1080,
+        "h": 1350
+      }
+    ]
+  },
+  {
+    "post": "07",
+    "title": "What Would You Replace First?",
+    "format": "IG Story 9:16",
+    "section_id": "599:8511",
+    "frames": [
+      {
+        "id": "599:8512",
+        "name": "07-what-would-you-replace-first/07-what-would-you-replace-first_ig-story-9x16",
+        "file": "png/07-what-would-you-replace-first/07-what-would-you-replace-first_ig-story-9x16.png",
+        "w": 1080,
+        "h": 1920
+      }
+    ]
+  },
+  {
+    "post": "08",
+    "title": "Finish the Sentence",
+    "format": "Static 4:5",
+    "section_id": "599:8547",
+    "frames": [
+      {
+        "id": "599:8548",
+        "name": "08-finish-the-sentence/08-finish-the-sentence_static-4x5",
+        "file": "png/08-finish-the-sentence/08-finish-the-sentence_static-4x5.png",
+        "w": 1080,
+        "h": 1350
+      }
+    ]
+  },
+  {
+    "post": "09",
+    "title": "What Matters Most at Checkout?",
+    "format": "IG Story 9:16",
+    "section_id": "599:8582",
+    "frames": [
+      {
+        "id": "599:8583",
+        "name": "09-what-matters-most-at-checkout/09-what-matters-most-at-checkout_ig-story-9x16",
+        "file": "png/09-what-matters-most-at-checkout/09-what-matters-most-at-checkout_ig-story-9x16.png",
+        "w": 1080,
+        "h": 1920
+      }
+    ]
+  },
+  {
+    "post": "10",
+    "title": "Get What You Need. Pay Over Time.",
+    "format": "Static 4:5",
+    "section_id": "599:8642",
+    "frames": [
+      {
+        "id": "599:8643",
+        "name": "10-get-what-you-need-pay-over-time/10-get-what-you-need-pay-over-time_static-4x5",
+        "file": "png/10-get-what-you-need-pay-over-time/10-get-what-you-need-pay-over-time_static-4x5.png",
+        "w": 1080,
+        "h": 1350
+      }
+    ]
+  },
+  {
+    "post": "11",
+    "title": "Shop More Retailers With Katapult",
+    "format": "Static 4:5",
+    "section_id": "599:8682",
+    "frames": [
+      {
+        "id": "599:8683",
+        "name": "11-shop-more-retailers-with-katapult/11-shop-more-retailers-with-katapult_static-4x5",
+        "file": "png/11-shop-more-retailers-with-katapult/11-shop-more-retailers-with-katapult_static-4x5.png",
+        "w": 1080,
+        "h": 1350
+      }
+    ]
+  },
+  {
+    "post": "12",
+    "title": "Know Your Buying Power",
+    "format": "Static 4:5",
+    "section_id": "599:8723",
+    "frames": [
+      {
+        "id": "599:8724",
+        "name": "12-know-your-buying-power/12-know-your-buying-power_static-4x5",
+        "file": "png/12-know-your-buying-power/12-know-your-buying-power_static-4x5.png",
+        "w": 1080,
+        "h": 1350
+      }
+    ]
+  },
+  {
+    "post": "13",
+    "title": "More Than a Payment Option",
+    "format": "Carousel 4:5",
+    "section_id": "599:8757",
+    "frames": [
+      {
+        "id": "599:8758",
+        "name": "13-more-than-a-payment-option/13-more-than-a-payment-option_carousel-4x5_01",
+        "file": "png/13-more-than-a-payment-option/13-more-than-a-payment-option_carousel-4x5_01.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8780",
+        "name": "13-more-than-a-payment-option/13-more-than-a-payment-option_carousel-4x5_02",
+        "file": "png/13-more-than-a-payment-option/13-more-than-a-payment-option_carousel-4x5_02.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8829",
+        "name": "13-more-than-a-payment-option/13-more-than-a-payment-option_carousel-4x5_03",
+        "file": "png/13-more-than-a-payment-option/13-more-than-a-payment-option_carousel-4x5_03.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8844",
+        "name": "13-more-than-a-payment-option/13-more-than-a-payment-option_carousel-4x5_04",
+        "file": "png/13-more-than-a-payment-option/13-more-than-a-payment-option_carousel-4x5_04.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8869",
+        "name": "13-more-than-a-payment-option/13-more-than-a-payment-option_carousel-4x5_05",
+        "file": "png/13-more-than-a-payment-option/13-more-than-a-payment-option_carousel-4x5_05.png",
+        "w": 1080,
+        "h": 1350
+      }
+    ]
+  },
+  {
+    "post": "14",
+    "title": "Built for Shoppers. Built for Retailers.",
+    "format": "Carousel 4:5",
+    "section_id": "599:8902",
+    "frames": [
+      {
+        "id": "599:8903",
+        "name": "14-built-for-shoppers-built-for-retailers/14-built-for-shoppers-built-for-retailers_carousel-4x5_01",
+        "file": "png/14-built-for-shoppers-built-for-retailers/14-built-for-shoppers-built-for-retailers_carousel-4x5_01.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8934",
+        "name": "14-built-for-shoppers-built-for-retailers/14-built-for-shoppers-built-for-retailers_carousel-4x5_02",
+        "file": "png/14-built-for-shoppers-built-for-retailers/14-built-for-shoppers-built-for-retailers_carousel-4x5_02.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8951",
+        "name": "14-built-for-shoppers-built-for-retailers/14-built-for-shoppers-built-for-retailers_carousel-4x5_03",
+        "file": "png/14-built-for-shoppers-built-for-retailers/14-built-for-shoppers-built-for-retailers_carousel-4x5_03.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8962",
+        "name": "14-built-for-shoppers-built-for-retailers/14-built-for-shoppers-built-for-retailers_carousel-4x5_04",
+        "file": "png/14-built-for-shoppers-built-for-retailers/14-built-for-shoppers-built-for-retailers_carousel-4x5_04.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:8994",
+        "name": "14-built-for-shoppers-built-for-retailers/14-built-for-shoppers-built-for-retailers_carousel-4x5_05",
+        "file": "png/14-built-for-shoppers-built-for-retailers/14-built-for-shoppers-built-for-retailers_carousel-4x5_05.png",
+        "w": 1080,
+        "h": 1350
+      }
+    ]
+  },
+  {
+    "post": "15",
+    "title": "Why Katapult Exists",
+    "format": "Carousel 4:5",
+    "section_id": "599:9011",
+    "frames": [
+      {
+        "id": "599:9012",
+        "name": "15-why-katapult-exists/15-why-katapult-exists_carousel-4x5_01",
+        "file": "png/15-why-katapult-exists/15-why-katapult-exists_carousel-4x5_01.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:9046",
+        "name": "15-why-katapult-exists/15-why-katapult-exists_carousel-4x5_02",
+        "file": "png/15-why-katapult-exists/15-why-katapult-exists_carousel-4x5_02.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:9162",
+        "name": "15-why-katapult-exists/15-why-katapult-exists_carousel-4x5_03",
+        "file": "png/15-why-katapult-exists/15-why-katapult-exists_carousel-4x5_03.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:9189",
+        "name": "15-why-katapult-exists/15-why-katapult-exists_carousel-4x5_04",
+        "file": "png/15-why-katapult-exists/15-why-katapult-exists_carousel-4x5_04.png",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "id": "599:9234",
+        "name": "15-why-katapult-exists/15-why-katapult-exists_carousel-4x5_05",
+        "file": "png/15-why-katapult-exists/15-why-katapult-exists_carousel-4x5_05.png",
+        "w": 1080,
+        "h": 1350
+      }
+    ]
+  }
+]
