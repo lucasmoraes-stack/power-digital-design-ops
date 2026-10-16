@@ -115,6 +115,62 @@ def rku26013():
   </section>"""
 
 
+J12 = ROOT / "03-work" / "ads" / "2026-rku26012-tv-ads-3-steps"
+R12 = J12 / "review"
+# storyboard beats: (time, beat, what happens)
+SB12 = [(1.4, "Intro", "Lockup, \u201cAdvertise on TV in 3 Simple Steps\u201d, then the three steps pop in."),
+        (3.3, "Step 1 · Set Your Budget", "Card slides in, cursor clicks the empty budget field."),
+        (4.8, "Step 1 · $5,000", "Typed 5, 50, 500, 5,000 with a blinking caret, then Next."),
+        (7.4, "Step 2 · Interests", "Dropdown opens, cursor moves down to Home &amp; Garden."),
+        (8.6, "Step 2 · Age", "Clicks 25\u201334, the pill lights up."),
+        (9.8, "Step 2 · ZIP", "Types 90210, then Next."),
+        (12.4, "Step 3 · Upload", "Clicks Upload Content, TV_Ad.mp4 runs 0 to 100%."),
+        (14.2, "Step 3 · Launch", "Check mark, cursor clicks Launch Campaign, light flash."),
+        (15.4, "The ad, full frame", "After a light flash, cut to the ad playing full screen."),
+        (17.3, "Camera pulls back", "The camera pulls back from the screen to the living room (15.4 to 17.4 s): the ad is on a TV at home. The dashed frame marks where the shot starts."),
+        (19.0, "CTA end frame", "Lockup, headline, \u201cStart your first campaign\u201d pressed.")]
+SIZES12 = [("16x9", "16:9 · CTV · 1920×1080", "1920x1080", "CTV", "16/9"), ("1x1", "1:1 · Meta · 1440×1440", "1440x1440", "Meta", "1/1"),
+           ("4x5", "4:5 · Meta · 1440×1800", "1440x1800", "Meta", "4/5"), ("9x16", "9:16 · Meta · 1440×2560", "1440x2560", "Meta", "9/16")]
+
+
+def rku26012():
+    vids = "".join(f'<figure class="vid"><video src="rku26012/{k}.mp4" style="aspect-ratio:{ar}" controls muted loop playsinline preload="none" poster="{img_data(R12 / "sb" / f"{k}-poster.jpg")}"></video>'
+                   f'<figcaption><b>{lab}</b><span class="mono">RKU26012-TVAdvertising3Steps-{px}-Animation-{pl}-20s-V2.mp4</span></figcaption></figure>'
+                   for k, lab, px, pl, ar in SIZES12)
+    sb = "".join(f'<figure class="sbf"><button type="button" class="zoom" aria-label="Enlarge {b}"><img src="{img_data(R12 / "sb" / f"16x9-F{n:02d}.jpg")}" alt="{b}"></button>'
+                 f'<figcaption><span class="tc">F{n:02d} · {t:04.1f}s</span><b>{b}</b><span>{d}</span></figcaption></figure>' for n, (t, b, d) in enumerate(SB12, 1))
+    refs = "".join(f'<figure style="width:min(100%,300px)"><div><img class="fr" src="{img_data(R12 / "sb" / f"ref-{n}.jpg")}" alt="Victor AI frame, {n}"></div><figcaption>Victor\u2019s AI frame · {n}</figcaption></figure>'
+                   for n in ("budget", "audience", "upload"))
+    return f"""
+  <div class="jh">
+    <span class="label">RKU26012 · Meta and YouTube / CTV · Animation 20s · TV Advertising in 3 Steps</span>
+    <h2>TV Advertising in 3 Steps</h2>
+    <p class="idea">A Roku-branded Ads Manager card does the whole job in twenty seconds: $5,000 budget, Home &amp; Garden, 25\u201334, 90210, upload, launch. Then the ad is on a living-room TV. The UI is the hero; the background is a dark purple night over a quiet Roku City silhouette.</p>
+    <ul class="counts"><li><b>4</b> sizes</li><li><b>20s</b> each</li><li><b>1</b> variation</li><li><b>11</b> storyboard beats</li><li>V2</li></ul>
+    <p class="next"><b>For review, 2026-10-15 · V2.</b> Headlines now in Roku Display Regular, and the Roku blimp floats across the sky in every size, as in Victor\u2019s frames. Rendered with HyperFrames. Three answers still needed, listed in the notes.</p>
+    <details class="more"><summary>Copy check and production notes</summary><div class="notes">
+      <p><b>Brief copy, verbatim:</b> headline \u201cAdvertise on TV in 3 Simple Steps\u201d (intro and end frame), subhead \u201cSet Your Budget. Pick Your Audience. Upload Your Content.\u201d (the three steps), CTA \u201cStart your first campaign\u201d (end frame). Budget $5,000, ZIP 90210, upload 0 to 100%.</p>
+      <p><b>Open 1 · age:</b> the brief says \u201cselect 35-34\u201d, which is not one of the options (18-24, 25-34, 35-50). Built 25\u201334, as in Victor\u2019s frame. Or 35\u201350?</p>
+      <p><b>Removed from the AI frames:</b> the helper line under each headline (\u201cChoose how much you want to spend on your campaign.\u201d, \u201cChoose your interests, age range, and location to reach the right viewers.\u201d, \u201cAdd your video and we\u2019ll take care of the rest.\u201d) and \u201cMP4, MOV, or WebM up to 2GB\u201d. They are not in the brief, and the formats and size limit are product claims nobody has confirmed. The blimp with the Roku wordmark was left out of V1 and is back in V2 at Lucas\u2019s request: it drifts slowly across the top of the frame, behind the card.</p>
+      <p><b>V2 · 2026-10-15:</b> headlines (intro, steps, end frame) set in Regular instead of Black; UI labels and buttons stay bold. Roku blimp added to the background (drawn in code with the wordmark, reusable from <span class="mono">01-brand/roku_city.py</span>). Renders now run through HyperFrames (open source, Apache 2.0, local Chrome and FFmpeg, four parallel workers), about four times faster than the V1 pipeline; the timeline is unchanged, so every frame matches the review stills.</p>
+      <p><b>Open 2 · UI microcopy (ours):</b> stepper Budget / Audience / Content; card titles Your Budget / Your Audience / Your Content; labels Campaign budget, Interests, Age range, ZIP code; buttons Next, Upload Content, Launch Campaign; dropdown Food &amp; Drink, Home &amp; Garden, Pets, Sports &amp; Fitness, Travel; file TV_Ad.mp4. The ad on the TV is the fictional Homegoods ad from RKU26013 (\u201cComfort, styled your way.\u201d), which matches the Home &amp; Garden interest.</p>
+      <p><b>Open 3 · sound:</b> nothing in the brief. Exported silent.</p>
+      <p><b>Order:</b> the creative summary says \u201cupload, target and launch\u201d, the subhead says budget, audience, upload. Built in subhead order; launch is the last click of step 3.</p>
+      <p><b>Reusable pieces</b> (the brief asked for them): Roku City silhouette (drawn in code, seeded, any size, <span class="mono">01-brand/roku_city.py</span>), glass card with purple inner shadows, field with focus glow and blinking caret, dropdown, age pills, upload bar, stepper, cursor with click ring.</p>
+      <p><b>How it is made:</b> one HyperFrames composition per size with a frame-exact timeline, rendered at 30 fps in headless Chrome and encoded to H.264. Layouts: 16:9 copy left, card right; 1:1 and 4:5 copy on top; 9:16 copy and card centred inside the 267px top and 333px bottom safe zones. The living room is the RKU26013 V4 Homegoods room, with the ad placed sharp on the screen so the zoom holds. Previews here are compressed; full-quality MP4s are in <span class="mono">03-work/ads/2026-rku26012-tv-ads-3-steps/export/</span>.</p>
+    </div></details>
+  </div>
+  <section class="part" id="rku26012-videos"><div class="ph"><h3>Animations · V2</h3><p>Twenty seconds each. Press play; they loop.</p></div>
+    <div class="vids">{vids}</div>
+  </section>
+  <section class="part" id="rku26012-sb"><div class="ph"><h3>Storyboard · 16:9</h3><p>Eleven beats from the 16:9 cut. The other sizes follow the same timing.</p></div>
+    <div class="sb">{sb}</div>
+  </section>
+  <section class="part" id="rku26012-refs"><div class="ph"><h3>Victor\u2019s AI frames</h3><p>The starting point. Kept: dark purple ground, city silhouette, Roku blimp, glass card, step pill, two-tone headline. Changed: own layout and motion, invented copy removed, CTA end frame added.</p></div>
+    <div class="sk">{refs}</div>
+  </section>"""
+
+
 def reframe():
     secs = [("V1: MOF Ad - MOBITE", "Video storyboard", 23), ("V1: MOF Ad - CAROUSEL", "Static carousel", 7),
             ("V1: MOF Ad - CAROUSEL - Version 2", "Static carousel", 7), ("V2: BOF Retargeting Ad - MOBITE", "Video storyboard", 17),
@@ -151,6 +207,9 @@ def reframe_thumb():
 
 JOBS = [
     # channel, id, code, title, desc, counts, badge, thumb, body
+    ("paid", "rku26012", "RKU26012", "TV Advertising in 3 Steps",
+     "A 20-second animated Ads Manager demo: budget, audience, upload, then the ad on a living-room TV, over a Roku City silhouette.",
+     ["<b>4</b> animations", "<b>20s</b> each"], "V2 · for review", lambda: f'<img src="{img_data(R12 / "sb" / "16x9-t04.80.jpg")}" alt="">', rku26012),
     ("paid", "rku26013", "RKU26013", "Sell it on Roku",
      "Six industries, four sizes: a real living room looking out on an illustrated lilac city, a business ad on the TV, Learn more.",
      ["<b>24</b> frames", "<b>15s</b> CTV animatic"], "V4 · all sizes", lambda: f'<img src="{img_data(REVIEW / "RKU26013-SellItOnRoku-1440x1440-Static-Meta-Pet-V4.jpg")}" alt="">', rku26013),
@@ -258,6 +317,12 @@ main{{display:flex;flex-direction:column;gap:48px;padding-top:36px}}
 .slot.done .slot-f{{border:0;padding:0;overflow:hidden}}
 .slot.done img{{width:100%;height:100%;object-fit:cover;display:block}}
 .zoom{{cursor:zoom-in;border:0;background:none;font:inherit}}
+.vids{{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:24px;align-items:end}}
+.vid{{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}}
+.vid:first-child{{grid-column:1/-1}}
+.vid:first-child video{{max-width:760px}}
+.vid video{{display:block;width:100%;background:var(--midnight);border-radius:6px;box-shadow:0 14px 34px -22px rgba(79,1,163,.6)}}
+.vid figcaption{{display:flex;flex-direction:column;gap:2px;font-size:13px;overflow-wrap:anywhere}}
 .reel{{position:relative;width:min(100%,760px);aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:var(--midnight)}}
 .reel img{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:reel 18s infinite}}
 .reel img:first-child{{opacity:1}}

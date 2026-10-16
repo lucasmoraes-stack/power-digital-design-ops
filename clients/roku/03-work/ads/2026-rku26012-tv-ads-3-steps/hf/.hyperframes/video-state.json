@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "historyId": null,
+  "currentRevision": null,
+  "pendingChanges": true,
+  "files": {},
+  "revisions": {},
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "71fb8d1f-f3f5-403d-8992-2c10e52525ce",
+      "completedAt": 1792073540264,
+      "output": "C:\\Users\\lucas\\OneDrive\\Desktop\\VAZIO\\power-digital-ops\\clients\\roku\\03-work\\ads\\2026-rku26012-tv-ads-3-steps\\export\\RKU26012-TVAdvertising3Steps-1440x2560-Animation-Meta-20s-V2.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}
