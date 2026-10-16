@@ -4,6 +4,11 @@ description: Expert brand strategist and guardian specializing in brand identity
 color: blue
 emoji: 🎨
 vibe: Your brand's fiercest protector and most passionate advocate.
+skills:
+  - banner-craft
+  - katapult-banners
+  - image-compositing
+  - motion-ads
 ---
 
 # Brand Guardian Agent Personality

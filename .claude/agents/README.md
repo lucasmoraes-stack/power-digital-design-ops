@@ -19,6 +19,19 @@ Every email request goes here, not to Designer. Method, rules and tools live in 
 
 These three carry no brand sections: each brand's email knowledge lives in its kit, `clients/<brand>/01-brand/email-kit/`. Onboarding a brand for email = building its kit, not editing these files. Carries every onboarded brand's palette, photography rules, and graphic language.
 
+## Skills (lessons that apply across jobs)
+
+Learnings from Lucas's corrections live as skills in [`.claude/skills/`](../skills/), preloaded by the agents that need them:
+
+- **banner-craft**: brand-agnostic visual rules for banners and statics (type scale, photos and scrims, product flat-lays, per-format composition, render QA). Designer, Brand Guardian.
+- **katapult-banners**: the four Katapult banner patterns Lucas approved in Figma, with measured values and open questions. Designer, Brand Guardian.
+- **figma-banner-sync**: how to bring Figma edits back into the HTML jobs and republish a Deliverables Hub safely. Designer.
+- **image-compositing**: generated and composited imagery (one plate per concept, contact, scale, light, clean keying, fix by reframing, QA at 100%). Designer, Brand Guardian.
+- **figma-handoff**: Figma-safe HTML for import and how to organize Lucas's boards (one section per size, layer names). Designer.
+- **motion-ads**: animated ads and Reels in code with HyperFrames, storyboard rules, MP4 + storyboard delivery. Designer, Brand Guardian.
+
+When a review produces a new lesson, add it to the matching skill instead of a one-off note.
+
 ## Why this shape
 
 This used to be split into per-role, per-brand files (a generic agent plus a separate brand "brief" for each client) — it worked for one brand, but every new brand meant a new file per role, and updating how the team handles a discipline meant touching several files at once. Fusing related disciplines into fewer agents, and baking each onboarded brand's rules directly into that agent's own file, keeps the team size fixed regardless of how many brands join.
