@@ -9,7 +9,9 @@ everything else passes through untouched.
 The markup goes inside the KAT26019 block (.hub-ch-banners), right above its V1
 section, because the hub's router shows one job view at a time and hides anything
 outside it. Note: build.py (KB) rewrites that block, so run this again after it.
-Cutouts come from img-knolling/{item}.png (cutout.py), only the ones the layout uses.
+Cutouts come from img-knolling/{item}.png, only the ones the layout uses: the cutout.py
+ones (fridge, tv, tire, laptop, washer, console) and the Figma round-2 ones (couch, bed,
+nightstand, vacuum, necklace). The ground is img-knolling/ground.jpg (Figma's paper).
 """
 import base64, io, json, re, sys
 from pathlib import Path
@@ -33,18 +35,33 @@ css = (HERE / "kn.css").read_text(encoding="utf-8")
 body = (HERE / "kn.html").read_text(encoding="utf-8")
 js = (HERE / "kn.js").read_text(encoding="utf-8")
 
-used = set(re.findall(r"'(\w+)'", re.search(r"rows:\[(.*?)\]\}", js, re.S).group(1)))
+# every id placed in a size's items list: ['couch', 254, ...]
+used = set(re.findall(r"\['(\w+)',-?[\d.]", js))
 photos = {}
 for p in sorted((HERE / "img-knolling").glob("*.png")):
     if p.stem not in used:
         continue
     im = Image.open(p).convert("RGBA")
+    ow, oh = im.size
+    # trim the empty alpha around the cutout (Figma's image rects refer to the whole
+    # original, so the trimmed box goes along as fractions: tb)
+    a = im.getchannel("A").point(lambda v: 255 if v > 3 else 0)
+    box = a.getbbox() or (0, 0, ow, oh)
+    im.putalpha(Image.composite(im.getchannel("A"), Image.new("L", im.size, 0), a))
+    im = im.crop(box)
     im.thumbnail((720, 720), Image.LANCZOS)
     buf = io.BytesIO()
     im.save(buf, "WEBP", quality=88, method=6)
-    photos[p.stem] = {"src": "data:image/webp;base64," + base64.b64encode(buf.getvalue()).decode(), "w": im.width, "h": im.height}
+    photos[p.stem] = {"src": "data:image/webp;base64," + base64.b64encode(buf.getvalue()).decode(),
+                      "ow": ow, "oh": oh, "tb": [round(box[0] / ow, 5), round(box[1] / oh, 5), round(box[2] / ow, 5), round(box[3] / oh, 5)]}
 assert used <= set(photos), f"missing cutouts: {sorted(used - set(photos))}"
 js = js.replace("var KN_PHOTOS={};", "var KN_PHOTOS=" + json.dumps(photos) + ";")
+
+# the ground texture (Figma's paper), once, in the canvas CSS
+g = Image.open(HERE / "img-knolling" / "ground.jpg").convert("RGB")
+buf = io.BytesIO()
+g.save(buf, "JPEG", quality=82, optimize=True)
+css = css.replace("KN_GROUND", "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode())
 assert "</script" not in js.lower()
 
 # css: with the other job blocks, before the NAV styles

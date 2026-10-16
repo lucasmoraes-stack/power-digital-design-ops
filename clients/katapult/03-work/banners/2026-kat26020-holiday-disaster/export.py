@@ -4,7 +4,7 @@ Usage: python export.py <built-hub.html> <out-dir> [--png <png-dir>] [--issues]
 
 <built-hub.html> is the output of build.py. Headless Chrome renders the hub, each banner
 canvas is serialized at 1:1 with the brand fonts, the logo artwork and the canvas CSS
-inlined. The photo is baked per frame: the exact crop at 2x, with the fade to Dark Blue, as one
+inlined. The photo is baked per frame: the exact crop at 2x, with Figma's scrims, as one
 JPEG filling its box, so the file opens (or imports into Figma) alone without the full photo.
 Writes <out-dir>/V1, <out-dir>/V2 and KAT26020-HolidayDisaster-html.zip next to <out-dir>.
 """
@@ -54,25 +54,40 @@ print("layout issues:", len(issues))
 for i in issues:
     print("  ", i)
 
-SRC = {n: Image.open(HERE / "img" / f"{n}.jpg").convert("RGB") for n in ("kitchen", "livingroom")}
+SRC = {n: Image.open(HERE / "img" / f"{n}-r5.jpg").convert("RGB") for n in ("kitchen", "livingroom")}
 
 
-def crop(spec):
-    """The photo's visible rect, cut from the graded photo at 2x the box size, with the fade to
-    Dark Blue baked in (Figma's HTML import doesn't keep a CSS gradient over an image)."""
-    name, sx, sy, sw, sh, bw, bh, fdir, fa, fb = spec.split(",")
-    sx, sy, sw, sh, bw, bh, fa, fb = map(float, (sx, sy, sw, sh, bw, bh, fa, fb))
+def scrim_alpha(layers, w, h, bw, bh):
+    """Opacity of the black scrim layers (CSS linear-gradient geometry), stacked."""
+    keep = np.ones((h, w), np.float32)
+    ys, xs = np.mgrid[0:h, 0:w].astype(np.float32)
+    xs = (xs + .5) / w * bw; ys = (ys + .5) / h * bh
+    for L in layers:
+        if L.get("g") is None:
+            a = np.full((h, w), L["a"], np.float32)
+        else:
+            t = np.radians(L["g"]); dx, dy = np.sin(t), -np.cos(t)
+            ln = abs(bw * dx) + abs(bh * dy)
+            p = ((xs - bw / 2) * dx + (ys - bh / 2) * dy) / ln + .5
+            p0, p1 = L["p0"] / 100, L["p1"] / 100
+            a = L["a"] * (1 - np.clip((p - p0) / max(1e-6, p1 - p0), 0, 1))
+        keep *= 1 - a
+    return 1 - keep
+
+
+def crop(spec, scrim):
+    """The photo's visible rect, cut from the photo at 2x the box size, mirrored if Figma flips it,
+    with the scrims baked in (Figma's HTML import doesn't keep a CSS gradient over an image)."""
+    name, sx, sy, sw, sh, bw, bh, flip = spec.split(",")
+    sx, sy, sw, sh, bw, bh = map(float, (sx, sy, sw, sh, bw, bh))
     im = SRC[name]
     pw, ph = round(bw * 2), round(bh * 2)
     cut = im.crop((round(sx), round(sy), round(sx + sw), round(sy + sh))).resize((pw, ph), Image.LANCZOS)
-    n = ph if fdir == "bottom" else pw
-    t = np.arange(n, dtype=np.float32) / max(1, n - 1)
-    if fdir == "bottom":   # transparent above a, solid below b
-        alpha = np.clip((t - fa) / max(1e-6, fb - fa), 0, 1)[:, None] * np.ones((1, pw), np.float32)
-    else:                  # solid left of a, transparent right of b
-        alpha = np.ones((ph, 1), np.float32) * (1 - np.clip((t - fa) / max(1e-6, fb - fa), 0, 1))[None, :]
+    if flip == "1":
+        cut = cut.transpose(Image.FLIP_LEFT_RIGHT)
     a = np.asarray(cut, np.float32)
-    a = a * (1 - alpha[..., None]) + np.array([19, 21, 64], np.float32) * alpha[..., None]
+    if scrim:
+        a = a * (1 - scrim_alpha(scrim, pw, ph, bw, bh)[..., None])
     buf = io.BytesIO()
     Image.fromarray(a.clip(0, 255).astype(np.uint8)).save(buf, "JPEG", quality=88, optimize=True)
     return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
@@ -86,13 +101,14 @@ for name, body in frames.items():
     # the photo: one <img> filling its box, fade baked in; the CSS fade layer goes
     def bake(mm):
         spec = re.search(r'data-crop="([^"]+)"', mm.group(0)).group(1)
+        scrim = json.loads(_h.unescape(re.search(r'data-scrim="([^"]*)"', mm.group(0)).group(1)))
         bw, bh = map(float, spec.split(",")[5:7])
-        return (f'<img alt="" width="{round(bw)}" height="{round(bh)}" src="{crop(spec)}" '
+        return (f'<img alt="" width="{round(bw)}" height="{round(bh)}" src="{crop(spec, scrim)}" '
                 f'style="left:0px;top:0px;width:{bw}px;height:{bh}px">')
     body, n = re.subn(r'<img[^>]*src="K20CROP"[^>]*>', bake, body)
     assert n == 1, name
     body, n = re.subn(r'<div class="k20-fade"[^>]*></div>', "", body)
-    assert n == 1, name
+    assert n <= 1, name
     doc = ('<!doctype html>\n<html><head><meta charset="utf-8"><title>' + name + "</title>\n<style>\n"
            ':root{--font-brand:"Aktiv Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif}\n' + fonts + "\n"
            f"html,body{{margin:0;padding:0;width:{w}px;height:{h}px;overflow:hidden;background:#131540}}\n"

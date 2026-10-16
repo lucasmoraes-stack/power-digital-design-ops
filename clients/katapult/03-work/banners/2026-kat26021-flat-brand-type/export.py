@@ -3,7 +3,7 @@
 Usage: python export.py <built-hub.html> <out-dir>
 
 <built-hub.html> is the output of build.py. Headless Chrome renders the hub, each
-banner canvas is serialized at 1:1 and written to <out-dir>/V1 with the brand fonts,
+banner canvas is serialized at 1:1 and written to <out-dir>/V1 and <out-dir>/V2 with the brand fonts,
 logo and canvas CSS inlined, so the file opens alone.
 """
 import json, re, subprocess, sys, tempfile, zipfile
@@ -49,7 +49,7 @@ for name, body in frames.items():
            ':root{--font-brand:"Aktiv Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif}\n' + fonts + "\n"
            f"html,body{{margin:0;padding:0;width:{w}px;height:{h}px;overflow:hidden;background:#EAEAE8}}\n"
            + canvas_css + "</style></head><body>\n" + body + "\n</body></html>\n")
-    f = out / "V1" / (name + ".html")
+    f = out / name.rsplit("-", 1)[1] / (name + ".html")
     f.parent.mkdir(exist_ok=True)
     f.write_text(doc, encoding="utf-8")
     files.append(f)

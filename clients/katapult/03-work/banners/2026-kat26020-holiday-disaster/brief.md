@@ -33,6 +33,8 @@ Open: confirm with the account lead whether programmatic should carry it too (no
 
 ## Creative direction (from the brief) and how it was answered
 
+**Round 5 (2026-10-14): client notes.** "On the turkey version, brighten the image overall slightly, and raise the mids and shadows specifically on the turkey and the oven (the cutdowns show mostly the turkey). On V2 lighten the image slightly overall, and in the CTA underline before." [grade_r5.py](grade_r5.py) makes img/{kitchen,livingroom}-r5.jpg from the Figma photos: V1 overall lift plus a masked mids/shadows lift on the oven and, stronger, the turkey (means 78 to 96); V2 overall lift only (92 to 103). The same files replace the image fills in all 16 Figma frames (page 553:3165), crops untouched. "before" is underlined in the V2 CTA in the HTML (`u` in k20.js); in Figma it still has to be set by hand (Aktiv Grotesk is a local font the plugin can't load).
+
 **Round 3 (2026-10-08, current): centered.** Same full-bleed system, everything on one centered axis: headline strips across the top, CTA, logo and disclaimer stacked centered on the solid Dark Blue at the bottom (logo no longer in the corner). Headline pushed to the full safe width, capped only by the longest line so V1 and V2 still match. Leaderboards unchanged (one row). Round 2 left-aligned version kept in `_fullbleed-left/`.
 
 **Round 2 (2026-10-08): full-bleed.** Lucas asked for a fullscreen layout after round 1.

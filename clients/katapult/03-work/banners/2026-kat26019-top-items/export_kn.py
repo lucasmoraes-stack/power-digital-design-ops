@@ -9,7 +9,6 @@ file opens (or imports into Figma) alone. Writes <out-dir>/V1, <out-dir>/V2 and 
 """
 import base64, html as _h, io, json, re, subprocess, sys, tempfile, zipfile
 
-import numpy as np
 from PIL import Image
 from pathlib import Path
 
@@ -25,7 +24,7 @@ page = hub.read_text(encoding="utf-8")
 fonts = "\n".join(re.findall(r'@font-face\{font-family:"Aktiv Grotesk";[^}]*\}', page))
 logo = re.search(r'<symbol id="k-logo"[^>]*>(.*?)</symbol>', page, re.S).group(1).strip()
 css = (HERE / "kn.css").read_text(encoding="utf-8")
-canvas_css = css[css.index("/* banner canvas"):css.index("/* safe zone overlay */")]
+canvas_css = css[css.index("/* banner canvas"):css.index("/* safe zone overlay */")].replace('url("KN_GROUND") ', "")
 
 dump = """<script>
 (document.fonts?document.fonts.ready:Promise.resolve()).then(function(){ setTimeout(function(){
@@ -34,10 +33,9 @@ dump = """<script>
   [].forEach.call(document.querySelectorAll('.kn-part .kb-fig'),function(f){
     var k=f.querySelector('.kn').cloneNode(true); k.style.transform='';
     if(!k.querySelector('.kn-item')) throw new Error('frame without products: '+f.querySelector('figcaption .mono').textContent);
-    /* bake each cutout's size on the img itself: Figma importers ignore 100% sizing */
-    [].forEach.call(k.querySelectorAll('.kn-item'),function(it){
-      var w=parseFloat(it.style.width), h=parseFloat(it.style.height), im=it.querySelector('img');
-      if(im){ im.setAttribute('width',Math.round(w)); im.setAttribute('height',Math.round(h)); im.style.cssText='width:'+w+'px;height:'+h+'px'; }
+    /* bake each cutout's size on the img itself as attributes too (Figma importers) */
+    [].forEach.call(k.querySelectorAll('.kn-item img'),function(im){
+      im.setAttribute('width',Math.round(parseFloat(im.style.width))); im.setAttribute('height',Math.round(parseFloat(im.style.height)));
     });
     out[f.querySelector('figcaption .mono').textContent]=k.outerHTML;
   });
@@ -57,19 +55,15 @@ frames = json.loads(_h.unescape(m.group(1)))
 
 
 def ground(w, h):
-    """The matte ground baked into an image. Figma's HTML import can't read the canvas CSS
-    (a radial-gradient light plus an SVG-filter grain) and turns it into a dark block, so the
-    standalone files carry the same ground as a picture: #F6E6DE, the soft lift at top left
-    (120% x 90% ellipse at 18% 6%, white .26 fading out by 62%) and a fine warm grain."""
-    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
-    d = np.sqrt(((xx - .18 * w) / (1.2 * w)) ** 2 + ((yy - .06 * h) / (.9 * h)) ** 2)
-    lift = np.clip(1 - d / .62, 0, 1) * .26
-    base = np.array([0xF6, 0xE6, 0xDE], np.float32)
-    img = base + (255 - base) * lift[..., None]
-    grain = np.random.default_rng(19).random((h, w), np.float32) * .07
-    img = img * (1 - grain[..., None]) + np.array([.45, .32, .28], np.float32) * 255 * grain[..., None]
+    """The matte ground baked into an image (Figma's HTML import can't read a CSS
+    background): img-knolling/ground.jpg, the paper texture from Lucas's Figma pass,
+    cover-fitted to the frame and centred, exactly as the canvas CSS does."""
+    g = Image.open(HERE / "img-knolling" / "ground.jpg").convert("RGB")
+    k = max(w / g.width, h / g.height)
+    g = g.resize((max(w, round(g.width * k)), max(h, round(g.height * k))), Image.LANCZOS)
+    x, y = (g.width - w) // 2, (g.height - h) // 2
     buf = io.BytesIO()
-    Image.fromarray(img.clip(0, 255).astype(np.uint8)).save(buf, "JPEG", quality=88, optimize=True)
+    g.crop((x, y, x + w, y + h)).save(buf, "JPEG", quality=88, optimize=True)
     return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
 
 

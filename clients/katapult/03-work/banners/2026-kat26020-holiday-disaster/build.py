@@ -10,7 +10,8 @@ Needs KAT26019 (channels + jobs bar), KAT26021, KAT26022 and the NAV card index 
 Idempotent: re-running on its own output gives the same file. The K20 blocks, the #k20
 jobs-bar entry, the k20 row of the NAV job list, the Banners tab count and the index
 intro are removed or set to fixed values, never incremented.
-Photos: img/{kitchen,livingroom}.jpg (grade.py), embedded as WebP.
+Photos: img/{kitchen,livingroom}-r5.jpg, the Figma photos lightened by grade_r5.py for the
+client's round 5 notes (also swapped into the Figma frames), embedded as WebP.
 """
 import base64, io, json, re, sys
 from pathlib import Path
@@ -39,7 +40,7 @@ js = (HERE / "k20.js").read_text(encoding="utf-8")
 
 photos = {}
 for name in ("kitchen", "livingroom"):
-    im = Image.open(HERE / "img" / f"{name}.jpg").convert("RGB")
+    im = Image.open(HERE / "img" / f"{name}-r5.jpg").convert("RGB")
     buf = io.BytesIO()
     im.save(buf, "WEBP", quality=84, method=6)
     photos[name] = {"src": "data:image/webp;base64," + base64.b64encode(buf.getvalue()).decode(), "w": im.width, "h": im.height}
