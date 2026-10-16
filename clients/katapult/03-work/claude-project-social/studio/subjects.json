@@ -1,0 +1,178 @@
+{
+ "phone-man-street-phone-01": {
+  "face": "55% 18%",
+  "subject": "one man, face upper middle"
+ },
+ "laptop-woman-sofa-laptop-01": {
+  "face": "73% 22%",
+  "subject": "one woman, right third"
+ },
+ "phone-woman-dog-phone-02": {
+  "face": "50% 22%",
+  "subject": "one woman centre, dog bottom left"
+ },
+ "phone-man-green-sofa-phone-03": {
+  "face": "48% 18%",
+  "subject": "one man centre, high"
+ },
+ "phone-woman-lamps-phone-04": {
+  "face": "45% 25%",
+  "subject": "one woman centre"
+ },
+ "at-home-woman-sofa-coffee-01": {
+  "face": "72% 35%",
+  "subject": "one woman, right third, eyes closed"
+ },
+ "laptop-woman-desk-laptop-02": {
+  "face": "50% 22%",
+  "subject": "one woman centre, laptop in front"
+ },
+ "together-couple-sofa-phone-laptop-01": {
+  "face": "62% 42%",
+  "subject": "two people right of centre, wall above"
+ },
+ "retail-man-tire-dealership-01": {
+  "face": "63% 25%",
+  "subject": "one man right, car left"
+ },
+ "together-friends-gaming-sofa-02": {
+  "face": "62% 23%",
+  "subject": "two people small, right of centre"
+ },
+ "phone-woman-card-phone-05": {
+  "face": "35% 30%",
+  "subject": "one woman left third, close-up, phone and card in hands"
+ },
+ "laptop-woman-blanket-laptop-03": {
+  "face": "40% 25%",
+  "subject": "one woman left of centre"
+ },
+ "retail-shop-owners-tablet-02": {
+  "face": "52% 20%",
+  "subject": "two people centre, high"
+ },
+ "at-home-senior-woman-armchair-02": {
+  "face": "50% 25%",
+  "subject": "one woman centre"
+ },
+ "phone-man-call-tablet-sofa-06": {
+  "face": "35% 20%",
+  "subject": "one man left third"
+ },
+ "at-home-woman-pendant-lamp-03": {
+  "face": "42% 20%",
+  "subject": "one woman from behind, face not visible"
+ },
+ "room-leather-sofa-room-01": {
+  "face": null,
+  "subject": "no people"
+ },
+ "phone-man-kitchen-phone-07": {
+  "face": "55% 25%",
+  "subject": "one man right of centre"
+ },
+ "laptop-woman-tablet-counter-04": {
+  "face": "48% 30%",
+  "subject": "one woman centre"
+ },
+ "phone-man-window-phone-08": {
+  "face": "45% 20%",
+  "subject": "one man centre, looking away"
+ },
+ "phone-woman-headphones-selfie-09": {
+  "face": "65% 22%",
+  "subject": "one woman right of centre"
+ },
+ "at-home-woman-beanbag-mug-04": {
+  "face": "65% 45%",
+  "subject": "one woman right, mid height"
+ },
+ "laptop-man-sofa-coffee-laptop-05": {
+  "face": "53% 30%",
+  "subject": "one man centre"
+ },
+ "together-family-homework-sofa-03": {
+  "face": "55% 30%",
+  "subject": "three people centre"
+ },
+ "together-couple-hug-laptop-04": {
+  "face": "55% 42%",
+  "subject": "two people centre, mid height"
+ },
+ "laptop-woman-window-desk-06": {
+  "face": "62% 33%",
+  "subject": "one woman right of centre, profile"
+ },
+ "at-home-woman-dishwasher-05": {
+  "face": "60% 15%",
+  "subject": "one woman right of centre, very high"
+ },
+ "phone-senior-woman-call-10": {
+  "face": "58% 25%",
+  "subject": "one woman right of centre"
+ },
+ "unboxing-kids-moving-box-01": {
+  "face": "50% 40%",
+  "subject": "kids centre, parent's face cropped"
+ },
+ "unboxing-woman-unboxing-sofa-02": {
+  "face": "52% 28%",
+  "subject": "one woman centre, box bottom left"
+ },
+ "at-home-woman-daybed-plants-06": {
+  "face": "35% 45%",
+  "subject": "one woman small, left"
+ },
+ "laptop-woman-tablet-orange-sofa-07": {
+  "face": "58% 30%",
+  "subject": "one woman right of centre, close"
+ },
+ "together-couple-tablet-mug-05": {
+  "face": "62% 30%",
+  "subject": "two people right of centre"
+ },
+ "together-senior-couple-kitchen-06": {
+  "face": "55% 25%",
+  "subject": "two people small, centre"
+ },
+ "at-home-woman-headphones-relax-07": {
+  "face": "30% 25%",
+  "subject": "one woman left, eyes closed"
+ },
+ "room-orange-armchair-room-02": {
+  "face": null,
+  "subject": "no people"
+ },
+ "laptop-woman-tablet-laughing-08": {
+  "face": "50% 35%",
+  "subject": "one woman centre"
+ },
+ "laptop-man-glasses-laptop-09": {
+  "face": "52% 25%",
+  "subject": "one man centre"
+ },
+ "together-friends-cooking-07": {
+  "face": "55% 25%",
+  "subject": "three people across the frame"
+ },
+ "retail-business-owner-workshop-03": {
+  "face": "48% 15%",
+  "subject": "one woman centre, very high"
+ },
+ "room-blue-fridge-kitchen-03": {
+  "face": null,
+  "subject": "no people, fridge centre left"
+ },
+ "phone-senior-man-phone-11": {
+  "face": "45% 40%",
+  "subject": "one man centre"
+ },
+ "phone-woman-kitchen-phone-12": {
+  "face": "50% 25%",
+  "subject": "one woman centre"
+ },
+ "laptop-man-bed-laptop-10": {
+  "face": "45% 45%",
+  "subject": "one man centre, lying down"
+ }
+}

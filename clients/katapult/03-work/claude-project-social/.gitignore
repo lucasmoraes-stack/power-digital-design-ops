@@ -1,0 +1,6 @@
+studio/assets/
+studio/_test/
+studio/_post.html
+studio/_all-*.html
+studio/_uploads/
+__pycache__/

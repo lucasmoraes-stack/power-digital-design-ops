@@ -1,0 +1,3405 @@
+{
+ "layouts": {
+  "T01-1x1": {
+   "name": "Full image",
+   "family": "T01",
+   "w": 1200,
+   "h": 1200,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "The upgrade your kitchen deserves.",
+     "size": 112.0,
+     "lines": null
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit needed. Just fair terms and your yes.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T01-4x5": {
+   "name": "Full image",
+   "family": "T01",
+   "w": 1080,
+   "h": 1350,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "The upgrade your kitchen deserves.",
+     "size": 112.0,
+     "lines": null
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit needed. Just fair terms and your yes.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T01-16x9": {
+   "name": "Full image",
+   "family": "T01",
+   "w": 1920,
+   "h": 1080,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "The upgrade your kitchen deserves.",
+     "size": 112.0,
+     "lines": null
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit needed. Just fair terms and your yes.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T01-9x16": {
+   "name": "Full image",
+   "family": "T01",
+   "w": 1080,
+   "h": 1920,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "The upgrade your kitchen deserves.",
+     "size": 112.0,
+     "lines": null
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit needed. Just fair terms and your yes.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T02-1x1": {
+   "name": "Split panel, image",
+   "family": "T02",
+   "w": 1200,
+   "h": 1200,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Your home.<br>Your upgrade.<br>Your move.",
+     "size": 143.319,
+     "lines": 3
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "New couch, new laptop, new fridge. No credit score required.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T02-4x5": {
+   "name": "Split panel, image",
+   "family": "T02",
+   "w": 1080,
+   "h": 1350,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Your home.<br>Your upgrade.<br>Your move.",
+     "size": 88.0,
+     "lines": 3
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "New couch, new laptop, new fridge. No credit score required.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T02-16x9": {
+   "name": "Split panel, image",
+   "family": "T02",
+   "w": 1920,
+   "h": 1080,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Your home.<br>Your upgrade.<br>Your move.",
+     "size": 146.3,
+     "lines": 3
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "New couch, new laptop, new fridge. No credit score required.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T02-9x16": {
+   "name": "Split panel, image",
+   "family": "T02",
+   "w": 1080,
+   "h": 1920,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Your home.<br>Your upgrade.<br>Your move.",
+     "size": 146.3,
+     "lines": 3
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "New couch, new laptop, new fridge. No credit score required.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T03-1x1": {
+   "name": "Split, phone in hand",
+   "family": "T03",
+   "w": 1200,
+   "h": 1200,
+   "group": "template",
+   "slots": {
+    "phone": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/layout/phone-367259973a.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Open the app<br>Find it fast<br>Make it yours.",
+     "size": 82.324,
+     "lines": 3
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Browse, apply, and start shopping right from your phone.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T03-4x5": {
+   "name": "Split, phone in hand",
+   "family": "T03",
+   "w": 1080,
+   "h": 1350,
+   "group": "template",
+   "slots": {
+    "phone": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/layout/phone-367259973a.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Open the app<br>Find it fast<br>Make it yours.",
+     "size": 82.324,
+     "lines": 3
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Browse, apply, and start shopping right from your phone.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T03-16x9": {
+   "name": "Split, phone in hand",
+   "family": "T03",
+   "w": 1920,
+   "h": 1080,
+   "group": "template",
+   "slots": {
+    "phone": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/layout/phone-367259973a.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Open the app<br>Find it fast<br>Make it yours.",
+     "size": 82.324,
+     "lines": 3
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Browse, apply, and start shopping right from your phone.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T03-9x16": {
+   "name": "Split, phone in hand",
+   "family": "T03",
+   "w": 1080,
+   "h": 1920,
+   "group": "template",
+   "slots": {
+    "phone": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/layout/phone-367259973a.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Open the app<br>Find it fast<br>Make it yours.",
+     "size": 82.324,
+     "lines": 3
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Browse, apply, and start shopping right from your phone.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T04-1x1": {
+   "name": "Product row, 3-up",
+   "family": "T04",
+   "w": 1200,
+   "h": 1200,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-c759106187.webp"
+    },
+    "product2": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ed533bc2e8.webp"
+    },
+    "product3": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ec492880be.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Level up your setup<br>and never look back.",
+     "size": 98.0,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit required. Just the tech you actually need.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T04-4x5": {
+   "name": "Product row, 3-up",
+   "family": "T04",
+   "w": 1080,
+   "h": 1350,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-c759106187.webp"
+    },
+    "product2": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ed533bc2e8.webp"
+    },
+    "product3": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ec492880be.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Level up your setup<br>and never look back.",
+     "size": 98.0,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit required. Just the tech you actually need.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T04-16x9": {
+   "name": "Product row, 3-up",
+   "family": "T04",
+   "w": 1920,
+   "h": 1080,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ec492880be.webp"
+    },
+    "product2": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-c759106187.webp"
+    },
+    "product3": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ed533bc2e8.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Level up your setup<br>and never look back.",
+     "size": 98.0,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit required. Just the tech you actually need.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T04-9x16": {
+   "name": "Product row, 3-up",
+   "family": "T04",
+   "w": 1080,
+   "h": 1920,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ec492880be.webp"
+    },
+    "product2": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-c759106187.webp"
+    },
+    "product3": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ed533bc2e8.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Level up your setup<br>and never look back.",
+     "size": 98.0,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit required. Just the tech you actually need.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T05-1x1": {
+   "name": "Hero product, bleed",
+   "family": "T05",
+   "w": 1200,
+   "h": 1200,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ed533bc2e8.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Say yes to the<br>thing you've<br>been eyeing.",
+     "size": 117.582,
+     "lines": 3
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit history required. Just a little good karma to spare.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T05-4x5": {
+   "name": "Hero product, bleed",
+   "family": "T05",
+   "w": 1080,
+   "h": 1350,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ed533bc2e8.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Say yes to the<br>thing you've<br>been eyeing.",
+     "size": 117.582,
+     "lines": 3
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit history required. Just a little good karma to spare.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T05-16x9": {
+   "name": "Hero product, bleed",
+   "family": "T05",
+   "w": 1920,
+   "h": 1080,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ed533bc2e8.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Say yes to the<br>thing you've<br>been eyeing.",
+     "size": 117.582,
+     "lines": 3
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit history required. Just a little good karma to spare.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T05-9x16": {
+   "name": "Hero product, bleed",
+   "family": "T05",
+   "w": 1080,
+   "h": 1920,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ed533bc2e8.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Say yes to the<br>thing you've<br>been eyeing.",
+     "size": 117.582,
+     "lines": 3
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit history required. Just a little good karma to spare.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T06-1x1": {
+   "name": "Top block, photo card",
+   "family": "T06",
+   "w": 1200,
+   "h": 1200,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Time for the home<br>upgrade you want.",
+     "size": 112.0,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit score needed. Just fair, straightforward terms.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T06-4x5": {
+   "name": "Top block, photo card",
+   "family": "T06",
+   "w": 1080,
+   "h": 1350,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Time for the home<br>upgrade you want.",
+     "size": 112.0,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit score needed. Just fair, straightforward terms.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T06-16x9": {
+   "name": "Top block, photo card",
+   "family": "T06",
+   "w": 1920,
+   "h": 1080,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Time for the home<br>upgrade you want.",
+     "size": 112.0,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit score needed. Just fair, straightforward terms.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T06-9x16": {
+   "name": "Top block, photo card",
+   "family": "T06",
+   "w": 1080,
+   "h": 1920,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Time for the home<br>upgrade you want.",
+     "size": 112.0,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit score needed. Just fair, straightforward terms.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T07-1x1": {
+   "name": "Top block, product on circle",
+   "family": "T07",
+   "w": 1200,
+   "h": 1200,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ec492880be.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Your upgrade<br>starts here.",
+     "size": 120.0,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit score needed. Just tap and say yes.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T07-4x5": {
+   "name": "Top block, product on circle",
+   "family": "T07",
+   "w": 1080,
+   "h": 1350,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ec492880be.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Your upgrade<br>starts here.",
+     "size": 120.0,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit score needed. Just tap and say yes.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T07-16x9": {
+   "name": "Top block, product on circle",
+   "family": "T07",
+   "w": 1920,
+   "h": 1080,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ec492880be.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Your upgrade<br>starts here.",
+     "size": 120.0,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit score needed. Just tap and say yes.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T07-9x16": {
+   "name": "Top block, product on circle",
+   "family": "T07",
+   "w": 1080,
+   "h": 1920,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ec492880be.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Your upgrade<br>starts here.",
+     "size": 120.0,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit score needed. Just tap and say yes.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T08-1x1": {
+   "name": "Typographic statement",
+   "family": "T08",
+   "w": 1200,
+   "h": 1200,
+   "group": "template",
+   "slots": {
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "You want it.<br>You need it.<br>You deserve it.<br>Go. Get it.",
+     "size": 159.683,
+     "lines": 4
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Fair terms, no credit score needed. Just show up and say yes.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T08-4x5": {
+   "name": "Typographic statement",
+   "family": "T08",
+   "w": 1080,
+   "h": 1350,
+   "group": "template",
+   "slots": {
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "You want it.<br>You need it.<br>You deserve it.<br>Go. Get it.",
+     "size": 145.0,
+     "lines": 4
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Fair terms, no credit score needed. Just show up and say yes.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T08-16x9": {
+   "name": "Typographic statement",
+   "family": "T08",
+   "w": 1920,
+   "h": 1080,
+   "group": "template",
+   "slots": {
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "You want it.<br>You need it.<br>You deserve it.<br>Go. Get it.",
+     "size": 159.683,
+     "lines": 4
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Fair terms, no credit score needed. Just show up and say yes.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T08-9x16": {
+   "name": "Typographic statement",
+   "family": "T08",
+   "w": 1080,
+   "h": 1920,
+   "group": "template",
+   "slots": {
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "You want it.<br>You need it.<br>You deserve it.<br>Go. Get it.",
+     "size": 145.0,
+     "lines": 4
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Fair terms, no credit score needed. Just show up and say yes.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T09-1x1": {
+   "name": "Hero photo, full width",
+   "family": "T09",
+   "w": 1200,
+   "h": 1200,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "accent",
+     "default": "Your next upgrade <em>awaits.</em>",
+     "size": 108.059,
+     "lines": null
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit required. Just the upgrade you've been wanting.",
+     "size": 36.0,
+     "lines": null
+    }
+   }
+  },
+  "T09-4x5": {
+   "name": "Hero photo, full width",
+   "family": "T09",
+   "w": 1080,
+   "h": 1350,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "accent",
+     "default": "Your next upgrade <em>awaits.</em>",
+     "size": 108.059,
+     "lines": null
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit required. Just the upgrade you've been wanting.",
+     "size": 36.0,
+     "lines": null
+    }
+   }
+  },
+  "T09-16x9": {
+   "name": "Hero photo, full width",
+   "family": "T09",
+   "w": 1920,
+   "h": 1080,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "accent",
+     "default": "Your next upgrade <em>awaits.</em>",
+     "size": 108.059,
+     "lines": null
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit required. Just the upgrade you've been wanting.",
+     "size": 36.0,
+     "lines": null
+    }
+   }
+  },
+  "T09-9x16": {
+   "name": "Hero photo, full width",
+   "family": "T09",
+   "w": 1080,
+   "h": 1920,
+   "group": "template",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e2f06b6083.jpg"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "accent",
+     "default": "Your next upgrade <em>awaits.</em>",
+     "size": 108.059,
+     "lines": null
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit required. Just the upgrade you've been wanting.",
+     "size": 36.0,
+     "lines": null
+    }
+   }
+  },
+  "T10-1x1": {
+   "name": "Product trio, circles",
+   "family": "T10",
+   "w": 1200,
+   "h": 1200,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ed533bc2e8.webp"
+    },
+    "product2": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ec492880be.webp"
+    },
+    "product3": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-c759106187.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Upgrade your<br>everyday gear.",
+     "size": 118.682,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit needed. Just the gear you actually want.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T10-4x5": {
+   "name": "Product trio, circles",
+   "family": "T10",
+   "w": 1080,
+   "h": 1350,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ed533bc2e8.webp"
+    },
+    "product2": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ec492880be.webp"
+    },
+    "product3": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-c759106187.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Upgrade your<br>everyday gear.",
+     "size": 118.682,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit needed. Just the gear you actually want.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T10-16x9": {
+   "name": "Product trio, circles",
+   "family": "T10",
+   "w": 1920,
+   "h": 1080,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ed533bc2e8.webp"
+    },
+    "product2": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ec492880be.webp"
+    },
+    "product3": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-c759106187.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Upgrade your<br>everyday gear.",
+     "size": 118.682,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit needed. Just the gear you actually want.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "T10-9x16": {
+   "name": "Product trio, circles",
+   "family": "T10",
+   "w": 1080,
+   "h": 1920,
+   "group": "template",
+   "slots": {
+    "product1": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ed533bc2e8.webp"
+    },
+    "product2": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-ec492880be.webp"
+    },
+    "product3": {
+     "kind": "image",
+     "fit": "contain",
+     "default": "assets/products/product-c759106187.webp"
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "Leap Forward",
+     "size": 73.91
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "lines",
+     "default": "Upgrade your<br>everyday gear.",
+     "size": 118.682,
+     "lines": 2
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "plain",
+     "default": "No credit needed. Just the gear you actually want.",
+     "size": 40.0,
+     "lines": null
+    }
+   }
+  },
+  "P1-1200x1200": {
+   "name": "Knolling flat-lay",
+   "family": "P1",
+   "w": 1200,
+   "h": 1200,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Your Whole Wish<br/>List, Lease-to-Own.",
+     "size": 95.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "From couches to TVs to tires, lease-to-own the big stuff at<br/>thousands of retailers this Cyber Week.",
+     "size": 36.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Shop Cyber Deals. Lease to Own.",
+     "size": 36.0
+    }
+   }
+  },
+  "P1-1200x628": {
+   "name": "Knolling flat-lay",
+   "family": "P1",
+   "w": 1200,
+   "h": 628,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Your Whole Wish<br/>List, Lease-to-Own.",
+     "size": 62.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "From couches to TVs to tires, lease-to-own<br/>the big stuff at thousands of retailers this<br/>Cyber Week.",
+     "size": 26.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Shop Cyber Deals. Lease to Own.",
+     "size": 28.0
+    }
+   }
+  },
+  "P1-960x1200": {
+   "name": "Knolling flat-lay",
+   "family": "P1",
+   "w": 960,
+   "h": 1200,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Your Whole Wish<br/>List, Lease-to-Own.",
+     "size": 76.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "From couches to TVs to tires, lease-to-own the big stuff<br/>at thousands of retailers this Cyber Week.",
+     "size": 34.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Shop Cyber Deals. Lease to Own.",
+     "size": 34.0
+    }
+   }
+  },
+  "P1-300x600": {
+   "name": "Knolling flat-lay",
+   "family": "P1",
+   "w": 300,
+   "h": 600,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Your Whole Wish<br/>List, Lease-to-Own.",
+     "size": 30.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "From couches to TVs to tires,<br/>lease-to-own the big stuff at thousands<br/>of retailers this Cyber Week.",
+     "size": 15.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Shop Cyber Deals.<br/>Lease to Own.",
+     "size": 20.0
+    }
+   }
+  },
+  "P1-300x250": {
+   "name": "Knolling flat-lay",
+   "family": "P1",
+   "w": 300,
+   "h": 250,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Your Whole<br/>Wish List,<br/>Lease-to-Own.",
+     "size": 21.5
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "From couches to TVs to tires,<br/>lease-to-own the big stuff at<br/>thousands of retailers this<br/>Cyber Week.",
+     "size": 10.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Shop Cyber Deals.<br/>Lease to Own.",
+     "size": 11.5
+    }
+   }
+  },
+  "P1-160x600": {
+   "name": "Knolling flat-lay",
+   "family": "P1",
+   "w": 160,
+   "h": 600,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Your Whole<br/>Wish List,<br/>Lease-to-Own.",
+     "size": 20.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "From couches to TVs to<br/>tires, lease-to-own the<br/>big stuff at thousands<br/>of retailers this<br/>Cyber Week.",
+     "size": 12.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Shop Cyber Deals.<br/>Lease to Own.",
+     "size": 13.0
+    }
+   }
+  },
+  "P1-728x90": {
+   "name": "Knolling flat-lay",
+   "family": "P1",
+   "w": 728,
+   "h": 90,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Your Whole Wish<br/>List, Lease-to-Own.",
+     "size": 25.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Shop Cyber Deals.<br/>Lease to Own.",
+     "size": 13.0
+    }
+   }
+  },
+  "P1-320x50": {
+   "name": "Knolling flat-lay",
+   "family": "P1",
+   "w": 320,
+   "h": 50,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Your Whole Wish List, Lease-to-Own.",
+     "size": 12.3
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Shop Cyber Deals. Lease to Own.",
+     "size": 8.0
+    }
+   }
+  },
+  "P2-1200x1200": {
+   "name": "Photo + highlight bars",
+   "family": "P2",
+   "w": 1200,
+   "h": 1200,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-bad0eba56e.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The turkey's fine.</span><span class=\"t2\">The oven isn't.</span>",
+     "size": 119.299
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Shop Appliances. Lease to Own.",
+     "size": 44.0
+    }
+   }
+  },
+  "P2-1200x628": {
+   "name": "Photo + highlight bars",
+   "family": "P2",
+   "w": 1200,
+   "h": 628,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-6ef81afa26.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The turkey's fine.</span><span class=\"t2\">The oven isn't.</span>",
+     "size": 88.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Shop Appliances. Lease to Own.",
+     "size": 31.341
+    }
+   }
+  },
+  "P2-960x1200": {
+   "name": "Photo + highlight bars",
+   "family": "P2",
+   "w": 960,
+   "h": 1200,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-0a0c4f8604.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The turkey's fine.</span><span class=\"t2\">The oven isn't.</span>",
+     "size": 95.452
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Shop Appliances. Lease to Own.",
+     "size": 45.591
+    }
+   }
+  },
+  "P2-300x600": {
+   "name": "Photo + highlight bars",
+   "family": "P2",
+   "w": 300,
+   "h": 600,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-fde80ed3d2.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The turkey's fine.</span><span class=\"t2\">The oven isn't.</span>",
+     "size": 33.437
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Shop Appliances.<br/>Lease to Own.",
+     "size": 19.092
+    }
+   }
+  },
+  "P2-300x250": {
+   "name": "Photo + highlight bars",
+   "family": "P2",
+   "w": 300,
+   "h": 250,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-1077cf12e1.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The turkey's fine.</span><span class=\"t2\">The oven isn't.</span>",
+     "size": 29.622
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Appliances. Lease to Own.</span>",
+     "size": 12.075
+    }
+   }
+  },
+  "P2-160x600": {
+   "name": "Photo + highlight bars",
+   "family": "P2",
+   "w": 160,
+   "h": 600,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-6b34547a67.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The</span><span class=\"t1\">turkey's</span><span class=\"t1\">fine.</span><span class=\"t2\">The oven</span><span class=\"t2\">isn't.</span>",
+     "size": 31.405
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Appliances.<br/>Lease to Own.</span>",
+     "size": 11.938
+    }
+   }
+  },
+  "P2-728x90": {
+   "name": "Photo + highlight bars",
+   "family": "P2",
+   "w": 728,
+   "h": 90,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-857969dd81.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The turkey's fine.</span><span class=\"t2\">The oven isn't.</span>",
+     "size": 32.429
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Shop Appliances.<br/>Lease to Own.",
+     "size": 18.2
+    }
+   }
+  },
+  "P2-320x50": {
+   "name": "Photo + highlight bars",
+   "family": "P2",
+   "w": 320,
+   "h": 50,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-1e45f9f61f.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The turkey's fine.</span><span class=\"t2\">The oven isn't.</span>",
+     "size": 14.254
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "Shop Appliances.<br/>Lease to Own.",
+     "size": 8.0
+    }
+   }
+  },
+  "P3A-1200x1200": {
+   "name": "Flat brand type, Dark Blue",
+   "family": "P3A",
+   "w": 1200,
+   "h": 1200,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span></span><span class=\"t1\">won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span> you</span><span class=\"t2\">don't have to.</span>",
+     "size": 151.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Lease-to-own on thousands</span><span>of Cyber Week deals.</span>",
+     "size": 63.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber Deals Now</span>",
+     "size": 45.0
+    }
+   }
+  },
+  "P3A-1200x628": {
+   "name": "Flat brand type, Dark Blue",
+   "family": "P3A",
+   "w": 1200,
+   "h": 628,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span> won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span> you</span><span class=\"t2\">don't have to.</span>",
+     "size": 99.5
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Lease-to-own on thousands</span><span>of Cyber Week deals.</span>",
+     "size": 48.3
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber Deals Now</span>",
+     "size": 42.0
+    }
+   }
+  },
+  "P3A-960x1200": {
+   "name": "Flat brand type, Dark Blue",
+   "family": "P3A",
+   "w": 960,
+   "h": 1200,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span></span><span class=\"t1\">won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span></span><span class=\"t2\">you don't</span><span class=\"t2\">have to.</span>",
+     "size": 156.5
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Lease-to-own on thousands</span><span>of Cyber Week deals.</span>",
+     "size": 50.99
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber Deals Now</span>",
+     "size": 43.0
+    }
+   }
+  },
+  "P3A-300x600": {
+   "name": "Flat brand type, Dark Blue",
+   "family": "P3A",
+   "w": 300,
+   "h": 600,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span></span><span class=\"t1\">won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span></span><span class=\"t2\">you don't</span><span class=\"t2\">have to.</span>",
+     "size": 50.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Lease-to-own</span><span>on thousands</span><span>of Cyber Week deals.</span>",
+     "size": 21.86
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber Deals Now</span>",
+     "size": 18.0
+    }
+   }
+  },
+  "P3A-300x250": {
+   "name": "Flat brand type, Dark Blue",
+   "family": "P3A",
+   "w": 300,
+   "h": 250,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span></span><span class=\"t1\">won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span> you</span><span class=\"t2\">don't have to.</span>",
+     "size": 39.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber Deals Now</span>",
+     "size": 13.0
+    }
+   }
+  },
+  "P3A-160x600": {
+   "name": "Flat brand type, Dark Blue",
+   "family": "P3A",
+   "w": 160,
+   "h": 600,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span></span><span class=\"t1\">won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span></span><span class=\"t2\">you don't</span><span class=\"t2\">have to.</span>",
+     "size": 28.96
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Lease-to-own</span><span>on thousands of</span><span>Cyber Week deals.</span>",
+     "size": 16.26
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber</span><span>Deals Now</span>",
+     "size": 16.0
+    }
+   }
+  },
+  "P3A-728x90": {
+   "name": "Flat brand type, Dark Blue",
+   "family": "P3A",
+   "w": 728,
+   "h": 90,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span> won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span> you don't have to.</span>",
+     "size": 33.26
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber</span><span>Deals Now</span>",
+     "size": 16.0
+    }
+   }
+  },
+  "P3A-320x50": {
+   "name": "Flat brand type, Dark Blue",
+   "family": "P3A",
+   "w": 320,
+   "h": 50,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span> won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span> you don't have to.</span>",
+     "size": 13.74
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber</span><span>Deals Now</span>",
+     "size": 10.0
+    }
+   }
+  },
+  "P3B-1200x1200": {
+   "name": "Flat brand type, Cream",
+   "family": "P3B",
+   "w": 1200,
+   "h": 1200,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span></span><span class=\"t1\">won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span> you</span><span class=\"t2\">don't have to.</span>",
+     "size": 151.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Lease-to-own on thousands</span><span>of Cyber Week deals.</span>",
+     "size": 63.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber Deals Now</span>",
+     "size": 45.0
+    }
+   }
+  },
+  "P3B-1200x628": {
+   "name": "Flat brand type, Cream",
+   "family": "P3B",
+   "w": 1200,
+   "h": 628,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span> won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span> you</span><span class=\"t2\">don't have to.</span>",
+     "size": 99.5
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Lease-to-own on thousands</span><span>of Cyber Week deals.</span>",
+     "size": 48.3
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber Deals Now</span>",
+     "size": 42.0
+    }
+   }
+  },
+  "P3B-960x1200": {
+   "name": "Flat brand type, Cream",
+   "family": "P3B",
+   "w": 960,
+   "h": 1200,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span></span><span class=\"t1\">won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span></span><span class=\"t2\">you don't</span><span class=\"t2\">have to.</span>",
+     "size": 156.5
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Lease-to-own on thousands</span><span>of Cyber Week deals.</span>",
+     "size": 55.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber Deals Now</span>",
+     "size": 43.0
+    }
+   }
+  },
+  "P3B-300x600": {
+   "name": "Flat brand type, Cream",
+   "family": "P3B",
+   "w": 300,
+   "h": 600,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span></span><span class=\"t1\">won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span></span><span class=\"t2\">you don't</span><span class=\"t2\">have to.</span>",
+     "size": 50.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Lease-to-own</span><span>on thousands</span><span>of Cyber Week deals.</span>",
+     "size": 21.86
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber Deals Now</span>",
+     "size": 18.0
+    }
+   }
+  },
+  "P3B-300x250": {
+   "name": "Flat brand type, Cream",
+   "family": "P3B",
+   "w": 300,
+   "h": 250,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span></span><span class=\"t1\">won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span> you</span><span class=\"t2\">don't have to.</span>",
+     "size": 39.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber Deals Now</span>",
+     "size": 15.0
+    }
+   }
+  },
+  "P3B-160x600": {
+   "name": "Flat brand type, Cream",
+   "family": "P3B",
+   "w": 160,
+   "h": 600,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span></span><span class=\"t1\">won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span></span><span class=\"t2\">you don't</span><span class=\"t2\">have to.</span>",
+     "size": 28.96
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Lease-to-own</span><span>on thousands of</span><span>Cyber Week deals.</span>",
+     "size": 16.26
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber</span><span>Deals Now</span>",
+     "size": 16.0
+    }
+   }
+  },
+  "P3B-728x90": {
+   "name": "Flat brand type, Cream",
+   "family": "P3B",
+   "w": 728,
+   "h": 90,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span> won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span> you don't have to.</span>",
+     "size": 33.26
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber</span><span>Deals Now</span>",
+     "size": 16.0
+    }
+   }
+  },
+  "P3B-320x50": {
+   "name": "Flat brand type, Cream",
+   "family": "P3B",
+   "w": 320,
+   "h": 50,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span class=\"t1\">The <span class=\"ta\">deals</span> won't wait.</span><span class=\"t2\">And <span class=\"ta\">now</span> you don't have to.</span>",
+     "size": 13.74
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Shop Cyber</span><span>Deals Now</span>",
+     "size": 10.0
+    }
+   }
+  },
+  "P4A-1200x1200": {
+   "name": "Proof badge, centered",
+   "family": "P4A",
+   "w": 1200,
+   "h": 1200,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take</span><span>our word for it.</span>",
+     "size": 123.7
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Real people, real reviews. There's a reason</span><span>why thousands rate Katapult 5 stars.</span>",
+     "size": 42.2
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers Love Katapult</span>",
+     "size": 42.2
+    }
+   }
+  },
+  "P4A-1200x628": {
+   "name": "Proof badge, centered",
+   "family": "P4A",
+   "w": 1200,
+   "h": 628,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take</span><span>our word for it.</span>",
+     "size": 76.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Real people, real reviews.</span><span>There's a reason why</span><span>thousands rate Katapult 5 stars.</span>",
+     "size": 28.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers Love Katapult</span>",
+     "size": 25.362
+    }
+   }
+  },
+  "P4A-960x1200": {
+   "name": "Proof badge, centered",
+   "family": "P4A",
+   "w": 960,
+   "h": 1200,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take</span><span>our word for it.</span>",
+     "size": 112.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Real people, real reviews. There's a reason</span><span>why thousands rate Katapult 5 stars.</span>",
+     "size": 42.2
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers Love Katapult</span>",
+     "size": 42.2
+    }
+   }
+  },
+  "P4A-300x600": {
+   "name": "Proof badge, centered",
+   "family": "P4A",
+   "w": 300,
+   "h": 600,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take</span><span>our word</span><span>for it.</span>",
+     "size": 53.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Real people, real reviews.</span><span>There's a reason why</span><span>thousands rate Katapult 5 stars.</span>",
+     "size": 17.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers</span><span>Love Katapult</span>",
+     "size": 17.0
+    }
+   }
+  },
+  "P4A-300x250": {
+   "name": "Proof badge, centered",
+   "family": "P4A",
+   "w": 300,
+   "h": 250,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take our word for it.</span>",
+     "size": 23.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Real people, real reviews. There's a reason</span><span>why thousands rate Katapult 5 stars.</span>",
+     "size": 10.5
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers Love Katapult</span>",
+     "size": 12.0
+    }
+   }
+  },
+  "P4A-160x600": {
+   "name": "Proof badge, centered",
+   "family": "P4A",
+   "w": 160,
+   "h": 600,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't</span><span>take our</span><span>word for it.</span>",
+     "size": 27.667
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Real people, real</span><span>reviews. There's a</span><span>reason why thousands</span><span>rate Katapult 5 stars.</span>",
+     "size": 14.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers</span><span>Love Katapult</span>",
+     "size": 12.442
+    }
+   }
+  },
+  "P4A-728x90": {
+   "name": "Proof badge, centered",
+   "family": "P4A",
+   "w": 728,
+   "h": 90,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take our</span><span>word for it.</span>",
+     "size": 35.156
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers</span><span>Love Katapult</span>",
+     "size": 11.931
+    }
+   }
+  },
+  "P4A-320x50": {
+   "name": "Proof badge, centered",
+   "family": "P4A",
+   "w": 320,
+   "h": 50,
+   "group": "banner",
+   "slots": {
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take our</span><span>word for it.</span>",
+     "size": 15.453
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers</span><span>Love Katapult</span>",
+     "size": 5.244
+    }
+   }
+  },
+  "P4B-1200x1200": {
+   "name": "Proof badge, photo seam",
+   "family": "P4B",
+   "w": 1200,
+   "h": 1200,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e7440fae96.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take</span><span>our word for it.</span>",
+     "size": 110.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Real people, real reviews. There's a reason</span><span>why thousands rate Katapult 5 stars.</span>",
+     "size": 38.8
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers Love Katapult</span>",
+     "size": 38.8
+    }
+   }
+  },
+  "P4B-1200x628": {
+   "name": "Proof badge, photo seam",
+   "family": "P4B",
+   "w": 1200,
+   "h": 628,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e7440fae96.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take</span><span>our word for it.</span>",
+     "size": 82.57
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Real people, real reviews. There's a reason</span><span>why thousands rate Katapult 5 stars.</span>",
+     "size": 28.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers Love Katapult</span>",
+     "size": 28.0
+    }
+   }
+  },
+  "P4B-960x1200": {
+   "name": "Proof badge, photo seam",
+   "family": "P4B",
+   "w": 960,
+   "h": 1200,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e7440fae96.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take</span><span>our word for it.</span>",
+     "size": 95.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Real people, real reviews. There's a reason</span><span>why thousands rate Katapult 5 stars.</span>",
+     "size": 36.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers Love Katapult</span>",
+     "size": 34.0
+    }
+   }
+  },
+  "P4B-300x600": {
+   "name": "Proof badge, photo seam",
+   "family": "P4B",
+   "w": 300,
+   "h": 600,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e7440fae96.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take</span><span>our word for it.</span>",
+     "size": 40.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Real people, real reviews.</span><span>There's a reason why</span><span>thousands rate Katapult 5 stars.</span>",
+     "size": 17.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers</span><span>Love Katapult</span>",
+     "size": 12.801
+    }
+   }
+  },
+  "P4B-300x250": {
+   "name": "Proof badge, photo seam",
+   "family": "P4B",
+   "w": 300,
+   "h": 250,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e7440fae96.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take our word for it.</span>",
+     "size": 21.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Real people, real reviews. There's a reason</span><span>why thousands rate Katapult 5 stars.</span>",
+     "size": 10.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers Love Katapult</span>",
+     "size": 10.381
+    }
+   }
+  },
+  "P4B-160x600": {
+   "name": "Proof badge, photo seam",
+   "family": "P4B",
+   "w": 160,
+   "h": 600,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e7440fae96.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take</span><span>our word</span><span>for it.</span>",
+     "size": 30.0
+    },
+    "sub": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Real people, real</span><span>reviews. There's a</span><span>reason why thousands</span><span>rate Katapult 5 stars.</span>",
+     "size": 13.0
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers</span><span>Love Katapult</span>",
+     "size": 11.931
+    }
+   }
+  },
+  "P4B-728x90": {
+   "name": "Proof badge, photo seam",
+   "family": "P4B",
+   "w": 728,
+   "h": 90,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e7440fae96.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take our</span><span>word for it.</span>",
+     "size": 36.875
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers</span><span>Love Katapult</span>",
+     "size": 11.931
+    }
+   }
+  },
+  "P4B-320x50": {
+   "name": "Proof badge, photo seam",
+   "family": "P4B",
+   "w": 320,
+   "h": 50,
+   "group": "banner",
+   "slots": {
+    "photo": {
+     "kind": "image",
+     "fit": "cover",
+     "default": "assets/layout/photo-e7440fae96.jpg"
+    },
+    "headline": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>Don't take our</span><span>word for it.</span>",
+     "size": 16.209
+    },
+    "cta": {
+     "kind": "text",
+     "mode": "markup",
+     "default": "<span>See Why Shoppers</span><span>Love Katapult</span>",
+     "size": 5.244
+    }
+   }
+  }
+ },
+ "library": [
+  {
+   "id": "phone-man-street-phone-01",
+   "path": "assets/library/phone-man-street-phone-01.jpg",
+   "size": "4000x6000",
+   "subject": "Man in a dark jacket smiling at his phone on a city street",
+   "category": "phone",
+   "text_space": "none (brick and storefront behind)",
+   "use": "story or portrait post, person-led static",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "",
+   "face": "55% 18%",
+   "people": "one man, face upper middle"
+  },
+  {
+   "id": "laptop-woman-sofa-laptop-01",
+   "path": "assets/library/laptop-woman-sofa-laptop-01.jpg",
+   "size": "6552x4396",
+   "subject": "Woman on a white sofa with a laptop, bright living room",
+   "category": "laptop",
+   "text_space": "left (white room)",
+   "use": "landscape banner with copy left, blog header",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "",
+   "face": "73% 22%",
+   "people": "one woman, right third"
+  },
+  {
+   "id": "phone-woman-dog-phone-02",
+   "path": "assets/library/phone-woman-dog-phone-02.jpg",
+   "size": "8639x4860",
+   "subject": "Woman in glasses and an orange top laughing at her phone, dog on the sofa",
+   "category": "phone",
+   "text_space": "top (white wall, narrow)",
+   "use": "wide banner, organic static",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "orange top echoes Katapult Orange",
+   "face": "50% 22%",
+   "people": "one woman centre, dog bottom left"
+  },
+  {
+   "id": "phone-man-green-sofa-phone-03",
+   "path": "assets/library/phone-man-green-sofa-phone-03.jpg",
+   "size": "4096x2160",
+   "subject": "Man in a light blue shirt on a green sofa, smiling at his phone",
+   "category": "phone",
+   "text_space": "top left (shelves, soft)",
+   "use": "wide banner (4096 x 2160)",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "light blue shirt echoes Light Blue",
+   "face": "48% 18%",
+   "people": "one man centre, high"
+  },
+  {
+   "id": "phone-woman-lamps-phone-04",
+   "path": "assets/library/phone-woman-lamps-phone-04.jpg",
+   "size": "4881x6101",
+   "subject": "Curly-haired woman in a blue striped shirt checking her phone, warm lamps",
+   "category": "phone",
+   "text_space": "top left",
+   "use": "portrait post, story",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "foreground leaf blur bottom right",
+   "face": "45% 25%",
+   "people": "one woman centre"
+  },
+  {
+   "id": "at-home-woman-sofa-coffee-01",
+   "path": "assets/library/at-home-woman-sofa-coffee-01.jpg",
+   "size": "6000x4000",
+   "subject": "Woman in a striped tee with coffee on a cream sofa, eyes closed, warm light",
+   "category": "at-home",
+   "text_space": "left and top (sofa, wall)",
+   "use": "furniture post, calm moment",
+   "fit": "with care",
+   "rights": "to confirm",
+   "notes": "eyes closed, calm rather than fun",
+   "face": "72% 35%",
+   "people": "one woman, right third, eyes closed"
+  },
+  {
+   "id": "laptop-woman-desk-laptop-02",
+   "path": "assets/library/laptop-woman-desk-laptop-02.jpg",
+   "size": "6240x4160",
+   "subject": "Woman smiling over a laptop and mug at a home desk",
+   "category": "laptop",
+   "text_space": "both sides (shelves, plant)",
+   "use": "square or 4:5 crop centered",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "",
+   "face": "50% 22%",
+   "people": "one woman centre, laptop in front"
+  },
+  {
+   "id": "together-couple-sofa-phone-laptop-01",
+   "path": "assets/library/together-couple-sofa-phone-laptop-01.jpg",
+   "size": "5333x3000",
+   "subject": "Couple on a sofa, she on her phone, he on a laptop, mugs on the table",
+   "category": "together",
+   "text_space": "top (wide white wall)",
+   "use": "banner or post with copy on top",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "strong text space",
+   "face": "62% 42%",
+   "people": "two people right of centre, wall above"
+  },
+  {
+   "id": "retail-man-tire-dealership-01",
+   "path": "assets/library/retail-man-tire-dealership-01.jpg",
+   "size": "6000x4000",
+   "subject": "Man crouching to check a car tire in a dealership",
+   "category": "retail",
+   "text_space": "none (busy showroom)",
+   "use": "tires and wheels category",
+   "fit": "with care",
+   "rights": "to confirm",
+   "notes": "looks down, face partly turned",
+   "face": "63% 25%",
+   "people": "one man right, car left"
+  },
+  {
+   "id": "together-friends-gaming-sofa-02",
+   "path": "assets/library/together-friends-gaming-sofa-02.jpg",
+   "size": "5930x2541",
+   "subject": "Two friends laughing on a green sofa with game controllers",
+   "category": "together",
+   "text_space": "left (large wall)",
+   "use": "wide banner with copy left, gaming and electronics",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "people small in frame",
+   "face": "62% 23%",
+   "people": "two people small, right of centre"
+  },
+  {
+   "id": "phone-woman-card-phone-05",
+   "path": "assets/library/phone-woman-card-phone-05.jpg",
+   "size": "8192x5464",
+   "subject": "Woman in glasses holding her phone and a payment card, big smile",
+   "category": "phone",
+   "text_space": "right (soft background)",
+   "use": "checkout and payment moment, hero",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "top pick for checkout copy",
+   "face": "35% 30%",
+   "people": "one woman left third, close-up, phone and card in hands"
+  },
+  {
+   "id": "laptop-woman-blanket-laptop-03",
+   "path": "assets/library/laptop-woman-blanket-laptop-03.jpg",
+   "size": "4004x6006",
+   "subject": "Blonde woman with a laptop on the sofa under a yellow blanket, lamp behind",
+   "category": "laptop",
+   "text_space": "top (lamp, wall)",
+   "use": "portrait post, story",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "",
+   "face": "40% 25%",
+   "people": "one woman left of centre"
+  },
+  {
+   "id": "retail-shop-owners-tablet-02",
+   "path": "assets/library/retail-shop-owners-tablet-02.jpg",
+   "size": "4672x7008",
+   "subject": "Two shop owners in aprons with a tablet in a kitchenware store",
+   "category": "retail",
+   "text_space": "none (busy shelves)",
+   "use": "retailer and merchant posts",
+   "fit": "with care",
+   "rights": "to confirm",
+   "notes": "busy background",
+   "face": "52% 20%",
+   "people": "two people centre, high"
+  },
+  {
+   "id": "at-home-senior-woman-armchair-02",
+   "path": "assets/library/at-home-senior-woman-armchair-02.jpg",
+   "size": "2572x3430",
+   "subject": "Older woman in green pajamas relaxing in an armchair, smiling",
+   "category": "at-home",
+   "text_space": "top right (white wall)",
+   "use": "furniture and comfort posts",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "age range",
+   "face": "50% 25%",
+   "people": "one woman centre"
+  },
+  {
+   "id": "phone-man-call-tablet-sofa-06",
+   "path": "assets/library/phone-man-call-tablet-sofa-06.jpg",
+   "size": "8924x4706",
+   "subject": "Grey-haired man on a phone call holding a tablet on a white sofa",
+   "category": "phone",
+   "text_space": "none strong",
+   "use": "wide banner, electronics",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "age range",
+   "face": "35% 20%",
+   "people": "one man left third"
+  },
+  {
+   "id": "at-home-woman-pendant-lamp-03",
+   "path": "assets/library/at-home-woman-pendant-lamp-03.jpg",
+   "size": "4324x6487",
+   "subject": "Woman from behind adjusting a pendant lamp in a living room",
+   "category": "at-home",
+   "text_space": "top left (white wall)",
+   "use": "home decor and lighting",
+   "fit": "with care",
+   "rights": "to confirm",
+   "notes": "face not visible",
+   "face": "42% 20%",
+   "people": "one woman from behind, face not visible"
+  },
+  {
+   "id": "room-leather-sofa-room-01",
+   "path": "assets/library/room-leather-sofa-room-01.jpg",
+   "size": "6000x7200",
+   "subject": "Brown leather sofa with a plant in a sunny room, no people",
+   "category": "room",
+   "text_space": "top (wall)",
+   "use": "furniture product background only",
+   "fit": "no people",
+   "rights": "to confirm",
+   "notes": "guideline: never the main image",
+   "face": null,
+   "people": "no people"
+  },
+  {
+   "id": "phone-man-kitchen-phone-07",
+   "path": "assets/library/phone-man-kitchen-phone-07.jpg",
+   "size": "9504x6336",
+   "subject": "Man in a denim jacket smiling at his phone in a kitchen",
+   "category": "phone",
+   "text_space": "left (shelves, soft)",
+   "use": "landscape post, banner",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "",
+   "face": "55% 25%",
+   "people": "one man right of centre"
+  },
+  {
+   "id": "laptop-woman-tablet-counter-04",
+   "path": "assets/library/laptop-woman-tablet-counter-04.jpg",
+   "size": "4096x2160",
+   "subject": "Woman with a tablet at a kitchen counter, warm low sun, dark cabinets",
+   "category": "laptop",
+   "text_space": "top left (dark cabinets)",
+   "use": "banner with light text on dark",
+   "fit": "with care",
+   "rights": "to confirm",
+   "notes": "darker scene",
+   "face": "48% 30%",
+   "people": "one woman centre"
+  },
+  {
+   "id": "phone-man-window-phone-08",
+   "path": "assets/library/phone-man-window-phone-08.jpg",
+   "size": "3397x5095",
+   "subject": "Bearded man in a green shirt with his phone by a window, looking away smiling",
+   "category": "phone",
+   "text_space": "top (dark wall)",
+   "use": "portrait post, story",
+   "fit": "with care",
+   "rights": "to confirm",
+   "notes": "low light, close to moody",
+   "face": "45% 20%",
+   "people": "one man centre, looking away"
+  },
+  {
+   "id": "phone-woman-headphones-selfie-09",
+   "path": "assets/library/phone-woman-headphones-selfie-09.jpg",
+   "size": "4672x7008",
+   "subject": "Woman in a red sweater and headphones laughing at a yellow phone, outdoors",
+   "category": "phone",
+   "text_space": "top (blurred street)",
+   "use": "story, fun organic post",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "most energetic photo",
+   "face": "65% 22%",
+   "people": "one woman right of centre"
+  },
+  {
+   "id": "at-home-woman-beanbag-mug-04",
+   "path": "assets/library/at-home-woman-beanbag-mug-04.jpg",
+   "size": "5472x3648",
+   "subject": "Woman in a beanbag holding a mug by a window, warm light",
+   "category": "at-home",
+   "text_space": "left (blinds, curtain)",
+   "use": "comfort and furniture posts",
+   "fit": "with care",
+   "rights": "to confirm",
+   "notes": "darker, calm",
+   "face": "65% 45%",
+   "people": "one woman right, mid height"
+  },
+  {
+   "id": "laptop-man-sofa-coffee-laptop-05",
+   "path": "assets/library/laptop-man-sofa-coffee-laptop-05.jpg",
+   "size": "5760x3840",
+   "subject": "Man with coffee and a laptop on a grey sofa, bright window",
+   "category": "laptop",
+   "text_space": "left and top (window)",
+   "use": "wide banner with copy left",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "duplicate download removed",
+   "face": "53% 30%",
+   "people": "one man centre"
+  },
+  {
+   "id": "together-family-homework-sofa-03",
+   "path": "assets/library/together-family-homework-sofa-03.jpg",
+   "size": "6720x4480",
+   "subject": "Parents helping their daughter with homework at a coffee table, orange sofa",
+   "category": "together",
+   "text_space": "top right (wall, narrow)",
+   "use": "family posts, back to school",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "orange sofa",
+   "face": "55% 30%",
+   "people": "three people centre"
+  },
+  {
+   "id": "together-couple-hug-laptop-04",
+   "path": "assets/library/together-couple-hug-laptop-04.jpg",
+   "size": "4480x6720",
+   "subject": "Couple hugging on a sofa with a laptop, kitchen lights behind",
+   "category": "together",
+   "text_space": "top (ceiling, lights)",
+   "use": "portrait post, relationship moment",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "",
+   "face": "55% 42%",
+   "people": "two people centre, mid height"
+  },
+  {
+   "id": "laptop-woman-window-desk-06",
+   "path": "assets/library/laptop-woman-window-desk-06.jpg",
+   "size": "6720x4480",
+   "subject": "Woman writing at a desk with a laptop, bright window, profile view",
+   "category": "laptop",
+   "text_space": "left (window)",
+   "use": "banner with copy left",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "profile, face visible",
+   "face": "62% 33%",
+   "people": "one woman right of centre, profile"
+  },
+  {
+   "id": "at-home-woman-dishwasher-05",
+   "path": "assets/library/at-home-woman-dishwasher-05.jpg",
+   "size": "7952x5304",
+   "subject": "Woman loading a dishwasher in a blue kitchen, smiling",
+   "category": "at-home",
+   "text_space": "top left (tiles)",
+   "use": "appliances category",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "appliance in use",
+   "face": "60% 15%",
+   "people": "one woman right of centre, very high"
+  },
+  {
+   "id": "phone-senior-woman-call-10",
+   "path": "assets/library/phone-senior-woman-call-10.jpg",
+   "size": "8192x5464",
+   "subject": "Older woman in glasses laughing on a phone call, tablet on the table",
+   "category": "phone",
+   "text_space": "none strong",
+   "use": "landscape post, age range",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "",
+   "face": "58% 25%",
+   "people": "one woman right of centre"
+  },
+  {
+   "id": "unboxing-kids-moving-box-01",
+   "path": "assets/library/unboxing-kids-moving-box-01.jpg",
+   "size": "6720x4480",
+   "subject": "Kids playing in a moving box while a parent carries a lamp",
+   "category": "unboxing",
+   "text_space": "none (busy)",
+   "use": "moving and new home posts",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "parent face cropped, kids lead",
+   "face": "50% 40%",
+   "people": "kids centre, parent's face cropped"
+  },
+  {
+   "id": "unboxing-woman-unboxing-sofa-02",
+   "path": "assets/library/unboxing-woman-unboxing-sofa-02.jpg",
+   "size": "6720x4480",
+   "subject": "Woman in an orange tee thrilled while opening a box on her sofa",
+   "category": "unboxing",
+   "text_space": "top (shelves, soft)",
+   "use": "delivery and unboxing hero",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "top pick, orange echoes the palette",
+   "face": "52% 28%",
+   "people": "one woman centre, box bottom left"
+  },
+  {
+   "id": "at-home-woman-daybed-plants-06",
+   "path": "assets/library/at-home-woman-daybed-plants-06.jpg",
+   "size": "6240x4160",
+   "subject": "Woman lounging on a daybed among plants, soft lamp light",
+   "category": "at-home",
+   "text_space": "top (window, plants)",
+   "use": "wide banner, home decor",
+   "fit": "with care",
+   "rights": "to confirm",
+   "notes": "subject small, dim",
+   "face": "35% 45%",
+   "people": "one woman small, left"
+  },
+  {
+   "id": "laptop-woman-tablet-orange-sofa-07",
+   "path": "assets/library/laptop-woman-tablet-orange-sofa-07.jpg",
+   "size": "5472x3648",
+   "subject": "Curly-haired woman in a yellow striped sweater laughing at a tablet, orange sofa",
+   "category": "laptop",
+   "text_space": "top left (window)",
+   "use": "landscape post, story crop",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "",
+   "face": "58% 30%",
+   "people": "one woman right of centre, close"
+  },
+  {
+   "id": "together-couple-tablet-mug-05",
+   "path": "assets/library/together-couple-tablet-mug-05.jpg",
+   "size": "4739x3164",
+   "subject": "Couple close on a sofa, he reads a tablet, she holds a mug",
+   "category": "together",
+   "text_space": "top (window)",
+   "use": "relationship moment",
+   "fit": "with care",
+   "rights": "to confirm",
+   "notes": "soft foreground blur",
+   "face": "62% 30%",
+   "people": "two people right of centre"
+  },
+  {
+   "id": "together-senior-couple-kitchen-06",
+   "path": "assets/library/together-senior-couple-kitchen-06.jpg",
+   "size": "7934x5292",
+   "subject": "Older couple chatting in a blue kitchen, fridge and oven visible",
+   "category": "together",
+   "text_space": "top (shelves)",
+   "use": "appliances category, age range",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "people small in frame",
+   "face": "55% 25%",
+   "people": "two people small, centre"
+  },
+  {
+   "id": "at-home-woman-headphones-relax-07",
+   "path": "assets/library/at-home-woman-headphones-relax-07.jpg",
+   "size": "5760x3840",
+   "subject": "Woman in headphones relaxing in a chair, eyes closed",
+   "category": "at-home",
+   "text_space": "right (wall)",
+   "use": "audio and electronics",
+   "fit": "with care",
+   "rights": "to confirm",
+   "notes": "eyes closed",
+   "face": "30% 25%",
+   "people": "one woman left, eyes closed"
+  },
+  {
+   "id": "room-orange-armchair-room-02",
+   "path": "assets/library/room-orange-armchair-room-02.jpg",
+   "size": "3456x5184",
+   "subject": "Orange armchair and floor lamp against a brick wall, no people",
+   "category": "room",
+   "text_space": "top (wall)",
+   "use": "furniture product background only",
+   "fit": "no people",
+   "rights": "to confirm",
+   "notes": "guideline: never the main image",
+   "face": null,
+   "people": "no people"
+  },
+  {
+   "id": "laptop-woman-tablet-laughing-08",
+   "path": "assets/library/laptop-woman-tablet-laughing-08.jpg",
+   "size": "6118x4032",
+   "subject": "Woman laughing with a tablet on a grey sofa, orange pants",
+   "category": "laptop",
+   "text_space": "top right (shelves)",
+   "use": "landscape post, banner",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "",
+   "face": "50% 35%",
+   "people": "one woman centre"
+  },
+  {
+   "id": "laptop-man-glasses-laptop-09",
+   "path": "assets/library/laptop-man-glasses-laptop-09.jpg",
+   "size": "6720x4480",
+   "subject": "Man in glasses smiling with a laptop on a sofa, flowers in the foreground",
+   "category": "laptop",
+   "text_space": "top (wall, plant)",
+   "use": "landscape post",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "",
+   "face": "52% 25%",
+   "people": "one man centre"
+  },
+  {
+   "id": "together-friends-cooking-07",
+   "path": "assets/library/together-friends-cooking-07.jpg",
+   "size": "7934x5292",
+   "subject": "Friends cooking together in a kitchen, rolling dough",
+   "category": "together",
+   "text_space": "none (busy)",
+   "use": "kitchen and appliances, group",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "busy frame",
+   "face": "55% 25%",
+   "people": "three people across the frame"
+  },
+  {
+   "id": "retail-business-owner-workshop-03",
+   "path": "assets/library/retail-business-owner-workshop-03.jpg",
+   "size": "4096x2160",
+   "subject": "Small business owner in a blue blazer, arms crossed, in her workshop",
+   "category": "retail",
+   "text_space": "none (busy)",
+   "use": "retailer and merchant posts",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "",
+   "face": "48% 15%",
+   "people": "one woman centre, very high"
+  },
+  {
+   "id": "room-blue-fridge-kitchen-03",
+   "path": "assets/library/room-blue-fridge-kitchen-03.jpg",
+   "size": "6000x4000",
+   "subject": "Light blue retro fridge in a white kitchen, no people",
+   "category": "room",
+   "text_space": "right (white wall)",
+   "use": "appliance product background only",
+   "fit": "no people",
+   "rights": "to confirm",
+   "notes": "fridge matches Light Blue; never the main image",
+   "face": null,
+   "people": "no people, fridge centre left"
+  },
+  {
+   "id": "phone-senior-man-phone-11",
+   "path": "assets/library/phone-senior-man-phone-11.jpg",
+   "size": "4565x6847",
+   "subject": "Grey-haired man in a green shirt smiling at his phone on a sofa",
+   "category": "phone",
+   "text_space": "top (white wall)",
+   "use": "portrait post, story, age range",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "",
+   "face": "45% 40%",
+   "people": "one man centre"
+  },
+  {
+   "id": "phone-woman-kitchen-phone-12",
+   "path": "assets/library/phone-woman-kitchen-phone-12.jpg",
+   "size": "6000x4000",
+   "subject": "Woman in a kitchen smiling at her phone, holding a juice",
+   "category": "phone",
+   "text_space": "left (dark cabinets)",
+   "use": "landscape post, banner",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "",
+   "face": "50% 25%",
+   "people": "one woman centre"
+  },
+  {
+   "id": "laptop-man-bed-laptop-10",
+   "path": "assets/library/laptop-man-bed-laptop-10.jpg",
+   "size": "3693x5539",
+   "subject": "Young man in glasses lying on a bed with a laptop and earbuds, brick wall",
+   "category": "laptop",
+   "text_space": "top (brick wall)",
+   "use": "portrait post, story",
+   "fit": "on-brand",
+   "rights": "to confirm",
+   "notes": "",
+   "face": "45% 45%",
+   "people": "one man centre, lying down"
+  }
+ ],
+ "products": [
+  {
+   "id": "headphones",
+   "path": "assets/products/headphones.webp",
+   "label": "Over-ear headphones, lilac",
+   "view": "front",
+   "size": "2420x2679"
+  },
+  {
+   "id": "tablets",
+   "path": "assets/products/tablets.webp",
+   "label": "Three tablets in a row, purple",
+   "view": "front",
+   "size": "3560x1640"
+  },
+  {
+   "id": "laptop-open",
+   "path": "assets/products/laptop-open.webp",
+   "label": "Open laptop, green screen",
+   "view": "front",
+   "size": "3279x2031"
+  },
+  {
+   "id": "laptop",
+   "path": "assets/products/laptop.webp",
+   "label": "Open laptop, silver",
+   "view": "top-down",
+   "size": "831x942"
+  },
+  {
+   "id": "fridge",
+   "path": "assets/products/fridge.webp",
+   "label": "French-door fridge, steel",
+   "view": "front",
+   "size": "628x979"
+  },
+  {
+   "id": "washer",
+   "path": "assets/products/washer.webp",
+   "label": "Front-load washer, white",
+   "view": "front",
+   "size": "818x948"
+  },
+  {
+   "id": "tv",
+   "path": "assets/products/tv.webp",
+   "label": "Flat TV",
+   "view": "front",
+   "size": "983x596"
+  },
+  {
+   "id": "tire",
+   "path": "assets/products/tire.webp",
+   "label": "Tire on alloy wheel",
+   "view": "front",
+   "size": "958x969"
+  },
+  {
+   "id": "console",
+   "path": "assets/products/console.webp",
+   "label": "Game console and controller",
+   "view": "top-down",
+   "size": "964x633"
+  },
+  {
+   "id": "vacuum",
+   "path": "assets/products/vacuum.webp",
+   "label": "Stick vacuum",
+   "view": "front",
+   "size": "264x960"
+  },
+  {
+   "id": "nightstand",
+   "path": "assets/products/nightstand.webp",
+   "label": "Wooden nightstand",
+   "view": "front",
+   "size": "436x571"
+  },
+  {
+   "id": "necklace",
+   "path": "assets/products/necklace.webp",
+   "label": "Gold necklace",
+   "view": "top-down",
+   "size": "2500x2500"
+  },
+  {
+   "id": "couch",
+   "path": "assets/products/couch.webp",
+   "label": "Three-seat couch, grey",
+   "view": "top-down",
+   "size": "1212x619"
+  },
+  {
+   "id": "bed",
+   "path": "assets/products/bed.webp",
+   "label": "Bed with green throw",
+   "view": "top-down",
+   "size": "1124x1632"
+  },
+  {
+   "id": "grill",
+   "path": "assets/products/grill.webp",
+   "label": "Kettle grill",
+   "view": "top-down",
+   "size": "819x952"
+  }
+ ]
+}
