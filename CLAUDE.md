@@ -53,3 +53,15 @@ clients/<marca>/
 ### Ferramentas
 
 Python 3.11 + Pillow, Chrome e Edge já instalados nesta máquina (conferido em 2026-09-24). Preview de revisão e página do kit: publicar como Artifact e mandar o link pro responsável.
+
+## Power Digital Hub (índice de todos os artifacts)
+
+Hub: https://claude.ai/code/artifact/91b3a212-4b8f-4cb4-ade3-0ae3b6122be6, gerado por [`hub/build_hub.py`](hub/build_hub.py) a partir de [`hub/artifacts.json`](hub/artifacts.json).
+
+Todo artifact novo de cliente Power Digital (design system, deliverables hub, biblioteca, board de revisão) entra no hub **na mesma sessão em que é publicado**:
+
+1. Entrada nova em `hub/artifacts.json` (cliente, tipo, status, título, URL, data, descrição, seções). Cliente novo: entrada em `clients` com as cores da marca.
+2. `read` do artifact novo e `python hub/build_hub.py thumb <slug> <html salvo pelo read>`.
+3. `python hub/build_hub.py`.
+4. `read` do hub publicado e republicar `hub/power-digital-hub.html` na mesma URL.
+5. Board cujo job foi pro deliverables hub: status `superseded`.

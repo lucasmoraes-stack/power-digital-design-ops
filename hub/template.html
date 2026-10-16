@@ -1,0 +1,345 @@
+<title>{{TITLE}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: studio index. Neutral chrome so each client's own brand colors carry the page;
+   summary first (path + client map), then one shelf per client with thumbnail cards. */
+:root{
+  --paper:#F1F2EF; --surface:#FFFFFF; --ink:#16181B; --muted:#5C626A; --line:#D9DCD6; --soft:#E7E9E4;
+  --accent:#2440D8; --accent-ink:#FFFFFF;
+  --live:#1F7A4D; --review:#A86400; --draft:#4B5BA8; --old:#80868D;
+  --f-display:"Open Sans","Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Open Sans","Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --f-label:"Open Sans","Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  --r:6px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#111315; --surface:#1A1D20; --ink:#ECEDEA; --muted:#9AA0A7; --line:#2E3237; --soft:#22262A;
+    --accent:#7F95FF; --accent-ink:#0E1330;
+    --live:#5BC48E; --review:#E3A84A; --draft:#93A2EC; --old:#7C838A;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#111315; --surface:#1A1D20; --ink:#ECEDEA; --muted:#9AA0A7; --line:#2E3237; --soft:#22262A;
+  --accent:#7F95FF; --accent-ink:#0E1330;
+  --live:#5BC48E; --review:#E3A84A; --draft:#93A2EC; --old:#7C838A;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5;
+  padding-inline:clamp(16px,4vw,48px);padding-block:0 64px}
+a{color:inherit}
+code{font-family:var(--f-mono);font-size:.86em}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+.wrap{max-width:1320px;margin-inline:auto}
+.eyebrow{font-family:var(--f-label);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+
+/* Sticky bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--paper);
+  border-bottom:1px solid var(--line);margin-inline:calc(-1 * clamp(16px,4vw,48px));padding:10px clamp(16px,4vw,48px)}
+.bar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px}
+.mark{font-family:var(--f-display);font-weight:700;font-size:15px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.mark span{color:var(--muted);font-weight:500}
+.filters{display:flex;flex-wrap:wrap;gap:6px}
+.filters button{font:500 13px var(--f-body);color:var(--ink);background:transparent;border:1px solid var(--line);
+  border-radius:999px;padding:5px 12px;cursor:pointer}
+.filters button:hover{border-color:var(--ink)}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.search{margin-left:auto;display:flex;align-items:center;gap:8px;flex:0 1 260px}
+.search input{width:100%;font:14px var(--f-body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:7px 10px}
+.search input::placeholder{color:var(--muted)}
+.toggle{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);white-space:nowrap}
+
+/* Masthead */
+.mast{padding-block:44px 28px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:32px;align-items:end}
+.mast h1{font-weight:600;font-size:clamp(34px,5.2vw,62px);line-height:1.08;letter-spacing:-.02em}
+.mast h1 span{display:block;font-weight:300;color:var(--muted)}
+.mast .lede{max-width:56ch;color:var(--muted);margin:16px 0 0;font-size:16px}
+.figs{display:grid;grid-template-columns:repeat(4,auto);justify-content:end;gap:4px 28px;margin:0}
+.figs div{display:flex;flex-direction:column-reverse}
+.figs dt{font-family:var(--f-label);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.figs dd{margin:0;font-family:var(--f-display);font-weight:600;font-size:32px;line-height:1.05;font-variant-numeric:tabular-nums}
+.jump{display:flex;flex-wrap:wrap;gap:6px 18px;padding-block:14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.jump a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:14px}
+.jump a:hover{text-decoration:underline}
+.jump i{width:12px;height:12px;border-radius:2px;display:inline-block}
+
+/* Start here */
+.block{padding-block:40px 8px}
+.block > header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;margin-bottom:18px}
+.block h2{font-weight:600;font-size:24px;letter-spacing:-.005em}
+.block > header p{color:var(--muted);margin:0;max-width:62ch}
+.path{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;
+  border:1px solid var(--line);border-radius:var(--r);background:var(--surface);counter-reset:step}
+.path li{padding:18px 20px 20px;position:relative;counter-increment:step}
+.path li + li{border-left:1px solid var(--line)}
+.path li::before{content:"Step " counter(step);position:absolute;top:20px;right:20px;font-family:var(--f-label);font-size:11px;color:var(--muted)}
+.path h3{font-size:17px;font-weight:600;margin:12px 0 6px}
+.path p{margin:0;font-size:14px}
+.path .when{color:var(--muted);margin-top:8px}
+
+.code{display:inline-block;font-family:var(--f-mono);font-weight:500;font-size:11px;letter-spacing:.04em;
+  padding:2px 6px;border-radius:3px;border:1px solid currentColor;line-height:1.4}
+.t-design-system{color:var(--ink)}
+.t-deliverables{color:var(--paper);background:var(--ink);border-color:var(--ink)}
+.t-library{color:var(--ink);border-style:dashed}
+.t-studio{color:var(--ink);border-style:double;border-width:3px}
+.t-board{color:var(--muted)}
+
+/* Map */
+.mapwrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+table.map{width:100%;border-collapse:collapse;min-width:760px}
+.map th,.map td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+.map tr:last-child th,.map tr:last-child td{border-bottom:0}
+.map thead th{font-family:var(--f-label);font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--soft)}
+.map tbody th a{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;white-space:nowrap}
+.map tbody th a:hover{text-decoration:underline}
+.sw{display:inline-flex}
+.sw i{width:8px;height:20px;display:block}
+.sw i:first-child{border-radius:2px 0 0 2px}.sw i:last-child{border-radius:0 2px 2px 0}
+.map td{display:table-cell}
+.chip{display:block;width:fit-content;max-width:100%;margin:0 0 6px;font-size:13.5px;font-weight:500;text-decoration:none;
+  border-bottom:1px solid var(--line);padding-bottom:1px}
+.chip:last-child{margin-bottom:0}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip em{font-style:normal;font-family:var(--f-label);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;margin-left:4px}
+.chip.s-in-review em{color:var(--review)}.chip.s-draft em{color:var(--draft)}.chip.s-superseded{color:var(--old)}.chip.s-superseded em{color:var(--old)}
+.gap{font-size:13px;color:var(--muted);font-style:italic}
+
+/* Client shelves */
+.client{padding-top:56px}
+.chead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:14px 32px;align-items:end;margin-bottom:20px}
+.band{grid-column:1/-1;display:flex;height:6px;border-radius:2px;overflow:hidden}
+.band i{flex:1}
+.ctitle h2{font-weight:600;font-size:clamp(28px,3.4vw,38px);letter-spacing:-.015em;line-height:1.1}
+.csub{margin:8px 0 0;color:var(--muted);font-size:14px}
+.csub span,.repo span{opacity:.5}
+.cinfo p{margin:0;font-size:14px;max-width:62ch}
+.cinfo .repo{color:var(--muted);margin-top:6px;font-size:13px}
+.swatches{grid-column:1/-1;list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 14px}
+.swatches li{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.swatches code{font-size:11.5px}
+.swatches i{width:14px;height:14px;border-radius:3px;box-shadow:inset 0 0 0 1px rgba(127,127,127,.35)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:20px}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  transition:border-color .15s, transform .15s}
+.card:hover{border-color:var(--ink)}
+.card[data-status="superseded"]{opacity:.62}
+.card[data-status="superseded"]:hover{opacity:1}
+.shot{display:block;aspect-ratio:16/10;background:var(--soft);border-bottom:1px solid var(--line);overflow:hidden;max-width:100%}
+.shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .35s ease}
+.card:hover .shot img{transform:scale(1.025)}
+@media (prefers-reduced-motion: reduce){.shot img,.card{transition:none}.card:hover .shot img{transform:none}}
+.nothumb{display:grid;place-items:center;height:100%;font-family:var(--f-label);font-size:12px;color:var(--muted)}
+.body{display:flex;flex-direction:column;gap:10px;padding:14px 16px 16px;flex:1}
+.meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tlabel{font-size:12.5px;color:var(--muted)}
+.status{margin-left:auto;font-family:var(--f-label);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;display:inline-flex;align-items:center;gap:5px}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.s-live{color:var(--live)}.s-in-review{color:var(--review)}.s-draft{color:var(--draft)}.s-superseded{color:var(--old)}
+.status.s-superseded::before{background:transparent;box-shadow:inset 0 0 0 1.5px currentColor}
+.card h3{font-size:17px;font-weight:600;line-height:1.2;letter-spacing:-.005em}
+.card h3 a{text-decoration:none}
+.card h3 a:hover{text-decoration:underline;text-underline-offset:3px}
+.card p{margin:0;font-size:14px;color:var(--ink)}
+.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px}
+.tags li{font-size:11.5px;color:var(--muted);background:var(--soft);border-radius:3px;padding:2px 6px}
+.foot{margin-top:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;padding-top:10px;border-top:1px solid var(--line);
+  font-family:var(--f-label);font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.actions{display:flex;gap:8px}
+.actions .open{flex:1;text-align:center;text-decoration:none;font-weight:600;font-size:14px;background:var(--ink);color:var(--paper);
+  border-radius:var(--r);padding:8px 12px}
+.actions .open:hover{background:var(--accent);color:var(--accent-ink)}
+.actions .copy{font:500 13px var(--f-body);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:var(--r);padding:8px 12px;cursor:pointer}
+.actions .copy:hover{border-color:var(--ink)}
+.empty{color:var(--muted);font-style:italic;margin:0}
+.client.is-empty{display:none}
+
+/* Legacy + upkeep */
+.legacy{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.legacy li{display:grid;grid-template-columns:140px minmax(0,1.2fr) minmax(0,1.5fr);gap:6px 20px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}
+.legacy .lc{font-family:var(--f-label);font-size:12px;color:var(--muted);padding-top:2px}
+.legacy a{font-weight:600}
+.legacy .ln{color:var(--muted)}
+.upkeep{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.upkeep ol{margin:0;padding-left:20px;display:grid;gap:10px}
+.upkeep li{padding-left:4px}
+.upkeep li::marker{font-family:var(--f-label);font-size:12px;color:var(--muted)}
+.upkeep pre{margin:6px 0 0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;overflow-x:auto;font:12.5px/1.6 var(--f-mono)}
+.note{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;font-size:14px;align-self:start}
+.note h3{font-size:15px;font-weight:700;margin-bottom:8px}
+.note p{margin:0 0 8px}.note p:last-child{margin:0}
+footer.end{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--f-label);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--paper);
+  padding:8px 14px;border-radius:var(--r);font-size:13px;font-weight:500}
+
+@media (max-width:960px){
+  .mast{grid-template-columns:1fr}
+  .figs{justify-content:start;grid-template-columns:repeat(4,auto)}
+  .path{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .path li:nth-child(3){border-left:0}
+  .path li:nth-child(n+3){border-top:1px solid var(--line)}
+  .chead{grid-template-columns:1fr}
+  .upkeep{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .search{flex-basis:100%;margin-left:0}
+  .figs{grid-template-columns:repeat(2,auto);gap:12px 28px}
+  .path{grid-template-columns:1fr}
+  .path li + li{border-left:0;border-top:1px solid var(--line)}
+  .legacy li{grid-template-columns:1fr}
+}
+</style>
+
+<div class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top">Power Digital <span>Hub</span></a>
+    <div class="filters" role="group" aria-label="Filter by artifact type">
+      <button type="button" id="f-all" data-f="all" aria-pressed="true">All</button>
+      <button type="button" id="f-deliverables" data-f="deliverables" aria-pressed="false">Deliverables hubs</button>
+      <button type="button" id="f-design-system" data-f="design-system" aria-pressed="false">Design systems</button>
+      <button type="button" id="f-library" data-f="library" aria-pressed="false">Libraries</button>
+      <button type="button" id="f-studio" data-f="studio" aria-pressed="false">Studios</button>
+      <button type="button" id="f-board" data-f="board" aria-pressed="false">Review boards</button>
+    </div>
+    <label class="toggle" for="f-old"><input type="checkbox" id="f-old" checked> Show superseded</label>
+    <div class="search">
+      <label class="eyebrow" for="q">Find</label>
+      <input id="q" type="search" placeholder="Client, job, module…" autocomplete="off">
+    </div>
+  </div>
+</div>
+
+<div class="wrap" id="top">
+  <section class="mast">
+    <div>
+      <p class="eyebrow">PowerDigital Lab · artifact index</p>
+      <h1>Every client page,<span>one place to start.</span></h1>
+      <p class="lede">Design systems, deliverables hubs, asset libraries and review boards for every Power Digital client, with a picture of each so you know what you are opening.</p>
+    </div>
+    <dl class="figs">
+      <div><dt>Clients</dt><dd>{{N_CLIENTS}}</dd></div>
+      <div><dt>Artifacts</dt><dd>{{N_ARTS}}</dd></div>
+      <div><dt>Live</dt><dd>{{N_LIVE}}</dd></div>
+      <div><dt>In progress</dt><dd>{{N_REV}}</dd></div>
+    </dl>
+  </section>
+  <nav class="jump" aria-label="Jump to client">{{JUMP}}</nav>
+
+  <section class="block" id="start">
+    <header>
+      <h2>How a piece moves through the artifacts</h2>
+      <p>Each client can have five kinds of page. They follow the order you work in, so open them left to right.</p>
+    </header>
+    <ol class="path">{{STEPS}}</ol>
+  </section>
+
+  <section class="block" id="map">
+    <header>
+      <h2>Client map</h2>
+      <p>What exists for each client, and what is still missing. Click any name to open it.</p>
+    </header>
+    <div class="mapwrap">
+      <table class="map">
+        <thead><tr><th scope="col">Client</th>{{MAP_HEAD}}</tr></thead>
+        <tbody>{{MAP}}</tbody>
+      </table>
+    </div>
+  </section>
+
+  {{SECTIONS}}
+
+  <section class="block" id="legacy" style="padding-top:64px">
+    <header>
+      <h2>Old links</h2>
+      <p>Still cited in older briefs and READMEs. Do not build from them; each one says where its content went.</p>
+    </header>
+    <ul class="legacy">{{LEGACY}}</ul>
+  </section>
+
+  <section class="block" id="upkeep" style="padding-top:56px">
+    <header>
+      <h2>Keeping this hub current</h2>
+      <p>Every new artifact for a Power Digital client gets a card here in the same session it is published.</p>
+    </header>
+    <div class="upkeep">
+      <ol>
+        <li>Add an entry to <code>hub/artifacts.json</code>: client, type, status, title, URL, date, a two-line description and its main sections.</li>
+        <li>Read the new artifact with the Artifact tool, then make its thumbnail from the saved HTML:
+          <pre>python hub/build_hub.py thumb &lt;slug&gt; &lt;saved.html&gt;</pre></li>
+        <li>Build the page:
+          <pre>python hub/build_hub.py</pre></li>
+        <li>Read this hub's live version, then republish <code>hub/power-digital-hub.html</code> to the same URL.</li>
+        <li>When a board's job ships into a deliverables hub, set the board's status to <code>superseded</code>.</li>
+      </ol>
+      <div class="note">
+        <h3>Status labels</h3>
+        <p><span class="status s-live">Live</span> approved and in use. Build from it.</p>
+        <p><span class="status s-in-review">In review</span> waiting on a decision from the team or client.</p>
+        <p><span class="status s-draft">Draft</span> work in progress; check its open items before relying on it.</p>
+        <p><span class="status s-superseded">Superseded</span> kept for history; its content lives somewhere newer.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="end">
+    <span>Power Digital Hub · built from hub/artifacts.json</span>
+    <span>Updated {{UPDATED}}</span>
+  </footer>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function(){
+  var f = "all";
+  var q = document.getElementById("q");
+  var old = document.getElementById("f-old");
+  var btns = document.querySelectorAll(".filters button");
+  function apply(){
+    var term = q.value.trim().toLowerCase();
+    document.querySelectorAll(".client").forEach(function(sec){
+      var name = sec.querySelector("h2").textContent.toLowerCase();
+      var shown = 0;
+      sec.querySelectorAll(".card").forEach(function(c){
+        var ok = (f === "all" || c.dataset.type === f)
+          && (old.checked || c.dataset.status !== "superseded")
+          && (!term || c.dataset.search.indexOf(term) > -1 || name.indexOf(term) > -1);
+        c.hidden = !ok; if (ok) shown++;
+      });
+      sec.classList.toggle("is-empty", shown === 0 && !!term);
+      sec.querySelector(".empty").hidden = shown !== 0 || !!term;
+    });
+  }
+  btns.forEach(function(b){
+    b.addEventListener("click", function(){
+      f = b.dataset.f;
+      btns.forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      apply();
+    });
+  });
+  q.addEventListener("input", apply);
+  old.addEventListener("change", apply);
+
+  var toast = document.getElementById("toast"), t;
+  function say(msg){ toast.textContent = msg; toast.hidden = false; clearTimeout(t); t = setTimeout(function(){ toast.hidden = true; }, 1800); }
+  document.querySelectorAll(".copy").forEach(function(b){
+    b.addEventListener("click", function(){
+      var url = b.dataset.url;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function(){ say("Link copied"); }, function(){ say(url); });
+      } else { say(url); }
+    });
+  });
+})();
+</script>

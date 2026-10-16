@@ -41,3 +41,8 @@ clients/*/01-brand/email-kit/assets/source/
 # saved third-party web pages used as email references (heavy; kept on disk/OneDrive)
 clients/*/03-work/email/*/references/*.html
 clients/*/03-work/email/*/references/*_files/
+
+# Figma template sources (heavy, duplicated exports; kept on disk/OneDrive)
+clients/*/01-brand/templates/figma/assets/
+clients/*/01-brand/templates/figma/ref/
+clients/*/01-brand/templates/qa/

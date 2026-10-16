@@ -1,0 +1,493 @@
+{
+  "hub": {
+    "title": "Power Digital Hub",
+    "url": "https://claude.ai/code/artifact/91b3a212-4b8f-4cb4-ade3-0ae3b6122be6",
+    "updated": "2026-10-13"
+  },
+  "types": {
+    "design-system": {
+      "label": "Design system",
+      "what": "The brand's rules for building: color, type, logo, layouts, modules.",
+      "when": "Open it before you start any piece for the brand."
+    },
+    "deliverables": {
+      "label": "Deliverables hub",
+      "what": "Every finished job for the client, grouped by channel, ready for review.",
+      "when": "Send this link to the client or team. Each new job lands here."
+    },
+    "library": {
+      "label": "Asset library",
+      "what": "Photos, tokens or modules pulled from approved work, with paths and rights.",
+      "when": "Search here before you crop, shoot or rebuild an asset."
+    },
+    "studio": {
+      "label": "Studio",
+      "what": "A working tool paired with a Claude Project: the team makes pieces in the Project and turns them into final files here.",
+      "when": "Open it to render and download what the Project hands over."
+    },
+    "board": {
+      "label": "Review board",
+      "what": "A working page for one campaign or one decision while it is in production.",
+      "when": "Use it during the job. When the job ships, it moves into the deliverables hub."
+    }
+  },
+  "statuses": {
+    "live": "Live",
+    "in-review": "In review",
+    "draft": "Draft",
+    "superseded": "Superseded"
+  },
+  "clients": [
+    {
+      "id": "roku",
+      "name": "Roku",
+      "sub": "Roku Ads Manager",
+      "channels": [
+        "Paid social",
+        "CTV"
+      ],
+      "repo": "clients/roku/",
+      "colors": [
+        "#4F01A3",
+        "#853DFF",
+        "#20004C",
+        "#EC4AF0",
+        "#FF8553",
+        "#1BCECB"
+      ],
+      "note": "Jobs: RKU26012 TV Advertising in 3 Steps (animated Ads Manager demo), RKU26013 Sell it on Roku (real room + illustrated city)."
+    },
+    {
+      "id": "katapult",
+      "name": "Katapult",
+      "sub": "Lease-to-own",
+      "channels": [
+        "Banners",
+        "Organic social"
+      ],
+      "repo": "clients/katapult/",
+      "colors": [
+        "#ED5370",
+        "#131540",
+        "#365488",
+        "#9EB5C0",
+        "#E48027"
+      ],
+      "note": "Banner jobs KAT26019 to KAT26022 and the organic social run (October finals, November 2026 for review). New social pieces start from the ten social templates in the Design System (Templates section, 10 layouts x 4 ratios, Aktiv Grotesk Regular headlines). Team production runs in the Katapult Social Studio Claude Project (brief PDF in, post file out), rendered to PNG in the Social Studio artifact."
+    },
+    {
+      "id": "habit",
+      "name": "Habit Outdoors",
+      "sub": "Outdoor apparel",
+      "channels": [
+        "Email"
+      ],
+      "repo": "clients/habit-outdoors/",
+      "colors": [
+        "#FF6400",
+        "#2A2B2D",
+        "#E2DDD9",
+        "#202944",
+        "#483F39",
+        "#595442"
+      ],
+      "note": "Email kit v0.2.1 approved, v0.3 to v0.6 rules pending approval."
+    },
+    {
+      "id": "toms",
+      "name": "Tom's of Maine",
+      "sub": "Natural personal care",
+      "channels": [
+        "Email"
+      ],
+      "repo": "clients/toms-of-maine/",
+      "colors": [
+        "#05453D",
+        "#008D83",
+        "#00867D",
+        "#10302B",
+        "#F2F6F5"
+      ],
+      "note": "Email kit in onboarding: tokens drafted, HTML module library not built yet. No deliverables hub yet."
+    },
+    {
+      "id": "truly",
+      "name": "Truly Nolen",
+      "sub": "Pest control",
+      "channels": [
+        "Meta",
+        "Programmatic banners"
+      ],
+      "repo": "clients/truly-nolen/",
+      "colors": [
+        "#FFE300",
+        "#ED2524",
+        "#12110C"
+      ],
+      "note": "Pages written in Portuguese. Banner jobs: Spotlight $50 Off, Mosquito Season."
+    }
+  ],
+  "artifacts": [
+    {
+      "slug": "roku-hub",
+      "client": "roku",
+      "type": "deliverables",
+      "status": "live",
+      "title": "Roku Deliverables Hub",
+      "url": "https://claude.ai/code/artifact/39370946-f238-45ad-a924-31f30d9266dd",
+      "updated": "2026-10-15",
+      "description": "Jobs grouped by channel. Each job card opens its frames, copy, storyboard and notes, so reviewers can check every exported frame.",
+      "sections": [
+        "Paid Social + CTV",
+        "Figma reframes",
+        "RKU26012 TV Advertising in 3 Steps",
+        "RKU26013 Sell it on Roku",
+        "Holiday reframes MOF/BOF",
+        "CTV storyboard and animatic",
+        "Previous round RKU26008"
+      ],
+      "counts": "2 channels · RKU26012 4 animations · RKU26013 24 frames · Holiday reframes 122 frames",
+      "local": "clients/roku/04-deliverables/deliverables-hub.html"
+    },
+    {
+      "slug": "roku-ds",
+      "client": "roku",
+      "type": "design-system",
+      "status": "live",
+      "title": "Roku Design System",
+      "url": "https://claude.ai/code/artifact/bc7915dd-8473-4414-a915-a25334150616",
+      "updated": "2026-10-12",
+      "description": "Brand tokens from the 2024 guideline plus the RKU26013 direction. The reference for building and naming frames for paid social and CTV.",
+      "sections": [
+        "Color, purple first",
+        "Roku Display type",
+        "Two logo marks",
+        "Real room + illustrated city",
+        "Canvases and safe areas",
+        "Frame anatomy",
+        "Motion",
+        "How a frame is named"
+      ],
+      "counts": "10 sections · 4 canvases",
+      "local": "clients/roku/01-brand/roku-design-system.html"
+    },
+    {
+      "slug": "katapult-hub",
+      "client": "katapult",
+      "type": "deliverables",
+      "status": "live",
+      "title": "Katapult Deliverables Hub",
+      "url": "https://claude.ai/code/artifact/2abbbef7-4ac3-4e9c-a431-7c37b8e05dcf",
+      "updated": "2026-10-16",
+      "description": "Banner jobs and the organic social run by month: October finals from Figma and November 2026 for review, with a posting calendar, captions and notes.",
+      "sections": [
+        "Holiday Disaster",
+        "Trusted",
+        "Flat Brand Type Cyber",
+        "Top Items Banners",
+        "Organic · November 2026 (calendar)",
+        "Organic · October 2026 finals"
+      ],
+      "counts": "4 banner jobs · 64 pieces · 30 organic posts · 78 frames · 2 Reels",
+      "local": "clients/katapult/04-deliverables/deliverables-hub.html"
+    },
+    {
+      "slug": "katapult-ds",
+      "client": "katapult",
+      "type": "design-system",
+      "status": "live",
+      "title": "Katapult Design System",
+      "url": "https://claude.ai/code/artifact/ee8bd24b-c2e4-4f39-b14b-4523c87c4704",
+      "updated": "2026-10-13",
+      "description": "Color, Aktiv Grotesk on a 1080px canvas, logo, photography, the ten social templates in four ratios, voice, plus the Q4 organic patterns and how to clone a post.",
+      "sections": [
+        "Pink and Dark Blue",
+        "Aktiv Grotesk",
+        "Logo",
+        "No line graphics",
+        "Photography",
+        "10 social templates · 4 ratios",
+        "Q4 organic patterns",
+        "How to clone a post"
+      ],
+      "counts": "11 sections · 40 template frames · 9 organic patterns",
+      "local": "clients/katapult/01-brand/katapult-social-system.html"
+    },
+    {
+      "slug": "katapult-images",
+      "client": "katapult",
+      "type": "library",
+      "status": "live",
+      "title": "Katapult Image Library",
+      "url": "https://claude.ai/code/artifact/bc252c47-7c82-4376-ba50-383a10c1a576",
+      "updated": "2026-10-13",
+      "description": "Adobe Stock lifestyle photos graded against the Katapult photography rules, with copy space, best use, stock ID and file path.",
+      "sections": [
+        "Brand-fit rules",
+        "Inbox",
+        "Filters",
+        "On the phone",
+        "Laptop and tablet",
+        "Together",
+        "Delivery and moving",
+        "At home",
+        "Retailers",
+        "Rooms, no people"
+      ],
+      "counts": "44 photos · 31 on-brand · 10 with care · 3 no people",
+      "local": "clients/katapult/01-brand/photos/image-library.html"
+    },
+    {
+      "slug": "katapult-studio",
+      "client": "katapult",
+      "type": "studio",
+      "status": "live",
+      "title": "Katapult Social Studio",
+      "url": "https://claude.ai/code/artifact/5a137796-2f13-4690-8ce2-45fd9f4c8cdc",
+      "updated": "2026-10-13",
+      "description": "Make PNG for the Katapult Social Studio Claude Project: a designer attaches the brief PDF in the Project, gets one post file, drops it here and downloads checked PNGs built from the approved templates and banner patterns.",
+      "sections": [
+        "Make PNG",
+        "Layouts: 10 templates x 4 ratios",
+        "Banner patterns P1 to P4 x 8 sizes",
+        "Photos and products",
+        "How it works"
+      ],
+      "counts": "88 layouts · 44 photos · 15 product cutouts",
+      "local": "clients/katapult/03-work/claude-project-social/studio/katapult-social-studio.html"
+    },
+    {
+      "slug": "habit-hub",
+      "client": "habit",
+      "type": "deliverables",
+      "status": "live",
+      "title": "Habit Outdoors Deliverables Hub",
+      "url": "https://claude.ai/code/artifact/70778e63-a022-4658-9d99-3c68be5815ee",
+      "updated": "2026-10-08",
+      "description": "Pick a month, open an email and see it at desktop and phone width with subject line, preheader, QA state, client flags and the pre-send checklist.",
+      "sections": [
+        "November campaign",
+        "October campaign",
+        "Desktop + mobile viewer",
+        "Dark-mode toggle",
+        "Before-send notes"
+      ],
+      "counts": "2 campaigns · 10 emails",
+      "local": "clients/habit-outdoors/04-deliverables/deliverables-hub.html"
+    },
+    {
+      "slug": "habit-ds",
+      "client": "habit",
+      "type": "design-system",
+      "status": "live",
+      "title": "Habit Outdoors Design System",
+      "url": "https://claude.ai/code/artifact/f33018ee-a734-4183-83d0-79d046c9c60d",
+      "updated": "2026-10-07",
+      "description": "Email kit and module library: color, the two-voice headline, the button, 15 production rules and copy-ready HTML modules.",
+      "sections": [
+        "Kit sheet",
+        "Production rules R1 to R15",
+        "Header and hero modules",
+        "Product and feature bands",
+        "Textures and torn edges",
+        "Footer"
+      ],
+      "counts": "Modules E01 to E41 · 9 brand colors · 15 rules",
+      "local": "clients/habit-outdoors/01-brand/email-kit/design-system.html"
+    },
+    {
+      "slug": "habit-images",
+      "client": "habit",
+      "type": "library",
+      "status": "live",
+      "title": "Habit Outdoors Image Library",
+      "url": "https://claude.ai/code/artifact/4006b37f-7efb-4d33-9d00-99c119d08a88",
+      "updated": "2026-10-07",
+      "description": "Filterable contact sheet of photos cleared or queued for email, tagged with category, text-safe area, use, rights and file path.",
+      "sections": [
+        "Inbox",
+        "Filters",
+        "Habit originals",
+        "Provisional crops",
+        "Photo detail"
+      ],
+      "counts": "21 photos · 4 originals · 17 crops",
+      "local": "clients/habit-outdoors/01-brand/photos/image-library.html"
+    },
+    {
+      "slug": "habit-nov-broadcasts",
+      "client": "habit",
+      "type": "board",
+      "status": "superseded",
+      "title": "Habit Outdoors · November 2026 broadcasts",
+      "url": "https://claude.ai/code/artifact/1abd6da7-a336-4edd-bd52-f68bdc788614",
+      "updated": "2026-10-07",
+      "description": "Earlier standalone review page for the 5 November emails. The same campaign now lives in the Habit Outdoors Deliverables Hub; use that one.",
+      "sections": [
+        "Open decisions",
+        "Her Gear Is Field Ready",
+        "Outdoor Gift Guide",
+        "Buck Hollow 2.0",
+        "The Flannel You'll Live In",
+        "Gifts at Every Price Point"
+      ],
+      "counts": "5 emails · desktop 640 + mobile 375"
+    },
+    {
+      "slug": "toms-nov-emails",
+      "client": "toms",
+      "type": "board",
+      "status": "in-review",
+      "title": "Tom's November Emails",
+      "url": "https://claude.ai/code/artifact/3c9ef9d8-e89c-4f48-a015-1554d5516a02",
+      "updated": "2026-10-07",
+      "description": "Production board for the 8 November broadcasts. Each email shows its 600px render with subject line, export slices and decisions to check.",
+      "sections": [
+        "Rooted in Nature 11/3",
+        "The Deo That Actually Works 11/9",
+        "Gifts for the People at Your Table 11/18",
+        "Something Is Coming 11/24",
+        "BFCM Announcement 11/27",
+        "Gifts That Actually Get Used 11/28",
+        "Last Full Day 11/30 + 12/1"
+      ],
+      "counts": "8 emails · all in layout review"
+    },
+    {
+      "slug": "toms-heroes",
+      "client": "toms",
+      "type": "board",
+      "status": "in-review",
+      "title": "Rooted in Nature Heroes",
+      "url": "https://claude.ai/code/artifact/20c9caff-f1c6-42a8-a096-661619457501",
+      "updated": "2026-10-07",
+      "description": "Hero picker for the 11/3 email: three directions on the same body, plus a calibration strip comparing a rebuilt 10/8 email to Figma.",
+      "sections": [
+        "A Autumn glass",
+        "B Still life on top",
+        "C Forest and lineup",
+        "10/8 calibration"
+      ],
+      "counts": "3 hero concepts"
+    },
+    {
+      "slug": "toms-tokens",
+      "client": "toms",
+      "type": "design-system",
+      "status": "draft",
+      "title": "Tom's of Maine Email Tokens",
+      "url": "https://claude.ai/code/artifact/ea41f86e-fbc5-48a6-b979-712207817de0",
+      "updated": "2026-10-06",
+      "description": "Draft tokens measured from 6 approved Figma emails: color, New Kansas type at true 600px size, buttons, spacing, header and footer.",
+      "sections": [
+        "Image or live text",
+        "Color",
+        "Typography",
+        "Buttons",
+        "Spacing",
+        "Header and footer",
+        "Open items"
+      ],
+      "counts": "7 sections · 6 source emails"
+    },
+    {
+      "slug": "toms-modules",
+      "client": "toms",
+      "type": "library",
+      "status": "draft",
+      "title": "Tom's of Maine Module Catalogue",
+      "url": "https://claude.ai/code/artifact/8d5dfa0e-25cd-4164-bc82-579de63a381f",
+      "updated": "2026-10-06",
+      "description": "Every module found in the 26 approved emails, July to October 2026, with Figma screenshots and measured specs. The source for the HTML module library, which is not built yet.",
+      "sections": [
+        "Build checklist",
+        "Open questions",
+        "Headers",
+        "Heroes",
+        "Product cards and grids",
+        "Feature bands",
+        "Closing and signup",
+        "Footer and buttons"
+      ],
+      "counts": "71 modules · 94 screenshots · 12 open questions"
+    },
+    {
+      "slug": "toms-images",
+      "client": "toms",
+      "type": "library",
+      "status": "live",
+      "title": "Tom's of Maine Image Bank",
+      "url": "https://claude.ai/code/artifact/a617c37a-312f-4225-a9d3-38d39502c2c1",
+      "updated": "2026-10-06",
+      "description": "Every image used in the 26 approved emails, pulled from Figma and deduplicated, with size, transparency, where it was used and its OneDrive path.",
+      "sections": [
+        "Transparent packshots",
+        "Packshots on white",
+        "Lifestyle and scenes",
+        "Seals and decor",
+        "Still life",
+        "Logos and icons",
+        "Textures"
+      ],
+      "counts": "172 images · 49 transparent packshots"
+    },
+    {
+      "slug": "truly-hub",
+      "client": "truly",
+      "type": "deliverables",
+      "status": "live",
+      "title": "Truly Nolen Deliverables Hub",
+      "url": "https://claude.ai/code/artifact/797d5cd9-833f-44ca-b297-cb7f06f36c6f",
+      "updated": "2026-10-06",
+      "description": "One tab per banner job with the brief summary, open points, statics, storyboards and file locations. Written in Portuguese.",
+      "sections": [
+        "Spotlight $50 Off",
+        "Mosquito Season",
+        "Pontos pra confirmar",
+        "Storyboards em 3 cenas",
+        "Onde está cada entrega"
+      ],
+      "counts": "2 jobs · Spotlight: 14 statics + 14 storyboards"
+    },
+    {
+      "slug": "truly-ds",
+      "client": "truly",
+      "type": "design-system",
+      "status": "live",
+      "title": "Truly Nolen Design System",
+      "url": "https://claude.ai/code/artifact/728b45e2-be86-412d-9c99-b6eb56f8984a",
+      "updated": "2026-10-06",
+      "description": "Built from patterns repeated in delivered pieces: color pairs, three type weights, logo versions, layouts, the size grid and offer components. Written in Portuguese.",
+      "sections": [
+        "Yellow, black, red",
+        "Color pairs per background",
+        "Three type weights",
+        "Two logo versions",
+        "Stack, split, band",
+        "Standard size grid",
+        "BOF $50 OFF components"
+      ],
+      "counts": "8 sections · 3 layouts"
+    }
+  ],
+  "legacy": [
+    {
+      "client": "katapult",
+      "title": "Katapult Deliverables Hub, older link",
+      "url": "https://claude.ai/artifact/HTkyaVvtPH72dpT6RUNSrP",
+      "note": "Cited in the KAT26019 and KAT26022 briefs. Use the current hub above."
+    },
+    {
+      "client": "habit",
+      "title": "Habit email kit v0.2 review page",
+      "url": "https://claude.ai/artifact/NaEqLoLezs7y5EvUeJRFBf",
+      "note": "Replaced by the Habit Outdoors Design System."
+    },
+    {
+      "client": "habit",
+      "title": "Habit font test",
+      "url": "https://claude.ai/artifact/5gRnMYHKZAHUCKPneuPXpo",
+      "note": "Used once, 2026-09-24, to pick the email font combo."
+    }
+  ]
+}
